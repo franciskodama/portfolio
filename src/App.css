@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/*
+
+Color Scheme:
+    Blue: #12B3D8
+    Orange: #FF860F
+    Green: #B3F90E 
+    Light Gray: #F5F5F5
+
+Fonts:
+    Headings:
+        font-family: 'Montserrat', sans-serif;
+    
+    Paragraph:
+        font-family: 'Hubballi', cursive;
+
+*/
+
+/* ====================================
+        VARIABLES
+======================================= */
+
+/*  font-family: var(--main-font); 
+    color: var(--dark-color); 
+*/
+
+:root {
+  --main-font-thin: "axiformathin", sans-serif;
+  --main-font-light: "axiformalight", sans-serif;
+  --main-font-regular: "axiformaregular", sans-serif;
+  --main-font-medium: "axiformamedium", sans-serif;
+  --main-font-semibold: "axiformasemibold", sans-serif;
+
+  --second-font: "Hubballi", cursive;
+
+  --dark-color: #1c1c1c;
+  --bright-color: white;
+  --third-color: #ed1c24;
+
+  --gradient: linear-gradient(180deg, #1c1c1c, #393939);
+}
+
+/* ====================================
+          STARTERS
+  ======================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 100%;
+  background-color: var(--dark-color);
+  color: white;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====================================
+            TYPOGRAPHY
+    ======================================= */
+
+/* ====================================
+            LAYOUT
+    ======================================= */
+
+/* --- GENERAL --- */
+
+.section {
+  width: 100%;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* --- BUTTONS --- */
+
+button {
+  text-transform: uppercase;
+}
+
+/* ====================================
+            MEDIA QUERY
+    ======================================= */
+
+@media only screen and (min-width: 20em) {
+}
+
+@media only screen and (min-width: 48em) {
+}
+
+@media only screen and (min-width: 62em) {
+}
+
+@media only screen and (min-width: 75em) {
+}

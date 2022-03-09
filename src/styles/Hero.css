@@ -1,0 +1,35 @@
+.section-hero {
+  background: var(--gradient);
+  height: 850px;
+}
+
+.section-hero .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font-semibold);
+  font-size: 1.5rem;
+}
+
+.hero-info p {
+  font-family: var(--main-font-thin);
+  font-size: 1.35rem;
+  font-weight: 100;
+}
+
+.hightlight,
+.highlight-special {
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--bright-color);
+}
+
+.highlight-special {
+  color: var(--third-color);
+}

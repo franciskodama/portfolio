@@ -1,0 +1,30 @@
+.section-header {
+  width: 100%;
+  background-color: var(--dark-color);
+}
+
+.section-header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 1.7em 0;
+  width: 100px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  font-family: var(--main-font-light);
+  font-size: 1rem;
+  color: var(--bright-color);
+  padding-left: 2.5em;
+  text-decoration: none;
+}
