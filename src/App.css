@@ -38,7 +38,7 @@ Fonts:
   --dark-color: #1c1c1c;
   --bright-color: white;
   --third-color: #ed1c24;
-
+  --transparent: hsla(0, 0%, 0%, 0);
   --gradient: linear-gradient(180deg, #1c1c1c, #393939);
 }
 
@@ -53,7 +53,7 @@ Fonts:
 }
 
 body {
-  font-family: var(--main-font);
+  font-family: var(--main-font-thin);
   font-size: 100%;
   background-color: var(--dark-color);
   color: white;
@@ -69,6 +69,13 @@ img {
             TYPOGRAPHY
     ======================================= */
 
+h1,
+h2,
+h3,
+button {
+  text-transform: uppercase;
+}
+
 /* ====================================
             LAYOUT
     ======================================= */
@@ -80,14 +87,35 @@ img {
 }
 
 .container {
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
 }
 
 /* --- BUTTONS --- */
 
 button {
-  text-transform: uppercase;
+  font-family: var(--main-font-medium);
+  padding: 0.8em 2em;
+  margin-left: 2em;
+  border: 1px solid var(--bright-color);
+}
+
+.btn-cta {
+  background-color: var(--third-color);
+  color: var(--bright-color);
+  border: solid 1px var(--third-color);
+}
+
+.btn-simple {
+  background-color: var(--transparent);
+  color: var(--bright-color);
+}
+
+/* --- INPUTS --- */
+
+input {
+  height: 3em;
+  width: 40em;
 }
 
 /* ====================================

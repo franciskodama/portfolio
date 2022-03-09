@@ -1,18 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Reason.css'
 
 function Reason() {
   return (
     <div className='section section-reason'>
-        <div>Reason</div>
 
         <form action="">
             <input type="text" />
-            <button>send</button>
-            <button>reload original message</button>
-        
-        
-        
+            <button className='btn-cta' type="submit">send</button>
+            <button className='btn-simple'type="submit">reload original message</button>
         </form>
     </div>      
 )
