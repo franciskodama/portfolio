@@ -2,7 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  background-color: var(--dark-color);
   height: 850px;
   margin-bottom: 5em;
+}
+
+::placeholder {
+  padding-left: 2em;
+  color: rgb(191, 189, 189);
 }

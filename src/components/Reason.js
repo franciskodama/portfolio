@@ -6,8 +6,7 @@ function Reason() {
     <div className='section section-reason'>
 
         <form action="">
-            <input type="text" />
-            <button className='btn-cta' type="submit">send</button>
+            <input type="text" placeholder="type something here..."/>
             <button className='btn-simple'type="submit">reload original message</button>
         </form>
     </div>      

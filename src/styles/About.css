@@ -6,26 +6,57 @@
   display: flex;
   background-color: var(--bright-color);
   color: var(--dark-color);
-  padding: 3em;
-  border: 1px solid magenta;
+  padding: 0;
 }
 
-.about-left {
+/* --- AVATAR BOX --- */
+
+.about-avatar {
+  position: relative;
   width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-left: 3em;
 }
 
-.about-right {
+.img-me {
+  position: relative;
+  z-index: 1;
+  height: 70%;
+  align-items: center;
+}
+
+.square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36em;
+  width: 25em;
+  background-color: hsla(0, 0%, 0%, 0.07);
+}
+
+/* --- INFO BOX --- */
+
+.about-info {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 50%;
   justify-content: center;
+  padding-right: 3em;
 }
 
-.about-desc {
+.bag-empty {
+  position: absolute;
+  top: 2em;
+  left: 30em;
+  height: 25px;
+  width: 25px;
+}
+
+.about-description {
   width: 50%;
 }
 
@@ -46,17 +77,6 @@ h2 {
 
 .description-one {
   margin-bottom: 1em;
-}
-
-.img-me {
-  height: 70%;
-  align-items: center;
-}
-
-.bag-empty {
-  height: 25px;
-  width: 25px;
-  align-self: flex-end;
 }
 
 select {
@@ -84,4 +104,14 @@ select {
   width: 15em;
   color: var(--bright-color);
   background-color: var(--dark-color);
+}
+
+.skills {
+  position: absolute;
+  top: 56em;
+  left: 40em;
+  font-family: var(--main-font-medium);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  text-align: right;
 }

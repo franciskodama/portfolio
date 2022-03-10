@@ -84,6 +84,7 @@ button {
 
 .section {
   width: 100%;
+  background-color: var(--dark-color);
 }
 
 .container {
