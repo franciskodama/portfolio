@@ -24,9 +24,7 @@ function App() {
             <About />
             <Contact />
             <Footer />
-      <div className="content">
-        <h1> className CONTENT</h1>
-      </div>
+
     </div>
   )
 }

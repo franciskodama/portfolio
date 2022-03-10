@@ -20,7 +20,7 @@ function About() {
             <img className="bag-empty" src={BagEmpty} alt="Shop bag empty" />
             <div className="about-description">
               <h3 className="name">Francis Kodama</h3>
-              <h2>Front-end Developer</h2>
+              <h2 className="job">Front-end Developer</h2>
               <h2 className="languages">HTML, CSS, JS, and React</h2>
               <p className="description-one">I'm an experienced tech services entrepreneur/consultant - product designer oriented, with experience in product design, UX/UI and business development.</p>
               <p className="description-two">Resourceful, curious, creative, and critical thinker, who loves to solve problems by designing enjoyable, usable and useful products.</p>

@@ -60,19 +60,20 @@
   width: 50%;
 }
 
-h3 {
+.name,
+.languages {
+  margin-bottom: 0.5em;
+}
+
+.name {
   font-size: 1.2rem;
   font-family: var(--main-font-thin);
 }
 
-h2 {
+.job,
+.languages {
   font-size: 1.5rem;
   font-family: var(--main-font-medium);
-}
-
-.name,
-.languages {
-  margin-bottom: 0.5em;
 }
 
 .description-one {
