@@ -1,7 +1,8 @@
 .section-footer .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 80%;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  column-gap: 4em;
+  width: 60%;
   padding-bottom: 4em;
 }
 
@@ -34,12 +35,12 @@
 }
 
 .aboutme {
-  width: 50%;
   margin-bottom: 3em;
 }
 
 .section-footer img {
   width: 100px;
+  opacity: 0.4;
 }
 
 .email,
@@ -51,7 +52,6 @@
 .menu,
 .email,
 .send-message,
-.last p,
 .localization {
   font-size: 0.9rem;
 }
@@ -71,7 +71,6 @@
 .icons {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
   height: 70%;
   align-items: flex-start;
 }
@@ -90,7 +89,7 @@
 
 .before-last-container {
   display: flex;
-  width: 80%;
+  width: 60%;
   align-items: baseline;
   justify-content: space-between;
 }
@@ -107,6 +106,11 @@
   margin: 0 1.5em 0 0;
 }
 
-.last h2 span {
-  color: var(--third-color);
+.last p,
+.localization {
+  font-size: 0.7rem;
+}
+
+.localization {
+  margin-right: 3rem;
 }

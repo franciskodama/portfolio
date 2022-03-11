@@ -13,7 +13,7 @@ function Footer() {
           <h2>ABOUT<span>ME</span></h2>
           <h2>GET<span>BACK</span></h2>
           <h2>GET<span>IN TOUCH</span></h2>
-          <h2>GET<span>CONNECT</span></h2>
+          <h2>GET<span>CONNECTED</span></h2>
 
           <p className="aboutme">A Webdeveloper with a huge experience in marketing, a natural leader, curious, who find engagement challenge himself constantly.</p>
 
@@ -47,7 +47,7 @@ function Footer() {
         <div className="last-container">
           <div className="before-last-container">
             <div className="last">
-              <h2>RESU<span>ME</span></h2>
+              <h2>RESUME</h2>
               <p>Download</p>
               <p className='bold'>Resumé</p>
             </div>

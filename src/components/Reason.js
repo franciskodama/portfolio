@@ -2,16 +2,105 @@ import React, { useState } from 'react'
 import '../styles/Reason.css'
 
 function Reason() {
-  return (
-    <div className='section section-reason'>
+    
+    const [ myArray, setMyArray ] = useState ([])
 
-        <form action="">
-            <input type="text" placeholder="type something here..."/>
-            <button className='btn-simple'type="submit">reload original message</button>
-        </form>
-    </div>      
-)
+    function handleChange(e) {
+        const arrFromUser = Array.from(e.target.value)
+        createGrid(arrFromUser)
+    }
 
+    // ------------------------------------------------------
+
+    const originalMessageBright = 'This.portfolio.has.been.built.to.showcase.my.variety.of.skills.from.creativity.to.design.to.code.'
+    const originalMessageDark = 'Click.on.the.waves.for.an.explanation.of.each.item'
+    const arrOfLettersBright = Array.from(originalMessageBright)
+    const arrOfLettersDark = Array.from(originalMessageDark)
+
+    function createGrid(arrFromUser) {
+        const arrOfDiv = []
+        if (myArray != arrFromUser) {
+            for(let letterBright of arrOfLettersBright) {        
+                arrOfDiv.push(<div className='letter-bright'>{letterBright}</div>)
+            }
+            for(let letterDark of arrOfLettersDark) {        
+                arrOfDiv.push(<div className='letter-dark'>{letterDark}</div>)
+            }
+            return arrOfDiv
+        } else {
+            for(let letter of arrFromUser) {        
+                arrOfDiv.push(<div className='letter-dark'>{letter}</div>)
+            }
+            return arrOfDiv
+        }
+    }
+
+ 
+    return (
+        <div className='section section-reason'>
+            <div className='grid'>
+                {createGrid()}
+            </div>
+
+            <form>
+               <input onChange={handleChange} type='text' placeholder='type something here...'/>
+               {<button className='btn-cta'type="submit">reload original message</button>}
+            </form>
+
+        </div>      
+    )
 }
 
 export default Reason
+
+
+
+
+
+
+
+// function Reason() {
+//     const originalMessageWhite = 'This.portfolio.has.been.built.to.showcase.my.variety.of.skills.from.creativity.to.design.to.code.'
+//     const originalMessageRed = 'Mouseover.on.the.waves.for.an.explanation.of.each.item'
+//     const arrOfLettersWhite = Array.from(originalMessageWhite)
+//     const arrOfLettersRed = Array.from(originalMessageRed)
+
+//     const createGridWhite = () => {
+//         const arrOfDiv = []
+//         for(let letter of arrOfLettersWhite) {        
+//             arrOfDiv.push(<div className='letter'>{letter}</div>)
+//         }
+//         return arrOfDiv
+//     }
+
+//     const createGridRed = () => {
+//         const arrOfDiv = []
+//         for(let letter of arrOfLettersRed) {        
+//             arrOfDiv.push(<div className='letter-red'>{letter}</div>)
+//         }
+//         return arrOfDiv
+//     }   
+ 
+//     return (
+//         <div className='section section-reason'>
+//             <div className='grid'>
+//                 {createGridWhite()}
+//                 {createGridRed()}
+//             </div>
+
+//             <form action="">
+//                <input type="text" placeholder="type something here..."/>
+//                <button className='btn-cta'type="submit">reload original message</button>
+//             </form>
+
+//         </div>      
+//     )
+// }
+
+// export default Reason
+
+
+
+
+
+
