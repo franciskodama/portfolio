@@ -8,12 +8,12 @@ import '../styles/Footer.css'
 
 function Footer() {
   return (
-    <div className='section section-footer'>
-        <div className="container">
-          <h2>ABOUT<span>ME</span></h2>
-          <h2>GET<span>BACK</span></h2>
-          <h2>GET<span>IN TOUCH</span></h2>
-          <h2>GET<span>CONNECTED</span></h2>
+    <section className='section section-footer'>
+        <div className='container'>
+          <h2 className='title'>ABOUT<span>ME</span></h2>
+          <h2 className='title'>GET<span>BACK</span></h2>
+          <h2 className='title'>GET<span>IN TOUCH</span></h2>
+          <h2 className='title'>GET<span>CONNECTED</span></h2>
 
           <p className="aboutme">A Webdeveloper with a huge experience in marketing, a natural leader, curious, who find engagement challenge himself constantly.</p>
 
@@ -44,17 +44,16 @@ function Footer() {
           </div>
         </div>
 
-        <div className="last-container">
-          <div className="before-last-container">
-            <div className="last">
-              <h2>RESUME</h2>
+        <div className='last-container'>
+            <div className='resume-container'>
+              <h2 className='resume-title'>RESUME</h2>
               <p>Download</p>
               <p className='bold'>Resumé</p>
             </div>
             <p className="localization">Ottawa, ON - <span className='bold'>Canada</span></p>
           </div>
-        </div>
-    </div>
+
+    </section>
   )
 }
 

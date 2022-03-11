@@ -8,7 +8,7 @@ import BagFull from '../assets/images/about-bag-full.png'
 
 function About() {
   return (
-    <div className='section section-about'>
+    <section className='section section-about'>
         <div className="container">
 
           <div className="about-avatar">
@@ -44,7 +44,7 @@ function About() {
             </div>
           </div>
         </div>
-    </div>
+    </section>
   )
 }
 

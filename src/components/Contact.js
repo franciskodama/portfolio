@@ -3,7 +3,7 @@ import '../styles/Contact.css'
 
 function Contact() {
   return (
-    <div className='section section-contact'>
+    <section className='section section-contact'>
 
         <div className="container">
           <h1 className="title">message generator</h1>
@@ -27,7 +27,7 @@ function Contact() {
           </form>
         </div>
 
-    </div>
+    </section>
   )
 }
 

@@ -34,10 +34,11 @@ function Reason() {
             return arrOfDiv
         }
     }
-
- 
+    
+    // ------------------------------------------------------
+    
     return (
-        <div className='section section-reason'>
+        <section className='section section-reason'>
             <div className='grid'>
                 {createGrid()}
             </div>
@@ -47,7 +48,7 @@ function Reason() {
                {<button className='btn-cta'type="submit">reload original message</button>}
             </form>
 
-        </div>      
+        </section>      
     )
 }
 

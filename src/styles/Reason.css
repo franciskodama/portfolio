@@ -1,7 +1,7 @@
 .section-reason {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  max-width: 94em;
   margin: 0 auto;
   height: auto;
 }
