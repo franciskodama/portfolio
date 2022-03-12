@@ -14,7 +14,6 @@ const Hero = () => {
                     <p>Based in Ottawa, ON - Canada.</p>
                 </div>
 
-                {/* <iframe src='https://my.spline.design/untitled-17e28cb4d2901c6066d30d6839b48b2b/' frameborder='0' width='100%' height='100%'></iframe> */}
             </div>
         </section>
     )

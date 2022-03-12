@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import '../src/styles/reset.css'
 import '../src/styles/fonts.css'
 import './App.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Reason from "./components/Reason";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Navbar from './pages/Navbar'
+import Hero from './pages/Hero'
+import Reason from "./pages/Reason";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
