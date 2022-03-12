@@ -9,7 +9,7 @@
   padding: 0;
 }
 
-/* --- AVATAR BOX --- */
+/* --- AVATAR CONTAINER --- */
 
 .about-avatar {
   position: relative;
@@ -32,32 +32,31 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 36em;
-  width: 25em;
-  background-color: hsla(0, 0%, 0%, 0.07);
+  height: 100%;
+  width: 95%;
+  background-color: hsla(0, 0%, 0%, 0.05);
 }
 
-/* --- INFO BOX --- */
+/* --- INFO CONTAINER --- */
 
 .about-info {
   display: flex;
   flex-direction: column;
-  position: relative;
-  width: 50%;
+  width: 37%;
   justify-content: center;
-  padding-right: 3em;
+  max-width: 35em;
+  margin-bottom: 1.5em;
+  margin-left: 2em;
 }
 
 .bag-empty {
-  position: absolute;
-  top: 2em;
-  left: 30em;
+  align-self: flex-end;
   height: 25px;
   width: 25px;
 }
 
 .about-description {
-  width: 50%;
+  width: 60%;
 }
 
 .name,
@@ -76,43 +75,77 @@
   font-family: var(--main-font-medium);
 }
 
+.and {
+  font-size: 0.8rem;
+}
 .description-one {
   margin-bottom: 1em;
 }
 
-select {
-  height: 2rem;
-  font-family: var(--main-font-semibold);
-  font-size: 1.2rem;
-  border: none;
+/* --- CONTAINERS --- */
+
+.bottom-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
-.location {
+.location-button-container {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  flex-direction: column;
 }
+
+/* --- FORM --- */
 
 .location-title {
   font-size: 0.7rem;
   font-family: var(--main-font-light);
-  padding-right: 0.3rem;
-  margin: 5em 0;
+  margin: 3em 0 0.5em 0;
 }
 
+.location {
+  display: flex;
+  align-items: center;
+}
+
+.input-radio {
+  height: 0.8rem;
+}
+
+.location label {
+  font-family: var(--main-font-semibold);
+  font-size: 0.8rem;
+  margin: 0 1.5em 0 0.5em;
+}
+
+/* --- BUTTON --- */
+
 .btn-add {
+  margin-top: 3em;
   margin-left: 0;
   width: 15em;
   color: var(--bright-color);
   background-color: var(--dark-color);
 }
 
+/* --- SOFT SKILLS --- */
+
 .skills {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* position: absolute;
   top: 56em;
-  left: 40em;
+  left: 40em; */
   font-family: var(--main-font-medium);
   font-size: 0.6rem;
   text-transform: uppercase;
   text-align: right;
+}
+
+.skills-title {
+  margin-bottom: 0.5em;
+  font-size: 0.7rem;
+  font-family: var(--main-font-light);
+  text-transform: capitalize;
+  display: inline;
 }

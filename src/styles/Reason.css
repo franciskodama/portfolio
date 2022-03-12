@@ -10,6 +10,11 @@
   margin: 6em auto 12em;
 }
 
+.input-reason {
+  height: 3em;
+  width: 40em;
+}
+
 ::placeholder {
   padding-left: 2em;
   color: rgb(191, 189, 189);

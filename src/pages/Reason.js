@@ -44,7 +44,7 @@ function Reason() {
             </div>
 
             <form>
-               <input onChange={handleChange} type='text' placeholder='type something here...'/>
+               <input className='input-reason' onChange={handleChange} type='text' placeholder='type something here...'/>
                {<button className='btn-cta'type="submit">reload original message</button>}
             </form>
 
