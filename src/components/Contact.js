@@ -6,7 +6,7 @@ function Contact() {
     <section className='section section-contact'>
 
         <div className="container">
-          <h1 className="title">message generator</h1>
+          <h1 className="contact-title">message generator</h1>
           <p>Choose a chunk of text and drag to the message box.</p>
           <ul className="chunk-container">
             <li className="chunk">Cool website, man!</li>
