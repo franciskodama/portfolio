@@ -16,67 +16,6 @@
 .first-main-container {
   position: relative;
   width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* --- AVATAR CONTAINER --- */
-
-.first-inner-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 80%;
-  margin: 9em 0;
-}
-
-/* --- ICONS CONTAINER --- */
-
-.icons-container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 0.5em;
-}
-
-.icons-title {
-  font-size: 0.7rem;
-  font-family: var(--main-font-light);
-}
-
-.avatar-icon {
-  border: 1px dashed var(--dark-color);
-  padding: 0.5em;
-  width: 100px;
-}
-
-/* --- AVATAR + DESCRIPTION CONTAINER --- */
-
-.avatar-description-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 2em;
-  align-items: center;
-}
-
-.avatar-image {
-  z-index: 1;
-  align-items: center;
-}
-
-.skills-container {
-  margin: 2em;
-  text-align: center;
-  max-width: 90%;
-}
-
-.skills-title {
-  font-family: var(--main-font-semibold);
-  font-size: 0.9rem;
-}
-
-.skills-description {
-  font-size: 0.8rem;
 }
 
 /* --- BG GREY --- */
@@ -118,10 +57,9 @@
 .second-main-container {
   display: flex;
   flex-direction: column;
-  width: 37%;
+  width: 50%;
   justify-content: center;
   max-width: 35em;
-  margin-bottom: 1.5em;
   margin-left: 2em;
 }
 

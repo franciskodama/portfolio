@@ -1,0 +1,62 @@
+.out-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+/* --- AVATAR CONTAINER --- */
+
+.inner-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 9em 0;
+}
+
+/* --- ICONS CONTAINER --- */
+
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+}
+
+.icons-title {
+  font-size: 0.7rem;
+  font-family: var(--main-font-light);
+  margin-top: 1em;
+}
+
+.avatar-icon {
+  border: 1px dashed var(--dark-color);
+  padding: 0.5em;
+  width: 110px;
+}
+
+/* --- AVATAR + DESCRIPTION CONTAINER --- */
+
+.avatar-description-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
+}
+
+.avatar-image {
+  z-index: 1;
+}
+
+.skills-container {
+  margin: 2em;
+  max-width: 9 0%;
+}
+
+.skills-title {
+  font-family: var(--main-font-semibold);
+  font-size: 0.9rem;
+}
+
+.skills-description {
+  font-size: 0.8rem;
+}
