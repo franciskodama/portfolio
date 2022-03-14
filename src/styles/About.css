@@ -9,24 +9,77 @@
   padding: 0;
 }
 
-/* --- AVATAR CONTAINER --- */
+/*--------------------------
+--- AVATAR MAIN CONTAINER ---
+----------------------------*/
 
-.about-avatar {
+.first-main-container {
   position: relative;
   width: 50%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-left: 3em;
 }
 
-.img-me {
-  position: relative;
-  z-index: 1;
-  height: 70%;
+/* --- AVATAR CONTAINER --- */
+
+.first-inner-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 9em 0;
+}
+
+/* --- ICONS CONTAINER --- */
+
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5em;
+}
+
+.icons-title {
+  font-size: 0.7rem;
+  font-family: var(--main-font-light);
+}
+
+.avatar-icon {
+  border: 1px dashed var(--dark-color);
+  padding: 0.5em;
+  width: 100px;
+}
+
+/* --- AVATAR + DESCRIPTION CONTAINER --- */
+
+.avatar-description-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
   align-items: center;
 }
+
+.avatar-image {
+  z-index: 1;
+  align-items: center;
+}
+
+.skills-container {
+  margin: 2em;
+  text-align: center;
+  max-width: 90%;
+}
+
+.skills-title {
+  font-family: var(--main-font-semibold);
+  font-size: 0.9rem;
+}
+
+.skills-description {
+  font-size: 0.8rem;
+}
+
+/* --- BG GREY --- */
 
 .square {
   position: absolute;
@@ -37,9 +90,32 @@
   background-color: hsla(0, 0%, 0%, 0.05);
 }
 
-/* --- INFO CONTAINER --- */
+/* --- TAG WORK PERMIT --- */
 
-.about-info {
+.visa-tag {
+  position: absolute;
+  top: 3.7em;
+  left: 61%;
+  font-family: var(--main-font-light);
+  width: 20em;
+  line-height: 1em;
+  padding: 0.5em;
+  color: var(--bright-color);
+  background-color: var(--third-color);
+  transform: rotate(45deg);
+  text-align: center;
+  overflow: ;
+}
+
+.work-permit {
+  font-family: var(--main-font-semibold);
+}
+
+/*--------------------------
+------ INFO CONTAINER ------
+----------------------------*/
+
+.second-main-container {
   display: flex;
   flex-direction: column;
   width: 37%;
@@ -49,14 +125,14 @@
   margin-left: 2em;
 }
 
+.about-description {
+  width: 60%;
+}
+
 .bag-empty {
   align-self: flex-end;
   height: 25px;
   width: 25px;
-}
-
-.about-description {
-  width: 60%;
 }
 
 .name,
@@ -97,9 +173,13 @@
 
 /* --- FORM --- */
 
-.location-title {
+.location-title,
+.tools-title {
   font-size: 0.7rem;
   font-family: var(--main-font-light);
+}
+
+.location-title {
   margin: 3em 0 0.5em 0;
 }
 
@@ -130,22 +210,17 @@
 
 /* --- SOFT SKILLS --- */
 
-.skills {
+.tools {
   display: flex;
   flex-direction: column;
-  /* position: absolute;
-  top: 56em;
-  left: 40em; */
   font-family: var(--main-font-medium);
   font-size: 0.6rem;
   text-transform: uppercase;
   text-align: right;
 }
 
-.skills-title {
+.tools-title {
   margin-bottom: 0.5em;
-  font-size: 0.7rem;
-  font-family: var(--main-font-light);
   text-transform: capitalize;
   display: inline;
 }
