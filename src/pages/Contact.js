@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../components/Button'
 import '../styles/Contact.css'
 
 function Contact() {
@@ -23,7 +24,7 @@ function Contact() {
           </ul>
           <form className="form-contact" action="">
             <input className="form-contact-input" type="text" />
-            <button className="btn-contact btn-cta" >send</button>
+            <Button text="send" align="flex-end"/>
           </form>
         </div>
 

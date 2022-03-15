@@ -1,45 +1,21 @@
- import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import React, { useState } from 'react'
 import '../styles/About.css'
-
+import Button from '../components/Button'
 import BagEmpty from '../assets/images/bag.svg'
 import Avatar from '../components/Avatar'
 
 function About() {
+ 
+  const [ addMe, setAddMe ] = useState({showMe: false}) 
 
-  const [ addMe, setAddMe ] = useState(false)
-  const [ location, setLocation ] = useState(null)
-
-
-  // const [ addedToBag, setAddedToBag ] = useState({ backgroundColor: 'blue' })
-  // const newState =
-
-  // function handleClick() {
-  //   console.log("este")
-  //   setAddedToBag({ backgroundColor: 'green' })
-  // }  
-  
-  const newStyle = { color: "blue" }
-  
-   function handleClick() {
-
-     console.log("shottt 1")
-     setAddMe(true)
-     console.log("shottt 2")
-    //  addMe ? document.getElementById('number-one').style.display = "block" : document.getElementById('number-one').style.display = "none"
-
-      addMe ? newStyle = { color: "red" } : newStyle = { color: "white" } 
-
-   }
-
-  function handleChoice(e) {
-    setLocation(e.target.value)
+  function handleClick() {
+    setAddMe({showMe: true})
   }
 
   return (
+    
     <section className='section section-about'>
         <div className="container">
-
           <div className="first-main-container">
             <Avatar />
             <div className="square"></div>
@@ -54,14 +30,7 @@ function About() {
 
             <div className="bag-container">
               <img className="bag-empty" src={BagEmpty} alt="Shop bag empty" />
-
-              {/* ---------------------------- */}
-
-
-              <p id="number-one" style={newStyle}>1</p>
-
-
-              {/* ---------------------------- */}
+              <p className="number-one" style={{ display: addMe.showMe ? 'block': 'none'}}>1</p>
             </div>
 
             <div className="about-description">
@@ -76,14 +45,14 @@ function About() {
               <div className="location-button-container">
                 <p className="location-title">location:</p>
                 <form className="location">
-                  <input className="input-radio" onClick={handleChoice} type="radio" name="location" value="remote"/>
+                  <input className="input-radio" type="radio" name="location" value="remote"/>
                   <label htmlFor="remote">Remote</label>
-                  <input className="input-radio" onClick={handleChoice} type="radio" name="location" value="ottawa"/>
+                  <input className="input-radio" type="radio" name="location" value="ottawa"/>
                   <label htmlFor="ottawa">Ottawa</label>
-                  <input className="input-radio" onClick={handleChoice} type="radio" name="location" value="hybrid"/>
+                  <input className="input-radio" type="radio" name="location" value="hybrid"/>
                   <label htmlFor="hybrid">Hybrid</label>
                 </form>
-                <button onClick={handleClick} className="btn-add">Add to my team</button>
+                <Button onClick={handleClick} text="add to my team" color="var(--dark-color)" />
               </div>
 
               <div className="tools">

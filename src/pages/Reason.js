@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from '../components/Button'
 import '../styles/Reason.css'
 
 function Reason() {
@@ -45,7 +46,7 @@ function Reason() {
 
             <form>
                <input className='input-reason' onChange={handleChange} type='text' placeholder='type something here...'/>
-               {<button className='btn-cta'type="submit">reload original message</button>}
+               <Button text='reload original message' />
             </form>
 
         </section>      

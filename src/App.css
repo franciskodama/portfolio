@@ -93,26 +93,6 @@ button,
   margin: 0 auto;
 }
 
-/* --- BUTTONS --- */
-
-button {
-  font-family: var(--main-font-medium);
-  padding: 0.8em 2em;
-  margin-left: 2em;
-  border: 1px solid var(--bright-color);
-}
-
-.btn-cta {
-  background-color: var(--third-color);
-  color: var(--bright-color);
-  border: solid 1px var(--third-color);
-}
-
-.btn-simple {
-  background-color: var(--transparent);
-  color: var(--bright-color);
-}
-
 /* --- INPUTS --- */
 
 /* ====================================
