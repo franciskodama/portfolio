@@ -1,4 +1,5 @@
 import React from 'react'
+import Hello from '../assets/images/hello.png'
 import '../styles/Hero.css'
 import '../App.css'
 
@@ -13,7 +14,9 @@ const Hero = () => {
                     <h2 className="hightlight" >GIT, npm, FIGMA.</h2>
                     <p>Based in Ottawa, ON - Canada.</p>
                 </div>
-
+                <div className="hero-image-container">
+                    <img src={Hello} alt="" />
+                </div>
             </div>
         </section>
     )

@@ -20,7 +20,7 @@ function App() {
             <Route path="/" element={<Hero />}></Route>
           </Routes>
       </Router>
-            <Reason />
+            {/* <Reason /> */}
             <About />
             <Contact />
             <Footer />

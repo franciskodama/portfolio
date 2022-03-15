@@ -33,3 +33,8 @@
 .highlight-special {
   color: var(--third-color);
 }
+
+.hero-image-container {
+  text-align: right;
+  width: 60%;
+}

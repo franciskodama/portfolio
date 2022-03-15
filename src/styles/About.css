@@ -25,29 +25,8 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 95%;
+  width: 100%;
   background-color: hsla(0, 0%, 0%, 0.05);
-}
-
-/* --- TAG WORK PERMIT --- */
-
-.visa-tag {
-  position: absolute;
-  top: 3.7em;
-  left: 61%;
-  font-family: var(--main-font-light);
-  width: 20em;
-  line-height: 1em;
-  padding: 0.5em;
-  color: var(--bright-color);
-  background-color: var(--third-color);
-  transform: rotate(45deg);
-  text-align: center;
-  overflow: ;
-}
-
-.work-permit {
-  font-family: var(--main-font-semibold);
 }
 
 /*--------------------------
@@ -55,22 +34,62 @@
 ----------------------------*/
 
 .second-main-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 50%;
   justify-content: center;
   max-width: 35em;
-  margin-left: 2em;
+  padding-left: 4em;
+  overflow: hidden;
 }
+
+/* --- TAG WORK PERMIT --- */
+
+.visa-tag {
+  position: absolute;
+  top: 3em;
+  left: -5.2em;
+  font-family: var(--main-font-light);
+  width: 20em;
+  line-height: 1em;
+  padding: 0.5em;
+  color: var(--bright-color);
+  background-color: var(--third-color);
+  transform: rotate(-45deg);
+  text-align: center;
+}
+
+.work-permit {
+  font-family: var(--main-font-semibold);
+}
+
+/* --- SHOP BAG --- */
+
+.bag-container {
+  position: relative;
+  align-self: flex-end;
+}
+
+#number-one {
+  display: block;
+  position: absolute;
+  top: 1.2em;
+  left: -0.5em;
+  padding: 0 0.4rem;
+  z-index: 2;
+  font-size: 0.7rem;
+  font-family: var(--main-font-semibold);
+  color: var(--bright-color);
+  background-color: var(--third-color);
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* --- TEXT AREA --- */
 
 .about-description {
   width: 60%;
-}
-
-.bag-empty {
-  align-self: flex-end;
-  height: 25px;
-  width: 25px;
 }
 
 .name,
@@ -144,7 +163,23 @@
   width: 15em;
   color: var(--bright-color);
   background-color: var(--dark-color);
+  box-shadow: inset 0 0 0 0 var(--bright-color);
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.btn-add:hover {
+  background-color: grey;
+}
+
+/* .btn-add:hover {
+  box-shadow: inset 20em 0 0 0 var(--bright-color);
+  color: var(--dark-color);
+  border: 1px dashed var(--dark-color);
+}
+
+.btn-add:active {
+  background-color: var(--third-color);
+} */
 
 /* --- SOFT SKILLS --- */
 

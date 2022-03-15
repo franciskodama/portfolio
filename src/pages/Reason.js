@@ -12,8 +12,8 @@ function Reason() {
 
     // ------------------------------------------------------
 
-    const originalMessageBright = 'This.portfolio.has.been.built.to.showcase.my.variety.of.skills.from.creativity.to.design.to.code.'
-    const originalMessageDark = 'Click.on.the.waves.for.an.explanation.of.each.item'
+    const originalMessageBright = 'this.portfolio.has.been.built.to.showcase.my.variety.of.skills.from.creativity.to.code.'
+    const originalMessageDark = 'click.on.the.waves.for.an.explanation.of.each.page'
     const arrOfLettersBright = Array.from(originalMessageBright)
     const arrOfLettersDark = Array.from(originalMessageDark)
 

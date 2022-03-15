@@ -33,6 +33,7 @@
   border: 1px dashed var(--dark-color);
   padding: 0.5em;
   width: 110px;
+  cursor: pointer;
 }
 
 /* --- AVATAR + DESCRIPTION CONTAINER --- */
