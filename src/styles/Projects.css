@@ -1,0 +1,5 @@
+.background {
+  background-color: var(--bright-color);
+  height: 75vh;
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+}

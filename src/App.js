@@ -10,6 +10,7 @@ import Reason from "./pages/Reason";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </Router>
             <Reason /> 
             <About />
+            <Projects />
             <Contact />
             <Footer />
 

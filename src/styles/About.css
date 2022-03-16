@@ -86,6 +86,49 @@
   text-align: center;
 }
 
+.bag-message {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 2.5em;
+  background-color: var(--bright-color);
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.bag-message p {
+  font-size: 0.6rem;
+  font-family: var(--main-font-ligth);
+  text-transform: uppercase;
+}
+
+.bag-message:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid white;
+  border-bottom: 15px solid transparent;
+  bottom: -15;
+  right: 0;
+}
+
+.bag-message:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 17px solid transparent;
+  border-left: 16px solid transparent;
+  border-right: 16px solid rgb(182, 182, 182);
+  border-bottom: 15px solid transparent;
+  bottom: -16px;
+  right: -1px;
+}
+
 /* --- TEXT AREA --- */
 
 .about-description {

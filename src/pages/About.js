@@ -7,9 +7,14 @@ import Avatar from '../components/Avatar'
 function About() {
  
   const [ addMe, setAddMe ] = useState({showMe: false}) 
+  const [ showMessage, setShowMessage ] = useState({show:false})
 
   function handleClick() {
     setAddMe({showMe: true})
+  }
+
+  function handleMouseOver() {
+    setShowMessage(showMessage.show ? {show: false} : {show: true})
   }
 
   return (
@@ -28,9 +33,15 @@ function About() {
               <p>to work in Canada</p>
             </div>
 
-            <div className="bag-container">
+            <div className="bag-container" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver}>
               <img className="bag-empty" src={BagEmpty} alt="Shop bag empty" />
               <p className="number-one" style={{ display: addMe.showMe ? 'block': 'none'}}>1</p>
+            </div>
+
+            <div className="bag-message" style={{ display: showMessage.show ? 'block': 'none'}}>
+              <p>You have one Francis in your shopbag!</p>
+              <p>To confirm, click here to schedule an interview</p>
+              <p>Or click here to take me out of the shopbag.</p>
             </div>
 
             <div className="about-description">
