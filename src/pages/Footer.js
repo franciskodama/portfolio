@@ -15,31 +15,32 @@ function Footer() {
           <h2 className='footer-title'>GET<span>IN TOUCH</span></h2>
           <h2 className='footer-title'>GET<span>CONNECTED</span></h2>
 
-          <p className="aboutme">A Webdeveloper with a huge experience in marketing, a natural leader, curious, who find engagement challenge himself constantly.</p>
+          <p className='aboutme'>A Webdeveloper with a huge experience in marketing, a natural leader, curious, who find engagement challenge himself constantly.</p>
 
           <ul className='menu'>
             <li className='menu-item'>home</li>
             <li className='menu-item'>about</li>
-            <li className='menu-item'>testemunials</li>
+            <a href="#projects"><li className='menu-item'>projects</li></a>
+            <li className='menu-item'>api</li>
             <li className='menu-item'>contact</li>
           </ul>
 
-          <div className="contact">
+          <div className='contact'>
             <p className='email'>fk@fkodama.com</p>
             <p className='send-message'>send message</p>
           </div>
 
-          <div className="icons">
-            <img src={Linkedin} alt="logo Linkedin"/>
-            <img src={Insta} alt="logo Instagram"/>
-            <img src={Face} alt="logo Facebook"/>
+          <div className='icons'>
+            <img src={Linkedin} alt='logo Linkedin'/>
+            <img src={Insta} alt='logo Instagram'/>
+            <img src={Face} alt='logo Facebook'/>
           </div>
 
-          <img src={LogoFooter} alt="logo fkodama" />
+          <img src={LogoFooter} alt='logo fkodama' />
 
-          <div className="design">
+          <div className='design'>
             <p>Designed and built by</p>
-            <p className="bold">Francis Kodama</p>
+            <p className='bold'>Francis Kodama</p>
             <p>Copyright 2022</p>
           </div>
         </div>
@@ -50,7 +51,7 @@ function Footer() {
               <p>Download</p>
               <p className='bold'>Resumé</p>
             </div>
-            <p className="localization">Ottawa, ON - <span className='bold'>Canada</span></p>
+            <p className='localization'>Ottawa, ON - <span className='bold'>Canada</span></p>
           </div>
 
     </section>

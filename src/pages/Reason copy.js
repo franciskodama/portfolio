@@ -90,9 +90,9 @@ export default Reason
 //                 {createGridRed()}
 //             </div>
 
-//             <form action="">
-//                <input type="text" placeholder="type something here..."/>
-//                <button className='btn-cta'type="submit">reload original message</button>
+//             <form action=''>
+//                <input type='text' placeholder='type something here...'/>
+//                <button className='btn-cta'type='submit'>reload original message</button>
 //             </form>
 
 //         </div>      
