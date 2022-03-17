@@ -10,10 +10,10 @@ function Footer() {
   return (
     <section className='section section-footer'>
         <div className='container'>
-          <h2 className='title'>ABOUT<span>ME</span></h2>
-          <h2 className='title'>GET<span>BACK</span></h2>
-          <h2 className='title'>GET<span>IN TOUCH</span></h2>
-          <h2 className='title'>GET<span>CONNECTED</span></h2>
+          <h2 className='footer-title'>ABOUT<span>ME</span></h2>
+          <h2 className='footer-title'>GET<span>BACK</span></h2>
+          <h2 className='footer-title'>GET<span>IN TOUCH</span></h2>
+          <h2 className='footer-title'>GET<span>CONNECTED</span></h2>
 
           <p className="aboutme">A Webdeveloper with a huge experience in marketing, a natural leader, curious, who find engagement challenge himself constantly.</p>
 

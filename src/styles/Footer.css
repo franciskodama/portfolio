@@ -22,7 +22,7 @@
 
 /* ---- GENERAL TYPOGRAPHY ---- */
 
-.title {
+.footer-title {
   font-family: var(--main-font-semibold);
   font-size: 1rem;
   margin-top: 5em;

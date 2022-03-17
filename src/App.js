@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
+import Api from "./pages/Api";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Reason /> 
             <About />
             <Projects />
+            <Api />
             <Contact />
             <Footer />
 

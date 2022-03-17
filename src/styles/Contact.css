@@ -8,12 +8,6 @@
   width: 60%;
 }
 
-.contact-title {
-  margin-top: 5em;
-  font-family: var(--main-font-regular);
-  font-size: 1.5rem;
-}
-
 .chunk-container {
   margin-top: 3em;
   display: flex;
