@@ -1,7 +1,7 @@
 .section-api {
+  position: relative;
   background-color: var(--bright-color);
   height: 75vh;
-  position: relative;
 }
 
 .title-api {

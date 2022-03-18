@@ -3,10 +3,19 @@
   position: relative;
   z-index: 10;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  margin-top: 20em;
   margin-bottom: -10vw;
-  height: 800px;
+  height: 1200px;
 }
 
 .section-projects h2 {
-  color: aliceblue;
+  margin-bottom: 3em;
+}
+
+.projects-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  /* border: 1px solid red; */
 }

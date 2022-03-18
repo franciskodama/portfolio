@@ -1,3 +1,78 @@
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px orange solid; */
+}
+
+/* ----- IMAGE ----- */
+
+.card-image {
+  width: 270;
+}
+
+/* ----- CATEGORY ----- */
+
+.card-category {
+  font-size: 1rem;
+  position: absolute;
+  top: 2em;
+  right: -4.7em;
+  transform: rotateZ(90deg);
+  color: white;
+}
+
+/* ----- TITLES ----- */
+
+.title-wraper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px yellow solid; */
+}
+
+.card-title,
+.card-tech {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-family: var(--main-font-semibold);
+  padding: 0.1em 0.7em;
+}
+
 .card-title {
-  color: aliceblue;
+  position: absolute;
+  top: -1.7em;
+  background: var(--third-color);
+  margin-left: 0.3em;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+}
+
+.card-tech {
+  color: var(--dark-color);
+  background: var(--bright-color);
+  margin-left: 0.8em;
+}
+
+/* ----- EXPLORE ----- */
+
+.explore-wraper {
+  display: flex;
+  align-self: flex-end;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.card-explore {
+  font-family: var(--main-font-regular);
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--bright-color);
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid var(--bright-color);
+}
+
+.card-icon {
+  padding-bottom: 0.3em;
+  padding-left: 0.5em;
 }
