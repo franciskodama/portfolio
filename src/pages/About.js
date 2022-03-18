@@ -21,7 +21,7 @@ function About() {
 
   return (
     
-    <section className='section section-about'>
+    <section className='section section-about' id='about'>
         <div className='container'>
           <div className='first-main-container'>
             <Avatar />

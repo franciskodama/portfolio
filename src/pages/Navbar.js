@@ -1,21 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-scroll'
 import '../styles/Navbar.css'
 import '../App.css'
 import Logo from '../assets/logo-fkodama.svg'
 
+
 const  Navbar = () => {
+    
   return (    
     <header className='section section-header'>
       <div className='container'>
-          <Link to='/'><img className='logo' src={Logo} /></Link>
+          <Link to='hero' spy={true} smooth={true} offset={50} duration={500}><img className='logo' src={Logo} /></Link>
           <nav className='navbar'>
-              <Link className='nav-item' to='/'> home </Link>  
-              <Link className='nav-item' to='/reason'> reason </Link>
-              <Link className='nav-item' to='/about'> about </Link>  
-              <Link className='nav-item' to='/projects'> projects </Link>  
-              <Link className='nav-item' to='/api'> api </Link>
-              <Link className='nav-item' to='/contact'> contact </Link>  
+              <Link className='nav-item' to='hero' spy={true} smooth={true} offset={50} duration={500}> home </Link>  
+              <Link className='nav-item' to='about' spy={true} smooth={true} offset={-50} duration={500}> about </Link>  
+              <Link className='nav-item' to='projects' spy={true} smooth={true} offset={-50} duration={500}> projects </Link>  
+              <Link className='nav-item' to='api' spy={true} smooth={true} offset={-150} duration={500}> api </Link>
+              <Link className='nav-item' to='contact' spy={true} smooth={true} offset={-50} duration={500}> contact </Link>  
           </nav>
       </div>
     </header>

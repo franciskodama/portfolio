@@ -20,7 +20,7 @@ function Footer() {
           <ul className='menu'>
             <li className='menu-item'>home</li>
             <li className='menu-item'>about</li>
-            <a href="#projects"><li className='menu-item'>projects</li></a>
+            <a><li className='menu-item'>projects</li></a>
             <li className='menu-item'>api</li>
             <li className='menu-item'>contact</li>
           </ul>

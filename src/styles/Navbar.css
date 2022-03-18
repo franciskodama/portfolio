@@ -12,6 +12,7 @@
 .logo {
   padding: 1.7em 0;
   width: 120px;
+  cursor: pointer;
 }
 
 .navbar {
@@ -27,4 +28,10 @@
   color: var(--bright-color);
   padding-left: 2.5em;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: var(--third-color);
+  transition: color 0.5s ease;
 }

@@ -4,7 +4,7 @@ import SunCloudRain from '../assets/images/sun-cloud-little-rain.png'
 
 function Api() {
   return (
-    <section className='section section-api'>
+    <section className='section section-api' id='api'>
             <img className='weather-img' src={SunCloudRain} alt='weather condition' />
         <div className='inner-section'>
         <div className='container'>

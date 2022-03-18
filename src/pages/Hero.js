@@ -5,7 +5,7 @@ import '../App.css'
 
 const Hero = () => {
     return (
-        <section className='section section-hero'>
+        <section className='section section-hero' id='hero'>
             <div className='container'>
                 <div className='hero-info'>
                     <p>Hi, I'm Francis Kodama.</p>

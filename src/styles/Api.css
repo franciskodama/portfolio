@@ -1,26 +1,7 @@
 .section-api {
   background-color: var(--bright-color);
   height: 75vh;
-  /* clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%); */
   position: relative;
-}
-
-.section-api::before,
-.section-api::after {
-  content: "";
-  width: 100%;
-  height: 18em;
-  position: absolute;
-  background-color: var(--dark-color);
-  transform: skewY(-10deg);
-}
-
-.section-api::before {
-  top: -9em;
-}
-
-.section-api::after {
-  bottom: -9em;
 }
 
 .title-api {
@@ -35,5 +16,11 @@
   position: absolute;
   right: 0;
   top: -15em;
-  z-index: 5;
+  z-index: 15;
 }
+/* 
+.section-api {
+  background-color: indigo;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  height: 800px;
+} */
