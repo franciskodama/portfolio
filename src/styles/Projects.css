@@ -8,13 +8,9 @@
   background-color: var(--dark-color);
 }
 
-.section-projects h2 {
-  /* margin-bottom: 0; */
-}
-
 .projects-inner-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
   width: 100%;
 }

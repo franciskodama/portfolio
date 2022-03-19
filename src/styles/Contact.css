@@ -1,11 +1,8 @@
 .section-contact {
-  height: 650px;
-  margin-top: 15em;
-  margin-bottom: 13em;
   position: relative;
 }
 
-.section-contact:before {
+/* .section-contact:before {
   position: absolute;
   content: "";
   clip-path: polygon(100% 0, 100% calc(100% - 10vw), 100% 100%, 0 100%);
@@ -13,7 +10,7 @@
   height: 300px;
   background: var(--dark-color);
   top: -32.4vh;
-}
+} */
 
 .section-contact .container {
   width: 60%;

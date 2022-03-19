@@ -1,61 +1,162 @@
 .card-container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 10em;
-  margin-top: 7em;
+  margin: 4em 0 3em 3em;
+  width: 270px;
+  text-align: left;
 }
 
-/* ----- IMAGE ----- */
+.card-container:first-child {
+  margin-left: 0;
+}
 
-.card-image {
-  width: 270px;
-  box-shadow: -15px 15px 15px rgb(0, 0, 0, 1);
+/* ----------------------- */
+/* ----- ACTIVE CARD ----- */
+/* ----------------------- */
+
+.card-container--active {
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.card-container--active .card-image {
+  display: block;
+  width: 500px;
+  height: 350px;
+}
+
+.card-container--active .card-icon,
+.card-container--active .card-description,
+.card-container--active:first-child .explore-wraper {
+  display: none;
+}
+
+.card-container--active .card-box {
+  border: none;
+  box-shadow: none;
+  padding-left: 0;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.card-container--active .card-box:hover {
+  display: none;
+}
+
+.card-container--active .title-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 450px;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.card-container--active .card-title,
+.card-container--active .card-tech {
+  font-family: var(--main-font-regular);
+  font-size: 1.3rem;
+}
+
+.card-container--active .card-text {
+  display: block;
+  font-family: var(--main-font-thin);
+  font-size: 1rem;
+  color: var(--dark-color);
+}
+
+.card-container--active .card-category {
+  color: var(--third-color);
+  font-family: var(--main-font-regular);
+}
+
+.card-container--active .card-title {
+  padding: 0.5rem 2rem 0.5rem 0;
+  background-color: none;
+  color: var(--dark-color);
+}
+
+/* .card-container--active .card-title {
+  color: var(--dark-color);
+  background: var(--bright-color);
+  font-family: var(--main-font-semibold);
+  padding: 0.5rem 2rem;
+} */
+
+/* ----- ELEMENTS NOT ACTIVED ----- */
+
+.card-image,
+.card-text {
+  display: none;
 }
 
 /* ----- CATEGORY ----- */
 
 .card-category {
   font-size: 1rem;
-  position: absolute;
-  top: 2em;
-  right: -3rem;
-  transform: rotateZ(90deg);
-  color: white;
+  font-family: var(--main-font-light);
+  padding-bottom: 0.3em;
+}
+
+/* ----- ICON ----- */
+
+.card-icon {
+  width: 32px;
+  margin-top: 1em;
 }
 
 /* ----- TITLES ----- */
 
-.title-wraper {
-  position: absolute;
-  top: 16em;
-  display: flex;
-  flex-direction: column;
+.card-box {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  border: 1px solid var(--bright-color);
+  background: var(--dark-color);
+  padding-left: 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
+    var(--dark-color) -10px 10px 0px -1px, var(--bright-color) -10px 10px;
 }
 
-.card-title,
-.card-tech {
-  text-align: center;
-  min-width: 230px;
-  display: inline-block;
-  align-self: flex-start;
-  font-size: 1.5rem;
-  font-family: var(--main-font-semibold);
-  padding: 0.1em 0.7em;
+.card-box:hover {
+  transform: translate(-10px, 10px);
+  box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
+    var(--dark-color) 0px 0px 0px -1px, var(--bright-color) 0px 0px;
+  background: var(--bright-color);
+  color: var(--dark-color);
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 77%;
+  justify-content: center;
 }
 
 .card-title {
-  position: absolute;
-  top: -1.7em;
-  background: var(--third-color);
-  margin-left: 0.3em;
-  box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.3);
+  font-family: var(--main-font-heavy);
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  padding-bottom: 0.1em;
 }
 
 .card-tech {
-  color: var(--dark-color);
-  background: var(--bright-color);
-  margin-left: 0.8em;
+  font-family: var(--main-font-semibold);
+  font-size: 1.3rem;
+  color: var(--third-color);
+}
+
+/* ----- DESCRIPTION ----- */
+
+.card-description {
+  font-family: var(--main-font-thin);
+  font-size: 1rem;
+  margin-top: 1.5em;
 }
 
 /* ----- EXPLORE ----- */
@@ -63,7 +164,7 @@
 .explore-wraper {
   display: flex;
   align-self: flex-end;
-  margin-top: 3em;
+  margin-top: 1.5em;
   cursor: pointer;
 }
 
@@ -76,7 +177,7 @@
   border-bottom: 1px solid var(--bright-color);
 }
 
-.card-icon {
+.card-icon-visit {
   padding-bottom: 0.3em;
   padding-left: 0.5em;
 }

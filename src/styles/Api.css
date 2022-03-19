@@ -1,14 +1,19 @@
-.section-api {
+.section-api-external {
   position: relative;
+}
+
+.section-api {
   background-color: var(--bright-color);
-  height: 75vh;
+  color: var(--dark-color);
+  padding: 14rem 0;
+  width: 100%;
+
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
 }
 
 .title-api {
-  padding-top: 15em;
   font-family: var(--main-font-semibold);
   font-size: 1.5rem;
-  color: var(--dark-color);
 }
 
 .weather-img {
@@ -18,9 +23,3 @@
   top: -15em;
   z-index: 15;
 }
-/* 
-.section-api {
-  background-color: indigo;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  height: 800px;
-} */
