@@ -2,34 +2,49 @@
  import { useState } from 'react'
  import '../styles/Projects.css'
  import Card from '../components/Card'
- import Pacman from '../assets/images/card-squared-pacman-blue.jpg'
 
  const Projects = () => {
   const [ projects, setProjects ] = useState(
     [
       { 
         id: 1,
+        title: 'this.portfolio',
+        tech: '... + react',
+        category: 'website',
+        url: 'https://www.fkodama.com',
+        image: require('../assets/images/card-squared-this.jpg')
+      },
+      {    
+        id: 2,
         title: 'pac man',
         tech: 'html css js',
         category: 'video game',
         url: 'https://fkodama.com/pacman/',
-        image: 'https://www.fkodama.com/_transfer/card-squared-pacman-purple.jpg',
+        image: require('../assets/images/card-squared-pacman2.jpg')
       },
       { 
-        id: 2,
+        id: 3,
         title: 'space invaders',
         tech: 'html css js',
         category: 'video game',
         url: 'https://fkodama.com/spaceinvaders/',
-        image: 'https://www.fkodama.com/_transfer/card-squared-pacman-red.jpg',
+        image: require('../assets/images/card-squared-space.jpg'),
       },
       { 
-        id: 3,
+        id: 4,
         title: 'seletos',
         tech: 'html css js',
         category: 'website',
         url: 'https://fkodama.com/_dev/seletos',
-        image: 'https://www.fkodama.com/_transfer/card-squared-pacman-blue.jpg'
+        image: require('../assets/images/card-squared-seletos.jpg')
+      },
+      { 
+        id: 5,
+        title: 'mundial',
+        tech: 'html css',
+        category: 'website',
+        url: 'https://www.mundialcomunicacao.com.br/',
+        image: require('../assets/images/card-squared-mundial.jpg')
       }    
     ] 
   )

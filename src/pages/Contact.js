@@ -10,6 +10,7 @@ function Contact() {
           <h1 className='title'>message generator</h1>
           <p>Choose a chunk of text and drag to the message box.</p>
           <ul className='chunk-container'>
+            <li className='chunk'>I hope this message finds you well.</li>
             <li className='chunk'>Cool website, man!</li>
             <li className='chunk highlight'>do you want to work in our company?</li>
             <li className='chunk'>ops, I found a bug.</li>
