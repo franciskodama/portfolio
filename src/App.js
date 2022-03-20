@@ -13,6 +13,7 @@ import Footer from './pages/Footer';
 import Projects from './pages/Projects';
 // import ErrorPage from './pages/ErrorPage';
 import Api from './pages/Api';
+import CleanCode from './pages/CleanCode';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <About />
         <Projects />
         <Api />
+        <CleanCode />
         <Contact />
         <Footer />
     </div>

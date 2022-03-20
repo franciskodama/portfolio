@@ -8,8 +8,12 @@ const Hero = () => {
         <section className='section section-hero' id='hero'>
             <div className='container'>
                 <div className='hero-info'>
-                    <p>Hi, I'm Francis Kodama.</p>
-                    <h1 className='hightlight'>Front-end developer </h1>
+                    {/* <div class="typing-effect"> */}
+                        <p>Hi, I'm Francis Kodama.</p>
+                    {/* </div> */}
+                    <div class="typing-effect">
+                        <h1 className='hightlight'>Front-end developer </h1>
+                    </div>
                     <h2 className='highlight-special'>html, css, js, React,</h2>
                     <h2 className='hightlight' >GIT, npm, FIGMA.</h2>
                     <p>Based in Ottawa, ON - Canada.</p>

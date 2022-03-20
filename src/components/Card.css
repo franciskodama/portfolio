@@ -28,21 +28,17 @@
 }
 
 .card-container--active .card-icon,
-.card-container--active .card-description,
-.card-container--active:first-child .explore-wraper {
+.card-container--active .card-description {
   display: none;
 }
 
 .card-container--active .card-box {
+  pointer-events: none;
   border: none;
   box-shadow: none;
   padding-left: 0;
   height: auto;
   background-color: rgb(255, 255, 255);
-}
-
-.card-container--active .card-box:hover {
-  display: none;
 }
 
 .card-container--active .title-wrapper {
@@ -85,6 +81,28 @@
   font-family: var(--main-font-semibold);
   padding: 0.5rem 2rem;
 } */
+
+.card-container--active .explore-wraper {
+  display: flex;
+  align-self: flex-end;
+  margin-top: 1.5em;
+  cursor: pointer;
+}
+
+.card-container--active .card-explore {
+  font-family: var(--main-font-regular);
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--dark-color);
+  padding-bottom: 0.2em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.card-container--active .card-icon-visit {
+  padding-bottom: 0.3em;
+  padding-left: 0.5em;
+}
 
 /* ----- ELEMENTS NOT ACTIVED ----- */
 
@@ -149,6 +167,7 @@
   font-family: var(--main-font-semibold);
   font-size: 1.3rem;
   color: var(--third-color);
+  text-transform: uppercase;
 }
 
 /* ----- DESCRIPTION ----- */
@@ -162,22 +181,5 @@
 /* ----- EXPLORE ----- */
 
 .explore-wraper {
-  display: flex;
-  align-self: flex-end;
-  margin-top: 1.5em;
-  cursor: pointer;
-}
-
-.card-explore {
-  font-family: var(--main-font-regular);
-  font-size: 1.125rem;
-  text-decoration: none;
-  color: var(--bright-color);
-  padding-bottom: 0.2em;
-  border-bottom: 1px solid var(--bright-color);
-}
-
-.card-icon-visit {
-  padding-bottom: 0.3em;
-  padding-left: 0.5em;
+  display: none;
 }

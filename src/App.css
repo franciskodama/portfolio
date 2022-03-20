@@ -78,9 +78,7 @@ a:active {
 
 h1,
 h2,
-h3,
-button,
-.send-message {
+button {
   text-transform: uppercase;
 }
 
