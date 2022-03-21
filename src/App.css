@@ -37,7 +37,7 @@ Fonts:
   --second-font: "Hubballi", cursive;
 
   --dark-color: #1c1c1c;
-  --bright-color: white;
+  --bright-color: #f6f6f6;
   --third-color: #ed1c24;
   --transparent: hsla(0, 0%, 0%, 0);
   --gradient: linear-gradient(180deg, #1c1c1c, #393939);

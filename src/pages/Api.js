@@ -9,19 +9,14 @@ function Api() {
   const [ data, setData ] = useState({})
   const [ location, setLocation ] = useState('')
 
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=aeb29e2e41400b27c2f8bbdbf478ac97`
   // const urlGetCity = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&&appid=aeb29e2e41400b27c2f8bbdbf478ac97`
-  const urlGetCity = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&&appid=aeb29e2e41400b27c2f8bbdbf478ac97`
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
-      Axios.get(urlGetCity).then((response) => {
-        const lat = response.data[0].lat
-        const lon = response.data[0].lon
-        const urlWithLatLon = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=aeb29e2e41400b27c2f8bbdbf478ac97&units=metric`
-        Axios.get(urlWithLatLon).then((response) => {
-          setData(response.data)
-        })
-      }) 
+      Axios.get(url).then((response) => {
+        setData(response.data)
+      })
       setLocation('')
     }
   }
