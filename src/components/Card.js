@@ -6,7 +6,6 @@ function Card({ project }) {
 
  const handleClick = e => {
    e.target.closest('.card-container').classList.add('card-container--active')
-  console.log(e.target)
  }
 
   return (

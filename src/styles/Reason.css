@@ -16,11 +16,6 @@
   margin-right: 1em;
 }
 
-::placeholder {
-  padding-left: 2em;
-  color: rgb(191, 189, 189);
-}
-
 /* ----- GRID ----- */
 
 .grid {

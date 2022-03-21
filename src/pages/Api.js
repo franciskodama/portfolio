@@ -9,8 +9,7 @@ function Api() {
   const [ data, setData ] = useState({})
   const [ location, setLocation ] = useState('')
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=aeb29e2e41400b27c2f8bbdbf478ac97`
-  // const urlGetCity = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&&appid=aeb29e2e41400b27c2f8bbdbf478ac97`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=aeb29e2e41400b27c2f8bbdbf478ac97&units=metric`
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -25,29 +24,78 @@ function Api() {
     <div className='section-api-external'>
       <img className='weather-img' src={SunCloudRain} alt='weather condition' />
       <section className='section section-api' id='api'>
-        <img className='weather-img' src={SunCloudRain} alt='weather condition' />
-        <div className='inner-section'>
           <div className='container'>
-            <h1 className='title-api'>API</h1>
 
-              <input
-                value={location}
-                onChange={event => setLocation(event.target.value)}
-                onKeyPress={searchLocation}
-                placeholder='Enter location'
-              type='text' />
+            <div className="api--grid">
 
-              <p>{data.name}</p>
+              <div className="question-wrapper">              
+                <h2 className="api--question">What city are you in?</h2>
+                <input value={location} onChange={event => setLocation(event.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text' />
+              </div>
 
-              <div>Temperature: {data.main ? <p>{data.main.temp}</p> : null}</div>
-              <div>Feels like: {data.main ? <p>{data.main.feels_like}</p> : null}</div>
+              <h4 className="api--title-city">Weather in</h4>
+              <h3 className="api--city">{data.name}</h3>
+              {/* <h3 className="api--city">{data.cod}</h3>           */}
+              
+              <h4 className="api--log">Longitude {data.coord ? <p>{data.coord.lon}</p> : null}</h4>
+              <h4 className="api--lat">Latitude {data.coord ? <p>{data.coord.lat}</p> : null}</h4>
 
-              <div>Weather: {data.weather ? <p>{data.weather[0].main}</p> : null}</div>
+              <h3 className='api--description'>{data.weather ? <p>{data.weather[0].description}</p> : null}</h3>
 
-              <div>Wind: {data.wind ? <p>{data.wind.speed}</p> : null}</div>
-          
+              <div className="feels-wrapper">
+                <h4 className="api--title-others">Feels like</h4>
+                <h3>{data.main ? <p>{data.main.feels_like}</p> : null}</h3>
+                <h5 className="api--unit">Celsius</h5>
+              </div>
+
+              <div className="temp-wrapper">
+                <h4 className="api--title-temp">Current weather</h4>
+                <h3>{data.main ? <p>{data.main.temp}</p> : null}</h3>
+              </div>
+
+              <div className="wind-wrapper">
+                <h4 className="api--title-others">Wind</h4>
+                <h3>{data.wind ? <p>{data.wind.speed}</p> : null}</h3>
+                <h5 className="api--unit">km/h</h5>
+              </div>
+
+              <div className="pressure-wrapper">
+                <h4 className="api--title-others">Pressure</h4>
+                <h3>{data.main ? <p>{data.main.pressure}</p> : null}</h3>
+                <h5 className="api--unit">kPa</h5>
+              </div>
+
+              <div className="humidity-wrapper">
+                <h4 className="api--title-others">Humidity</h4>
+                <h3>{data.main ? <p>{data.main.humidity}</p> : null}</h3>
+                <h5 className="api--unit">%</h5>
+              </div>
+
+              <div className="visibility-wrapper">
+                <h4 className="api--title-others">Visibility</h4>
+                <h3>{data.visibility}</h3>
+                <h5 className="api--unit">km</h5>
+              </div>
+
+              <div className="sunrise-wrapper">
+                <h4 className="api--title-others">Sunrise</h4>
+                <h3>{data.sys ? <p>{data.sys.sunrise}</p> : null}</h3>
+                <h5 className="api--unit">a.m.</h5>
+              </div>
+
+              <div className="sunset-wrapper">
+                <h4 className="api--title-others">Sunset</h4>
+                <h3>{data.sys ? <p>{data.sys.sunset}</p> : null}</h3>
+                <h5 className="api--unit">p.m.</h5>
+              </div>
+
+              <div className="updated-wrapper">
+                <h4 className="api--title-others">Updated on</h4>
+                <h3 className='api--date'>Sunday, 1:00 p.m.</h3>
+              </div>
+
+            </div>
           </div>
-        </div>
     </section> 
   </div>
   )

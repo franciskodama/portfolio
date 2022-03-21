@@ -89,6 +89,12 @@ button {
   text-transform: uppercase;
 }
 
+::placeholder {
+  font-family: var(--main-font-light);
+  padding-left: 1em;
+  color: rgb(191, 189, 189);
+}
+
 /* ====================================
             LAYOUT
     ======================================= */
@@ -101,7 +107,7 @@ button {
 }
 
 .container {
-  max-width: 90em;
+  max-width: 70em;
   margin: 0 auto;
 }
 
