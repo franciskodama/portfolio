@@ -19,6 +19,8 @@
   background-color: rgb(255, 255, 255);
   padding: 1em;
   border: 1px solid rgb(255, 255, 255, 0.3);
+  box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
+    var(--dark-color) -10px 10px 0px -1px, var(--bright-color) -10px 10px;
 }
 
 .card-container--active .card-image {
@@ -80,7 +82,12 @@
   background: var(--bright-color);
   font-family: var(--main-font-semibold);
   padding: 0.5rem 2rem;
+
 } */
+
+.card-container--active:first-child .explore-wraper {
+  display: none;
+}
 
 .card-container--active .explore-wraper {
   display: flex;

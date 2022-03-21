@@ -1,18 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Axios from 'axios'
+
 import '../styles/Api.css'
 import SunCloudRain from '../assets/images/sun-cloud-little-rain.png' 
 
 function Api() {
+
+  const [ data, setData ] = useState({})
+  const [ location, setLocation ] = useState('')
+
+  // const urlGetCity = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&&appid=aeb29e2e41400b27c2f8bbdbf478ac97`
+  const urlGetCity = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&&appid=aeb29e2e41400b27c2f8bbdbf478ac97`
+
+  const searchLocation = (event) => {
+    if (event.key === 'Enter') {
+      Axios.get(urlGetCity).then((response) => {
+        const lat = response.data[0].lat
+        const lon = response.data[0].lon
+        const urlWithLatLon = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=aeb29e2e41400b27c2f8bbdbf478ac97&units=metric`
+        Axios.get(urlWithLatLon).then((response) => {
+          setData(response.data)
+        })
+      }) 
+      setLocation('')
+    }
+  }
+
   return (
-    <div className="section-api-external">
+    <div className='section-api-external'>
       <img className='weather-img' src={SunCloudRain} alt='weather condition' />
       <section className='section section-api' id='api'>
         <img className='weather-img' src={SunCloudRain} alt='weather condition' />
         <div className='inner-section'>
           <div className='container'>
             <h1 className='title-api'>API</h1>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+              <input
+                value={location}
+                onChange={event => setLocation(event.target.value)}
+                onKeyPress={searchLocation}
+                placeholder='Enter location'
+              type='text' />
+
+              <p>{data.name}</p>
+
+              <div>Temperature: {data.main ? <p>{data.main.temp}</p> : null}</div>
+              <div>Feels like: {data.main ? <p>{data.main.feels_like}</p> : null}</div>
+
+              <div>Weather: {data.weather ? <p>{data.weather[0].main}</p> : null}</div>
+
+              <div>Wind: {data.wind ? <p>{data.wind.speed}</p> : null}</div>
+          
           </div>
         </div>
     </section> 
