@@ -17,7 +17,7 @@ function Card({ project }) {
 
     <div onClick={handleClickToOpen} className='card-container'>
       <p className='card-category'>{project.category}</p>
-      <img src="" alt="Close button" />
+      {/* <img src="" alt="Close button" /> */}
       <img className='card-image' src={project.image} alt='main image project'/>
       <div className="card-box">
         <img className='card-icon' src={project.icon} alt='icon project'/>

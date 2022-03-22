@@ -1,67 +1,67 @@
-.out-container {
+.outter-container {
   margin: 0 auto;
-  width: 70%;
-  border: 1px solid magenta;
+  width: 100%;
 }
 
-/* --- AVATAR CONTAINER --- */
+/* ------------- GRID ------------- */
 
 .inner-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 9em 0;
-  border: 1px solid yellow;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 62px 1em 412px 1fr;
+  grid-template-rows: 5em auto auto 2em 8em 5em;
 }
 
-/* --- ICONS CONTAINER --- */
+/* ------- ICONS CONTAINER ------ */
 
 .icons-wrapper {
+  grid-column: 2/3;
+  grid-row: 3/4;
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 0.5em;
+  width: 62px;
 }
 
 .icons-title {
+  grid-column: 2/3;
+  grid-row: 2/3;
   font-size: 0.7rem;
   font-family: var(--main-font-light);
-  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
 
 .avatar-icon {
   border: 1px dashed var(--dark-color);
   padding: 0.5em;
-  width: 110px;
   cursor: pointer;
 }
 
-/* --- AVATAR + DESCRIPTION CONTAINER --- */
-
-.avatar-description-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 2em;
-  border: 1px solid orange;
-  /* height: 5.25rem;
-  width: 20rem; */
-}
+/* ---------- AVATAR ----------- */
 
 .avatar-image {
-  width: 390px;
-  height: 390px;
-  z-index: 1;
+  grid-row: 3/4;
+  grid-column: 4/5;
+  width: 412px;
+  height: 412px;
 }
 
+/* ------ SKILLS TXT ---------- */
+
 .skills-wrapper {
-  margin: 2em;
+  grid-column: 4/5;
+  grid-row: 5/6;
   max-width: 9 0%;
-  border: 1px solid blue;
 }
 
 .skills-title {
+  grid-column: 4/5;
+  grid-row: 2/3;
   font-family: var(--main-font-semibold);
   font-size: 0.9rem;
-  border: 1px solid red;
+  margin-bottom: 0.5em;
 }
 
 .skills-description {
