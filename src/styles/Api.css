@@ -22,7 +22,7 @@
 
 .api--grid {
   display: grid;
-  grid-template-rows: repeat(7, auto);
+  grid-template-rows: repeat(9, auto);
   grid-template-columns: repeat(8, 1fr);
   width: 80%;
   margin: 0 auto;
@@ -116,7 +116,6 @@
 
 .temp-wrapper,
 .feels-wrapper,
-.updated-wrapper,
 .wind-wrapper,
 .pressure-wrapper,
 .humidity-wrapper,
@@ -174,14 +173,15 @@
 /* ---- UPDATED SECTION ---- */
 
 .api--date {
-  font-family: var(--main-font-regular);
+  font-family: var(--main-font-light);
   font-size: 0.8rem;
 }
 
 .updated-wrapper {
-  grid-column: 7/9;
-  grid-row: 7/8;
-  margin: 5em 0;
+  text-align: left;
+  grid-column: 1/3;
+  grid-row: 8/9;
+  margin-top: 5em;
 }
 
 .api--title-city,

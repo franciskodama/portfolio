@@ -111,6 +111,10 @@ button {
   margin: 0 auto;
 }
 
+.red {
+  color: var(--third-color);
+}
+
 /* --- INPUTS --- */
 
 /* ====================================

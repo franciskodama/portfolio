@@ -1,9 +1,46 @@
 .section-code {
   display: flex;
-  height: 80vh;
+  height: auto;
   align-items: center;
   justify-content: center;
   background: var(--dark-color);
-  padding: 0 10px;
   cursor: url(../assets/images/code-pointer.png), auto;
+}
+
+.quote--wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 55em;
+  text-align: center;
+}
+
+.code--quote,
+.code--robert {
+  font-family: var(--main-font-semibold);
+  text-transform: none;
+  line-height: 4.5rem;
+}
+
+.code--quote {
+  font-size: 4rem;
+}
+
+.code--robert {
+  font-size: 2rem;
+  margin-top: 1em;
+  line-height: 3rem;
+}
+
+.code--author {
+  font-family: var(--main-font-ligth);
+}
+
+.flying--words {
+  text-align: center;
+  font-size: 4em;
+  font-family: var(--main-font-semibold);
+}
+
+.flying--words:last-child {
+  margin-bottom: 5em;
 }
