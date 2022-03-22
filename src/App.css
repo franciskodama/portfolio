@@ -89,6 +89,7 @@ button {
   text-transform: uppercase;
 }
 
+input,
 ::placeholder {
   font-family: var(--main-font-light);
   padding-left: 1em;
@@ -107,7 +108,7 @@ button {
 }
 
 .container {
-  max-width: 75em;
+  max-width: 85em;
   margin: 0 auto;
 }
 

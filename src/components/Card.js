@@ -4,14 +4,20 @@ import CardIcon from '../assets/images/card-icon.svg'
 
 function Card({ project }) {
 
- const handleClick = e => {
-   e.target.closest('.card-container').classList.add('card-container--active')
+ const handleClickToOpen = event => {
+   event.target.closest('.card-container').classList.add('card-container--active')
  }
+
+ const handleClickToClose = event => {
+  event.target('.card-container').classList.remove('card-container--active')
+ }
+
 
   return (
 
-    <div onClick={handleClick} className='card-container'>
+    <div onClick={handleClickToOpen} className='card-container'>
       <p className='card-category'>{project.category}</p>
+      <img src="" alt="Close button" />
       <img className='card-image' src={project.image} alt='main image project'/>
       <div className="card-box">
         <img className='card-icon' src={project.icon} alt='icon project'/>

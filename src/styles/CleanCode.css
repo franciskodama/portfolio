@@ -12,6 +12,7 @@
   flex-direction: column;
   width: 55em;
   text-align: center;
+  margin: 10em 0;
 }
 
 .code--quote,
@@ -37,8 +38,9 @@
 
 .flying--words {
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   font-family: var(--main-font-semibold);
+  text-transform: uppercase;
 }
 
 .flying--words:last-child {

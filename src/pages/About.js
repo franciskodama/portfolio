@@ -5,9 +5,8 @@ import Button from '../components/Button'
 import BagEmpty from '../assets/images/bag.svg'
 import Avatar from '../components/Avatar'
 
-function About() {
-  // let navigate = useNavigate()
- 
+const About = () => {
+
   const [ addMe, setAddMe ] = useState({showMe: false}) 
   const [ showMessage, setShowMessage ] = useState({show:false})
 
@@ -25,7 +24,6 @@ function About() {
         <div className='container'>
           <div className='first-main-container'>
             <Avatar />
-            <div className='square'></div>
           </div>
 
           <div className='second-main-container'>

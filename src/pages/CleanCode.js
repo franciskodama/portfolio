@@ -22,8 +22,6 @@ const CleanCode = () => {
           <div className="flying--words">consistent</div>
           <div className="flying--words">uncomplicate</div>
 
-          {/* <span className='red'>―</span> */}
-        
         </div>
     </section>
 

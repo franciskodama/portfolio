@@ -11,7 +11,10 @@
 .projects-inner-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
-  /* border: 1px solid orange; */
+}
+
+.section-projects .title {
+  text-align: center;
 }

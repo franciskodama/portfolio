@@ -1,9 +1,7 @@
 .out-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
   width: 70%;
+  border: 1px solid magenta;
 }
 
 /* --- AVATAR CONTAINER --- */
@@ -12,11 +10,12 @@
   display: flex;
   justify-content: space-between;
   margin: 9em 0;
+  border: 1px solid yellow;
 }
 
 /* --- ICONS CONTAINER --- */
 
-.icons-container {
+.icons-wrapper {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -42,20 +41,27 @@
   display: flex;
   flex-direction: column;
   margin-left: 2em;
+  border: 1px solid orange;
+  /* height: 5.25rem;
+  width: 20rem; */
 }
 
 .avatar-image {
+  width: 390px;
+  height: 390px;
   z-index: 1;
 }
 
-.skills-container {
+.skills-wrapper {
   margin: 2em;
   max-width: 9 0%;
+  border: 1px solid blue;
 }
 
 .skills-title {
   font-family: var(--main-font-semibold);
   font-size: 0.9rem;
+  border: 1px solid red;
 }
 
 .skills-description {

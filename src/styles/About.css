@@ -16,18 +16,10 @@
 .first-main-container {
   position: relative;
   width: 50%;
+  background-color: hsla(0, 0%, 0%, 0.05);
 }
 
 /* --- BG GREY --- */
-
-.square {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: hsla(0, 0%, 0%, 0.05);
-}
 
 /*--------------------------
 ------ INFO CONTAINER ------
@@ -39,7 +31,7 @@
   flex-direction: column;
   width: 50%;
   justify-content: center;
-  max-width: 35em;
+  max-width: 36em;
   padding-left: 4em;
   overflow: hidden;
 }

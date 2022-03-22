@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 
 import '../styles/Api.css'
@@ -9,16 +9,39 @@ function Api() {
   const [ data, setData ] = useState({})
   const [ location, setLocation ] = useState('')
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=aeb29e2e41400b27c2f8bbdbf478ac97&units=metric`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric`
+  // const urlGetCountry = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=56fa81e49104e23170bab6e9546dbc2e`
+
+  // useEffect(() => {
+  //   setLocation('ottawa')
+  //   Axios.get(url).then((response) => {
+  //     setData(response.data)
+  //   })
+  // }, [])
+
+
+  // const initiatePage = () => {
+  //     Axios.get('https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=aeb29e2e41400b27c2f8bbdbf478ac97&units=metric').then((response) => {
+  //       setData(response.data)
+  //     })
+  //     document.getElementById('myInput').value = ''
+  //   console.log('hey')
+  // }  
+
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
       Axios.get(url).then((response) => {
         setData(response.data)
       })
-      setLocation('')
     }
   }
+
+// Axios.get(urlGetCountry).then((response) => {
+//   return console.log(response.data[3])
+// })
+
+
 
   return (
     <div className='section-api-external'>
@@ -31,7 +54,7 @@ function Api() {
               <div className="question-wrapper">              
                 <h2 className="api--question">What city</h2>
                 <h2 className="api--question">are you in?</h2>
-                <input value={location} onChange={event => setLocation(event.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text' />
+                <input id='myInput' value={location} onChange={event => setLocation(event.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text' />
               </div>
 
               <h4 className="api--title-city">Weather in</h4>
