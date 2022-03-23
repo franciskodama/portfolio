@@ -1,23 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../components/Card.css'
 import CardIcon from '../assets/images/card-icon.svg'
 
 function Card({ project }) {
 
+const [ isOpen, setIsOpen ] = useState(false)
+
+// setIsOpen(isOpen.show ? {show: false} : {show: true})
+
+
  const handleClickToOpen = event => {
-   event.target.closest('.card-container').classList.add('card-container--active')
+  event.target.closest('.card-container').classList.add('card-container--active')
+  setIsOpen(true)
+
+
  }
 
- const handleClickToClose = event => {
-  event.target('.card-container').classList.remove('card-container--active')
- }
+//  const handleClickToClose = event => {
+//   event.target('.card-container').classList.remove('card-container--active')
+//  }
+//  onClick={handleClickToClose}
+
 
 
   return (
 
-    <div onClick={handleClickToOpen} className='card-container'>
+    <div className='card-container' onClick={handleClickToOpen}>
+      
       <p className='card-category'>{project.category}</p>
-      {/* <img src="" alt="Close button" /> */}
+      
       <img className='card-image' src={project.image} alt='main image project'/>
       <div className="card-box">
         <img className='card-icon' src={project.icon} alt='icon project'/>

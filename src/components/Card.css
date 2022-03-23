@@ -21,6 +21,17 @@
   border: 1px solid rgb(255, 255, 255, 0.3);
   box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
     var(--dark-color) -10px 10px 0px -1px, var(--bright-color) -10px 10px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-container--active:hover {
+  transform: translate(-10px, 10px);
+  box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
+    var(--dark-color) -10px 10px 0px -1px, var(--bright-color) 0px 0px;
+  background: #f6f6f6;
+  color: var(--dark-color);
 }
 
 .card-container--active .card-image {
@@ -77,14 +88,6 @@
   color: var(--dark-color);
 }
 
-/* .card-container--active .card-title {
-  color: var(--dark-color);
-  background: var(--bright-color);
-  font-family: var(--main-font-semibold);
-  padding: 0.5rem 2rem;
-
-} */
-
 .card-container--active:first-child .explore-wraper {
   display: none;
 }
@@ -111,7 +114,9 @@
   padding-left: 0.5em;
 }
 
-/* ----- ELEMENTS NOT ACTIVED ----- */
+/* --------------------------- */
+/* ----- NOT ACTIVE CARD ----- */
+/* --------------------------- */
 
 .card-image,
 .card-text {
@@ -145,14 +150,14 @@
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
-    var(--dark-color) -10px 10px 0px -1px, var(--bright-color) -10px 10px;
+    var(--dark-color) -10px 10px 0px -1px, var(--bright-color) 0px 0px;
 }
 
 .card-box:hover {
-  transform: translate(-10px, 10px);
+  transform: translate(10px, -10px);
   box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
-    var(--dark-color) 0px 0px 0px -1px, var(--bright-color) 0px 0px;
-  background: var(--bright-color);
+    var(--dark-color) -10px 10px 0px -1px, var(--bright-color) -10px 10px;
+  background: #f6f6f6;
   color: var(--dark-color);
 }
 

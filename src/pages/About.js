@@ -18,10 +18,15 @@ const About = () => {
     setAddMe({showMe: true})
   }
 
-  function handleMouseOver() {
+  function handleClickBag() {
     setShowMessage(showMessage.show ? {show: false} : {show: true})
   }
 
+  function handleClickDelete() {
+    setShowMessage({show: false})
+    setAddMe({show: false})
+  }
+  
   function handleClickInterview() {
     setShowMessage({show:false})
     console.log('click Interview')
@@ -29,7 +34,6 @@ const About = () => {
 
   // Do we need a close button? If the user clicks on the trash, everything disapper
 
-  // mouseover bag
 
   return (
     
@@ -46,13 +50,12 @@ const About = () => {
               <p>to work in Canada</p>
             </div>
 
-            <div className='bag-container' onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver}>
+            <div onClick={handleClickBag} className='bag-container'>
               <img className='bag-empty' src={BagEmpty} alt='Shop bag empty' />
               <p className='number-one' style={{ display: addMe.showMe ? 'block': 'none'}}>1</p>
             </div>
 
             <div className='bag-message' style={{ display: showMessage.show ? 'block': 'none'}}>
-            {/* <div className='bag-message'> */}
                <h3 className="checkout-title">CHECK OUT</h3> 
                <div className="purchase-container">
                 <img className="purchase-image" src={Thumbnail} alt="thumbanail image avatar"/>
@@ -64,11 +67,11 @@ const About = () => {
                     <p className="purchase-location">Remote</p>               
                   </div>
                 </div> 
-                <img className='icon-trash' src={Trash} alt="icon trash"/>
+                <img onClick={handleClickDelete} className='icon-delete' src={Trash} alt="icon trash to delete"/>
               </div>
 
               <p className="purchase-confirm-title">Confirm Purchase:</p>
-              <Button onClick={handleClickInterview} text='schedule an interview' color='var(--bright-color)' textColor='var(--dark-color)'/>
+              <Button onClick={handleClickInterview} text='schedule an interview' backgroundColor='var(--bright-color)' textColor='var(--dark-color)'/>
               
 
             </div>

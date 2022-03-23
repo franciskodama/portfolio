@@ -10,24 +10,12 @@ function Api() {
   const [ location, setLocation ] = useState('')
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric`
-  // const urlGetCountry = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=56fa81e49104e23170bab6e9546dbc2e`
 
-  // useEffect(() => {
-  //   setLocation('ottawa')
-  //   Axios.get(url).then((response) => {
-  //     setData(response.data)
-  //   })
-  // }, [])
-
-
-  // const initiatePage = () => {
-  //     Axios.get('https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=aeb29e2e41400b27c2f8bbdbf478ac97&units=metric').then((response) => {
-  //       setData(response.data)
-  //     })
-  //     document.getElementById('myInput').value = ''
-  //   console.log('hey')
-  // }  
-
+  useEffect(() => {
+    Axios.get('https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric').then((response) => {
+      setData(response.data)
+    })
+  }, [])
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -36,12 +24,6 @@ function Api() {
       })
     }
   }
-
-// Axios.get(urlGetCountry).then((response) => {
-//   return console.log(response.data[3])
-// })
-
-
 
   return (
     <div className='section-api-external'>
@@ -59,7 +41,8 @@ function Api() {
 
               <h4 className="api--title-city">Weather in</h4>
               <h3 className="api--city">{data.name}</h3>
-              {/* <h3 className="api--city">{data.cod}</h3>           */}
+              <h3 className="api--country">{data.sys ? <p className='api--country'>{data.sys.country}</p> : null}
+              </h3>          
               
               <h4 className="api--log">Longitude {data.coord ? <p>{data.coord.lon}</p> : null}</h4>
               <h4 className="api--lat">Latitude {data.coord ? <p>{data.coord.lat}</p> : null}</h4>

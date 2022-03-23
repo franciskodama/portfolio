@@ -1,21 +1,20 @@
 .btn {
   display: inline-block;
   font-family: var(--main-font-medium);
-  padding: 0.75em 2em;
+  padding: 0.9em 2em;
   color: var(--bright-color);
   border: 1px solid var(--dark-color);
   background-color: var(--dark-color);
   box-shadow: inset 0 0 0 0 var(--bright-color);
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
-  box-shadow: inset 20em 0 0 0 var(--bright-color);
-  color: var(--dark-color);
-  border: 1px solid var(--dark-color);
-}
+  transform: translate(5px, -5px);
+  box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
+    var(--bright-color) -5px 5px 0px -1px, var(--dark-color) -5px 5px;
 
-.btn:active {
-  background-color: var(--third-color);
+  /* background: #f6f6f6;
+  color: var(--dark-color); */
 }
