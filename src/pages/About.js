@@ -4,19 +4,32 @@ import '../styles/About.css'
 import Button from '../components/Button'
 import BagEmpty from '../assets/images/bag.svg'
 import Avatar from '../components/Avatar'
+import Thumbnail from '../assets/images/avatar-70x70.jpg'
+import Trash from '../assets/images/about-trash.svg'
+import arrowRight from '../assets/images/arrow-right-black.svg'
+import { isCompositeComponentWithType } from 'react-dom/test-utils'
 
 const About = () => {
 
   const [ addMe, setAddMe ] = useState({showMe: false}) 
   const [ showMessage, setShowMessage ] = useState({show:false})
 
-  function handleClick() {
+  function handleClickAddToTeam() {
     setAddMe({showMe: true})
   }
 
   function handleMouseOver() {
     setShowMessage(showMessage.show ? {show: false} : {show: true})
   }
+
+  function handleClickInterview() {
+    setShowMessage({show:false})
+    console.log('click Interview')
+  }
+
+  // Do we need a close button? If the user clicks on the trash, everything disapper
+
+  // mouseover bag
 
   return (
     
@@ -39,9 +52,25 @@ const About = () => {
             </div>
 
             <div className='bag-message' style={{ display: showMessage.show ? 'block': 'none'}}>
-              <p>You have one Francis in your shopbag!</p>
-              <p>To confirm, <button>click here</button> to schedule an interview</p>
-              <p>Or <button>click here</button> to take me out of the shopbag.</p>
+            {/* <div className='bag-message'> */}
+               <h3 className="checkout-title">CHECK OUT</h3> 
+               <div className="purchase-container">
+                <img className="purchase-image" src={Thumbnail} alt="thumbanail image avatar"/>
+                <div className="purchase-text-wrapper">
+                  <h4 className="purchase-name">Francis Kodama</h4>
+                  <p className='purchase-email'>fk@fkodama.com</p>
+                  <div className="location-wrapper">
+                    <p className="purchase-location-title">Location:</p>
+                    <p className="purchase-location">Remote</p>               
+                  </div>
+                </div> 
+                <img className='icon-trash' src={Trash} alt="icon trash"/>
+              </div>
+
+              <p className="purchase-confirm-title">Confirm Purchase:</p>
+              <Button onClick={handleClickInterview} text='schedule an interview' color='var(--bright-color)' textColor='var(--dark-color)'/>
+              
+
             </div>
             {/* onClick={() => {navigate('/contact')}} */}
             <div className='about-description'>
@@ -63,7 +92,7 @@ const About = () => {
                   <input className='input-radio' type='radio' name='location' value='hybrid'/>
                   <label htmlFor='hybrid'>Hybrid</label>
                 </form>
-                <Button onClick={handleClick} text='add to my team' color='var(--dark-color)' />
+                <Button onClick={handleClickAddToTeam} text='add to my team' color='var(--dark-color)' />
               </div>
 
               <div className='tools'>

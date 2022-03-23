@@ -60,8 +60,9 @@
   grid-column: 4/5;
   grid-row: 2/3;
   font-family: var(--main-font-semibold);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5em;
+  text-transform: uppercase;
 }
 
 .skills-description {
