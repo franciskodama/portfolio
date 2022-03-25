@@ -59,7 +59,8 @@
   cursor: none;
 } */
 
-.xray-image {
+#xray-image {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;

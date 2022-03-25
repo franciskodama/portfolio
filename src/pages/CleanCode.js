@@ -1,13 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/CleanCode.css'
 import background from '../assets/images/xray.jpg'
 
 const CleanCode = () => {
-  return (
 
+  const [ showBackground, setShowBackground ] = useState({show: false})
+
+  const handleClick = () => {
+    setShowBackground(showBackground.show ? {show: false} : {show: true})
+    if(showBackground.show) {
+      document.getElementById('xray-image').style.display = 'block'
+    } else {
+      document.getElementById('xray-image').style.display = 'none'
+    }
+  }
+
+
+  return (
     <section className="section section-code" id='code'>
         <div className="container">
         
+        <div onClick={handleClick} className="clickable-area">
+          <div
+              id="xray-image"   
+              style={{
+                backgroundImage: `url(${background})`,
+                backgroundRepeat: 'no-repeat',
+                // backgroundPosition: 'center',
+                backgroundSize: 'cover',
+              }}>
+          </div>
+
           <div className="quote--wrapper">
             <blockquote className="code--quote">“Clean code always looks like it was written by <br></br><span className='red' >someone who cares.”</span></blockquote>
             <h4 className="code--robert">― Robert C. Martin</h4>
@@ -22,7 +45,10 @@ const CleanCode = () => {
           <div className="flying--words">clear and concise</div>
           <div className="flying--words">consistent</div>
           <div className="flying--words">uncomplicate</div>
-          <div className="xray-image" style={{ backgroundImage: `url(${background})` }}>Hello</div>
+       
+        
+        </div>
+        
         </div>
     </section>
 
