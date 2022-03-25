@@ -11,10 +11,16 @@ import { isCompositeComponentWithType } from 'react-dom/test-utils'
 
 const About = () => {
 
+  const [ location, setLocation ] = useState('')
   const [ addMe, setAddMe ] = useState({showMe: false}) 
   const [ showMessage, setShowMessage ] = useState({show:false})
 
-  function handleClickAddToTeam() {
+  const handleClickLocation = (event) => {
+    setLocation(event.target.value)
+    console.log(location)
+  }
+
+  const handleClickAddToTeam = () => {
     setAddMe({showMe: true})
   }
 
@@ -32,11 +38,7 @@ const About = () => {
     console.log('click Interview')
   }
 
-  // Do we need a close button? If the user clicks on the trash, everything disapper
-
-
-  return (
-    
+  return (    
     <section className='section section-about' id='about'>
         <div className='container'>
           <div className='first-main-container'>
@@ -75,7 +77,6 @@ const About = () => {
               
 
             </div>
-            {/* onClick={() => {navigate('/contact')}} */}
             <div className='about-description'>
               <h3 className='name'>Francis Kodama</h3>
               <h2 className='job'>Front-end Developer</h2>
@@ -88,14 +89,14 @@ const About = () => {
               <div className='location-button-container'>
                 <p className='location-title'>location:</p>
                 <form className='location'>
-                  <input className='input-radio' type='radio' name='location' value='remote'/>
+                  <input onClick={handleClickLocation} className='input-radio' type='radio' name='location' value='remote'/>
                   <label htmlFor='remote'>Remote</label>
-                  <input className='input-radio' type='radio' name='location' value='ottawa'/>
+                  <input onClick={handleClickLocation} className='input-radio' type='radio' name='location' value='ottawa'/>
                   <label htmlFor='ottawa'>Ottawa</label>
-                  <input className='input-radio' type='radio' name='location' value='hybrid'/>
+                  <input onClick={handleClickLocation} className='input-radio' type='radio' name='location' value='hybrid'/>
                   <label htmlFor='hybrid'>Hybrid</label>
                 </form>
-                <Button onClick={handleClickAddToTeam} text='add to my team' backgroundColor='var(--dark-color)' textColor='var(--bright-color)' />
+                <Button onClick={handleClickAddToTeam} text='add to my team' backgroundColor='var(--bright-color)' textColor='var(--dark-color)' align='flex-start'/>
               </div>
 
               <div className='tools'>
@@ -111,10 +112,7 @@ const About = () => {
 
             </div>
 
-
-
           </div>
-
     </div>
   </section>
   )

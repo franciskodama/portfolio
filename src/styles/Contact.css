@@ -6,37 +6,92 @@
   width: 60%;
 }
 
-.chunk-container {
-  margin-top: 3em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  width: 80%;
+.sub-title {
+  margin-bottom: 3em;
 }
+
+/* ----- CHUNKS ----- */
 
 .chunk {
+  display: inline-block;
+  width: auto;
+  font-size: 1rem;
+  font-family: var(--main-font-light);
   text-transform: uppercase;
-  border: 1px solid var(--bright-color);
-  padding: 0.4em 1em;
+  padding: 0.6em 1em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 1em;
+  margin-bottom: 1em;
 }
 
-.chunk:first-child {
-  margin-left: 0;
+.third-color {
+  color: var(--third-color);
+  background-color: var(--dark-color);
+  border: 1px solid var(--third-color);
+
+  /* display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--main-font-medium);
+  padding: 0.9em 2em;
+  color: var(--bright-color);
+  border: 1px solid var(--dark-color);
+  background-color: var(--third-color);
+  box-shadow: inset 0 0 0 0 var(--bright-color);
+  cursor: pointer;
+  transition: all 0.2s ease; */
+
+  /* text-transform: uppercase;
+  border: 1px solid var(--bright-color);
+  padding: 0.4em 1em;
+  cursor: pointer; */
 }
+
+.third-color:hover {
+  transform: translate(5px, -5px);
+  box-shadow: var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
+}
+
+.bright-color {
+  color: var(--bright-color);
+  background-color: var(--dark-color);
+  border: 0.5px solid var(--bright-color);
+
+  /* display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--main-font-medium);
+  padding: 0.9em 2em;
+  color: var(--bright-color);
+  border: 1px solid var(--dark-color);
+  background-color: var(--third-color);
+  box-shadow: inset 0 0 0 0 var(--bright-color);
+  cursor: pointer;
+  transition: all 0.2s ease; */
+
+  /* text-transform: uppercase;
+  border: 1px solid var(--bright-color);
+  padding: 0.4em 1em;
+  cursor: pointer; */
+}
+
+.bright-color:hover {
+  transform: translate(5px, -5px);
+  box-shadow: var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
+}
+
+/* ----- INPUT ----- */
 
 .form-contact {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15em;
 }
 
 .form-contact-input {
+  color: var(--dark-color);
   margin: 4.5em 0;
   width: 100%;
   height: 10em;
-}
-
-.section-contact form {
-  margin-bottom: 15em;
 }
 
 .highlight {
@@ -47,8 +102,28 @@
 
 /* ----- BUTTON ----- */
 
+.btn {
+  display: inline-block;
+  font-family: var(--main-font-medium);
+  padding: 0.9em 2em;
+  color: var(--bright-color);
+  border: 1px solid var(--dark-color);
+  background-color: var(--dark-color);
+  box-shadow: inset 0 0 0 0 var(--bright-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
 .btn:hover {
   transform: translate(5px, -5px);
   box-shadow: var(--third-color) 0px 0px 0px 0px inset,
     var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
 }
+
+/* .chunk-container {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 80%;
+} */
