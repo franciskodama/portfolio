@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import LogoFooter from '../assets/images/logo-fkodama-footer.svg'
 import Linkedin from '../assets/images/ico-linkedin-white.svg'
 import Insta from '../assets/images/ico-instagram-white.svg'
 import Face from '../assets/images/ico-facebook-white.svg'
+import Git from '../assets/images/ico-github-white.svg'
 
 import '../styles/Footer.css'
 
@@ -17,23 +19,25 @@ function Footer() {
 
           <p className='aboutme'>A Webdeveloper with a huge experience in marketing, a natural leader, curious, who find engagement challenge himself constantly.</p>
 
-          <ul className='menu'>
-            <li className='menu-item'>home</li>
-            <li className='menu-item'>about</li>
-            <a><li className='menu-item'>projects</li></a>
-            <li className='menu-item'>api</li>
-            <li className='menu-item'>contact</li>
-          </ul>
+          <div className='menu'>
+            <Link className='menu-item' to='hero' spy={true} smooth={true} offset={50} duration={500}> home </Link>
+            <Link className='menu-item' to='about' spy={true} smooth={true} offset={-150} duration={500}> about </Link>
+            <Link className='menu-item' to='projects' spy={true} smooth={true} offset={-100} duration={500}> projects </Link>
+            <Link className='menu-item' to='api' spy={true} smooth={true} offset={-150} duration={500}> api </Link>
+            <Link className='menu-item' to='code' spy={true} smooth={true} offset={0} duration={500}> clean code </Link>
+            <Link className='menu-item' to='contact' spy={true} smooth={true} offset={-150} duration={500}> contact </Link>
+          </div>
 
           <div className='contact'>
             <p className='email'>fk@fkodama.com</p>
-            <p className='send-message'>send message</p>
+            <Link className='send-message' to='contact' spy={true} smooth={true} offset={-150} duration={500}> send message </Link>
           </div>
 
           <div className='icons'>
-            <img src={Linkedin} alt='logo Linkedin'/>
-            <img src={Insta} alt='logo Instagram'/>
-            <img src={Face} alt='logo Facebook'/>
+            <a className='icon-item' href="https://github.com/franciskodama" target="_blank"><img src={Git} alt='logo Github'/></a>
+            <a className='icon-item' href="https://www.linkedin.com/in/kodama/" target="_blank"><img src={Linkedin} alt='logo Linkedin'/></a>
+            <a className='icon-item' href="https://www.instagram.com/franciskodama/" target="_blank"><img src={Insta} alt='logo Instagram'/></a>
+            <a className='icon-item' href="https://www.facebook.com/francishidekikodama" target="_blank"><img src={Face} alt='logo Facebook'/></a>
           </div>
 
           <img src={LogoFooter} alt='logo fkodama' />

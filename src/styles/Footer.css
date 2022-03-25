@@ -37,6 +37,36 @@
   font-size: 0.9rem;
 }
 
+.icons,
+.menu-item,
+.send-message,
+.resume-container {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover,
+.send-message:hover,
+.resume-container:hover {
+  color: var(--third-color);
+  transform: translate(3px);
+}
+
+.icon-item {
+  position: relative;
+}
+
+.icon-item:hover::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  border: 1.5px solid var(--third-color);
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+}
+
 .section-footer h2 span {
   color: var(--third-color);
 }
@@ -45,8 +75,6 @@
   text-decoration: underline;
 }
 
-/* ---- GENERAL TYPOGRAPHY ---- */
-
 .aboutme {
   margin-bottom: 3em;
 }
@@ -54,6 +82,11 @@
 .email,
 .menu-item {
   margin-bottom: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ---- LOGO ---- */

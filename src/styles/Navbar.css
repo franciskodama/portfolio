@@ -17,6 +17,8 @@
   cursor: pointer;
 }
 
+/* ------ NAV BAR ------ */
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -28,12 +30,86 @@
   font-family: var(--main-font-light);
   font-size: 1rem;
   color: var(--bright-color);
-  padding-left: 2.5em;
+  margin-left: 2.5em;
   text-decoration: none;
   cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
 }
 
 .nav-item:hover {
-  color: var(--third-color);
-  transition: color 0.5s ease;
+  font-family: var(--main-font-semibold);
+  font-size: 1.2rem;
 }
+
+.nav-item:hover::first-letter {
+  color: var(--third-color);
+  font-family: var(--main-font-semibold);
+  font-size: 1.2rem;
+}
+
+/* ------ MOUSE OVER LIKE BUTTON ------ */
+
+/* .nav-item:hover {
+  color: var(--bright-color);
+  font-family: var(--main-font-regular);
+  background-color: var(--third-color);
+  border: 1px solid var(--third-color);
+  padding: 0.1em 0.3em;
+  transform: translate(5px, -5px);
+  box-shadow: var(--third-color) 0px 0px 0px 0px inset,
+    var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
+} */
+
+/* ------ MOUSE OVER ------ */
+
+/* 
+.nav-item {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(255, 0, 0, 0);
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.nav-item:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(
+    center,
+    ellipse,
+    rgba(255, 0, 0, 0.35) 0%,
+    rgba(255, 0, 0, 0) 80%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 0, 0, 0.35) 0%,
+    rgba(255, 0, 0, 0) 80%
+  );
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active {
+  color: var(--third-color);
+  transform: translateY(-5px);
+}
+
+.nav-item:hover:before,
+.nav-item:focus:before,
+.nav-item:active:before {
+  opacity: 1;
+  transform: translateY(5px);
+} */

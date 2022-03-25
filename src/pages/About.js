@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../styles/About.css'
 import Button from '../components/Button'
@@ -17,8 +17,12 @@ const About = () => {
 
   const handleClickLocation = (event) => {
     setLocation(event.target.value)
-    console.log(location)
+    // console.log(location)
   }
+
+  useEffect(() => {
+    console.log(location)
+  })
 
   const handleClickAddToTeam = () => {
     setAddMe({showMe: true})

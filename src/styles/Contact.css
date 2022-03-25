@@ -29,22 +29,6 @@
   color: var(--third-color);
   background-color: var(--dark-color);
   border: 1px solid var(--third-color);
-
-  /* display: inline-block;
-  text-transform: uppercase;
-  font-family: var(--main-font-medium);
-  padding: 0.9em 2em;
-  color: var(--bright-color);
-  border: 1px solid var(--dark-color);
-  background-color: var(--third-color);
-  box-shadow: inset 0 0 0 0 var(--bright-color);
-  cursor: pointer;
-  transition: all 0.2s ease; */
-
-  /* text-transform: uppercase;
-  border: 1px solid var(--bright-color);
-  padding: 0.4em 1em;
-  cursor: pointer; */
 }
 
 .third-color:hover {
@@ -56,22 +40,6 @@
   color: var(--bright-color);
   background-color: var(--dark-color);
   border: 0.5px solid var(--bright-color);
-
-  /* display: inline-block;
-  text-transform: uppercase;
-  font-family: var(--main-font-medium);
-  padding: 0.9em 2em;
-  color: var(--bright-color);
-  border: 1px solid var(--dark-color);
-  background-color: var(--third-color);
-  box-shadow: inset 0 0 0 0 var(--bright-color);
-  cursor: pointer;
-  transition: all 0.2s ease; */
-
-  /* text-transform: uppercase;
-  border: 1px solid var(--bright-color);
-  padding: 0.4em 1em;
-  cursor: pointer; */
 }
 
 .bright-color:hover {
@@ -88,16 +56,11 @@
 }
 
 .form-contact-input {
+  font-size: 1rem;
   color: var(--dark-color);
   margin: 4.5em 0;
   width: 100%;
   height: 10em;
-}
-
-.highlight {
-  font-family: var(--main-font-regular);
-  color: var(--third-color);
-  border: 1px solid var(--third-color);
 }
 
 /* ----- BUTTON ----- */
@@ -119,11 +82,3 @@
   box-shadow: var(--third-color) 0px 0px 0px 0px inset,
     var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
 }
-
-/* .chunk-container {
-  margin-top: 3em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  width: 80%;
-} */

@@ -92,6 +92,7 @@ button {
 input,
 ::placeholder {
   font-family: var(--main-font-light);
+  font-size: 1rem;
   padding-left: 1em;
   color: rgb(191, 189, 189);
 }

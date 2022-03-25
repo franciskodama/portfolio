@@ -16,11 +16,14 @@ function Api() {
   useEffect(() => {
     Axios.get('https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric').then((response) => {
       setData(response.data)
+
+ 
+
     })
   }, [])
 
   const searchLocation = (event) => {
-    if (event.key === 'Enter') {
+      if (event.key === 'Enter') {
       Axios.get(url).then((response) => {
         setData(response.data)
         let dt = new Date(data.dt * 1000-(data.timezone*1000)).toString()
@@ -34,6 +37,10 @@ function Api() {
     }
   }
 
+  useEffect(() => {
+
+  })
+
   return (
     <div className='section-api-external'>
       <img className='icon-weather' src={currentIconWeather} alt='weather condition'/>
@@ -45,7 +52,7 @@ function Api() {
               <div className="question-wrapper">              
                 <h2 className="api--question">What city</h2>
                 <h2 className="api--question">are you in?</h2>
-                <input id='myInput' value={location} onChange={event => setLocation(event.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text' />
+                <input id='myInput' value={location} onChange={event => setLocation(event.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text'/>
               </div>
 
               <h4 className="api--title-city">Weather in</h4>

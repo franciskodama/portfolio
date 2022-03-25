@@ -8,7 +8,7 @@ function Contact() {
 
   const handleClick = (event) => {
     event.preventDefault()
-    setMessage(previousMessage => previousMessage + event.target.value)
+    setMessage(previousMessage => previousMessage + event.target.value + ' ')
   }
 
   const handleChange = (event) => {
@@ -55,20 +55,40 @@ function Contact() {
             <input onClick={handleClick} className='chunk bright-color' value='I did not like your website, and I tell you why...' type='submit'/>
             <label htmlFor='I did not like your website, and I tell you why...'></label>
 
-            <input onClick={handleClick} className='chunk bright-color' value='regards,' type='submit'/>
-            <label htmlFor='regards,'></label>
+            <input onClick={handleClick} className='chunk bright-color' value='Regards,' type='submit'/>
+            <label htmlFor='Regards,'></label>
 
             <input onClick={handleClick} className='chunk bright-color' value='Take care!' type='submit'/>
             <label htmlFor='Take care!'></label>
 
             <input onClick={handleClick} className='chunk bright-color' value='Thanks! :)' type='submit'/>
             <label htmlFor='Thanks! :)'></label>
+            
+            <Button
+              text='clear message'
+              backgroundColor='var(--bright-color)'
+              textColor='var(--dark-color)'
+              align='flex-end'
+            />
+
           </form>
 
-
           <form className='form-contact'>
-            <input value={message} onChange={handleChange} className='form-contact-input' type='text' />
-            <Button text='send' backgroundColor='var(--third-color)' align='flex-end'/>
+          
+            <input 
+              value={message}
+              onChange={handleChange}
+              className='form-contact-input'
+              type='text'
+              size='10'
+            />
+          
+            <Button
+              text='send'
+              backgroundColor='var(--third-color)'
+              align='flex-end'
+            />
+          
           </form>
         </div>
 
