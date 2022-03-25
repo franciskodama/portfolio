@@ -40,3 +40,11 @@
 .letter-dark {
   color: var(--third-color);
 }
+
+/* ----- BUTTON ----- */
+
+.btn:hover {
+  transform: translate(5px, -5px);
+  box-shadow: var(--third-color) 0px 0px 0px 0px inset,
+    var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
+}

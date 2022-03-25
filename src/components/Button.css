@@ -9,12 +9,9 @@
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
+/* 
 .btn:hover {
   transform: translate(5px, -5px);
   box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
     var(--bright-color) -5px 5px 0px -1px, var(--dark-color) -5px 5px;
-
-  /* background: #f6f6f6;
-  color: var(--dark-color); */
-}
+} */

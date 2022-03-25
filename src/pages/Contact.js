@@ -25,7 +25,7 @@ function Contact() {
           </ul>
           <form className='form-contact' action=''>
             <input className='form-contact-input' type='text' />
-            <Button text='send' align='flex-end'/>
+            <Button text='send' backgroundColor='var(--third-color)' align='flex-end'/>
           </form>
         </div>
 

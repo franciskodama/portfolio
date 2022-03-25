@@ -10,11 +10,11 @@
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
 }
 
-.weather-img {
-  width: 35em;
+.icon-weather {
+  width: 30em;
   position: absolute;
-  right: calc(100vw-10em / 2);
-  top: -15em;
+  top: -14em;
+  left: calc(100vw - 47%);
   z-index: 10;
 }
 
@@ -23,6 +23,7 @@
 .api--grid {
   display: grid;
   grid-template-rows: repeat(9, auto);
+  grid-template-rows: auto auto 4em repeat(6, auto);
   grid-template-columns: repeat(8, 1fr);
   width: 70%;
   margin: 0 auto;
@@ -33,21 +34,21 @@
 .question-wrapper {
   display: flex;
   flex-direction: column;
-  grid-column: 1/3;
-  grid-row: 3/4;
-  width: 100%;
+  grid-column: 1/4;
+  grid-row: 2/4;
+  width: 18em;
 }
 
 .api--question {
-  line-height: 1.8rem;
+  line-height: 2.8rem;
   font-family: var(--main-font-semibold);
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   margin-bottom: 0.3rem;
 }
 
 .section-api input {
   height: 3em;
-  width: 15em;
+  width: 100%;
   margin-top: 0.7em;
   margin-right: 1em;
 }
@@ -63,7 +64,7 @@
 .api--city,
 .api--country {
   font-family: var(--main-font-semibold);
-  font-size: 4rem;
+
   text-transform: uppercase;
   line-height: 4.5rem;
 }
@@ -71,18 +72,21 @@
 .api--city {
   grid-column: 1/5;
   grid-row: 6/7;
+  font-size: 4rem;
 }
 
 .api--country {
   grid-column: 1/4;
   grid-row: 7/8;
+  font-size: 3rem;
 }
 
 .api--log,
 .api--lat {
-  font-family: var(--main-font-thin);
+  font-family: var(--main-font-regular);
+  font-size: 0.8rem;
   display: inline-block;
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .api--log {
@@ -98,12 +102,12 @@
 /* ---- TEMPERATURE SECTION ---- */
 
 .api--description {
-  grid-column: 6/9;
+  grid-column: 5/9;
   font-family: var(--main-font-semibold);
   font-size: 2.25rem;
   text-transform: capitalize;
   text-align: right;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 .temp-wrapper {
@@ -113,7 +117,8 @@
 
 /* ---- DATA SECTION ---- */
 
-.data {
+.data,
+.feels-celsius {
   font-family: var(--main-font-semibold);
   font-size: 1.5rem;
 }
@@ -121,6 +126,7 @@
 .temp {
   font-family: var(--main-font-semibold);
   font-size: 5rem;
+  margin-bottom: -0.5em;
 }
 
 .temp-wrapper,
@@ -134,13 +140,20 @@
   display: flex;
   flex-direction: column;
   text-align: right;
-  padding: 1em;
+  padding: 0.5em;
   margin-left: 1em;
 }
 
 .feels-wrapper {
   grid-column: 5/7;
   grid-row: 2/3;
+}
+
+.feels-celsius {
+  grid-column: 7/8;
+  grid-row: 2/3;
+  margin-top: 3em;
+  font-size: 0.8rem;
 }
 
 .wind-wrapper {
@@ -181,19 +194,20 @@
 
 /* ---- UPDATED SECTION ---- */
 
-.api--date {
-  font-family: var(--main-font-light);
-  font-size: 0.8rem;
-}
-
 .updated-wrapper {
-  text-align: left;
-  grid-column: 1/3;
-  grid-row: 8/9;
-  margin-top: 6em;
+  grid-column: 7/9;
+  grid-row: 7/8;
+  text-align: right;
+  /* margin-top: 6em; */
 }
 
 .api--title-city,
+.api--title-temp,
 .api--title-others {
   font-family: var(--main-font-regular);
+}
+
+.api--date {
+  font-family: var(--main-font-light);
+  font-size: 0.8rem;
 }

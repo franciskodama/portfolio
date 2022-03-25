@@ -157,8 +157,10 @@
   transform: translate(10px, -10px);
   box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
     var(--dark-color) -10px 10px 0px -1px, var(--bright-color) -10px 10px;
-  background: #f6f6f6;
   color: var(--dark-color);
+
+  background-image: radial-gradient(#000000 0.5px, #f6f6f6 0.5px);
+  background-size: 10px 10px;
 }
 
 .title-wrapper {

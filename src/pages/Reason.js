@@ -52,7 +52,7 @@ function Reason() {
                 type='text'
                 placeholder='type something here...'/>
 
-               <Button text='reload original message' />
+               <Button text='reload original message' backgroundColor='var(--third-color)'/>
 
             </form>
 

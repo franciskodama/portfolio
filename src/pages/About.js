@@ -95,7 +95,7 @@ const About = () => {
                   <input className='input-radio' type='radio' name='location' value='hybrid'/>
                   <label htmlFor='hybrid'>Hybrid</label>
                 </form>
-                <Button onClick={handleClickAddToTeam} text='add to my team' color='var(--dark-color)' />
+                <Button onClick={handleClickAddToTeam} text='add to my team' backgroundColor='var(--dark-color)' textColor='var(--bright-color)' />
               </div>
 
               <div className='tools'>

@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/CleanCode.css'
+import background from '../assets/images/xray.jpg'
 
 const CleanCode = () => {
   return (
@@ -21,7 +22,7 @@ const CleanCode = () => {
           <div className="flying--words">clear and concise</div>
           <div className="flying--words">consistent</div>
           <div className="flying--words">uncomplicate</div>
-
+          <div className="xray-image" style={{ backgroundImage: `url(${background})` }}>Hello</div>
         </div>
     </section>
 
