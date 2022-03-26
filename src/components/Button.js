@@ -2,7 +2,15 @@ import React from 'react'
 import '../components/Button.css'
 
 function Button({ text, backgroundColor, textColor, align, onClick }) {
-  return <button onClick={onClick} className='btn' style={{ backgroundColor: backgroundColor, color: textColor, alignSelf: align }} type='button'>{text}</button> 
+  return <button
+          onClick={onClick}
+          className='btn'
+          style={{
+            backgroundColor: backgroundColor,
+            color: textColor,
+            alignSelf: align
+          }}
+          type='button'>{text}</button> 
 }
 
 Button.defaultProps = {

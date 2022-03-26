@@ -18,7 +18,7 @@
   font-size: 1rem;
   font-family: var(--main-font-light);
   text-transform: uppercase;
-  padding: 0.6em 1em;
+  padding: 0.9em 1.2em;
   cursor: pointer;
   transition: all 0.2s ease;
   margin-right: 1em;
@@ -44,7 +44,8 @@
 
 .bright-color:hover {
   transform: translate(5px, -5px);
-  box-shadow: var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
+  box-shadow: var(--dark-color) -5px 5px 0px -0.5px,
+    var(--bright-color) -5px 5px;
 }
 
 /* ----- INPUT ----- */
@@ -56,11 +57,18 @@
 }
 
 .form-contact-input {
+  font-family: var(--main-font-light);
   font-size: 1rem;
+  line-height: 1.5;
   color: var(--dark-color);
   margin: 4.5em 0;
   width: 100%;
   height: 10em;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ----- BUTTON ----- */

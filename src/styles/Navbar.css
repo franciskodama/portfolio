@@ -33,19 +33,18 @@
   margin-left: 2.5em;
   text-decoration: none;
   cursor: pointer;
-
   transition: all 0.5s ease-in-out;
 }
 
 .nav-item:hover {
-  font-family: var(--main-font-semibold);
-  font-size: 1.2rem;
+  font-family: var(--main-font-regular);
+  font-size: 1.1rem;
 }
 
 .nav-item:hover::first-letter {
   color: var(--third-color);
   font-family: var(--main-font-semibold);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 /* ------ MOUSE OVER LIKE BUTTON ------ */

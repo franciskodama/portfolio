@@ -8,13 +8,16 @@ function Contact() {
 
   const handleClick = (event) => {
     event.preventDefault()
-    setMessage(previousMessage => previousMessage + event.target.value + ' ')
+    setMessage(previousMessage => previousMessage + event.target.value)
   }
 
   const handleChange = (event) => {
     setMessage(previousMessage => previousMessage + event.target.value)
-    
     console.log(message)
+  }
+
+  const handleClickClearMessage = () => {
+    setMessage('')
   }
 
   return (
@@ -64,31 +67,39 @@ function Contact() {
             <input onClick={handleClick} className='chunk bright-color' value='Thanks! :)' type='submit'/>
             <label htmlFor='Thanks! :)'></label>
             
-            <Button
-              text='clear message'
-              backgroundColor='var(--bright-color)'
-              textColor='var(--dark-color)'
-              align='flex-end'
-            />
+           
 
           </form>
 
+         
+
           <form className='form-contact'>
           
-            <input 
+            <textarea
               value={message}
               onChange={handleChange}
               className='form-contact-input'
               type='text'
               size='10'
+            ></textarea>
+
+            <div className="contact-buttons">
+
+           <Button
+              onClick={handleClickClearMessage}
+              text='clear message'
+              backgroundColor='var(--bright-color)'
+              textColor='var(--dark-color)'
+              align='flex-start'
             />
-          
+
             <Button
               text='send'
               backgroundColor='var(--third-color)'
               align='flex-end'
             />
-          
+            
+            </div>
           </form>
         </div>
 
