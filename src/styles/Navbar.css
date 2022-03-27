@@ -33,10 +33,9 @@
   margin-left: 2.5em;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
 }
 
-.nav-item:hover {
+/* .nav-item:hover {
   font-family: var(--main-font-regular);
   font-size: 1.1rem;
 }
@@ -45,7 +44,7 @@
   color: var(--third-color);
   font-family: var(--main-font-semibold);
   font-size: 1.1rem;
-}
+} */
 
 /* ------ MOUSE OVER LIKE BUTTON ------ */
 
@@ -62,7 +61,6 @@
 
 /* ------ MOUSE OVER ------ */
 
-/* 
 .nav-item {
   display: inline-block;
   vertical-align: middle;
@@ -72,6 +70,7 @@
   position: relative;
   transition-duration: 0.3s;
   transition-property: transform;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-item:before {
@@ -87,13 +86,13 @@
   background: -webkit-radial-gradient(
     center,
     ellipse,
-    rgba(255, 0, 0, 0.35) 0%,
-    rgba(255, 0, 0, 0) 80%
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 80%
   );
   background: radial-gradient(
     ellipse at center,
-    rgba(255, 0, 0, 0.35) 0%,
-    rgba(255, 0, 0, 0) 80%
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 80%
   );
   transition-duration: 0.3s;
   transition-property: transform, opacity;
@@ -102,7 +101,6 @@
 .nav-item:hover,
 .nav-item:focus,
 .nav-item:active {
-  color: var(--third-color);
   transform: translateY(-5px);
 }
 
@@ -111,4 +109,8 @@
 .nav-item:active:before {
   opacity: 1;
   transform: translateY(5px);
-} */
+}
+
+.nav-item:hover::first-letter {
+  color: var(--third-color);
+}

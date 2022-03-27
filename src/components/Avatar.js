@@ -106,8 +106,12 @@ function Avatar() {
             className='avatar-icon' src={Smile} alt='friendly'
           />
         </div>
+        
+        <iframe className='avatar-image' src='https://my.spline.design/untitled-93c1753c6b5d2f301c418a677de96cc2/' frameborder='0' width='100%' height='100%'></iframe>
+        <div className="white-square"></div>
 
           <img className='avatar-image' src={avatarData[isShown].imgUrl} alt='my avatar images' />
+
           <div className='skills-wrapper'>
               <h3 className='skills-title'>{avatarData[isShown].title}</h3>
               <p className='skills-description'>{avatarData[isShown].description}</p>

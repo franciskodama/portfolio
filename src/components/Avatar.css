@@ -48,6 +48,22 @@
   height: 412px;
 }
 
+iframe {
+  z-index: 10;
+  position: relative;
+}
+
+.white-square {
+  content: "";
+  position: absolute;
+  right: 4.5em;
+  bottom: 15em;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  z-index: 11;
+}
+
 /* ------ SKILLS TXT ---------- */
 
 .skills-wrapper {

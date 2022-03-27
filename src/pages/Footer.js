@@ -37,7 +37,7 @@ function Footer() {
             <a className='icon-item' href="https://github.com/franciskodama" target="_blank"><img src={Git} alt='logo Github'/></a>
             <a className='icon-item' href="https://www.linkedin.com/in/kodama/" target="_blank"><img src={Linkedin} alt='logo Linkedin'/></a>
             <a className='icon-item' href="https://www.instagram.com/franciskodama/" target="_blank"><img src={Insta} alt='logo Instagram'/></a>
-            <a className='icon-item' href="https://www.facebook.com/francishidekikodama" target="_blank"><img src={Face} alt='logo Facebook'/></a>
+            {/* <a className='icon-item' href="https://www.facebook.com/francishidekikodama" target="_blank"><img src={Face} alt='logo Facebook'/></a> */}
           </div>
 
           <img src={LogoFooter} alt='logo fkodama' />
