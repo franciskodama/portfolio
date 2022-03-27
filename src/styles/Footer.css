@@ -61,10 +61,12 @@
   top: 0;
   left: 0;
   content: "";
-  border: 1.5px solid var(--third-color);
+  border: 1.4px solid var(--third-color);
   border-radius: 50%;
   width: 33px;
   height: 33px;
+  /* box-shadow: 0px 0px 40px 3px var(--third-color); */
+  z-index: 10;
 }
 
 .section-footer h2 span {
