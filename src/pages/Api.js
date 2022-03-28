@@ -7,27 +7,15 @@ import Sun from '../assets/images/01d.png'
 
 function Api() {
 
-  const [ currentIconWeather, setCurrentIconWeather ] = useState()
   const [ data, setData ] = useState({})
   const [ location, setLocation ] = useState('')
-  const [ currentDate, setCurrentDate ] = useState('')
-  const [ sunrise, setSunrise ] = useState('')
-  const [ sunset, setSunset ] = useState('')
   
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric`
 
   useEffect(() => {
+    console.log('the use effect ran')
     Axios.get('https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric').then((response) => {
       setData(response.data)
-
-      // let dt = new Date(data.dt * 1000-(data.timezone*1000)).toString()
-      // let timeSunrise = new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()
-      // let timeSunset = new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()
-      // setCurrentDate(dt.slice(4))
-      // setSunrise(timeSunrise.slice(17,21))
-      // setSunset(timeSunset.slice(17,21))
-      // setCurrentIconWeather(require(`../assets/images/${data.weather[0].icon}.png`))
-
     })
   }, [])
 
@@ -35,14 +23,6 @@ function Api() {
       if (event.key === 'Enter') {
       Axios.get(url).then((response) => {
         setData(response.data)
-      
-        let dt = new Date(data.dt * 1000-(data.timezone*1000)).toString()
-        let timeSunrise = new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()
-        let timeSunset = new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()
-        setCurrentDate(dt.slice(4))
-        setSunrise(timeSunrise.slice(17,21))
-        setSunset(timeSunset.slice(17,21))
-        setCurrentIconWeather(require(`../assets/images/${data.weather[0].icon}.png`))
       })
     }
   }
@@ -53,7 +33,10 @@ function Api() {
 
   return (
     <div className='section-api-external'>
-      <img className='icon-weather' src={currentIconWeather && currentIconWeather : Sun} alt='weather condition'/>
+      <img className='icon-weather' src={data.weather ? require(`../assets/images/${data.weather[0].icon}.png`) : null} alt='weather condition'/>
+
+
+
       <section className='section section-api' id='api'>
           <div className='container'>
 
@@ -112,19 +95,19 @@ function Api() {
 
               <div className="sunrise-wrapper">
                 <h4 className="api--title-others">Sunrise</h4>
-                <h3>{data.sys ? <p className='data'>{sunrise}</p> : null}</h3>
+                <h3>{data.sys ? <p className='data'>{(new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()).slice(17,21)}</p> : null}</h3>
                 <h5 className="api--unit">a.m.</h5>
               </div>
 
               <div className="sunset-wrapper">
                 <h4 className="api--title-others">Sunset</h4>
-                <h3>{data.sys ? <p className='data'>{sunset}</p> : null}</h3>
+                <h3>{data.sys ? <p className='data'>{(new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()).slice(17,21)}</p> : null}</h3>
                 <h5 className="api--unit">p.m.</h5>
               </div>
 
               <div className="updated-wrapper">
                 <h4 className="api--date">Updated on</h4>
-                <h3 className='api--date'>{currentDate}</h3>
+                <h3 className='api--date'>{(new Date(data.dt * 1000-(data.timezone*1000)).toString()).slice(4)}</h3>
               </div>
 
             </div>
