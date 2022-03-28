@@ -107,7 +107,7 @@ function Avatar() {
           />
         </div>
         
-        <iframe className='avatar-image' src='https://my.spline.design/untitled-93c1753c6b5d2f301c418a677de96cc2/' frameborder='0' width='100%' height='100%'></iframe>
+        {/* <iframe className='avatar-image' src='https://my.spline.design/untitled-93c1753c6b5d2f301c418a677de96cc2/' frameborder='0' width='100%' height='100%'></iframe> */}
         <div className="white-square"></div>
 
           <img className='avatar-image' src={avatarData[isShown].imgUrl} alt='my avatar images' />

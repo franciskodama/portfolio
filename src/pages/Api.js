@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import '../styles/Api.css'
 
+import Sun from '../assets/images/01d.png'
+
+
 function Api() {
 
   const [ currentIconWeather, setCurrentIconWeather ] = useState()
@@ -17,7 +20,13 @@ function Api() {
     Axios.get('https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric').then((response) => {
       setData(response.data)
 
- 
+      // let dt = new Date(data.dt * 1000-(data.timezone*1000)).toString()
+      // let timeSunrise = new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()
+      // let timeSunset = new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()
+      // setCurrentDate(dt.slice(4))
+      // setSunrise(timeSunrise.slice(17,21))
+      // setSunset(timeSunset.slice(17,21))
+      // setCurrentIconWeather(require(`../assets/images/${data.weather[0].icon}.png`))
 
     })
   }, [])
@@ -26,6 +35,7 @@ function Api() {
       if (event.key === 'Enter') {
       Axios.get(url).then((response) => {
         setData(response.data)
+      
         let dt = new Date(data.dt * 1000-(data.timezone*1000)).toString()
         let timeSunrise = new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()
         let timeSunset = new Date(data.sys.sunrise * 1000-(data.timezone*1000)).toString()
@@ -43,7 +53,7 @@ function Api() {
 
   return (
     <div className='section-api-external'>
-      <img className='icon-weather' src={currentIconWeather} alt='weather condition'/>
+      <img className='icon-weather' src={currentIconWeather && currentIconWeather : Sun} alt='weather condition'/>
       <section className='section section-api' id='api'>
           <div className='container'>
 

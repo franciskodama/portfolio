@@ -1,22 +1,31 @@
 import React from 'react'
 import '../components/Button.css'
 
-function Button({ text, backgroundColor, textColor, align, onClick }) {
+function Button({ text, align, onClick, bgColor, color, border, boxShadow }) {
   return <button
-          onClick={onClick}
           className='btn'
+          onClick={onClick}
+
           style={{
-            backgroundColor: backgroundColor,
-            color: textColor,
-            alignSelf: align
+            backgroundColor: bgColor,
+            color: color,
+            alignSelf: align,
+            border: border,
+            boxShadow: boxShadow
           }}
-          type='button'>{text}</button> 
+
+          type='button'>
+          {text}
+        </button> 
 }
 
 Button.defaultProps = {
-  backgoundColor: 'var(--third-color)',
+  backgroundColor: 'var(--third-color)',
+  color: 'var(--bright-color)',
+  border: 'var(--bright-color)',
   align: 'flex-start',
-  textColor: 'var(--bright-color)'
+  text: 'Click'
+
 }
 
 // Button.propTypes = {

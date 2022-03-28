@@ -21,7 +21,7 @@ const About = () => {
   }
 
   useEffect(() => {
-    console.log(location)
+    // console.log(location)
   })
 
   const handleClickAddToTeam = () => {
@@ -39,7 +39,7 @@ const About = () => {
   
   function handleClickInterview() {
     setShowMessage({show:false})
-    console.log('click Interview')
+    // console.log('click Interview')
   }
 
   return (    
@@ -77,9 +77,13 @@ const About = () => {
               </div>
 
               <p className="purchase-confirm-title">Confirm Purchase:</p>
-              <Button onClick={handleClickInterview} text='schedule an interview' backgroundColor='var(--bright-color)' textColor='var(--dark-color)'/>
+              <Button
+                onClick={handleClickInterview}
+                text='schedule an interview'
+                bgColor='var(--bright-color)'
+                color='var(--dark-color)'
+              />
               
-
             </div>
             <div className='about-description'>
               <h3 className='name'>Francis Kodama</h3>
@@ -100,7 +104,13 @@ const About = () => {
                   <input onClick={handleClickLocation} className='input-radio' type='radio' name='location' value='hybrid'/>
                   <label htmlFor='hybrid'>Hybrid</label>
                 </form>
-                <Button onClick={handleClickAddToTeam} text='add to my team' backgroundColor='var(--bright-color)' textColor='var(--dark-color)' align='flex-start'/>
+                <Button
+                  onClick={handleClickAddToTeam}
+                  text='add to my team'
+                  bgColor='var(--bright-color)'
+                  color='var(--dark-color)'
+                  align='flex-start'
+                />
               </div>
 
               <div className='tools'>

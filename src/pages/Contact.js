@@ -92,13 +92,22 @@ function Contact() {
             <div className="contact-buttons">
 
 
-            <button className='btn-bright'
+            {/* <button className='btn-bright'
               onClick={handleClickClearMessage}
               text='clear message'
               backgroundColor='var(--bright-color)'
               textColor='var(--dark-color)'a
               align='flex-start'
-              >clear</button>
+              >clear</button> */}
+
+            <Button
+              onClick={handleClickClearMessage}
+              text='clear'
+              bgColor='var(--dark-color)'
+              color='var(--bright-color)'
+              align='flex-start'
+              border='1px solid var(--bright-color)'
+            />
 
 
            {/* <Button
@@ -111,7 +120,8 @@ function Contact() {
 
             <Button
               text='send'
-              backgroundColor='var(--third-color)'
+              bgColor='var(--third-color)'
+              color='var(--brigth-color'
               align='flex-end'
             />
             

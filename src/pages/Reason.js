@@ -53,7 +53,11 @@ function Reason() {
                 type='text'
                 placeholder='type something here...'/>
 
-               <Button text='reload original message' backgroundColor='var(--third-color)'/>
+               <Button
+                text='reload original message'
+                bgColor='var(--third-color)'
+                color='var(--bright-color)'
+               />
 
                 <WhyCard />
 

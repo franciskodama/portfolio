@@ -26,15 +26,6 @@
   align-items: center;
 }
 
-.nav-item {
-  font-family: var(--main-font-light);
-  font-size: 1rem;
-  color: var(--bright-color);
-  margin-left: 2.5em;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /* .nav-item:hover {
   font-family: var(--main-font-regular);
   font-size: 1.1rem;
@@ -62,15 +53,22 @@
 /* ------ MOUSE OVER ------ */
 
 .nav-item {
+  position: relative;
+  font-family: var(--main-font-light);
+  font-size: 1rem;
+  color: var(--bright-color);
+  margin-left: 2.5em;
+  text-decoration: none;
+  cursor: pointer;
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(255, 0, 0, 0);
-  position: relative;
-  transition-duration: 0.3s;
-  transition-property: transform;
   transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover::first-letter {
+  color: var(--third-color);
 }
 
 .nav-item:before {
@@ -83,12 +81,6 @@
   height: 10px;
   width: 90%;
   opacity: 0;
-  background: -webkit-radial-gradient(
-    center,
-    ellipse,
-    rgba(255, 255, 255, 0.35) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
   background: radial-gradient(
     ellipse at center,
     rgba(255, 255, 255, 0.35) 0%,
@@ -109,8 +101,4 @@
 .nav-item:active:before {
   opacity: 1;
   transform: translateY(5px);
-}
-
-.nav-item:hover::first-letter {
-  color: var(--third-color);
 }
