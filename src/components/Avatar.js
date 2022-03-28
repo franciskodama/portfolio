@@ -16,7 +16,7 @@ import Friendly from '../assets/images/avatar-friendly.jpg'
 
 import '../components/Avatar.css'
 
-function Avatar() {
+const Avatar = () => {
 
   const avatarData = [
     { key: 0,

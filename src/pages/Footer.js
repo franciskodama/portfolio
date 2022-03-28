@@ -8,7 +8,8 @@ import Git from '../assets/images/ico-github-white.svg'
 
 import '../styles/Footer.css'
 
-function Footer() {
+const Footer = () => {
+  
   return (
     <section className='section section-footer'>
         <div className='container'>

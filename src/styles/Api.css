@@ -61,11 +61,26 @@
   display: none;
   grid-column: 1/4;
   grid-row: 3/4;
-  margin-top: 3em;
-  margin-left: 0.3em;
+  margin-top: 2em;
   font-family: var(--main-font-regular);
   font-size: 0.9rem;
-  color: var(--third-color);
+  width: 20em;
+  color: var(--bright-color);
+  background-color: var(--dark-color);
+  padding: 0.5em;
+  text-align: center;
+  animation-name: appear;
+  animation-duration: 1s;
+  z-index: -10;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* ---- CITY SECTION ---- */

@@ -20,44 +20,44 @@ const WhyCard = () => {
   return (
     
     <div className='why'>
-        <div className="why__eye-wrapper">
-            <div className="why__eye-wrapper">
-              <img className="eye" src={EyeClosed} alt="icon eye" />
+        <div className='why__eye-wrapper'>
+            <div className='why__eye-wrapper'>
+              <img className='eye' src={EyeClosed} alt='icon eye' />
             </div>
-            <div className="why__button-wrapper">
-              <img className="why__button" src={Hey} alt="icon press and hold" />
+            <div className='why__button-wrapper'>
+              <img className='why__button' src={Hey} alt='icon press and hold' />
             </div>
         </div>
 
-        <div className="why__info-container">
+        <div className='why__info-container'>
 
-          <div className="single-container">
-            <div className="single__wrapper-icon-title">
-              <img className="icon" src={Flag} alt="icon bolt"/>
+          <div className='single-container'>
+            <div className='single__wrapper-icon-title'>
+              <img className='icon' src={Flag} alt='icon bolt'/>
               <h2 className='single__title'>WHY?</h2>
             </div>
-            <p className="single__info">This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
+            <p className='single__info'>This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
          </div>
 
-          <div className="single-container">
-            <div className="single__wrapper-icon-title">
-              <img className="icon" src={Bolt} alt="icon bolt"/>
+          <div className='single-container'>
+            <div className='single__wrapper-icon-title'>
+              <img className='icon' src={Bolt} alt='icon bolt'/>
               <h2 className='single__title'>WHY?</h2>
             </div>
-            <p className="single__info">This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
+            <p className='single__info'>This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
           </div>
         
-          <div className="single-container">
-            <div className="single__wrapper-icon-title">
-              <img className="icon" src={Brush} alt="icon bolt"/>
+          <div className='single-container'>
+            <div className='single__wrapper-icon-title'>
+              <img className='icon' src={Brush} alt='icon bolt'/>
               <h2 className='single__title'>WHY?</h2>
             </div>
-            <p className="single__info">This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
+            <p className='single__info'>This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
           </div>
 
-          <div className="why__ps-container">
-            <img className='icon icon-last' src={Alert} alt="icon alert ps"/>
-            <p className="ps__info">This portfolio was 100% created and programmed by Francis Kodama.</p>
+          <div className='why__ps-container'>
+            <img className='icon icon-last' src={Alert} alt='icon alert ps'/>
+            <p className='ps__info'>This portfolio was 100% created and programmed by Francis Kodama.</p>
           </div>
 
         </div>

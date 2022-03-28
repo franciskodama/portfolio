@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../components/Card.css'
 import CardIcon from '../assets/images/card-icon.svg'
 
-function Card({ project }) {
+const Card = ({ project }) => {
 
 const [ isOpen, setIsOpen ] = useState(false)
 

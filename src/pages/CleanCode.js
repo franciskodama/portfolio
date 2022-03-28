@@ -15,7 +15,6 @@ const CleanCode = () => {
     }
   }
 
-
   return (
     <section className="section section-code" id='code'>
         <div className="container">

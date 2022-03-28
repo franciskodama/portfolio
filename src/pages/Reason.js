@@ -3,7 +3,7 @@ import Button from '../components/Button'
 import WhyCard from '../components/WhyCard'
 import '../styles/Reason.css'
 
-function Reason() {
+const Reason = () => {
     
     const originalMessageBright = 'this portfolio has been built to showcase my variety of skills from creativity to code '
     const originalMessageDark = 'click on the waves for an explanation of each page'
@@ -13,7 +13,7 @@ function Reason() {
     let arrOfDiv = []
     let arrOfDivUser = []
 
-    function createGrid() {
+    const createGrid = () => {
         for(let i = 0; i < arrOfLettersBright.length; i++) {        
             arrOfDiv.push(<div key={i} className='letter-bright'>{arrOfLettersBright[i]}</div>)
         }
@@ -25,8 +25,8 @@ function Reason() {
 
     const [ currentArray, setCurrentArray ] = useState ([])
 
-    function handleChange(e) {
-        const letter = e.target.value
+    const handleChange = event => {
+        const letter = event.target.value
         const divArray = []
         divArray.push(<div className='letter-bright'>{letter}</div>)
         setCurrentArray(currentArray => [...currentArray, divArray])
@@ -34,9 +34,6 @@ function Reason() {
         console.log(currentArray)   
         return currentArray
     }
-
-   
-    // ------------------------------------------------------
     
     return (
         <section className='section section-reason'>

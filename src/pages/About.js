@@ -28,18 +28,17 @@ const About = () => {
     setAddMe({showMe: true})
   }
 
-  function handleClickBag() {
+  const handleClickBag = () => {
     setShowMessage(showMessage.show ? {show: false} : {show: true})
   }
 
-  function handleClickDelete() {
+  const handleClickDelete = () => {
     setShowMessage({show: false})
     setAddMe({show: false})
   }
   
-  function handleClickInterview() {
+  const handleClickInterview = () => {
     setShowMessage({show:false})
-    // console.log('click Interview')
   }
 
   return (    

@@ -15,7 +15,8 @@ import Projects from './pages/Projects';
 import Api from './pages/Api';
 import CleanCode from './pages/CleanCode';
 
-function App() {
+const App = () => {
+  
   return (
     <div className='App'>
         <Navbar />

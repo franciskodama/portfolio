@@ -4,6 +4,7 @@ import '../styles/Hero.css'
 import '../App.css'
 
 const Hero = () => {
+    
     return (
         <section className='section section-hero' id='hero'>
             <div className='container'>

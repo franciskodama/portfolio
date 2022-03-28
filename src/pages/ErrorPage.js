@@ -1,7 +1,8 @@
 import React from 'react'
 import '../styles/ErrorPage.css'
 
-function ErrorPage() {
+const ErrorPage = () => {
+  
   return (
     <section className='section section-error'>
         <div className='container'>
