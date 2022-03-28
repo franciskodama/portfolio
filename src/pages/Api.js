@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import '../styles/Api.css'
 
-import Sun from '../assets/images/01d.png'
-
-
-function Api() {
+const Api = () => {
 
   const [ data, setData ] = useState({})
   const [ location, setLocation ] = useState('')
@@ -13,18 +10,25 @@ function Api() {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric`
 
   useEffect(() => {
-    console.log('the use effect ran')
     Axios.get('https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric').then((response) => {
       setData(response.data)
-      console.log(response.data.timezone)
-      console.log(response.data.timezone)
     })
   }, [])
 
   const searchLocation = (event) => {
       if (event.key === 'Enter') {
-      Axios.get(url).then((response) => {
+        document.getElementById('error-message').style.display = 'none'
+        Axios.get(url)
+      .then((response) => {
         setData(response.data)
+      })
+      .catch( error => {
+        if (error.response) {
+          document.getElementById('error-message').style.display = 'block'
+        }
+        
+        
+        console.log(error.response)
       })
     }
   }
@@ -32,8 +36,6 @@ function Api() {
   return (
     <div className='section-api-external'>
       <img className='icon-weather' src={data.weather ? require(`../assets/images/${data.weather[0].icon}.png`) : null} alt='weather condition'/>
-
-
 
       <section className='section section-api' id='api'>
           <div className='container'>
@@ -45,6 +47,8 @@ function Api() {
                 <h2 className="api--question">are you in?</h2>
                 <input id='myInput' value={location} onChange={event => setLocation(event.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text'/>
               </div>
+
+              <p id='error-message'>...Ops, city not found. Try again! :)</p>
 
               <h4 className="api--title-city">Weather in</h4>
               <h3 className="api--city">{data.name}</h3>

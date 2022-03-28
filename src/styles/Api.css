@@ -55,6 +55,19 @@
   margin-right: 1em;
 }
 
+/* ---- ERROR MESSAGE ---- */
+
+#error-message {
+  display: none;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  margin-top: 3em;
+  margin-left: 0.3em;
+  font-family: var(--main-font-regular);
+  font-size: 0.9rem;
+  color: var(--third-color);
+}
+
 /* ---- CITY SECTION ---- */
 
 .api--title-city {
