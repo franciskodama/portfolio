@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from '../components/Button'
+import WhyCard from '../components/WhyCard'
 import '../styles/Reason.css'
 
 function Reason() {
@@ -53,6 +54,8 @@ function Reason() {
                 placeholder='type something here...'/>
 
                <Button text='reload original message' backgroundColor='var(--third-color)'/>
+
+                <WhyCard />
 
             </form>
 
