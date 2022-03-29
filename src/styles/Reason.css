@@ -10,7 +10,7 @@
   margin: 6em auto 12em;
 }
 
-.input-reason {
+.grid__input {
   height: 3em;
   width: 40em;
   margin-right: 1em;
@@ -26,6 +26,8 @@
   justify-content: center;
 }
 
+/* ----- LETTERS ----- */
+
 .letter-bright,
 .letter-dark {
   border: 1px solid hsla(0, 0%, 100%, 0.2);
@@ -39,12 +41,4 @@
 
 .letter-dark {
   color: var(--third-color);
-}
-
-/* ----- BUTTON ----- */
-
-.btn:hover {
-  transform: translate(5px, -5px);
-  box-shadow: var(--third-color) 0px 0px 0px 0px inset,
-    var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
 }

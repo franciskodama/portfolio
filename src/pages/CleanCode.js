@@ -44,6 +44,7 @@ const CleanCode = () => {
           <div className="flying--words">clear and concise</div>
           <div className="flying--words">consistent</div>
           <div className="flying--words">uncomplicate</div>
+          <div className="flying--words">BEM (Block-Element-Modifier)</div>
        
         
         </div>

@@ -9,7 +9,7 @@ import  Flag from '../assets/images/why-icon-flag.svg'
 import  Bolt from '../assets/images/why-icon-bolt.svg'
 import  Brush from '../assets/images/why-icon-brush.svg'
 import  Robot from '../assets/images/why-icon-robot.svg'
-import Alert from '../assets/images/why-icon-alert-red.svg'
+import Check from '../assets/images/why-icon-check.svg'
 
 const WhyCard = () => {
   
@@ -19,48 +19,41 @@ const WhyCard = () => {
   
   return (
     
-    <div className='why'>
-        <div className='why__eye-wrapper'>
-            <div className='why__eye-wrapper'>
-              <img className='eye' src={EyeClosed} alt='icon eye' />
-            </div>
-            <div className='why__button-wrapper'>
-              <img className='why__button' src={Hey} alt='icon press and hold' />
-            </div>
-        </div>
+    <div className='why-container'>
 
-        <div className='why__info-container'>
+        <button className='why-toggle'>
+            <img className='eye' src={EyeClosed} alt='icon eye' />
+            <span className="why-toggle__label">Click me</span>
+        </button>
 
-          <div className='single-container'>
-            <div className='single__wrapper-icon-title'>
-              <img className='icon' src={Flag} alt='icon bolt'/>
-              <h2 className='single__title'>WHY?</h2>
-            </div>
-            <p className='single__info'>This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
-         </div>
+        <ul className='why'>
 
-          <div className='single-container'>
-            <div className='single__wrapper-icon-title'>
-              <img className='icon' src={Bolt} alt='icon bolt'/>
-              <h2 className='single__title'>WHY?</h2>
-            </div>
-            <p className='single__info'>This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
-          </div>
-        
-          <div className='single-container'>
-            <div className='single__wrapper-icon-title'>
-              <img className='icon' src={Brush} alt='icon bolt'/>
-              <h2 className='single__title'>WHY?</h2>
-            </div>
-            <p className='single__info'>This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
-          </div>
+          <li className='why__item'>
+            <h2 className='why__title why__title--flag'>WHY?</h2>
+            <p className='why__desc'>This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
+          </li>
 
-          <div className='why__ps-container'>
-            <img className='icon icon-last' src={Alert} alt='icon alert ps'/>
-            <p className='ps__info'>This portfolio was 100% created and programmed by Francis Kodama.</p>
-          </div>
+          <li className='why__item'>
+            <h2 className='why__title why__title--bolt'>SHOWCASE</h2>
+            <p className='why__desc'>In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.</p>
+          </li>
 
-        </div>
+          <li className='why__item'>
+            <h2 className='why__title why__title--brush'>TOOLS USED</h2>
+            <p className='why__desc'>Figma, Adobe Photoshop, and VS Code</p>
+          </li>
+
+          <li className='why__item'>
+            <h2 className='why__title why__title--robot'>TECH USED</h2>
+            <p className='why__desc'>HTML, CSS, Javascript, React, Sass, NPM, and GIT</p>
+          </li>
+
+          <li className='why__footer'>
+            <img className='why__icon' src={Check} alt='icon check'/>
+            <p className='why__text'>This portfolio was 100% created and programmed by Francis Kodama.</p>
+          </li>
+
+        </ul>
     </div>
   )
 }

@@ -48,7 +48,7 @@ const Contact = () => {
     },
     {
       id: '11',
-      text: 'Regards,'
+      text: 'See you soon!'
     },
     {
       id: '12',
@@ -56,7 +56,7 @@ const Contact = () => {
     },
     {
       id: '13',
-      text: 'Thanks,'
+      text: 'Thanks! :)'
     },
     {
       id: '14',
@@ -93,47 +93,7 @@ const Contact = () => {
           <p className='sub-title'>Let me help you drop me a line! ;)</p>
 
           <DragDropContext>  
-            <form>
-            <p className='sub-title-tray sub-title-tray-first'>drag from here:</p>
-              <input onClick={handleClick} className='phrase phrase--active' value='Hey Francis!' type='submit'/>
-              <label htmlFor='Hey Francis!'></label>
 
-              <input onClick={handleClick} className='phrase' value='I hope this message finds you well.' type='submit'/>
-              <label htmlFor='I hope this message finds you well.'></label>
-
-              <input onClick={handleClick} className='phrase' value='Cool website, man!' type='submit'/>
-              <label htmlFor='Cool website, man!'></label>
-
-              <input onClick={handleClick} className='phrase' value='do you want to work in our company?' type='submit'/>
-              <label htmlFor='do you want to work in our company?'></label>
-
-              <input onClick={handleClick} className='phrase' value='ops, I found a bug.' type='submit'/>
-              <label htmlFor='ops, I found a bug.'></label>
-
-              <input onClick={handleClick} className='phrase' value='Holly cow, what a portfolio!' type='submit'/>
-              <label htmlFor='Holly cow, what a portfolio!'></label>
-
-              <input onClick={handleClick} className='phrase' value={`Let's schedule an interview?`} type='submit'/>
-              <label htmlFor='Lets schedule a interview?'></label>
-
-              <input onClick={handleClick} className='phrase' value='I did not like your website.' type='submit'/>
-              <label htmlFor='I did not like your website.'></label>
-
-              <input onClick={handleClick} className='phrase' value='Cool!!!' type='submit'/>
-              <label htmlFor='Cool!!!'></label>
-
-              <input onClick={handleClick} className='phrase' value='I did not like your website, and I tell you why...' type='submit'/>
-              <label htmlFor='I did not like your website, and I tell you why...'></label>
-
-              <input onClick={handleClick} className='phrase' value='Regards,' type='submit'/>
-              <label htmlFor='Regards,'></label>
-
-              <input onClick={handleClick} className='phrase' value='Take care!' type='submit'/>
-              <label htmlFor='Take care!'></label>
-
-              <input onClick={handleClick} className='phrase' value='Thanks! :)' type='submit'/>
-              <label htmlFor='Thanks! :)'></label>
-            </form>
           </DragDropContext>
           <div className="tray-container">
             <p className='sub-title-tray'>drop here:</p>

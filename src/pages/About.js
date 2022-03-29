@@ -77,10 +77,9 @@ const About = () => {
 
               <p className="purchase-confirm-title">Confirm Purchase:</p>
               <Button
+                className='btn btn--bright'
                 onClick={handleClickInterview}
                 text='schedule an interview'
-                bgColor='var(--bright-color)'
-                color='var(--dark-color)'
               />
               
             </div>
@@ -104,10 +103,9 @@ const About = () => {
                   <label htmlFor='hybrid'>Hybrid</label>
                 </form>
                 <Button
+                  className='btn btn--dark'
                   onClick={handleClickAddToTeam}
                   text='add to my team'
-                  bgColor='var(--bright-color)'
-                  color='var(--dark-color)'
                   align='flex-start'
                 />
               </div>

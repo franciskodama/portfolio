@@ -1,32 +1,21 @@
 import React from 'react'
 import '../components/Button.css'
 
-const Button = ({ text, align, onClick, bgColor, color, border, boxShadow }) => {
+const Button = ({ text, align, onClick, className }) => {
   
   return <button
-          className='btn'
-          onClick={onClick}
-
-          style={{
-            backgroundColor: bgColor,
-            color: color,
-            alignSelf: align,
-            border: border,
-            boxShadow: boxShadow
-          }}
-
+          className={ className }
+          onClick={ onClick }
+          style={{ alignSelf: align }}
           type='button'>
           {text}
         </button> 
 }
 
 Button.defaultProps = {
-  backgroundColor: 'var(--third-color)',
-  color: 'var(--bright-color)',
-  border: 'var(--bright-color)',
   align: 'flex-start',
-  text: 'Click'
-
+  text: 'Click',
+  className: 'btn btn--third-color'
 }
 
 // Button.propTypes = {
@@ -37,3 +26,24 @@ Button.defaultProps = {
 // }
 
 export default Button
+
+
+
+// const Button = ({ text, align, onClick, bgColor, color, border, boxShadow }) => {
+  
+//   return <button
+//           className='btn'
+//           onClick={onClick}
+
+//           style={{
+//             backgroundColor: bgColor,
+//             color: color,
+//             alignSelf: align,
+//             border: border,
+//             boxShadow: boxShadow
+//           }}
+
+//           type='button'>
+//           {text}
+//         </button> 
+// }

@@ -1,60 +1,109 @@
+.why-container {
+  display: flex;
+  width: max-content;
+  align-items: flex-end;
+}
+
+/* ----- BUTTON ----- */
+
+.why-toggle {
+  display: flex;
+  padding: 0.5em;
+  background-color: var(--third-color);
+  width: 100px;
+  height: 40px;
+  justify-content: space-around;
+  color: var(--bright-color);
+  border: 0;
+  align-items: center;
+}
+
+.why-toggle__label {
+  font-family: var(--main-font-regular);
+  font-size: 0.65rem;
+  width: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 0.7rem;
+}
+
+/* ----- BUTTON ANIMATION ----- */
+
+.why-toggle__label:hover,
+.why-toggle__label:focus,
+.why-toggle__label:active {
+  animation-name: icon-shake;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes icon-shake {
+  50% {
+    transform: translateX(2px) rotate(3deg);
+  }
+  100% {
+    transform: translateX(-2px) rotate(-3deg);
+  }
+}
+@keyframes hvr-buzz {
+  50% {
+    transform: translateX(2px) rotate(3deg);
+  }
+  100% {
+    transform: translateX(-2px) rotate(-3deg);
+  }
+}
+
+/* ----- WHY CARD ----- */
+
 .why {
   display: flex;
   flex-direction: column;
-  width: max-content;
-}
-
-.why .icon {
-  width: 28px;
-  height: 28px;
-}
-
-.why__eye-wrapper,
-.why__button-wrapper {
-  width: 40px;
-  height: 36px;
-  background-color: var(--third-color);
-  text-align: center;
-}
-
-.why__button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.why__button {
-  width: 28px;
-}
-
-.why__info-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2em;
   padding: 1em 2em 2em 2em;
   background-color: var(--third-color);
   width: max-content;
 }
 
-.single-container {
+.why__item {
   display: flex;
   flex-direction: column;
   width: 30ch;
-  margin: 1em 0 3em 0;
+  margin: 1em 0 2em 0;
 }
 
-.single__wrapper-icon-title {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.7em;
-}
-
-.single__title {
-  margin-left: 1em;
+.why__title {
   font-family: var(--main-font-semibold);
   font-size: 1.1rem;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 1.5em;
+  padding-left: 2.5em;
 }
 
-.why__ps-container {
+.why__title--flag {
+  background-image: url("../assets/images/why-icon-flag.svg");
+}
+
+.why__title--bolt {
+  background-image: url("../assets/images/why-icon-bolt.svg");
+}
+
+.why__title--brush {
+  background-image: url("../assets/images/why-icon-brush.svg");
+}
+
+.why__title--robot {
+  background-image: url("../assets/images/why-icon-robot.svg");
+}
+
+.why__desc {
+  margin-top: 0.5em;
+}
+
+/* ----- FOOTER ----- */
+
+.why__footer {
   display: flex;
   align-items: center;
   background-color: var(--bright-color);
@@ -62,12 +111,14 @@
   text-transform: uppercase;
   font-family: var(--main-font-regular);
   font-size: 0.7rem;
+  margin-top: 3em;
 }
 
-.ps__info {
+.why__text {
   width: 32ch;
+  padding: 0.5em 0;
 }
 
-.icon-last {
+.why__icon {
   margin: 0 1em;
 }

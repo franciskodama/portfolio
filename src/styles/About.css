@@ -19,8 +19,6 @@
   background-color: hsla(0, 0%, 0%, 0.05);
 }
 
-/* --- BG GREY --- */
-
 /*--------------------------
 ------ INFO CONTAINER ------
 ----------------------------*/
@@ -288,12 +286,4 @@
   margin-bottom: 0.5em;
   text-transform: capitalize;
   display: inline;
-}
-
-/* ----- BUTTON ----- */
-
-.btn:hover {
-  transform: translate(5px, -5px);
-  box-shadow: var(--bright-color) -5px 5px 0px -1px,
-    var(--bright-color) -5px 5px;
 }

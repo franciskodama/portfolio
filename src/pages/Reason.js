@@ -45,15 +45,14 @@ const Reason = () => {
 
             <form>
                <input
-                className='input-reason'
+                className='grid__input'
                 onChange={handleChange}
                 type='text'
                 placeholder='type something here...'/>
 
                <Button
                 text='reload original message'
-                bgColor='var(--third-color)'
-                color='var(--bright-color)'
+                className='btn btn--third-color'
                />
 
                 <WhyCard />
