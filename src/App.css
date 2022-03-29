@@ -89,10 +89,6 @@ button {
   text-transform: uppercase;
 }
 
-.sub-title {
-  margin-bottom: 3em;
-}
-
 input,
 ::placeholder {
   font-family: var(--main-font-light);

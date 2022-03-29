@@ -7,55 +7,55 @@ import Button from '../components/Button'
 const data = [
   {
     id: '1',
-    text: 'Hey Francis!'
+    content: 'Hey Francis!'
   },
   {
     id: '2',
-    text: 'I hope this message finds you well.'
+    content: 'I hope this message finds you well.'
   },
   {
     id: '3',
-    text: 'Cool website, man!'
+    content: 'Cool website, man!'
   },
   {
     id: '4',
-    text: 'Do you want to work in our company?'
+    content: 'Do you want to work in our company?'
   },
   {
     id: '5',
-    text: 'ops, I found a bug.'
+    content: 'ops, I found a bug.'
   },
   {
     id: '6',
-    text: 'Holly cow, what a portfolio!'
+    content: 'Holly cow, what a portfolio!'
   },
   {
     id: '7',
-    text: `Let's schedule an interview?`
+    content: `Let's schedule an interview?`
   },
   {
     id: '8',
-    text: 'I did not like your website.'
+    content: 'I did not like your website.'
   },
   {
     id: '9',
-    text: 'Cool!!!'
+    content: 'Cool!!!'
   },
   {
     id: '10',
-    text: 'I did not like your website, and I will tell you why...'
+    content: 'I did not like your website, and I will tell you why...'
   },
   {
     id: '11',
-    text: 'See you soon!'
+    content: 'See you soon!'
   },
   {
     id: '12',
-    text: 'Take care!'
+    content: 'Take care!'
   },
   {
     id: '13',
-    text: 'Thanks! :)'
+    content: 'Thanks! :)'
   }
 ]
 
@@ -92,7 +92,7 @@ const onDragEnd = (result, columns, setColumns) => {
         items: destItems
       }
     })
-
+    console.log(columns)
   } else {
     const column = columns[source.droppableId]
     const copiedItems = [...column.items]
@@ -110,145 +110,109 @@ const onDragEnd = (result, columns, setColumns) => {
 
 
 const Contact = () => {
-
+  
   const [columns, setColumns] = useState(dropSpace);
+  const [ message, setMessage ] = useState('')
+
+  const handleClickClearMessage = () => {
+    setMessage('')
+  }
+
+  const handleChange = (event) => {
+    setMessage(event.target.value)
+    console.log(message)
+  }
 
   return (
-    
-    <div style={{ display: "flex", justifyContent: "center", height: "100%", border: '5px solid orange'}}>
-      <DragDropContext
-        onDragEnd={result => onDragEnd(result, columns, setColumns)}
-      >
+    <section className='section section--contact' id='contact'>
+      <div className='container'>
+        <h1 className='main-title'>hello generator</h1>
+        <p className='sub-title'>Let me help you drop me a line! ;)</p>
+
+      <DragDropContext onDragEnd={result => onDragEnd(result, columns, setColumns)}>
         {Object.entries(columns).map(([columnId, column], index) => {
           return (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center"
-              }}
-              key={columnId}
-            >
-              <h2>{column.name}</h2>
-              <div style={{ margin: 8 }}>
+            <div className='drop' key={columnId}>
+              <h2 className='drop__title'>{column.name}</h2>
+              <div>
                 <Droppable droppableId={columnId} key={columnId}>
                   {(provided, snapshot) => {
                     return (
                       <div
                         {...provided.droppableProps}
                         ref={provided.innerRef}
+                        className='drop__space'
                         style={{
                           background: snapshot.isDraggingOver
-                            ? "lightblue"
-                            : "lightgrey",
-                          padding: 4,
-                          width: 250,
-                          minHeight: 500
+                            ? 'rgba(255, 255, 255, 0.1)'
+                            : 'var(--dark-color)'
                         }}
                       >
                         {column.items.map((item, index) => {
                           return (
-                            <Draggable
-                              key={item.id}
-                              draggableId={item.id}
-                              index={index}
-                            >
+                            <Draggable key={item.id} draggableId={item.id} index={index} >
                               {(provided, snapshot) => {
                                 return (
-                                  <div
+                                  <div className='phrase'
                                     ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
                                     style={{
-                                      userSelect: "none",
-                                      padding: 16,
-                                      margin: "0 0 8px 0",
-                                      minHeight: "50px",
                                       backgroundColor: snapshot.isDragging
-                                        ? "#263B4A"
-                                        : "#456C86",
-                                      color: "white",
+                                        ? 'var(--third-color)'
+                                        : 'var(--dark-color)',
+                                      color: 'var(--bright-color)',
                                       ...provided.draggableProps.style
                                     }}
                                   >
                                     {item.content}
                                   </div>
-                                );
+                                )
                               }}
                             </Draggable>
-                          );
+                          )
                         })}
                         {provided.placeholder}
                       </div>
-                    );
+                    )
                   }}
                 </Droppable>
               </div>
             </div>
-          );
+          )
         })}
       </DragDropContext>
-    </div>
-  );
+
+    <form className='form-contact'>
+            <p className='form-contact__title'>Additional comments:</p>
+            <textarea
+              className='form-contact__input'
+              placeholder='type some additional comments and sign your name.'
+              value={message}
+              onChange={handleChange}
+              type='text'
+            ></textarea>
+
+            <div className='form-contact__buttons'>
+              <Button
+                className={'btn btn--dark-dark-bg'}
+                onClick={handleClickClearMessage}
+                text='clear'
+                align='flex-start'
+              />
+              <Button
+                text='send'
+                align='flex-end'
+              />
+            </div>
+          </form>
 
 
-
-
-
-  // return (
-  //   <section className='section section--contact' id='contact'>
-
-  //       <div className='container'>
-  //         <h1 className='main-title'>hello generator</h1>
-  //         <p className='sub-title'>Let me help you drop me a line! ;)</p>
-
-  //         <DragDropContext onDragEnd={onEnd}>  
-  //           <Droppable droppableId='dragdrop'>
-  //             {(provided, snapshot) => ( <div ref={provided.innerRef}>
-                
-  //               <div className="drop">
-  //                 <p className='drop__title'>drop here:</p>
-  //                 <div className="drop__space">
-  //                 </div>
-  //               </div>
-
-
-  //               {/* LIST MAP DRAGGABLE */}
-                
-  //               {list.map((item, index) => (
-  //                 <Draggable draggableId={item.id} key={item.id} index={index} >
-  //                   {(provided, snapshot) => (
-  //                     <div
-  //                     ref={provided.innerRef}
-  //                     {...provided.draggableProps}
-  //                     {...provided.dragHandleProps}
-  //                     >
-  //                       <div className='phrase'>
-  //                         {item.text}
-  //                       </div>
-  //                     </div>
-  //                    )}
-  //                 </Draggable>                  
-  //               ))}
-
-  //               {/* END LIST MAP DRAGGABLE */}
-
-  //               {provided.placeholder}
-  //               </div>
-  //             )}
-  //           </Droppable>
-  //         </DragDropContext>
-  //         </div>
-  //   </section>
-  // )
-}
+</div>
+</section>
+)}
 
 export default Contact
-
-
-
-
-
 
   // const [ list, setList ] = useState(data)
 
@@ -262,9 +226,6 @@ export default Contact
   // const onEnd = (result) => {
   //   setList(reorderList(list, result.source.index, result.destination.index))
   // }
-
-
-
 
 //   return (
 //     <section className='section section--contact' id='contact'>
@@ -310,9 +271,9 @@ export default Contact
   // }
 
 {/* 
-          <div className="drop">
+          <div className='drop'>
             <p className='drop__title'>drop here:</p>
-            <div className="drop__space">
+            <div className='drop__space'>
             </div>
           </div> */}
 
@@ -326,7 +287,7 @@ export default Contact
               size='10'
             ></textarea>
 
-            <div className="form-contact__buttons">
+            <div className='form-contact__buttons'>
               <Button
                 className={'btn btn--dark-dark-bg'}
                 onClick={handleClickClearMessage}
@@ -433,9 +394,9 @@ export default Contact
 //               <label htmlFor='Thanks! :)'></label>
 //             </form>
 //           </DragDropContext>
-//           <div className="tray-container">
+//           <div className='tray-container'>
 //             <p className='sub-title-tray'>drop here:</p>
-//             <div className="tray">
+//             <div className='tray'>
 
 //             </div>
 //           </div>
@@ -451,7 +412,7 @@ export default Contact
 //               size='10'
 //             ></textarea>
 
-//             <div className="contact-buttons">
+//             <div className='contact-buttons'>
 
 //             <Button
 //               onClick={handleClickClearMessage}
