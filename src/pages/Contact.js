@@ -5,7 +5,7 @@ import '../styles/Contact.css'
 
 const Contact = () => {
 
-  const messages = [
+  const data = [
     {
       id: '1',
       text: 'Hey Francis!'
@@ -57,84 +57,103 @@ const Contact = () => {
     {
       id: '13',
       text: 'Thanks! :)'
-    },
-    {
-      id: '14',
-      text: ''
-    },
-    {
-      id: '15',
-      text: ''
-    },
+    }
   ]
 
+  const [ list, setList ] = useState(data)
 
-  const [ message, setMessage ] = useState('')
-
-  const handleClick = (event) => {
-    event.preventDefault()
-    setMessage(previousMessage => previousMessage + event.target.value)
+  const reorderList = (list, startIndex, endIndex) => {
+    const result = Array.from(list)
+    const [removed] = result.splice(startIndex, 1)
+    result.splice(endIndex, 0, removed)
+    return result
   }
 
-  const handleChange = (event) => {
-    setMessage(previousMessage => previousMessage + event.target.value)
-    console.log(message)
+  const onEnd = (result) => {
+    setList(reorderList(list, result.source.index, result.destination.index))
   }
 
-  const handleClickClearMessage = () => {
-    setMessage('')
-  }
+
+
+  // const [ message, setMessage ] = useState('')
+
+  // const handleClickClearMessage = () => {
+  //   setMessage('')
+  // }
 
   return (
-    <section className='section section-contact' id='contact'>
+    <section className='section section--contact' id='contact'>
 
         <div className='container'>
-          <h1 className='title'>hello generator</h1>
+          <h1 className='main-title'>hello generator</h1>
           <p className='sub-title'>Let me help you drop me a line! ;)</p>
 
-          <DragDropContext>  
+          <DragDropContext onDragEnd={onEnd}>  
+            <Droppable
+              droppableId='dragdrop'
+            >
+              {(provided, snapshot) => (
+                <div
+                  ref={provided.innerRef}
+                >
 
+                {list.map((item, index) => (
+                  <Draggable
+                    draggableId={item.id}
+                    key={item.id}
+                    index={index}
+                  >
+                    {(provided, snapshot) => (
+                      <div
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      >
+                        <div className='phrase'>
+                          {item.text}
+                        </div>
+                      </div>
+                     )}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+                </div>
+              )}
+ 
+            </Droppable>
           </DragDropContext>
-          <div className="tray-container">
-            <p className='sub-title-tray'>drop here:</p>
-            <div className="tray">
 
-            </div>
-          </div>
-         
+          <div className="drop">
+                <p className='drop__title'>drop here:</p>
+                <div className="drop__space">
+                </div>
+              </div>
 
-          <form className='form-contact'>
-          <p className='sub-title-tray'>Additional comments:</p>
+
+          {/* <form className='form-contact'>
+            <p className='form-contact__title'>Additional comments:</p>
             <textarea
-              value={message}
-              onChange={handleChange}
-              className='form-contact-input'
+              value=''
+              className='form-contact__input'
               type='text'
               size='10'
             ></textarea>
 
-            <div className="contact-buttons">
-
-            <Button
-              onClick={handleClickClearMessage}
-              text='clear'
-              bgColor='var(--dark-color)'
-              color='var(--bright-color)'
-              align='flex-start'
-              border='1px solid var(--bright-color)'
-            />
-
-            <Button
-              text='send'
-              bgColor='var(--third-color)'
-              color='var(--brigth-color'
-              align='flex-end'
-            />
-            
+            <div className="form-contact__buttons">
+              <Button
+                className={'btn btn--dark-dark-bg'}
+                onClick={handleClickClearMessage}
+                text='clear'
+                align='flex-start'
+              />
+              <Button
+                text='send'
+                align='flex-end'
+              />
             </div>
-          </form>
-        </div>
+          </form> */}
 
+        </div>
     </section>
   )
 }

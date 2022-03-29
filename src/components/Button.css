@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-/* ------ DARK ----- */
+/* ------ DARK BG BRIGHT ----- */
 
 .btn--dark {
   color: var(--bright-color);
@@ -19,6 +19,21 @@
   transform: translate(5px, -5px);
   box-shadow: var(--dark-color) 0px 0px 0px 0px inset,
     var(--bright-color) -5px 5px 0px -1px, var(--dark-color) -5px 5px;
+}
+
+/* ------ DARK BG DARK ----- */
+
+.btn--dark-dark-bg {
+  color: var(--bright-color);
+  border: 1px solid var(--bright-color);
+  background-color: var(--dark-color);
+  transition: all 0.2s ease;
+}
+
+.btn--dark-dark-bg:hover {
+  transform: translate(5px, -5px);
+  box-shadow: var(--dark-color) 0px 0px 0px 0px inset,
+    var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
 }
 
 /* ------ BRIGHT ----- */

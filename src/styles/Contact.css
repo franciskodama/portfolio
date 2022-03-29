@@ -1,13 +1,9 @@
-.section-contact {
+.section--contact {
   position: relative;
 }
 
-.section-contact .container {
+.section--contact .container {
   width: 60%;
-}
-
-.sub-title {
-  margin-bottom: 3em;
 }
 
 /* ----- PHRASES ----- */
@@ -45,27 +41,25 @@
     var(--bright-color) -5px 5px;
 }
 
-/* ----- TRAY ----- */
+/* ----- DRAG ----- */
 
-.tray-container {
+/* ----- DROP ----- */
+
+.drop {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.sub-title-tray {
+.drop__title,
+.form-contact__title {
   margin-top: 3em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
   font-family: var(--main-font-medium);
-  /* color: var(--third-color); */
 }
 
-.sub-title-tray-first {
-  margin-top: 8em;
-}
-
-.tray {
+.drop__space {
   border: 1px dashed var(--third-color);
   border: 1px dashed var(--bright-color);
   width: 100%;
@@ -80,7 +74,7 @@
   margin-bottom: 15em;
 }
 
-.form-contact-input {
+.form-contact__input {
   font-family: var(--main-font-light);
   font-size: 1rem;
   line-height: 1.5;
@@ -90,7 +84,7 @@
   height: 10em;
 }
 
-.contact-buttons {
+.form-contact__buttons {
   display: flex;
   justify-content: space-between;
 }
