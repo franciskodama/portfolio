@@ -11,17 +11,13 @@
 .phrase {
   display: inline-block;
   width: auto;
-  font-size: 1rem;
   font-family: var(--main-font-light);
   text-transform: uppercase;
-  padding: 0.9em 1.2em;
+  padding: 0.7em 1.2em;
   cursor: pointer;
+  margin: 0 1em 1em 0;
+  border: 1px solid var(--bright-color);
   transition: all 0.2s ease;
-  margin-right: 1em;
-  margin-bottom: 1em;
-  color: var(--bright-color);
-  background-color: var(--dark-color);
-  border: 0.5px solid var(--bright-color);
 }
 
 .phrase--active {
@@ -35,13 +31,11 @@
   box-shadow: var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
 }
 
-.phrase:hover {
+/* .phrase:hover {
   transform: translate(5px, -5px);
   box-shadow: var(--dark-color) -5px 5px 0px -0.5px,
     var(--bright-color) -5px 5px;
-}
-
-/* ----- DRAG ----- */
+} */
 
 /* ----- DROP ----- */
 
