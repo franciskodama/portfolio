@@ -1,55 +1,113 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import gsap from "gsap";
 import '../styles/CleanCode.css'
 import background from '../assets/images/xray.jpg'
 
 const CleanCode = () => {
 
-  const [ showBackground, setShowBackground ] = useState({show: false})
+  // const [ showBackground, setShowBackground ] = useState({show: false})
 
-  const handleClick = () => {
-    setShowBackground(showBackground.show ? {show: false} : {show: true})
-    if(showBackground.show) {
-      document.getElementById('xray-image').style.display = 'block'
-    } else {
-      document.getElementById('xray-image').style.display = 'none'
-    }
+  // const handleClick = () => {
+  //   setShowBackground(showBackground.show ? {show: false} : {show: true})
+  //   if(showBackground.show) {
+  //     document.getElementById('code__xray').style.display = 'block'
+  //   } else {
+  //     document.getElementById('code__xray').style.display = 'none'
+  //   }
+  // }
+
+
+  // console.clear();
+
+  let container = document.querySelector(".container");
+  let mask = document.querySelector(".mask");
+  let maskContent = document.querySelector(".mask-content");
+  
+  window.addEventListener("load", init);
+  
+  function init() {
+    
+    gsap.set(maskContent, {
+      width: container.offsetWidth,
+      height: container.offsetHeight
+    });
+    
+    container.addEventListener("mousemove", onMove);
+  }
+  
+  function onMove(e) {
+    
+    let x = e.pageX - 100;
+    let y = e.pageY - 100;
+  
+    gsap.set(mask, {
+      x: x,
+      y: y
+    });
+  
+    gsap.set(maskContent, {
+      x: -x,
+      y: -y
+    });
   }
 
+
+
+
+
   return (
-    <section className="section section-code" id='code'>
-        <div className="container">
-        
-        <div onClick={handleClick} className="clickable-area">
-          <div
-              id="xray-image"   
-              style={{
-                backgroundImage: `url(${background})`,
-                backgroundRepeat: 'no-repeat',
-                // backgroundPosition: 'center',
-                backgroundSize: 'cover',
-              }}>
-          </div>
+    <section className="section section--code" id='code'>
+      <div className="container">
+     
 
-          <div className="quote--wrapper">
-            <blockquote className="code--quote">“Clean code always looks like it was written by <br></br><span className='red' >someone who cares.”</span></blockquote>
-            <h4 className="code--robert">― Robert C. Martin</h4>
-            <h4 className="code--author">Author of Clean Code</h4>
-          </div>
+{/* 
 
-          <div className="flying--words">meticulousness</div>
-          <div className="flying--words">easy to read, easey to change</div>
-          <div className="flying--words">keep it simple</div>
-          <div className="flying--words">don't repeat your self</div>
-          <div className="flying--words">naming conventions</div>
-          <div className="flying--words">clear and concise</div>
-          <div className="flying--words">consistent</div>
-          <div className="flying--words">uncomplicate</div>
-          <div className="flying--words">BEM (Block-Element-Modifier)</div>
-       
-        
+  <div class="text-content">
+    <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h1>
+  </div>
+  
+  <div class="mask-container">
+    <div class="mask">
+      <div class="mask-content">
+        <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h1>
+      </div>
+    </div>    
+  </div> */}
+
+
+
+
+
+      {/* <div className="code" onClick={handleClick}> */}
+        {/* <div
+            id="code__xray"   
+            style={{
+              backgroundImage: `url(${background})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+            }}>
+        </div> */}
+
+        {/* <div className="code__quote-wrapper">
+          <blockquote className="code--quote">“Clean code always looks like it was written by <br></br><span className='red' >someone who cares.”</span></blockquote>
+          <h4 className="code--robert">― Robert C. Martin</h4>
+          <h4 className="code--author">Author of Clean Code</h4>
         </div>
-        
-        </div>
+
+        <div className="code--words">meticulousness</div>
+        <div className="code--words">easy to read, easey to change</div>
+        <div className="code--words">keep it simple</div>
+        <div className="code--words">don't repeat your self</div>
+        <div className="code--words">naming conventions</div>
+        <div className="code--words">clear and concise</div>
+        <div className="code--words">consistent</div>
+        <div className="code--words">uncomplicate</div>
+        <div className="code--words">BEM (Block-Element-Modifier)</div> */}
+      
+      
+      </div>
+      
+      {/* </div> */}
     </section>
 
   )
