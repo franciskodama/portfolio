@@ -6,15 +6,42 @@
   justify-content: center; */
   background: var(--dark-color);
   /* cursor: url(../assets/images/code-pointer.png), auto; */
+
+  --maskX: 0;
+  --maskY: 0;
+
 }
 
 /* ------- X-RAY EFFECT ------- */
 
+.mousearea {
+  position: relative;
+  height: 50em;
+  --maskX: 0;
+  --maskY: 0;
+  border: 1px red solid;
+
+}
+
+.circle {
+  display: block;
+  position: absolute;
+  width: 300px;
+  top: calc(var(--maskY) - 150px);
+  left: calc(var(--maskX) - 150px);
+  transition: all 0.8s cubic-bezier(0.165,0.84,0.44,1);
+}
 
 
 
 
-.text-content {
+
+
+
+
+
+
+/* .text-content {
   background: pink;
   color: white;
   height: 100vh;
@@ -45,7 +72,7 @@
   background-size: cover;
   height:100vh;
   color:#ffffff;
-}
+} */
 
 
 

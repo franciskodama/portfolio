@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import gsap from "gsap";
 import '../styles/CleanCode.css'
 import background from '../assets/images/xray.jpg'
+import Circle from '../assets/images/mask-circle.png'
 
 const CleanCode = () => {
 
@@ -18,47 +19,92 @@ const CleanCode = () => {
 
 
   // console.clear();
+  // let container = document.querySelector(".container");
+  // let mask = document.querySelector(".mask");
+  // let maskContent = document.querySelector(".mask-content");
+  
+  // window.addEventListener("load", init);
+  
+  // function init() {
+    
+  //   gsap.set(maskContent, {
+  //     width: container.offsetWidth,
+  //     height: container.offsetHeight
+  //   });
+    
+  //   container.addEventListener("mousemove", onMove);
+  // }
+  
+  // function onMove(e) {
+    
+  //   let x = e.pageX - 100;
+  //   let y = e.pageY - 100;
+  
+  //   gsap.set(mask, {
+  //     x: x,
+  //     y: y
+  //   });
+  
+  //   gsap.set(maskContent, {
+  //     x: -x,
+  //     y: -y
+  //   });
+  // }
 
-  let container = document.querySelector(".container");
-  let mask = document.querySelector(".mask");
-  let maskContent = document.querySelector(".mask-content");
-  
-  window.addEventListener("load", init);
-  
-  function init() {
-    
-    gsap.set(maskContent, {
-      width: container.offsetWidth,
-      height: container.offsetHeight
-    });
-    
-    container.addEventListener("mousemove", onMove);
+  const [ position, setPosition ] = useState({x: 0, y: 0 })
+  // const [ display, setDisplay ] = useState(false)
+
+  const refArea = useRef()
+  const refCircle = useRef()
+  const maskStyle = {
+    '--maskX': `${position.x}%`,
+    '--maskY': `${position.y}%`
   }
-  
-  function onMove(e) {
-    
-    let x = e.pageX - 100;
-    let y = e.pageY - 100;
-  
-    gsap.set(mask, {
-      x: x,
-      y: y
-    });
-  
-    gsap.set(maskContent, {
-      x: -x,
-      y: -y
-    });
+
+  const onMouseMove = (e) => {
+    const width = refArea.current.clientWidth
+    const height = refArea.current.clientHeight
+    const oX = (e.nativeEvent.offsetX/width) * 100
+    const oY = (e.nativeEvent.offsetY/height) * 100
+    setPosition({ x: oX, y: oY })
+    // setDisplay(true) 
+    console.log(`X = ${Math.floor(oX)}`, `Y = ${Math.floor(oY)}`);
   }
 
+  const onMouseOut = (e) => {
+    setPosition({ x: 0, y: 0 })
+    // setDisplay(false)
+    // displayCircle()
+  }
 
-
+  // const displayCircle = () => {
+  //   refCircle.style.display = "none"
+  // }
 
 
   return (
     <section className="section section--code" id='code'>
       <div className="container">
      
+        <div className="mousearea" ref={refArea}
+          onMouseMove={onMouseMove}     
+          onMouseOut={onMouseOut}     
+        
+        >
+          <img className='circle' ref={refCircle} src={Circle} style={maskStyle} alt="" />
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
 
 {/* 
 
