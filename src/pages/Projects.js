@@ -65,10 +65,10 @@
   )
 
   return (
-     <section className='section section-projects' id='projects'>
+     <section className='section section--projects' id='projects'>
          <div className='container'>
             <h2 className='main-title'>selected projects</h2>
-            <div className="projects-inner-container">
+            <div className="projects">
             
             {projects.map((project) => (
                 <Card key={project.id} project={project} />

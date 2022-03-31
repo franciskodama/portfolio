@@ -1,4 +1,4 @@
-.section-projects {
+.section--projects {
   position: relative;
   z-index: 10;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
@@ -8,13 +8,13 @@
   background-color: var(--dark-color);
 }
 
-.projects-inner-container {
+.projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
 
-.section-projects .title {
+.section-projects .main-title {
   text-align: center;
 }
