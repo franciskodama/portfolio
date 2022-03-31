@@ -15,8 +15,8 @@ const Api = () => {
     })
   }, [])
 
-  const searchLocation = (event) => {
-      if (event.key === 'Enter') {
+  const searchLocation = (e) => {
+      if (e.key === 'Enter') {
         document.getElementById('error-message').style.display = 'none'
         Axios.get(url)
       .then((response) => {
@@ -25,10 +25,7 @@ const Api = () => {
       .catch( error => {
         if (error.response) {
           document.getElementById('error-message').style.display = 'block'
-        }
-        
-        
-        console.log(error.response)
+        }       
       })
     }
   }
@@ -45,7 +42,7 @@ const Api = () => {
               <div className="question-wrapper">              
                 <h2 className="api--question">What city</h2>
                 <h2 className="api--question">are you in?</h2>
-                <input id='myInput' value={location} onChange={event => setLocation(event.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text'/>
+                <input id='myInput' value={location} onChange={e => setLocation(e.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text'/>
               </div>
 
               <p id='error-message'>...Ops, city not found. Try again! :)</p>

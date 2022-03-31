@@ -90,12 +90,26 @@ button {
 }
 
 input,
+textarea,
 ::placeholder {
   font-family: var(--main-font-light);
   font-size: 1rem;
+  line-height: 1.5;
   padding-left: 1em;
+}
+
+input,
+textarea {
+  color: var(--dark-color);
+}
+
+::placeholder {
   color: rgb(191, 189, 189);
 }
+
+
+
+
 
 /* ====================================
             LAYOUT

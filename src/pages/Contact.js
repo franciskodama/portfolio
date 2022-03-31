@@ -111,19 +111,15 @@ const Contact = () => {
   
   const [columns, setColumns] = useState(dropSpace);
   const [ message, setMessage ] = useState('')
-
-
-
-  const handleChange = (event) => {
-    setMessage(event.target.value)
-  }
+  const [ name, setName ] = useState('')
+  const [ email, setEmail ] = useState('')
 
   const handleClickClearMessage = () => {
     setMessage('')
   }
 
   const handleClickSendMessage = () => {
-    console.log(columns.drop.items.map((element) => element.content) + message)
+    console.log(columns.drop.items.map((element) => element.content) + message + name + email)
   }
 
   return (
@@ -188,13 +184,39 @@ const Contact = () => {
 
     <form className='form-contact'>
       <p className='form-contact__title'>Additional comments:</p>
-      <textarea
-        className='form-contact__input'
-        placeholder='type some additional comments and sign your name.'
+      
+      <textarea 
+        className='form-contact__input text-area'
+        placeholder='type some additional comments'
         value={message}
-        onChange={handleChange}
         type='text'
+        onChange={(e) => {
+          setMessage(e.target.value)
+        }}
       ></textarea>
+    
+    
+      <div className='form-contact__input-wrapper' >
+        <input 
+          className='form-contact__input'
+          placeholder='name'
+          type="text"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value)
+          }}
+        />
+
+        <input 
+          className='form-contact__input'
+          placeholder='email'
+          value={email}
+          type="text"
+          onChange={(e) => {
+            setEmail(e.target.value)
+          }}
+        />
+      </div>
 
       <div className='form-contact__buttons'>
         <Button
@@ -203,11 +225,13 @@ const Contact = () => {
           text='clear'
           align='flex-start'
         />
+
         <Button
         onClick={handleClickSendMessage}
           text='send'
           align='flex-end'
         />
+
       </div>
     </form>
   </div>
