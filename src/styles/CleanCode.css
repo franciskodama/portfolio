@@ -1,26 +1,54 @@
 .section--code {
   position: relative;
+  background: var(--dark-color);
+  --maskX: 0;
+  --maskY: 0;
+
+  background-color: indigo;
+
   /* display: flex;
   height: auto;
   align-items: center;
   justify-content: center; */
-  background: var(--dark-color);
   /* cursor: url(../assets/images/code-pointer.png), auto; */
-
-  --maskX: 0;
-  --maskY: 0;
-
 }
 
+/* .section--code .container {
+  background-image: url('../assets/images/xray.jpg');
+  background-size: cover;
+} */
+
 /* ------- X-RAY EFFECT ------- */
+
+
+
+.image-be-masked {
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/xray.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: url('../assets/images/mask-circle.png');
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.image-be-masked:hover {
+  mask-position: -10px -10px;
+}
+
+
+
+
+
 
 .mousearea {
   position: relative;
   height: 50em;
   --maskX: 0;
   --maskY: 0;
-  border: 1px red solid;
-
+  /* border: 1px red solid; */
 }
 
 .circle {

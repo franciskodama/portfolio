@@ -3,6 +3,7 @@ import gsap from "gsap";
 import '../styles/CleanCode.css'
 import background from '../assets/images/xray.jpg'
 import Circle from '../assets/images/mask-circle.png'
+import MaskTest from '../assets/images/mask-test.png'
 
 const CleanCode = () => {
 
@@ -91,7 +92,12 @@ const CleanCode = () => {
           onMouseOut={onMouseOut}     
         
         >
-          <img className='circle' ref={refCircle} src={Circle} style={maskStyle} alt="" />
+
+          <div className="image-be-masked"></div>
+
+          {/* <img src={background} className="image-be-masked" />           */}
+
+          {/* <img className='circle' ref={refCircle} src={Circle} style={maskStyle} alt="" /> */}
 
 
         </div>
