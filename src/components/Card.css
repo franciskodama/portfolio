@@ -67,7 +67,7 @@
 }
 
 .card-front__title {
-  font-family: var(--main-font-heavy);
+  font-family: var(--main-font-semibold);
   font-size: 2.25rem;
   line-height: 2.25rem;
   padding-bottom: 0.1em;
@@ -80,9 +80,9 @@
   text-transform: uppercase;
 }
 
-/* ----- DESCRIPTION ----- */
+/* ----- TEXT ----- */
 
-.card-front__description {
+.card-front__text {
   font-family: var(--main-font-thin);
   font-size: 1rem;
   margin-top: 1.5em;

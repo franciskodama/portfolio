@@ -36,11 +36,11 @@ const handleClickToClose = (e) => {
         <div className='card-front__box'>
           <img className='card-front__icon' src={project.icon} alt='icon project'/>
           <div className='card-front__title-wrapper'>
-            <h3 className='card-front__title'>{project.title}</h3>
+            <h3 className='card-front__title'>{project.titleA}</h3>
             <h3 className='card-front__tech'>{project.tech}</h3>
           </div>
         </div>
-        <p className='card-front__description'>{project.description}</p>
+        <p className='card-front__text'>{project.frontText}</p>
       </div>
 
       <div className='card-back'>
@@ -51,14 +51,14 @@ const handleClickToClose = (e) => {
         </div>
 
         <img className='card-back__image' src={project.image} alt='main image project'/>
-        <h3 className='card-back__main-title'><span>game.</span>Pac Man</h3>
+        <h3 className='card-back__main-title'><span style={{ color: 'red' }}>{project.titleB}</span>{project.titleC}</h3>
         
         <div className="card-back__info-wrapper">
-          <p className='card-back__descrition'>100% React-based, it was the most important project I used to learn and display my skills in HTML, JSX, CSS, Javascript, and the React framework.</p>
+          <p className='card-back__text'>{project.backText}</p>
           <h4 className='card-back__title icon-purpose'>purpose</h4>
-          <p className='card-back__purpose'>100% React-based, it was the most important project I used to learn and display my skills in HTML, JSX, CSS, Javascript, and the React framework.</p>
+          <p className='card-back__purpose'>{project.backTextPurpose}</p>
           <h4 className='card-back__title icon-robot'>tech</h4>
-          <p className='card-back__tech'>100% React-based, it was the most important project I used to learn and display my skills in HTML, JSX, CSS, Javascript, and the React framework.</p>
+          <p className='card-back__tech'>{project.backTextTech}</p>
 
           <a className='card-back__visit-wraper' href={project.url} target='_blank'>
             <p className='card-back__visit icon-visit'>visit project</p>
