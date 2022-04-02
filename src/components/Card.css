@@ -1,4 +1,12 @@
 .card {
+  margin: 2em;
+}
+
+/* --------------------------- */
+/* ------- FRONT CARD -------- */
+/* --------------------------- */
+
+.card-front {
   display: flex;
   flex-direction: column;
   margin: 4em 0 3em 3em;
@@ -6,141 +14,28 @@
   text-align: left;
 }
 
-.card:first-child {
+.card-front:first-child {
   margin-left: 0;
-}
-
-/* ----------------------- */
-/* ----- ACTIVE CARD ----- */
-/* ----------------------- */
-
-.card--active {
-  width: 500px;
-  background-color: var(--bright-color);
-  padding: 1em;
-  border: 1px solid rgb(255, 255, 255, 0.3);
-  box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
-    var(--dark-color) -10px 10px 0px -1px, var(--bright-color) -10px 10px;
-
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.card--active:hover {
-  transform: translate(-10px, 10px);
-  box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
-    var(--dark-color) -10px 10px 0px -1px, var(--bright-color) 0px 0px;
-  background: #f6f6f6;
-  color: var(--dark-color);
-}
-
-.card--active .card__image {
-  display: block;
-  width: 500px;
-  height: 350px;
-}
-
-.card--active .card__icon,
-.card--active .card__description {
-  display: none;
-}
-
-.card--active .card__box {
-  pointer-events: none;
-  border: none;
-  box-shadow: none;
-  padding-left: 0;
-  height: auto;
-  background-color: rgb(255, 255, 255);
-}
-
-.card--active .card__title-wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 450px;
-  height: auto;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1em 0;
-}
-
-.card--active .card__title,
-.card--active .card__tech {
-  font-family: var(--main-font-regular);
-  font-size: 1.3rem;
-}
-
-.card--active .card__text {
-  display: block;
-  font-family: var(--main-font-thin);
-  font-size: 1rem;
-  color: var(--dark-color);
-}
-
-.card--active .card__category {
-  color: var(--third-color);
-  font-family: var(--main-font-regular);
-}
-
-.card--active .card__title {
-  padding: 0.5rem 2rem 0.5rem 0;
-  background-color: none;
-  color: var(--dark-color);
-}
-
-.card--active:first-child .card__visit-wraper {
-  display: none;
-}
-
-.card--active .card__visit-wraper {
-  display: flex;
-  align-self: flex-end;
-  margin-top: 1.5em;
-  cursor: pointer;
-}
-
-.card--active .card__visit-text {
-  font-family: var(--main-font-regular);
-  font-size: 1.125rem;
-  text-decoration: none;
-  color: var(--dark-color);
-  padding-bottom: 0.2em;
-  margin-bottom: 1em;
-  border-bottom: 1px solid var(--dark-color);
-}
-
-.card--active .card__visit-icon {
-  padding-bottom: 0.3em;
-  padding-left: 0.5em;
-}
-
-/* --------------------------- */
-/* ----- NOT ACTIVE CARD ----- */
-/* --------------------------- */
-
-.card__image,
-.card__text {
-  display: none;
 }
 
 /* ----- CATEGORY ----- */
 
-.card__category {
+.card-front__category {
   font-size: 1rem;
   font-family: var(--main-font-light);
   padding-bottom: 0.8rem;
 }
 
-/* ----- ICON ----- */
+/* ------- ICON ------- */
 
-.card__icon {
+.card-front__icon {
   width: 32px;
   margin-top: 1em;
 }
 
-/* ----- TITLES ----- */
+/* ------- BOX -------- */
 
-.card__box {
+.card-front__box {
   position: relative;
   width: 270px;
   height: 270px;
@@ -153,31 +48,32 @@
     var(--dark-color) -10px 10px 0px -1px, var(--bright-color) 0px 0px;
 }
 
-.card__box:hover {
+.card-front__box:hover {
   transform: translate(10px, -10px);
   box-shadow: var(--bright-color) 0px 0px 0px 0px inset,
     var(--dark-color) -10px 10px 0px -1px, var(--bright-color) -10px 10px;
   color: var(--dark-color);
-
   background-image: radial-gradient(#000000 0.5px, #f6f6f6 0.5px);
   background-size: 10px 10px;
 }
 
-.card__title-wrapper {
+/* ------ TITLES ------ */
+
+.card-front__title-wrapper {
   display: flex;
   flex-direction: column;
   height: 77%;
   justify-content: center;
 }
 
-.card__title {
+.card-front__title {
   font-family: var(--main-font-heavy);
   font-size: 2.25rem;
   line-height: 2.25rem;
   padding-bottom: 0.1em;
 }
 
-.card__tech {
+.card-front__tech {
   font-family: var(--main-font-semibold);
   font-size: 1.3rem;
   color: var(--third-color);
@@ -186,14 +82,125 @@
 
 /* ----- DESCRIPTION ----- */
 
-.card__description {
+.card-front__description {
   font-family: var(--main-font-thin);
   font-size: 1rem;
   margin-top: 1.5em;
 }
 
-/* ----- VISIT ----- */
 
-.card__visit-wraper {
-  display: none;
+/* --------------------------- */
+/* -------- BACK CARD -------- */
+/* --------------------------- */
+
+
+.card-back {
+  width: 500px;
+  background-color: var(--bright-color);
+  padding: 0.2em 1em 1em 1em;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--dark-color);
 }
+
+/* ------- HEADER ------- */
+
+.card-back__header {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 0.50em;
+}
+
+.card-back__category {
+  color: var(--dark-color);
+  font-family: var(--main-font-regular);
+  padding-bottom: 0;
+}
+
+.card-back__close {
+  display: inline-block;
+  width: 32px;
+}
+
+/* ------- IMAGE ------- */
+
+.card-back__image {
+  display: block;
+  width: 500px;
+  height: 350px;
+}
+
+/* ----- MAIN TITLE ----- */
+
+.card-back__main-title {
+  font-family: var(--main-font-semibold);
+  font-size: 1.5rem;
+  background-color: var(--dark-color);
+  color: var(--bright-color);
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  padding: 0.2em;
+  padding-left: 0.5em;
+}
+
+.card-back__main-title span {
+  color: var(--third-color);
+  font-family: var(--main-font-regular);
+}
+
+/* ------- INFO AREA -------- */
+
+.card-back__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7em;
+}
+
+/* ------ PARAGRAPHS ------- */
+
+.card-back__title {
+  font-family: var(--main-font-regular);
+  font-size: 1.2rem;
+  padding-left: 2em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.icon-purpose,
+.icon-robot {
+  background-repeat: no-repeat;
+  width: 20px;
+}
+
+.icon-purpose {
+  background-image: url(../assets/images/card-icon-purpose.svg);
+}
+
+
+.icon-robot {
+  background-image: url(../assets/images/card-icon-robot.svg);
+}
+
+/* ----- VISIT PROJECT ----- */
+
+.card-back__visit {
+  font-family: var(--main-font-regular);
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--dark-color);
+  padding-right: 2em;
+  margin-top: 3em;
+  cursor: pointer;
+  text-align: end;
+}
+
+.icon-visit {
+  background-image: url(../assets/images/card-icon-visit.svg);
+  background-repeat: no-repeat;
+  background-position: 23em;
+  background-size: 20px;
+}
+
+
