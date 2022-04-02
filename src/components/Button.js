@@ -28,22 +28,3 @@ Button.defaultProps = {
 export default Button
 
 
-
-// const Button = ({ text, align, onClick, bgColor, color, border, boxShadow }) => {
-  
-//   return <button
-//           className='btn'
-//           onClick={onClick}
-
-//           style={{
-//             backgroundColor: bgColor,
-//             color: color,
-//             alignSelf: align,
-//             border: border,
-//             boxShadow: boxShadow
-//           }}
-
-//           type='button'>
-//           {text}
-//         </button> 
-// }

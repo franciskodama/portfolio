@@ -64,6 +64,8 @@
   flex-direction: column;
   height: 77%;
   justify-content: center;
+  border: 1px solid red;
+  width: 15em;
 }
 
 .card-front__title {
@@ -110,7 +112,7 @@
   display: flex;
   justify-content: space-between;
   align-items:center;
-  padding: 0.50em;
+  padding: 0.5em 0.25em;
 }
 
 .card-back__category {

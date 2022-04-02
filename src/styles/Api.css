@@ -70,7 +70,7 @@
   padding: 0.5em;
   text-align: center;
   animation-name: appear;
-  animation-duration: 1s;
+  animation-duration: 0.35s;
   z-index: -10;
 }
 

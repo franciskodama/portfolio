@@ -10,7 +10,7 @@
   display: flex;
   padding: 0.5em;
   background-color: var(--third-color);
-  width: 100px;
+  width: 40px;
   height: 40px;
   justify-content: space-around;
   color: var(--bright-color);
@@ -18,13 +18,23 @@
   align-items: center;
 }
 
+.why-toggle--active {
+  width: 100px;
+}
+
 .why-toggle__label {
+  display: none;
   font-family: var(--main-font-regular);
   font-size: 0.65rem;
   width: 40px;
   text-align: center;
   text-transform: uppercase;
   line-height: 0.7rem;
+}
+
+.why-toggle__label--active {
+  display: block;
+  transition: all 1s ease;
 }
 
 /* ----- BUTTON ANIMATION ----- */
@@ -58,7 +68,7 @@
 /* ----- WHY CARD ----- */
 
 .why {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 1em 2em 2em 2em;
   background-color: var(--third-color);

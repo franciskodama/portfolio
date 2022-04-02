@@ -1,56 +1,85 @@
 
 
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import '../components/WhyCard.css'
 import EyeOpen from '../assets/images/why-eye-open.svg'
 import EyeClosed from '../assets/images/why-eye-closed.svg'
-import Hey from '../assets/images/why-hey.svg'
-import  Flag from '../assets/images/why-icon-flag.svg'
-import  Bolt from '../assets/images/why-icon-bolt.svg'
-import  Brush from '../assets/images/why-icon-brush.svg'
-import  Robot from '../assets/images/why-icon-robot.svg'
 import Check from '../assets/images/why-icon-check.svg'
 
-const WhyCard = () => {
+const WhyCard = ({ titleOne, textOne, titleTwo, textTwo, titleThree, textThree, titleFour, textFour, observation }) => {
   
-  const [ currentEye, setCurrentEye ] = useState(false)
-  
+  const [ isShow, setIsShow ] = useState(false)
+  const [ eyesOpen, setEyesOpen ] = useState(false)
+  const refButton = useRef(null)
+  const refButtonLabel = useRef(null)
 
-  
+
+
+  const onMouseEnterHandler = () => {
+    refButton.current.classList.add('why-toggle--active')
+    refButtonLabel.current.classList.add('why-toggle__label--active')
+
+
+    setIsShow(true)
+  }
+
+  const onMouseOutHandler = () => {
+    refButton.current.classList.remove('why-toggle--active')
+    refButtonLabel.current.classList.remove('why-toggle__label--active')
+
+    setIsShow(false)
+  }
+
+  const onClickHandler = () => {
+    setEyesOpen(true)
+  }
+
+
+
   return (
     
     <div className='why-container'>
 
-        <button className='why-toggle'>
-            <img className='eye' src={EyeClosed} alt='icon eye' />
-            <span className="why-toggle__label">Click me</span>
+        <button
+          ref={refButton}
+          className='why-toggle'
+          onMouseEnter={onMouseEnterHandler}
+          onMouseLeave={onMouseOutHandler}
+          onClick={onClickHandler}
+        >
+          <img className='eye' src={eyesOpen ? EyeClosed : EyeOpen} alt='icon eye' />
+          <span
+            className="why-toggle__label"
+            ref={refButtonLabel}
+            >Click me
+          </span>
         </button>
 
         <ul className='why'>
 
           <li className='why__item'>
-            <h2 className='why__title why__title--flag'>WHY?</h2>
-            <p className='why__desc'>This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.</p>
+            <h2 className='why__title why__title--flag'>{titleOne}</h2>
+            <p className='why__desc'>{textOne}</p>
           </li>
 
           <li className='why__item'>
-            <h2 className='why__title why__title--bolt'>SHOWCASE</h2>
-            <p className='why__desc'>In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.</p>
+            <h2 className='why__title why__title--bolt'>{titleTwo}</h2>
+            <p className='why__desc'>{textTwo}</p>
           </li>
 
           <li className='why__item'>
-            <h2 className='why__title why__title--brush'>TOOLS USED</h2>
-            <p className='why__desc'>Figma, Adobe Photoshop, and VS Code</p>
+            <h2 className='why__title why__title--brush'>{titleThree}</h2>
+            <p className='why__desc'>{textThree}</p>
           </li>
 
           <li className='why__item'>
-            <h2 className='why__title why__title--robot'>TECH USED</h2>
-            <p className='why__desc'>HTML, CSS, Javascript, React, Sass, NPM, and GIT</p>
+            <h2 className='why__title why__title--robot'>{titleFour}</h2>
+            <p className='why__desc'>{textFour}</p>
           </li>
 
           <li className='why__footer'>
             <img className='why__icon' src={Check} alt='icon check'/>
-            <p className='why__text'>This portfolio was 100% created and programmed by Francis Kodama.</p>
+            <p className='why__text'>{observation}</p>
           </li>
 
         </ul>
@@ -59,3 +88,4 @@ const WhyCard = () => {
 }
 
 export default WhyCard
+

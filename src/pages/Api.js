@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Axios from 'axios'
 import '../styles/Api.css'
 
@@ -6,6 +6,7 @@ const Api = () => {
 
   const [ data, setData ] = useState({})
   const [ location, setLocation ] = useState('')
+  const refInput = useRef(null)
   
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric`
 
@@ -13,6 +14,7 @@ const Api = () => {
     Axios.get('https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric').then((response) => {
       setData(response.data)
     })
+    // refInput.current.focus()
   }, [])
 
   const searchLocation = (e) => {
@@ -42,7 +44,7 @@ const Api = () => {
               <div className="question-wrapper">              
                 <h2 className="api--question">What city</h2>
                 <h2 className="api--question">are you in?</h2>
-                <input id='myInput' value={location} onChange={e => setLocation(e.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text'/>
+                <input ref={refInput} value={location} onChange={e => setLocation(e.target.value)} onKeyPress={searchLocation} placeholder='enter location' type='text'/>
               </div>
 
               <p id='error-message'>...Ops, city not found. Try again! :)</p>

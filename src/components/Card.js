@@ -1,29 +1,48 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import '../components/Card.css'
 import IconClose from '../assets/images/card-icon-close.svg'
 
 const Card = ({ project }) => {
 
-const [ isOpen, setIsOpen ] = useState(false)
-
-// setIsOpen(isOpen.show ? {show: false} : {show: true})
+    const [ isOpen, setIsOpen ] = useState(false)
 
 
- const handleClickToOpen = (e) => {
-  e.target.closest('.card').classList.add('card--active')
-  setIsOpen(true)
- }
+    const refCard = useRef(null)
 
-const handleClickToClose = (e) => {
-  e.target('.card-front__close').classList.remove('card--active')
-  setIsOpen(false)
-}
+    
 
 
-//  const handleClickToClose = event => {
-//   event.target('.card-container').classList.remove('card-container--active')
-//  }
-//  onClick={handleClickToClose}
+
+  // setIsOpen(isOpen.show ? {show: false} : {show: true})
+
+
+  const handleClickToOpen = (e) => {
+    // console.log(e.target.closest('.card-front').attr('id'));
+    console.log(refCard.current);
+
+
+
+
+
+
+    // console.log(project.id[e.target])
+    // console.log(e.target.closest('.card-front'))
+
+    // e.target.closest('.card-front').style.display = 'none'
+
+    setIsOpen(true)
+  }
+
+  const handleClickToClose = (e) => {
+    e.target('.card-front__close').classList.remove('card--active')
+    setIsOpen(false)
+  }
+
+
+  //  const handleClickToClose = event => {
+  //   event.target('.card-container').classList.remove('card-container--active')
+  //  }
+  //  onClick={handleClickToClose}
 
 
 
@@ -31,7 +50,8 @@ const handleClickToClose = (e) => {
    
     <div className='card'>
 
-      <div className='card-front' onClick={handleClickToOpen}>
+      <div className='card-front' ref={refCard} onClick={handleClickToOpen}>
+      {/* <div className='card-front' id={`card-${project.id}`} onClick={handleClickToOpen}> */}
         <p className='card-front__category'>{project.category}</p>
         <div className='card-front__box'>
           <img className='card-front__icon' src={project.icon} alt='icon project'/>
@@ -60,9 +80,12 @@ const handleClickToClose = (e) => {
           <h4 className='card-back__title icon-robot'>tech</h4>
           <p className='card-back__tech'>{project.backTextTech}</p>
 
-          <a className='card-back__visit-wraper' href={project.url} target='_blank'>
-            <p className='card-back__visit icon-visit'>visit project</p>
-          </a>
+          {project.visitIcon ? 
+            <a className='card-back__visit-wraper' href={project.url} target='_blank'>
+              <p className='card-back__visit icon-visit'>visit project</p>
+            </a> : null  
+          }
+          
         </div>
       </div>
 
