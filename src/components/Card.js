@@ -4,54 +4,41 @@ import IconClose from '../assets/images/card-icon-close.svg'
 
 const Card = ({ project }) => {
 
-    const [ isOpen, setIsOpen ] = useState(false)
+  // const [ isOpen, setIsOpen ] = useState({
+  //   1: { front: true },
+  //   2: { front: true },
+  //   3: { front: true },
+  //   4: { front: true },
+  //   5: { front: true }
+  // })
 
-
-    const refCard = useRef(null)
-
-    
-
-
-
-  // setIsOpen(isOpen.show ? {show: false} : {show: true})
-
+  const refCardFront = useRef(null)
+  const refCardBack = useRef(null)
 
   const handleClickToOpen = (e) => {
-    // console.log(e.target.closest('.card-front').attr('id'));
-    console.log(refCard.current);
+    refCardFront.current.style.display = 'none'
+    refCardBack.current.style.display = 'block'
 
+    // setIsOpen(isOpen.front ? {front: false} : {front: true})
 
-
-
-
-
-    // console.log(project.id[e.target])
-    // console.log(e.target.closest('.card-front'))
-
-    // e.target.closest('.card-front').style.display = 'none'
-
-    setIsOpen(true)
+    // setIsFront({
+    //   1: { front: true },
+    //   2: { front: true },
+    //   3: { front: true },
+    //   4: { front: true },
+    //   5: { front: true }
+   // })
   }
 
   const handleClickToClose = (e) => {
-    e.target('.card-front__close').classList.remove('card--active')
-    setIsOpen(false)
+    refCardFront.current.style.display = 'block'
+    refCardBack.current.style.display = 'none'
   }
 
-
-  //  const handleClickToClose = event => {
-  //   event.target('.card-container').classList.remove('card-container--active')
-  //  }
-  //  onClick={handleClickToClose}
-
-
-
   return (
-   
     <div className='card'>
 
-      <div className='card-front' ref={refCard} onClick={handleClickToOpen}>
-      {/* <div className='card-front' id={`card-${project.id}`} onClick={handleClickToOpen}> */}
+      <div className='card-front' ref={refCardFront} onClick={handleClickToOpen}>
         <p className='card-front__category'>{project.category}</p>
         <div className='card-front__box'>
           <img className='card-front__icon' src={project.icon} alt='icon project'/>
@@ -63,7 +50,7 @@ const Card = ({ project }) => {
         <p className='card-front__text'>{project.frontText}</p>
       </div>
 
-      <div className='card-back'>
+      <div className='card-back' ref={refCardBack}>
         
         <div className='card-back__header'>
           <p className='card-back__category'>{project.category}</p>

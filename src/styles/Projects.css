@@ -4,7 +4,8 @@
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
   margin-top: 10em;
   margin-bottom: -10vw;
-  height: 2400px;
+  height: auto;
+  padding-bottom: 30em;
   background-color: var(--dark-color);
 }
 

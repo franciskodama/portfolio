@@ -45,18 +45,18 @@ const Reason = () => {
             <div>{currentArray}</div>
 
             <form>
-               <input
+               {/* <input
                 className='grid__input'
                 onChange={handleChange}
                 type='text'
-                placeholder='type something here...'/>
-
+                placeholder='type something here...'/> */}
+{/* 
                <Button
                 text='reload original message'
                 className='btn btn--third-color'
-               />
+               /> */}
 
-
+            <div className='grid__input'></div>
 
             </form>
             

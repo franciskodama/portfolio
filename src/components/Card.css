@@ -64,7 +64,6 @@
   flex-direction: column;
   height: 77%;
   justify-content: center;
-  border: 1px solid red;
   width: 15em;
 }
 
@@ -97,6 +96,7 @@
 
 
 .card-back {
+  display: none;
   width: 500px;
   background-color: var(--bright-color);
   padding: 0.2em 1em 1em 1em;

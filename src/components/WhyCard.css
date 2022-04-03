@@ -83,15 +83,16 @@
   background-color: var(--third-color);
   width: max-content;
   position: absolute;
-  top: -37.6em;
+  top: -37.55em;
   left: 2.5em;
 }
 
 .why__close {
   position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  width: 28px;
+  top: 0em;
+  right: 0em;
+  width: 45px;
+  padding: 0.5em;
 }
 
 .why__item {
