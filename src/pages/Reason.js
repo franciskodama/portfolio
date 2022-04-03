@@ -7,7 +7,8 @@ import Button from "../components/Button";
 const Reason = () => {
   const originalMessageBright =
     "this portfolio has been built to showcase my variety of skills from creativity to code ";
-  const originalMessageDark = "click on the eye to know more of each page";
+  const originalMessageDark =
+    "click on the eye below to know more of each page";
   const arrOfLettersBright = Array.from(originalMessageBright);
   const arrOfLettersDark = Array.from(originalMessageDark);
 

@@ -74,6 +74,11 @@
   padding-bottom: 0.1em;
 }
 
+.card-front__title--red {
+  color: var(--third-color);
+  font-size: 1.8rem;
+}
+
 .card-front__tech {
   font-family: var(--main-font-semibold);
   font-size: 1.3rem;
