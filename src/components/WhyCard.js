@@ -19,38 +19,48 @@ const WhyCard = ({
   left,
 }) => {
   const [isCardShow, setIsCardShow] = useState(false);
+  const [isOnMouse, setisOnMouse] = useState(false);
 
-  // const [ eyesOpen, setEyesOpen ] = useState(false)
   const refButton = useRef(null);
   const refButtonLabel = useRef(null);
   const refWhy = useRef(null);
 
-  // const onMouseEnterHandler = () => {
-  //   refButton.current.classList.add('why-toggle--active')
-  //   refButtonLabel.current.classList.add('why-toggle__label--active')
-  // }
+  const onMouseEnterHandler = () => {
+    setisOnMouse(true);
+  };
 
-  // const onMouseOutHandler = () => {
-  //   refButton.current.classList.remove('why-toggle--active')
-  //   refButtonLabel.current.classList.remove('why-toggle__label--active')
-  // }
+  const onMouseOutHandler = () => {
+    setisOnMouse(false);
+  };
+
+  const clickHandler = () => {
+    isCardShow ? setIsCardShow(false) : setIsCardShow(true);
+  };
 
   return (
     <div className="why-container" style={{ bottom: bottom, left: left }}>
       <button
         ref={refButton}
-        className="why-toggle"
-        // onMouseEnter={onMouseEnterHandler}
-        // onMouseLeave={onMouseOutHandler}
-        onClick={() =>
-          isCardShow ? setIsCardShow(false) : setIsCardShow(true)
-        }
+        className={`why-toggle ${isCardShow ? "why-toggle--active" : ""}`}
+        onMouseEnter={onMouseEnterHandler}
+        onMouseLeave={onMouseOutHandler}
+        onClick={clickHandler}
       >
-        <img className="eye" src={EyeOpen} alt="icon eye" />
-        {/* <img className='eye' src={eyesOpen ? EyeClosed : EyeOpen} alt='icon eye' /> */}
-        <span className="why-toggle__label" ref={refButtonLabel}>
+        <span
+          className={`why-toggle__label ${
+            isOnMouse && !isCardShow ? "why-toggle__label--active" : null
+          }`}
+          ref={refButtonLabel}
+        >
           Click me
         </span>
+
+        {/* <img className="eye" src={EyeOpen} alt="icon eye" /> */}
+        <img
+          className="eye"
+          src={isCardShow ? EyeClosed : EyeOpen}
+          alt="icon eye"
+        />
       </button>
 
       <ul
@@ -60,7 +70,7 @@ const WhyCard = ({
       >
         <img
           className="why__close"
-          onClick={() => setIsCardShow(false)}
+          onClick={clickHandler}
           src={Close}
           alt="close button icon"
         />

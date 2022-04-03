@@ -4,57 +4,63 @@
   width: max-content;
   align-items: flex-end;
   transform: translate(-50%);
+  color: var(--bright-color);
 }
 
-/* ----- BUTTON ----- */
+/* ----- TOGGLE ----- */
 
 .why-toggle {
+  position: relative;
   display: flex;
-  padding: 0.5em;
-  background-color: var(--third-color);
+  flex-direction: column;
   width: 40px;
   height: 40px;
-  justify-content: space-around;
-  color: var(--bright-color);
-  border: 0;
+  background-color: var(--dark-color);
   align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+}
+
+.why-toggle--active {
+  background-color: var(--third-color);
 }
 
 .eye {
-  width: 32px;
+  width: 30px;
 }
-
-/* .why-toggle--active {
-  width: 100px;
-} */
 
 .why-toggle__label {
   display: none;
+  position: absolute;
+  top: -2em;
+  left: -6px;
+  color: var(--bright-color);
   font-family: var(--main-font-regular);
   font-size: 0.65rem;
-  width: 40px;
+  width: 50px;  
+  height: 50px;
   text-align: center;
   text-transform: uppercase;
   line-height: 0.7rem;
   animation-name: icon-shake;
-  animation-duration: 0.2s;
+  animation-duration: 0.3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-/* .why-toggle__label--active {
+.why-toggle__label--active {
   display: block;
-  transition: all 1s ease;
-} */
+}
 
 /* ----- BUTTON ANIMATION ----- */
 
-.why-toggle__label:hover,
+/* .why-toggle__label:hover,
 .why-toggle__label:focus,
 .why-toggle__label:active {
   display: block;
   transform: translate(10px);
-}
+} */
 
 @keyframes icon-shake {
   50% {
@@ -83,15 +89,14 @@
   background-color: var(--third-color);
   width: max-content;
   position: absolute;
-  top: -37.55em;
-  left: 2.5em;
+  top: -37.6em;
+  left: 2.9em;
 }
 
 .why__close {
   position: absolute;
   top: 0em;
   right: 0em;
-  width: 45px;
   padding: 0.5em;
 }
 
