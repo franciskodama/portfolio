@@ -1,12 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from "react";
+import WhyCard from "../components/WhyCard";
+import { whyData } from "../data/Data";
 import gsap from "gsap";
-import '../styles/CleanCode.css'
-import background from '../assets/images/xray.jpg'
-import Circle from '../assets/images/mask-circle.png'
-import MaskTest from '../assets/images/mask-test.png'
+import "../styles/CleanCode.css";
+import background from "../assets/images/xray.jpg";
+import Circle from "../assets/images/mask-circle.png";
+import MaskTest from "../assets/images/mask-test.png";
 
 const CleanCode = () => {
-
   // const [ showBackground, setShowBackground ] = useState({show: false})
 
   // const handleClick = () => {
@@ -18,101 +19,92 @@ const CleanCode = () => {
   //   }
   // }
 
-
   // console.clear();
   // let container = document.querySelector(".container");
   // let mask = document.querySelector(".mask");
   // let maskContent = document.querySelector(".mask-content");
-  
+
   // window.addEventListener("load", init);
-  
+
   // function init() {
-    
+
   //   gsap.set(maskContent, {
   //     width: container.offsetWidth,
   //     height: container.offsetHeight
   //   });
-    
+
   //   container.addEventListener("mousemove", onMove);
   // }
-  
+
   // function onMove(e) {
-    
+
   //   let x = e.pageX - 100;
   //   let y = e.pageY - 100;
-  
+
   //   gsap.set(mask, {
   //     x: x,
   //     y: y
   //   });
-  
+
   //   gsap.set(maskContent, {
   //     x: -x,
   //     y: -y
   //   });
   // }
 
-  const [ position, setPosition ] = useState({x: 0, y: 0 })
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   // const [ display, setDisplay ] = useState(false)
 
-  const refArea = useRef()
-  const refCircle = useRef()
+  const refArea = useRef();
+  const refCircle = useRef();
   const maskStyle = {
-    '--maskX': `${position.x}%`,
-    '--maskY': `${position.y}%`
-  }
+    "--maskX": `${position.x}%`,
+    "--maskY": `${position.y}%`,
+  };
 
   const onMouseMove = (e) => {
-    const width = refArea.current.clientWidth
-    const height = refArea.current.clientHeight
-    const oX = (e.nativeEvent.offsetX/width) * 100
-    const oY = (e.nativeEvent.offsetY/height) * 100
-    setPosition({ x: oX, y: oY })
-    // setDisplay(true) 
+    const width = refArea.current.clientWidth;
+    const height = refArea.current.clientHeight;
+    const oX = (e.nativeEvent.offsetX / width) * 100;
+    const oY = (e.nativeEvent.offsetY / height) * 100;
+    setPosition({ x: oX, y: oY });
+    // setDisplay(true)
     console.log(`X = ${Math.floor(oX)}`, `Y = ${Math.floor(oY)}`);
-  }
+  };
 
   const onMouseOut = (e) => {
-    setPosition({ x: 0, y: 0 })
+    setPosition({ x: 0, y: 0 });
     // setDisplay(false)
     // displayCircle()
-  }
+  };
 
   // const displayCircle = () => {
   //   refCircle.style.display = "none"
   // }
 
-
   return (
-    <section className="section section--code" id='code'>
+    <section className="section section--code" id="code">
       <div className="container">
-     
-        <div className="mousearea" ref={refArea}
-          onMouseMove={onMouseMove}     
-          onMouseOut={onMouseOut}     
-        
+        <div
+          className="mousearea"
+          ref={refArea}
+          onMouseMove={onMouseMove}
+          onMouseOut={onMouseOut}
         >
-
           <div className="image-be-masked"></div>
 
           {/* <img src={background} className="image-be-masked" />           */}
 
-          {/* <img className='circle' ref={refCircle} src={Circle} style={maskStyle} alt="" /> */}
-
-
+          <img
+            className="circle"
+            ref={refCircle}
+            src={Circle}
+            style={maskStyle}
+            alt=""
+          />
         </div>
 
-
-
-
-
-
-
-
-
-
-
-{/* 
+        {/* 
 
   <div class="text-content">
     <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h1>
@@ -126,11 +118,7 @@ const CleanCode = () => {
     </div>    
   </div> */}
 
-
-
-
-
-      {/* <div className="code" onClick={handleClick}> */}
+        {/* <div className="code" onClick={handleClick}> */}
         {/* <div
             id="code__xray"   
             style={{
@@ -155,14 +143,25 @@ const CleanCode = () => {
         <div className="code--words">consistent</div>
         <div className="code--words">uncomplicate</div>
         <div className="code--words">BEM (Block-Element-Modifier)</div> */}
-      
-      
+
+        <WhyCard
+          titleOne={whyData.code.titleOne}
+          textOne={whyData.code.textOne}
+          titleTwo={whyData.code.titleTwo}
+          textTwo={whyData.code.textTwo}
+          titleThree={whyData.code.titleThree}
+          textThree={whyData.code.textThree}
+          titleFour={whyData.code.titleFour}
+          textFour={whyData.code.textFour}
+          observation={whyData.code.observation}
+          bottom={whyData.code.bottom}
+          left={whyData.code.left}
+        />
       </div>
-      
+
       {/* </div> */}
     </section>
+  );
+};
 
-  )
-}
-
-export default CleanCode
+export default CleanCode;
