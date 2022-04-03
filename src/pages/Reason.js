@@ -7,7 +7,7 @@ import { whyData } from '../data/Data'
 const Reason = () => {
 
     const originalMessageBright = 'this portfolio has been built to showcase my variety of skills from creativity to code '
-    const originalMessageDark = 'click on the waves for an explanation of each page'
+    const originalMessageDark = 'click on the eye to know more of each page'
     const arrOfLettersBright = Array.from(originalMessageBright)
     const arrOfLettersDark = Array.from(originalMessageDark)
 
@@ -56,7 +56,11 @@ const Reason = () => {
                 className='btn btn--third-color'
                />
 
-               <WhyCard
+
+
+            </form>
+            
+            <WhyCard
                 titleOne={whyData.reason.titleOne}
                 textOne={whyData.reason.textOne}
                 titleTwo={whyData.reason.titleTwo}
@@ -66,9 +70,9 @@ const Reason = () => {
                 titleFour={whyData.reason.titleFour}
                 textFour={whyData.reason.textFour}
                 observation={whyData.reason.observation}
-               />
-
-            </form>
+                top={whyData.reason.top}
+                left={whyData.reason.left}
+            />
 
         </section>      
     )

@@ -1,7 +1,9 @@
 .why-container {
+  position: absolute;
   display: flex;
   width: max-content;
   align-items: flex-end;
+  transform: translate(-50%);
 }
 
 /* ----- BUTTON ----- */
@@ -18,9 +20,13 @@
   align-items: center;
 }
 
-.why-toggle--active {
-  width: 100px;
+.eye {
+  width: 32px;
 }
+
+/* .why-toggle--active {
+  width: 100px;
+} */
 
 .why-toggle__label {
   display: none;
@@ -30,22 +36,24 @@
   text-align: center;
   text-transform: uppercase;
   line-height: 0.7rem;
+  animation-name: icon-shake;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-.why-toggle__label--active {
+/* .why-toggle__label--active {
   display: block;
   transition: all 1s ease;
-}
+} */
 
 /* ----- BUTTON ANIMATION ----- */
 
 .why-toggle__label:hover,
 .why-toggle__label:focus,
 .why-toggle__label:active {
-  animation-name: icon-shake;
-  animation-duration: 0.2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  display: block;
+  transform: translate(10px);
 }
 
 @keyframes icon-shake {
@@ -68,11 +76,22 @@
 /* ----- WHY CARD ----- */
 
 .why {
+  position: relative;
   display: none;
   flex-direction: column;
   padding: 1em 2em 2em 2em;
   background-color: var(--third-color);
   width: max-content;
+  position: absolute;
+  top: -37.6em;
+  left: 2.5em;
+}
+
+.why__close {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 28px;
 }
 
 .why__item {
