@@ -3,30 +3,116 @@ import "../components/Card.css";
 import IconClose from "../assets/images/card-icon-close.svg";
 
 const Card = ({ project }) => {
-  // const [ isOpen, setIsOpen ] = useState({
-  //   1: { front: true },
-  //   2: { front: true },
-  //   3: { front: true },
-  //   4: { front: true },
-  //   5: { front: true }
-  // })
+  const [isOpen, setIsOpen] = useState({
+    1: { back: false },
+    2: { back: false },
+    3: { back: false },
+    4: { back: false },
+    5: { back: false },
+  });
 
   const refCardFront = useRef(null);
   const refCardBack = useRef(null);
 
   const handleClickToOpen = (e) => {
-    refCardFront.current.style.display = "none";
-    refCardBack.current.style.display = "block";
+    // refCardFront.current.style.display = "none";
+    // refCardBack.current.style.display = "block";
+
+    if (project.id === 1) {
+      setIsOpen({
+        1: { back: true },
+        2: { back: false },
+        3: { back: false },
+        4: { back: false },
+        5: { back: false },
+      });
+    } else if (project.id === 2) {
+      setIsOpen({
+        1: { back: false },
+        2: { back: true },
+        3: { back: false },
+        4: { back: false },
+        5: { back: false },
+      });
+    } else if (project.id === 3) {
+      setIsOpen({
+        1: { back: false },
+        2: { back: false },
+        3: { back: true },
+        4: { back: false },
+        5: { back: false },
+      });
+    } else if (project.id === 4) {
+      setIsOpen({
+        1: { back: false },
+        2: { back: false },
+        3: { back: true },
+        4: { back: false },
+        5: { back: false },
+      });
+    } else if (project.id === 5) {
+      setIsOpen({
+        1: { back: false },
+        2: { back: false },
+        3: { back: false },
+        4: { back: false },
+        5: { back: true },
+      });
+    }
+
+    // switch (project.id) {
+    //   case 1:
+    //     break;
+    //   case 2:
+    //     setIsOpen({
+    //       1: { back: false },
+    //       2: { back: true },
+    //       3: { back: false },
+    //       4: { back: false },
+    //       5: { back: false },
+    //     });
+    //     break;
+    //   case 3:
+    //     setIsOpen({
+    //       1: { back: false },
+    //       2: { back: false },
+    //       3: { back: true },
+    //       4: { back: false },
+    //       5: { back: false },
+    //     });
+    //     break;
+    //   case 4:
+    //     setIsOpen({
+    //       1: { back: false },
+    //       2: { back: false },
+    //       3: { back: false },
+    //       4: { back: true },
+    //       5: { back: false },
+    //     });
+    //     break;
+    //   case 5:
+    //     setIsOpen({
+    //       1: { back: false },
+    //       2: { back: false },
+    //       3: { back: false },
+    //       4: { back: false },
+    //       5: { back: true },
+    //     });
+    //     break;
+    // }
+
+    // if (isOpen[project.id].back === false) {
+    //   setIsOpen({
+    //     1: { front: true },
+    //     2: { front: true },
+    //     3: { front: true },
+    //     4: { front: true },
+    //     5: { front: true },
+    //   });
 
     // setIsOpen(isOpen.front ? {front: false} : {front: true})
-
-    // setIsFront({
-    //   1: { front: true },
-    //   2: { front: true },
-    //   3: { front: true },
-    //   4: { front: true },
-    //   5: { front: true }
-    // })
+    console.log(project.id);
+    console.log(isOpen);
   };
 
   const handleClickToClose = (e) => {

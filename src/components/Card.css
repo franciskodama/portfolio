@@ -99,7 +99,6 @@
 /* -------- BACK CARD -------- */
 /* --------------------------- */
 
-
 .card-back {
   display: none;
   width: 500px;
@@ -110,6 +109,8 @@
   transition: all 0.2s ease;
   color: var(--dark-color);
 }
+
+
 
 /* ------- HEADER ------- */
 

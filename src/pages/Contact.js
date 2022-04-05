@@ -4,66 +4,12 @@ import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
 import "../styles/Contact.css";
 import Button from "../components/Button";
-
-const data = [
-  {
-    id: "1",
-    content: "Hey Francis!",
-  },
-  {
-    id: "2",
-    content: "I hope this message finds you well.",
-  },
-  {
-    id: "3",
-    content: "Cool website, man!",
-  },
-  {
-    id: "4",
-    content: "Do you want to work in our company?",
-  },
-  {
-    id: "5",
-    content: "ops, I found a bug.",
-  },
-  {
-    id: "6",
-    content: "Holly cow, what a portfolio!",
-  },
-  {
-    id: "7",
-    content: `Let's schedule an interview?`,
-  },
-  {
-    id: "8",
-    content: "I am looking for a professional like you.",
-  },
-  {
-    id: "9",
-    content: "Cool!!!",
-  },
-  {
-    id: "10",
-    content: "I did not like your website, and I will tell you why...",
-  },
-  {
-    id: "11",
-    content: "See you soon!",
-  },
-  {
-    id: "12",
-    content: "Take care!",
-  },
-  {
-    id: "13",
-    content: "Thanks! :)",
-  },
-];
+import { contactData } from "../data/Data";
 
 const dropSpace = {
   drag: {
     name: "drag from here:",
-    items: data,
+    items: contactData,
   },
   drop: {
     name: "drop here:",
