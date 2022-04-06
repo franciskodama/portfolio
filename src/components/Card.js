@@ -1,118 +1,81 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../components/Card.css";
 import IconClose from "../assets/images/card-icon-close.svg";
 
 const Card = ({ project }) => {
   const [isOpen, setIsOpen] = useState({
-    1: { back: false },
-    2: { back: false },
-    3: { back: false },
-    4: { back: false },
-    5: { back: false },
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
   });
 
   const refCardFront = useRef(null);
   const refCardBack = useRef(null);
+  const ref = useRef(isOpen);
 
   const handleClickToOpen = (e) => {
-    // refCardFront.current.style.display = "none";
-    // refCardBack.current.style.display = "block";
-
+    let newState = {};
     if (project.id === 1) {
-      setIsOpen({
-        1: { back: true },
-        2: { back: false },
-        3: { back: false },
-        4: { back: false },
-        5: { back: false },
-      });
+      newState = {
+        1: true,
+        2: false,
+        3: false,
+        4: false,
+        5: false,
+      };
     } else if (project.id === 2) {
-      setIsOpen({
-        1: { back: false },
-        2: { back: true },
-        3: { back: false },
-        4: { back: false },
-        5: { back: false },
-      });
+      newState = {
+        1: false,
+        2: true,
+        3: false,
+        4: false,
+        5: false,
+      };
     } else if (project.id === 3) {
-      setIsOpen({
-        1: { back: false },
-        2: { back: false },
-        3: { back: true },
-        4: { back: false },
-        5: { back: false },
-      });
+      newState = {
+        1: false,
+        2: false,
+        3: true,
+        4: false,
+        5: false,
+      };
     } else if (project.id === 4) {
-      setIsOpen({
-        1: { back: false },
-        2: { back: false },
-        3: { back: true },
-        4: { back: false },
-        5: { back: false },
-      });
+      newState = {
+        1: false,
+        2: false,
+        3: false,
+        4: true,
+        5: false,
+      };
     } else if (project.id === 5) {
-      setIsOpen({
-        1: { back: false },
-        2: { back: false },
-        3: { back: false },
-        4: { back: false },
-        5: { back: true },
-      });
+      newState = {
+        1: false,
+        2: false,
+        3: false,
+        4: false,
+        5: true,
+      };
     }
-
-    // switch (project.id) {
-    //   case 1:
-    //     break;
-    //   case 2:
-    //     setIsOpen({
-    //       1: { back: false },
-    //       2: { back: true },
-    //       3: { back: false },
-    //       4: { back: false },
-    //       5: { back: false },
-    //     });
-    //     break;
-    //   case 3:
-    //     setIsOpen({
-    //       1: { back: false },
-    //       2: { back: false },
-    //       3: { back: true },
-    //       4: { back: false },
-    //       5: { back: false },
-    //     });
-    //     break;
-    //   case 4:
-    //     setIsOpen({
-    //       1: { back: false },
-    //       2: { back: false },
-    //       3: { back: false },
-    //       4: { back: true },
-    //       5: { back: false },
-    //     });
-    //     break;
-    //   case 5:
-    //     setIsOpen({
-    //       1: { back: false },
-    //       2: { back: false },
-    //       3: { back: false },
-    //       4: { back: false },
-    //       5: { back: true },
-    //     });
-    //     break;
-    // }
-
-    // if (isOpen[project.id].back === false) {
-    //   setIsOpen({
-    //     1: { front: true },
-    //     2: { front: true },
-    //     3: { front: true },
-    //     4: { front: true },
-    //     5: { front: true },
-    //   });
-
-    // setIsOpen(isOpen.front ? {front: false} : {front: true})
     console.log(project.id);
-    console.log(isOpen);
+    updateState(newState);
+
+    // for (let i = 0; i < isOpen.lenght; i++) {
+    //   if (isOpen[i] === project.id) {
+    //     refCardBack.current.style.display = "block";
+    //     console.log(`ref card back: ${refCardBack.current}`);
+    //   } else {
+    //     refCardBack.current.style.display = "none";
+    //     console.log(`ref card back: ${refCardBack.current}`);
+    //   }
+    // }
+  };
+
+  const updateState = (state) => {
+    ref.current = state;
+    setIsOpen(state);
+    console.log(ref.current[project.id]);
   };
 
   const handleClickToClose = (e) => {
@@ -122,10 +85,15 @@ const Card = ({ project }) => {
 
   return (
     <div className="card">
+      {/* ============================================================== */}
+
       <div
         className="card-front"
         ref={refCardFront}
         onClick={handleClickToOpen}
+        style={{
+          display: ref.current[project.id] === false ? "block" : "none",
+        }}
       >
         <p className="card-front__category">{project.category}</p>
         <div className="card-front__box">
@@ -145,7 +113,15 @@ const Card = ({ project }) => {
         <p className="card-front__text">{project.frontText}</p>
       </div>
 
-      <div className="card-back" ref={refCardBack}>
+      {/* ============================================================== */}
+
+      <div
+        className="card-back"
+        ref={refCardBack}
+        style={{
+          display: ref.current[project.id] === true ? "block" : "none",
+        }}
+      >
         <div className="card-back__header">
           <p className="card-back__category">{project.category}</p>
           <img
