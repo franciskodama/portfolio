@@ -89,7 +89,7 @@ export const projects = [
     icon: require("../assets/images/card-icon-mundial.png"),
     titleA: "MUNDIAL",
     titleB: "website.",
-    titleC: "Mundial Comunicação Visual",
+    titleC: "Mundial Comunicação",
     tech: "html css",
     category: "website",
     url: "https://www.mundialcomunicacao.com.br/",
