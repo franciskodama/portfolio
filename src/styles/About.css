@@ -1,8 +1,8 @@
-.section .section-about {
+.section .section--about {
   background-color: var(--dark-color);
 }
 
-.section-about .container {
+.section--about .container {
   display: flex;
   background-color: var(--bright-color);
   color: var(--dark-color);
@@ -105,9 +105,9 @@
   text-align: center;
 }
 
-/* --- CHECK OUT MESSAGE --- */
+/* --- MODAL --- */
 
-.bag-message {
+.modal {
   display: block;
   position: absolute;
   right: 50px;
@@ -115,9 +115,11 @@
   color: var(--bright-color);
   background-color: var(--dark-color);
   padding: 2em 1em 2em 2em;
+  height: 19em;
+  width: 23.5em;
 }
 
-.bag-message:before {
+.modal:before {
   content: "";
   position: absolute;
   width: 0;
@@ -130,41 +132,106 @@
   right: -24px;
 }
 
-.checkout-title {
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid orange; */
+}
+
+.modal__title {
   font-family: var(--main-font-semibold);
 }
 
-.purchase-container {
+.modal__close {
+  width: 1.5em;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+
+/* ---- MODAL FULL ---- */
+
+.modal__full {
+  display: none;
+  /* display: block; */
+}
+
+.modal__full-wrapper {
   display: flex;
   margin-bottom: 2.5em;
 }
 
-.purchase-image {
+.modal__image {
   width: 70px;
   height: 70px;
   margin: 1em;
 }
 
-.purchase-text-wrapper {
+.modal__text-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.purchase-name {
+.modal__name {
   font-family: var(--main-font-regular);
 }
 
-.purchase-email,
-.purchase-title,
-.purchase-location {
+.modal__email,
+.modal__location {
   font-size: 0.8rem;
 }
 
-.purchase-email {
+.modal__email {
   padding-bottom: 0.5em;
   border-bottom: 0.5px dashed var(--bright-color);
 }
+
+/* ---- MODAL EMPTY ---- */
+
+.modal__empty {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  background-image: url(../assets/images/about-empty.svg);
+  background-repeat: no-repeat;
+  background-size: 6em;
+  background-position: 2em 1.5em;
+}
+
+.modal__empty-wrapper {
+  margin-top: 2em;
+  margin-left: 9em;
+  margin-bottom: 2.5em;
+  position: relative;
+}
+
+.modal__empty-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -1em;
+  left: -9em;
+  width: 19.2em;
+  border-bottom: 0.5px dashed var(--bright-color);
+}
+
+
+
+
+.modal__empty-text {
+  font-family: var(--main-font-light);
+  font-size: 1.2rem;
+}
+
+.modal__empty-title {
+  color: var(--third-color);
+  font-family: var(--main-font-semibold);
+  font-size: 1.85rem;
+}
+
+
+/* ---- LOCATION ---- */
 
 .location-wrapper {
   display: flex;
@@ -172,11 +239,11 @@
 }
 
 .purchase-location-title,
-.purchase-confirm-title {
+.modal__button-title {
   font-size: 0.8rem;
 }
 
-.purchase-confirm-title {
+.modal__button-title {
   margin-bottom: 0.5em;
 }
 
@@ -197,6 +264,37 @@
   animation-duration: 0.2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+/* ---- ERROR MESSAGE ---- */
+
+
+.error-location {
+  display: none;
+}
+
+.error-location--active{
+  display: block;
+  position: absolute;
+  bottom: -2.8em; 
+  font-family: var(--main-font-regular);
+  font-size: 0.8rem;
+  color: var(--bright-color);
+  background-color: var(--third-color);
+  padding: 0.5em 2.05em;
+  text-align: center;
+  animation-name: appear;
+  animation-duration: 0.35s;
+  z-index: 0;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* ----- TEXT AREA ----- */
@@ -235,14 +333,26 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
 }
 
 .location-button-container {
   display: flex;
   flex-direction: column;
+  position: relative;
+
+
 }
 
+
 /* --- FORM --- */
+
+
+.location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3em;
+}
 
 .location-title,
 .tools-title {
@@ -254,14 +364,10 @@
   margin: 3em 0 0.5em 0;
 }
 
-.location {
-  display: flex;
-  align-items: center;
-  margin-bottom: 3em;
-}
 
 .input-radio {
   height: 0.8rem;
+  cursor: pointer;
 }
 
 .location label {

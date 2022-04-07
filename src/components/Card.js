@@ -3,6 +3,7 @@ import "../components/Card.css";
 import IconClose from "../assets/images/card-icon-close.svg";
 
 const Card = ({ project }) => {
+  const [test, setTest] = useState("");
   const [isOpen, setIsOpen] = useState({
     1: false,
     2: false,
@@ -16,77 +17,23 @@ const Card = ({ project }) => {
   const ref = useRef(isOpen);
 
   const handleClickToOpen = (e) => {
-    let newState = {};
     if (project.id === 1) {
-      newState = {
-        1: true,
-        2: false,
-        3: false,
-        4: false,
-        5: false,
-      };
+      setIsOpen({ ...isOpen, 1: true });
     } else if (project.id === 2) {
-      newState = {
-        1: false,
-        2: true,
-        3: false,
-        4: false,
-        5: false,
-      };
+      setIsOpen({ ...isOpen, 2: true });
     } else if (project.id === 3) {
-      newState = {
-        1: false,
-        2: false,
-        3: true,
-        4: false,
-        5: false,
-      };
+      setIsOpen({ ...isOpen, 3: true });
     } else if (project.id === 4) {
-      newState = {
-        1: false,
-        2: false,
-        3: false,
-        4: true,
-        5: false,
-      };
+      setIsOpen({ ...isOpen, 4: true });
     } else if (project.id === 5) {
-      newState = {
-        1: false,
-        2: false,
-        3: false,
-        4: false,
-        5: true,
-      };
+      setIsOpen({ ...isOpen, 5: true });
     }
     console.log(project.id);
-    updateState(newState);
-
-    // for (let i = 0; i < isOpen.lenght; i++) {
-    //   if (isOpen[i] === project.id) {
-    //     refCardBack.current.style.display = "block";
-    //     console.log(`ref card back: ${refCardBack.current}`);
-    //   } else {
-    //     refCardBack.current.style.display = "none";
-    //     console.log(`ref card back: ${refCardBack.current}`);
-    //   }
-    // }
   };
 
-  // useEffect(() => {
-  //   setIsOpen({
-  //     1: false,
-  //     2: false,
-  //     3: false,
-  //     4: false,
-  //     5: false,
-  //   });
-  // }, []);
-
-  const updateState = (state) => {
-    ref.current = state;
-    setIsOpen(state);
-    console.log(ref.current[project.id]);
-  };
+  useEffect(() => {
+    // console.log(isOpen);
+  }, [isOpen]);
 
   const handleClickToClose = (e) => {
     refCardFront.current.style.display = "block";
@@ -94,7 +41,7 @@ const Card = ({ project }) => {
   };
 
   return (
-    <div className="card">
+    <div className="card card---active">
       {/* ============================================================== */}
 
       <div
@@ -102,7 +49,7 @@ const Card = ({ project }) => {
         ref={refCardFront}
         onClick={handleClickToOpen}
         style={{
-          display: ref.current[project.id] === false ? "block" : "none",
+          display: isOpen[project.id] === false ? "block" : "none",
         }}
       >
         <p className="card-front__category">{project.category}</p>
@@ -129,7 +76,7 @@ const Card = ({ project }) => {
         className="card-back"
         ref={refCardBack}
         style={{
-          display: ref.current[project.id] === true ? "block" : "none",
+          display: isOpen[project.id] === true ? "block" : "none",
         }}
       >
         <div className="card-back__header">
@@ -175,3 +122,12 @@ const Card = ({ project }) => {
 };
 
 export default Card;
+// for (let i = 0; i < isOpen.lenght; i++) {
+//   if (isOpen[i] === project.id) {
+//     refCardBack.current.style.display = "block";
+//     console.log(`ref card back: ${refCardBack.current}`);
+//   } else {
+//     refCardBack.current.style.display = "none";
+//     console.log(`ref card back: ${refCardBack.current}`);
+//   }
+// }

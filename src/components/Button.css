@@ -13,6 +13,7 @@
   border: 1px solid var(--dark-color);
   background-color: var(--dark-color);
   transition: all 0.2s ease;
+  z-index: 1;
 }
 
 .btn--dark:hover {
