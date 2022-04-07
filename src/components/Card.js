@@ -72,6 +72,16 @@ const Card = ({ project }) => {
     // }
   };
 
+  // useEffect(() => {
+  //   setIsOpen({
+  //     1: false,
+  //     2: false,
+  //     3: false,
+  //     4: false,
+  //     5: false,
+  //   });
+  // }, []);
+
   const updateState = (state) => {
     ref.current = state;
     setIsOpen(state);

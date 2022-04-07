@@ -18,7 +18,7 @@ const About = () => {
 
   const handleClickLocation = (event) => {
     setLocation(event.target.value);
-    // console.log(location)
+    console.log(location);
   };
 
   useEffect(() => {
@@ -41,6 +41,10 @@ const About = () => {
   const handleClickInterview = () => {
     setShowMessage({ show: false });
   };
+
+  // if (error.response) {
+  //   document.getElementById("error-message").style.display = "block";
+  // }
 
   return (
     <section className="section section-about" id="about">
@@ -151,6 +155,7 @@ const About = () => {
                 text="add to my team"
                 align="flex-start"
               />
+              <p id="error-message">...Ops, please choose a location</p>
             </div>
 
             <div className="tools">
