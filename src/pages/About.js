@@ -50,7 +50,8 @@ const About = () => {
   };
 
   const handleClickDelete = () => {
-    setShowMessage({ show: false });
+    refMessageEmpty.current.style.display = "flex";
+    refMessageFull.current.style.display = "none";
     setAddMe({ show: false });
     setInBag(false);
   };
