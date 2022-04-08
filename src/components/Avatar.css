@@ -46,23 +46,25 @@
   grid-column: 4/5;
   width: 412px;
   height: 412px;
+  z-index: 5;
+
 }
 
 iframe {
-  z-index: 10;
   position: relative;
+  z-index: 0;
 }
 
 .white-square {
-  display: none;
+  display: block;
   content: "";
   position: absolute;
   right: 4.5em;
   bottom: 15em;
-  background-color: white;
+  background-color: #eaeaea;
   width: 50px;
   height: 50px;
-  z-index: 11;
+  z-index: 1;
 }
 
 /* ------ SKILLS TXT ---------- */

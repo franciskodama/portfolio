@@ -218,7 +218,7 @@ export const avatarData = [
     key: 0,
     title: "Francis Kodama",
     description: `I'm an experienced tech services entrepreneur/consultant - product designer oriented, with experience in product design, UX/UI.`,
-    imgUrl: require("../assets/images/about-me2.png"),
+    imgUrl: require("../assets/images/about-me.png"),
   },
   {
     key: 1,

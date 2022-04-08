@@ -22,6 +22,8 @@ const Card = ({ project }) => {
   let newStateClose = {};
 
   const handleClickToOpen = () => {
+    refCardBack.current.style.display = "none";
+
     // newStateClose = {
     //   1: false,
     //   2: false,
@@ -133,12 +135,3 @@ const Card = ({ project }) => {
 };
 
 export default Card;
-// for (let i = 0; i < isOpen.lenght; i++) {
-//   if (isOpen[i] === project.id) {
-//     refCardBack.current.style.display = "block";
-//     console.log(`ref card back: ${refCardBack.current}`);
-//   } else {
-//     refCardBack.current.style.display = "none";
-//     console.log(`ref card back: ${refCardBack.current}`);
-//   }
-// }

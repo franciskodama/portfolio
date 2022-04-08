@@ -17,6 +17,7 @@
   position: relative;
   width: 50%;
   background-color: hsla(0, 0%, 0%, 0.05);
+  background-color: #eaeaea;
 }
 
 /*--------------------------
@@ -136,7 +137,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid orange; */
 }
 
 .modal__title {
@@ -199,10 +199,7 @@ margin-top: 0.5em;
 /* ---- MODAL EMPTY ---- */
 
 .modal__empty {
-  
-
   display: none;
-  /* display: flex; */
   flex-direction: column;
   background-image: url(../assets/images/about-empty.svg);
   background-repeat: no-repeat;
@@ -225,9 +222,6 @@ margin-top: 0.5em;
   width: 19.2em;
   border-bottom: 0.5px dashed var(--bright-color);
 }
-
-
-
 
 .modal__empty-text {
   font-family: var(--main-font-light);
@@ -277,7 +271,6 @@ margin-top: 0.5em;
 }
 
 /* ---- ERROR MESSAGE ---- */
-
 
 .error-location {
   display: none;
@@ -350,13 +343,10 @@ margin-top: 0.5em;
   display: flex;
   flex-direction: column;
   position: relative;
-
-
 }
 
 
 /* --- FORM --- */
-
 
 .location {
   display: flex;
