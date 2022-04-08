@@ -211,4 +211,14 @@
   background-size: 20px;
 }
 
+/* ----- CARD ACTIVE ----- */
+/* 
+.card--active .card-front {
+  display: none;
+}
 
+.card--active .card-back {
+  display: block;
+}
+
+ */

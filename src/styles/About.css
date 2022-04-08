@@ -154,7 +154,6 @@
 
 .modal__full {
   display: none;
-  /* display: block; */
 }
 
 .modal__full-wrapper {
@@ -179,8 +178,17 @@
 }
 
 .modal__email,
-.modal__location {
+.modal__location,
+.modal__location-title {
   font-size: 0.8rem;
+}
+
+.modal__location-title {
+margin-top: 0.5em;
+}
+
+.modal__location {
+  font-family: var(--main-font-semibold);
 }
 
 .modal__email {
@@ -191,6 +199,8 @@
 /* ---- MODAL EMPTY ---- */
 
 .modal__empty {
+  
+
   display: none;
   /* display: flex; */
   flex-direction: column;

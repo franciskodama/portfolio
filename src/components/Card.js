@@ -3,7 +3,11 @@ import "../components/Card.css";
 import IconClose from "../assets/images/card-icon-close.svg";
 
 const Card = ({ project }) => {
-  const [test, setTest] = useState("");
+  // const [isActive, setIsActive] = useState(false);
+  // const toggleClass = () => {
+  //    setIsActive(!isActive);
+  // };
+
   const [isOpen, setIsOpen] = useState({
     1: false,
     2: false,
@@ -14,35 +18,40 @@ const Card = ({ project }) => {
 
   const refCardFront = useRef(null);
   const refCardBack = useRef(null);
-  const ref = useRef(isOpen);
+  let newState = {};
+  let newStateClose = {};
 
-  const handleClickToOpen = (e) => {
-    if (project.id === 1) {
-      setIsOpen({ ...isOpen, 1: true });
-    } else if (project.id === 2) {
-      setIsOpen({ ...isOpen, 2: true });
-    } else if (project.id === 3) {
-      setIsOpen({ ...isOpen, 3: true });
-    } else if (project.id === 4) {
-      setIsOpen({ ...isOpen, 4: true });
-    } else if (project.id === 5) {
-      setIsOpen({ ...isOpen, 5: true });
-    }
-    console.log(project.id);
+  const handleClickToOpen = () => {
+    // newStateClose = {
+    //   1: false,
+    //   2: false,
+    //   3: false,
+    //   4: false,
+    //   5: false,
+    // };
+    // setIsOpen(newStateClose);
+    // console.log(newStateClose);
+
+    newState = { ...isOpen, [project.id]: true };
+    setIsOpen(newState);
   };
 
   useEffect(() => {
-    // console.log(isOpen);
+    console.log(isOpen);
   }, [isOpen]);
 
-  const handleClickToClose = (e) => {
+  const handleClickToClose = () => {
     refCardFront.current.style.display = "block";
     refCardBack.current.style.display = "none";
   };
 
   return (
-    <div className="card card---active">
-      {/* ============================================================== */}
+    <div
+      // className={isActive ? "card card--active" : "card"}
+      // onClick={toggleClass}
+      className="card"
+    >
+      {/* ========================== CARD FRONT ========================== */}
 
       <div
         className="card-front"
@@ -70,7 +79,7 @@ const Card = ({ project }) => {
         <p className="card-front__text">{project.frontText}</p>
       </div>
 
-      {/* ============================================================== */}
+      {/* ========================== CARD BACK ========================== */}
 
       <div
         className="card-back"
@@ -117,6 +126,8 @@ const Card = ({ project }) => {
           ) : null}
         </div>
       </div>
+
+      {/* ========================== END CARDS ========================== */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-scroll";
 import "../styles/About.css";
 import Button from "../components/Button";
@@ -57,7 +57,6 @@ const About = () => {
 
   const handleClickClose = () => {
     setShowMessage({ show: false });
-    setAddMe({ show: false });
   };
 
   const handleClickInterview = () => {
@@ -116,8 +115,18 @@ const About = () => {
                   <h4 className="modal__name">Francis Kodama</h4>
                   <p className="modal__email">fk@fkodama.com</p>
                   <div className="modal__location-wrapper">
-                    <p className="modal__location-title">Location:</p>
-                    <p className="modal__location">Remote</p>
+                    <p className="modal__location-title">
+                      Location:{" "}
+                      <span
+                        style={{
+                          textTransform: "uppercase",
+                          fontFamily: "var(--main-font-semibold)",
+                        }}
+                      >
+                        {location.data}
+                      </span>
+                    </p>
+                    {/* <p className="modal__location">Remote</p> */}
                   </div>
                 </div>
                 <img
