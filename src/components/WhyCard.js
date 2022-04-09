@@ -77,22 +77,22 @@ const WhyCard = ({
 
         <li className="why__item">
           <h2 className="why__title why__title--flag">{titleOne}</h2>
-          <p className="why__desc">{textOne}</p>
+          <p className="why__description">{textOne}</p>
         </li>
 
         <li className="why__item">
           <h2 className="why__title why__title--bolt">{titleTwo}</h2>
-          <p className="why__desc">{textTwo}</p>
+          <p className="why__description">{textTwo}</p>
         </li>
 
         <li className="why__item">
-          <h2 className="why__title why__title--brush">{titleThree}</h2>
-          <p className="why__desc">{textThree}</p>
+          <h2 className="why__title why__title--robot">{titleThree}</h2>
+          <p className="why__description">{textThree}</p>
         </li>
 
         <li className="why__item">
-          <h2 className="why__title why__title--robot">{titleFour}</h2>
-          <p className="why__desc">{textFour}</p>
+          <h2 className="why__title why__title--brush">{titleFour}</h2>
+          <p className="why__description">{textFour}</p>
         </li>
 
         <li className="why__footer">

@@ -94,7 +94,7 @@ const About = () => {
             style={{ display: showMessage.show ? "block" : "none" }}
           >
             <div className="modal__header">
-              <h3 className="modal__title">CHECK OUT</h3>
+              <h3 className="modal__title">CHECKOUT</h3>
               <img
                 className="modal__close"
                 onClick={handleClickClose}
@@ -161,7 +161,7 @@ const About = () => {
                 <h3 className="modal__empty-title">EMPTY</h3>
               </div>
 
-              <p className="modal__button-title">Do you want to come back?</p>
+              <p className="modal__button-title">Would you like to return?</p>
               <Button
                 className="btn btn--bright"
                 onClick={handleClickClose}
@@ -172,20 +172,22 @@ const About = () => {
             {/* ===================== MODAL END ===================== */}
           </div>
 
-          <div className="about-description">
-            <h3 className="name">Francis Kodama</h3>
-            <h2 className="job">Front-end Developer</h2>
-            <h2 className="languages">
-              HTML, CSS, JS, <span className="and">and</span> React.
+          <div className="about">
+            <h3 className="about__name">Francis Kodama</h3>
+            <h2 className="about__job">Front-end Developer</h2>
+            <h2 className="about__languages">
+              React, JS, CSS, <span className="about__and">and</span> HTML
             </h2>
-            <p className="description-one">
-              I'm an experienced tech services entrepreneur/consultant - product
-              designer oriented, with experience in product design, UX/UI and
-              business development.
+            <p className="about__description">
+              I'm an experienced tech services provider with a strong
+              understanding of industry trends, as well as of the entire web
+              development process, including development, UX/UI design, product
+              management, and client services.
             </p>
-            <p className="description-two">
+            <p className="about__description">
               Resourceful, curious, creative, and critical thinker, who loves to
-              solve problems by designing enjoyable, usable and useful products.
+              solve problems by designing and coding enjoyable, usable and
+              useful products.
             </p>
           </div>
 
@@ -238,8 +240,8 @@ const About = () => {
             <div className="tools">
               <p className="tools-title">included:</p>
               <p>git</p>
-              <p>agile</p>
               <p>jira</p>
+              <p>agile</p>
               <p>figma</p>
               <p>adobe xd</p>
               <p>adobe photoshop</p>

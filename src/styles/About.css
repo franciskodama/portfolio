@@ -302,32 +302,33 @@ margin-top: 0.5em;
 
 /* ----- TEXT AREA ----- */
 
-.about-description {
+.about {
   width: 60%;
 }
 
-.name,
-.languages {
+.about__name,
+.about__languages {
   margin-bottom: 0.5em;
 }
 
-.name {
+.about__name {
   font-size: 1.2rem;
   font-family: var(--main-font-thin);
 }
 
-.job,
-.languages {
+.about__job,
+.about__languages {
   font-size: 1.5rem;
   font-family: var(--main-font-medium);
 }
 
-.and {
+.about__and {
   font-size: 0.8rem;
 }
 
-.description-one {
-  margin-bottom: 1em;
+.about__description {
+  font-size: 0.95rem;
+   margin-bottom: 1em;
 }
 
 /* --- CONTAINERS --- */

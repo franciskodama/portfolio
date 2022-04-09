@@ -11,7 +11,7 @@
   height: 100%;
 }
 
-.hero-info {
+.hero__info {
   display: flex;
   flex-direction: column;
   font-family: var(--main-font-semibold);
@@ -22,7 +22,7 @@
 
 /* ------ VIDEO  ------ */
 
-.filter {
+.hero__filter {
   position: absolute;
   top: 0;
   left: 0;
@@ -34,7 +34,7 @@
 
 /* ------ TYPE EFFECT ------ */
 
-.typing-effect {
+.hero__typing-effect {
   width: 100%;
   animation: typing 2s steps(18), effect 0.5s step-end infinite alternate;
   white-space: nowrap;
@@ -55,21 +55,20 @@
   }
 }
 
-.hero-info p {
+.hero__info .hero__paragraphs {
   font-family: var(--main-font-thin);
   font-size: 1.35rem;
   font-weight: 100;
 }
 
-.hightlight,
-.highlight-special {
+.hero__title {
   font-size: 2.25rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--bright-color);
 }
 
-.highlight-special {
+.hero__title--highlight {
   color: var(--third-color);
 }
 

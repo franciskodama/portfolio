@@ -1,30 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto:wght@100;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
 
-/*
-
-Color Scheme:
-    Blue: #12B3D8
-    Orange: #FF860F
-    Green: #B3F90E 
-    Light Gray: #F5F5F5
-
-Fonts:
-    Headings:
-        font-family: 'Montserrat', sans-serif;
-    
-    Paragraph:
-        font-family: 'Hubballi', cursive;
-
-*/
-
 /* ====================================
         VARIABLES
 ======================================= */
-
-/*  font-family: var(--main-font); 
-    color: var(--dark-color); 
-*/
 
 :root {
   --main-font-thin: "axiformathin", sans-serif;

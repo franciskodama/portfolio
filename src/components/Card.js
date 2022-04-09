@@ -34,12 +34,17 @@ const Card = ({ project }) => {
     // setIsOpen(newStateClose);
     // console.log(newStateClose);
 
+    // let previousId = project.id;
+    // console.log(e.target);
+    // console.log(previousId);
+    // console.log(refCardBack.current.value);
+
     newState = { ...isOpen, [project.id]: true };
     setIsOpen(newState);
   };
 
   useEffect(() => {
-    console.log(isOpen);
+    // console.log(isOpen);
   }, [isOpen]);
 
   const handleClickToClose = () => {

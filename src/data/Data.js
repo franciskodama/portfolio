@@ -118,10 +118,10 @@ export const whyData = {
     titleTwo: "Showcase",
     textTwo:
       "In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.",
-    titleThree: "Tools used",
-    textThree: "Figma, Adobe Photoshop, and VS Code",
-    titleFour: "Tech used",
-    textFour: "HTML, CSS, Javascript, React, Sass, NPM, and GIT",
+    titleThree: "Tech used",
+    textThree: "React, Javascript, CSS, HTML, NPM, and Git.",
+    titleFour: "Tools used",
+    textFour: "Figma, Adobe Photoshop, and VS Code.",
     observation:
       "This portfolio was 100% created and programmed by Francis Kodama.",
     bottom: "20%",
@@ -217,43 +217,49 @@ export const avatarData = [
   {
     key: 0,
     title: "Francis Kodama",
-    description: `I'm an experienced tech services entrepreneur/consultant - product designer oriented, with experience in product design, UX/UI.`,
+    description: `Resourceful, curious, creative, and critical thinker, who loves to solve problems by designing and coding enjoyable, usable and useful products.`,
     imgUrl: require("../assets/images/about-me.png"),
   },
   {
     key: 1,
     title: "creative",
-    description: "I am super duper Creative!",
+    description:
+      "Due to his continuous curiosity and extensive advertising experience, he is always ready to contribute to the development of innovative solutions that can make a real impact.",
     imgUrl: require("../assets/images/avatar-creative.jpg"),
   },
   {
     key: 2,
     title: "problem solving",
-    description: "I am super duper problem solving!",
-    imgUrl: require("../assets/images/avatar-problem.jpg"),
+    description:
+      "Possess the ability to handle and calmly identify solutions to difficult or unexpected situations both in programming challenges and in the workplace.",
+    imgUrl: require("../assets/images/avatar-problem2.jpg"),
   },
   {
     key: 3,
-    title: "tech lover",
-    description: "I am super duper tech lover!",
-    imgUrl: require("../assets/images/avatar-tech.jpg"),
+    title: "communication",
+    description:
+      "It is crucial that we are able to listen actively to the stakeholders, which was Francis' job for all of his life. Additionally, Francis has the gift of feeding it back to them, so they know it is correct.",
+    imgUrl: require("../assets/images/avatar-communication2.jpg"),
   },
   {
     key: 4,
-    title: "constant learner",
-    description: "I am super duper constant learner, bitch!",
-    imgUrl: require("../assets/images/avatar-learner.jpg"),
+    title: "lifelong learner",
+    description:
+      "Dedicated to continuous growth and development to keep up with changes in this new world. Aims to develop skills, master new technologies, in order to add value to the organization.",
+    imgUrl: require("../assets/images/avatar-learner2.jpg"),
   },
   {
     key: 5,
-    title: "details oriented",
-    description: "I am super duper details oriented!",
-    imgUrl: require("../assets/images/avatar-detail.jpg"),
+    title: "goal oriented",
+    description:
+      "Motivated by a clear vision, goals, and meaningful aspirations, he believes in hard work, choices, and persistence. Difficult to have him distracted from his goals.",
+    imgUrl: require("../assets/images/avatar-goal2.jpg"),
   },
   {
     key: 6,
-    title: "friendly",
-    description: "I am super duper friendly!",
+    title: "positive attitude",
+    description:
+      "Demonstrates kindly interest and goodwill in relationships. Collaboration, flexibility, and empathy rank high on his list of top career skills.",
     imgUrl: require("../assets/images/avatar-friendly.jpg"),
   },
 ];

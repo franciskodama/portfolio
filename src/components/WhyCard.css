@@ -90,7 +90,7 @@
   background-color: var(--third-color);
   width: max-content;
   position: absolute;
-  top: -37.6em;
+  bottom: 0em;
   left: 2.9em;
 }
 
@@ -106,7 +106,7 @@
   display: flex;
   flex-direction: column;
   width: 30ch;
-  margin: 1em 0 2em 0;
+  margin: 1em 0 3em 0;
 }
 
 .why__title {
@@ -116,6 +116,7 @@
   background-repeat: no-repeat;
   background-size: 1.5em;
   padding-left: 2.5em;
+  padding-bottom: 0.5em;
 }
 
 .why__title--flag {
@@ -134,8 +135,8 @@
   background-image: url("../assets/images/why-icon-robot.svg");
 }
 
-.why__desc {
-  margin-top: 0.5em;
+.why__description {
+  font-family: var(--main-font-light);
 }
 
 /* ----- FOOTER ----- */
