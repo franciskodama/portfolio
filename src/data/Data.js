@@ -218,11 +218,11 @@ export const avatarData = [
     key: 0,
     title: "Francis Kodama",
     description: `Resourceful, curious, creative, and critical thinker, who loves to solve problems by designing and coding enjoyable, usable and useful products.`,
-    imgUrl: require("../assets/images/about-me.png"),
+    imgUrl: require("../assets/images/about-me2.png"),
   },
   {
     key: 1,
-    title: "creative",
+    title: "creative and innovation",
     description:
       "Due to his continuous curiosity and extensive advertising experience, he is always ready to contribute to the development of innovative solutions that can make a real impact.",
     imgUrl: require("../assets/images/avatar-creative.jpg"),
@@ -236,7 +236,7 @@ export const avatarData = [
   },
   {
     key: 3,
-    title: "communication",
+    title: "effective communication",
     description:
       "It is crucial that we are able to listen actively to the stakeholders, which was Francis' job for all of his life. Additionally, Francis has the gift of feeding it back to them, so they know it is correct.",
     imgUrl: require("../assets/images/avatar-communication2.jpg"),

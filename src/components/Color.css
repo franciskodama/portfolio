@@ -1,0 +1,80 @@
+.color {
+ position: absolute;
+ top: 20em;
+ right: 7%;    
+}
+
+.color__square-first,
+.color__square-wrapper {
+    background-color: var(--third-color);
+}
+
+.color__square-first {
+    width: 40px;
+    height: 40px;
+    background-image: url(../assets/images/color-pallete.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.color__square-wrapper {
+    display: none;
+    position: absolute;
+    bottom: 0; 
+    left: -6.5em;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 0.5em 0.5em;
+}
+
+.color__options {
+    display: flex;
+    padding: 0.4em;
+    cursor: pointer;
+}
+
+.color--active {
+    border: 1px dashed var(--bright-color);
+}
+
+.color__square {
+    width: 25px;
+    height: 25px;
+    margin: 0.1em 0.2em;
+}
+
+.color-one {
+    background-color: var(--dark-color);
+}
+
+
+.color-two {
+    background-color: var(--third-color);
+    border: 1px solid var(--bright-color);
+    margin-left: 0.5em;
+}
+
+
+.color-three {
+    background-color: grey;
+    border: 1px solid var(--bright-color);
+}
+
+.color-four {
+    background-color: orange;
+    border: 1px solid var(--bright-color);
+    margin-left: 0.5em;
+
+}
+
+.color-five {
+    background-color: indigo;
+}
+
+.color-six {
+    background-color: yellow;
+    margin-left: 0.5em;
+
+}

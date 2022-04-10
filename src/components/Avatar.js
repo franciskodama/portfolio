@@ -71,14 +71,14 @@ const Avatar = () => {
           />
         </div>
 
-        <iframe
+        {/* <iframe
           className="avatar-image"
           src="https://my.spline.design/untitled-93c1753c6b5d2f301c418a677de96cc2/"
           frameBorder="0"
           width="100%"
           height="100%"
         ></iframe>
-        <div className="white-square"></div>
+        <div className="white-square"></div> */}
 
         <img
           className="avatar-image"
