@@ -20,7 +20,19 @@
   --third-color: #ed1c24;
   --transparent: hsla(0, 0%, 0%, 0);
   --gradient: linear-gradient(180deg, #1c1c1c, #393939);
+
+  --dark-two-color: grey;
+  --third-two-color: orange;
+  --dark-three-color: indigo;
+  --third-three-color: rgb(154, 154, 0);
 }
+
+.button-test {
+  padding: 3em;
+  background-color: #ed1c24;
+  color: #ffffff;
+}
+
 
 /* ====================================
           STARTERS
