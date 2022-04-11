@@ -1,7 +1,8 @@
 .color {
  position: absolute;
- top: 20em;
+ top: 45em;
  right: 7%;    
+ z-index: 2;
 }
 
 .color__square-first,
@@ -40,6 +41,8 @@
     border-color: var(--bright-color);
 }
 
+/* ------- PALETTE ------- */
+
 .color__square {
     width: 25px;
     height: 25px;
@@ -57,19 +60,19 @@
 }
 
 .color-three {
-    background-color: var(--dark-two-color);
+    background-color: #29335C;
 }
 
 .color-four {
-    background-color: var(--third-two-color);
+    background-color: #F3A712;
     margin-left: 0.5em;
 }
 
 .color-five {
-    background-color: var(--dark-three-color) ;
+    background-color: #757575;
 }
 
 .color-six {
-    background-color: var(--third-three-color);
+    background-color: #03A9F4;
     margin-left: 0.5em;
 }

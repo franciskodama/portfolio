@@ -26,6 +26,7 @@ const App = () => {
 
   const firstColors = () => {
     root.style.setProperty("--dark-color", "#1c1c1c");
+    root.style.setProperty("--bright-color", "#ffffff");
     root.style.setProperty("--third-color", "#ed1c24");
     setIsActive({
       first: true,
@@ -35,8 +36,13 @@ const App = () => {
   };
 
   const secondColors = () => {
-    root.style.setProperty("--dark-color", "grey");
-    root.style.setProperty("--third-color", "orange");
+    root.style.setProperty("--dark-color", "#29335C");
+    root.style.setProperty("--bright-color", "#669BBC");
+    root.style.setProperty("--third-color", "#F3A712");
+
+    // root.style.setProperty("--dark-color", "#7B1FA2");
+    // root.style.setProperty("--bright-color", "#E1BEE7");
+    // root.style.setProperty("--third-color", "#FF4081");
     setIsActive({
       first: false,
       second: true,
@@ -45,8 +51,9 @@ const App = () => {
   };
 
   const thirdColors = () => {
-    root.style.setProperty("--dark-color", "indigo");
-    root.style.setProperty("--third-color", "rgb(154, 154, 0)");
+    root.style.setProperty("--dark-color", "#757575");
+    root.style.setProperty("--bright-color", "#ffffff");
+    root.style.setProperty("--third-color", "#03A9F4");
     setIsActive({
       first: false,
       second: false,

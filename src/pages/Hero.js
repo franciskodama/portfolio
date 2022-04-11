@@ -19,25 +19,25 @@ const Hero = () => {
 
   return (
     <section className="section section--hero" id="hero">
-      <div className="hero__filter">
-        <video
-          autoPlay
-          loop
-          muted
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "49em",
-            left: "50%",
-            top: 0,
-            objectFit: "cover",
-            transform: "translate(-50%, 0)",
-            zIndex: "-100",
-          }}
-        >
-          <source src={Video} type="video/mp4" />
-        </video>
-      </div>
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          position: "absolute",
+          width: "100%",
+          height: "49em",
+          left: "50%",
+          top: 0,
+          objectFit: "cover",
+          transform: "translate(-50%, 0)",
+          zIndex: "1",
+        }}
+      >
+        <source src={Video} type="video/mp4" />
+      </video>
+
+      <div className="hero__filter"></div>
 
       <div className="container">
         <div className="hero__info">
