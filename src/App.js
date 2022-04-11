@@ -39,10 +39,6 @@ const App = () => {
     root.style.setProperty("--dark-color", "#29335C");
     root.style.setProperty("--bright-color", "#669BBC");
     root.style.setProperty("--third-color", "#F3A712");
-
-    // root.style.setProperty("--dark-color", "#7B1FA2");
-    // root.style.setProperty("--bright-color", "#E1BEE7");
-    // root.style.setProperty("--third-color", "#FF4081");
     setIsActive({
       first: false,
       second: true,
@@ -83,28 +79,3 @@ const App = () => {
 };
 
 export default App;
-
-// function App() {
-//   return (
-//     <div className='App'>
-//       <Router>
-//         <Navbar />
-//           <Routes>
-//             <Route path='/' element={<Hero />} />
-//             <Route path='/reason' element={<Reason />} />
-//             <Route path='/about' element={<About />} />
-//             <Route path='/projects' element={<Projects />} />
-//             <Route path='/api' element={<Api />} />
-//             <Route path='/contact' element={<Contact />} />
-//             <Route path='*' element={<ErrorPage />} />
-//           </Routes>
-//       </Router>
-//             <Reason />
-//             <About />
-//             <Projects />
-//             <Api />
-//             <Contact />
-//             <Footer />
-//     </div>
-//   )
-// }

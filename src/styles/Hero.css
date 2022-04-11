@@ -1,7 +1,8 @@
 .section--hero {
   background: var(--gradient);
   height: 49em;
-  padding-top: 120px;
+  padding-top: 7.5em;
+  
 }
 
 .section--hero .container {
@@ -9,6 +10,7 @@
   display: flex;
   align-items: center;
   height: 100%;
+  width: 90%;
 }
 
 .hero__info {
@@ -41,7 +43,7 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-size: 2.25em;
+  /* font-size: 2.25em; */
 }
 
 @keyframes typing {
@@ -58,12 +60,12 @@
 
 .hero__info .hero__paragraphs {
   font-family: var(--main-font-thin);
-  font-size: 1.35rem;
+  font-size: 1rem;
   font-weight: 100;
 }
 
 .hero__title {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
   color: var(--bright-color);
@@ -73,3 +75,29 @@
   color: var(--third-color);
 }
 
+
+/* ====================================
+            MEDIA QUERY
+    ======================================= */
+
+    @media only screen and (width > 20em) {
+    }
+    
+    @media only screen and (width > 48em) {
+    }
+    
+    @media only screen and (width > 62em) {
+    }
+    
+    @media only screen and (width > 75em) {
+
+.hero__info .hero__paragraphs {
+  font-size: 1.35rem;
+}
+
+.hero__title {
+  font-size: 2.35rem;
+}
+
+
+}

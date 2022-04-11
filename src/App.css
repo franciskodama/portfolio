@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto:wght@100;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Hubballi&family=Roboto:wght@100;400&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"); */
 
 /* ====================================
         VARIABLES
@@ -26,13 +26,6 @@
   --dark-three-color: indigo;
   --third-three-color: rgb(154, 154, 0);
 }
-
-.button-test {
-  padding: 3em;
-  background-color: #ed1c24;
-  color: #ffffff;
-}
-
 
 /* ====================================
           STARTERS
@@ -103,12 +96,9 @@ textarea {
 }
 
 
-
-
-
 /* ====================================
             LAYOUT
-    ======================================= */
+======================================= */
 
 /* --- GENERAL --- */
 
@@ -126,18 +116,43 @@ textarea {
   color: var(--third-color);
 }
 
+
+
+
 /* ====================================
             MEDIA QUERY
-    ======================================= */
+======================================= */
 
-@media only screen and (min-width: 20em) {
+    @media only screen and (width > 20em) {
+    }
+    
+    @media only screen and (width > 48em) {
+    }
+    
+    @media only screen and (width > 62em) {
+    }
+    
+    @media only screen and (width > 75em) {
+
+    }
+    
+
+
+
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (width > 48em) {
 }
 
-@media only screen and (min-width: 62em) {
+@media only screen and (width > 62em) {
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (width > 75em) {
 }

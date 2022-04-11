@@ -1,5 +1,5 @@
 .card {
-  margin: 2em;
+  margin: 0.5em;
 }
 
 /* --------------------------- */
@@ -9,7 +9,7 @@
 .card-front {
   display: flex;
   flex-direction: column;
-  margin: 4em 0 3em 3em;
+  margin: 3em 0 1em 0;
   width: 270px;
   text-align: left;
 }
@@ -101,16 +101,15 @@
 
 .card-back {
   display: none;
-  width: 500px;
+  width: 22em;
   background-color: var(--bright-color);
   padding: 0.2em 1em 1em 1em;
+  margin: 2em 0;
   border: 1px solid rgb(255, 255, 255, 0.3);
   cursor: pointer;
   transition: all 0.2s ease;
   color: var(--dark-color);
 }
-
-
 
 /* ------- HEADER ------- */
 
@@ -136,8 +135,7 @@
 
 .card-back__image {
   display: block;
-  width: 500px;
-  height: 350px;
+  width: auto;
 }
 
 /* ----- MAIN TITLE ----- */
@@ -163,7 +161,7 @@
 .card-back__info-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0.7em;
+  padding: 0.5em;
 }
 
 /* ------ PARAGRAPHS ------- */
@@ -186,7 +184,6 @@
   background-image: url(../assets/images/card-icon-purpose.svg);
 }
 
-
 .icon-robot {
   background-image: url(../assets/images/card-icon-robot.svg);
 }
@@ -199,7 +196,7 @@
   text-decoration: none;
   color: var(--dark-color);
   padding-right: 2em;
-  margin-top: 3em;
+  margin-top: 2em;
   cursor: pointer;
   text-align: end;
 }
@@ -207,7 +204,7 @@
 .icon-visit {
   background-image: url(../assets/images/card-icon-visit.svg);
   background-repeat: no-repeat;
-  background-position: 23em;
+  background-position: 15em;
   background-size: 20px;
 }
 
@@ -220,5 +217,60 @@
 .card--active .card-back {
   display: block;
 }
+*/
 
- */
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+  .card {
+    margin: 0 2em;
+  }
+
+  .card-front {
+    margin: 4em 0 1em 0;
+  }
+
+.card-back {
+  width: 31em;
+}
+
+.card-back__category {
+  padding-bottom: 0;
+}
+
+.card-back__info-wrapper {
+  padding: 0.7em;
+}
+
+.icon-visit {
+  background-position: 23em;
+}
+
+
+
+
+}
+
+@media only screen and (width > 62em) {
+}
+
+@media only screen and (width > 75em) {
+
+.card {
+  margin: 2em;
+}
+
+.card-front {
+  margin: 4em 0 3em 0em;
+}
+
+/* .card-back__image {
+  width: 31em;
+} */
+
+}

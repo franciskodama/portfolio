@@ -44,10 +44,8 @@
 .avatar-image {
   grid-row: 3/4;
   grid-column: 4/5;
-  width: 412px;
-  height: 412px;
+  width: 17em;
   z-index: 5;
-
 }
 
 iframe {
@@ -86,4 +84,28 @@ iframe {
 
 .skills-description {
   font-size: 0.8rem;
+}
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+}
+
+@media only screen and (width > 62em) {
+
+  .avatar-image {
+    grid-row: 3/4;
+    grid-column: 4/5;
+    width: 25.75em;
+  }
+
+}
+
+@media only screen and (width > 75em) {
 }

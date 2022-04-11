@@ -10,11 +10,12 @@
   margin: 6em auto 12em;
 }
 
+/* 
 .grid__input {
   height: 3em;
   width: 40em;
   margin-right: 1em;
-}
+} */
 
 /* ----- GRID ----- */
 
@@ -32,13 +33,44 @@
 .letter-dark {
   border: 1px solid hsla(0, 0%, 100%, 0.2);
   text-transform: uppercase;
-  height: 1.3em;
-  width: 1.3em;
+  height: 1.5em;
+  width: 1.5em;
   text-align: center;
   font-family: var(--main-font-light);
-  font-size: 3.8rem;
+  font-size: 1.3rem;
 }
 
 .letter-dark {
   color: var(--third-color);
 }
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+    @media only screen and (width > 20em) {
+    }
+    
+    @media only screen and (width > 48em) {
+      .letter-bright,
+      .letter-dark {
+        height: 1.5em;
+        width: 1.5em;
+        font-size: 2rem;
+      }
+    }
+    
+    @media only screen and (width > 62em) {
+    }
+    
+    @media only screen and (width > 75em) {
+      
+      .letter-bright,
+      .letter-dark {
+        height: 1.3em;
+        width: 1.3em;
+        font-size: 3.8rem;
+      }
+    }
+    

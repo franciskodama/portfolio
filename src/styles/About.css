@@ -4,18 +4,19 @@
 
 .section--about .container {
   display: flex;
+  flex-direction: column;
   background-color: var(--bright-color);
   color: var(--dark-color);
-  padding: 0;
+  /* padding: 0; */
 }
 
 /*--------------------------
---- AVATAR MAIN CONTAINER ---
+----- AVATAR CONTAINER -----
 ----------------------------*/
 
 .first-main-container {
   position: relative;
-  width: 50%;
+  width: 100%;
   background-color: hsla(0, 0%, 0%, 0.05);
   background-color: #eaeaea;
 }
@@ -28,7 +29,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   justify-content: center;
   max-width: 36em;
   padding-left: 4em;
@@ -394,3 +395,39 @@ margin-top: 0.5em;
   text-transform: capitalize;
   display: inline;
 }
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+}
+
+@media only screen and (width > 62em) {
+
+.section--about .container {
+  flex-direction: row;
+}
+
+
+.first-main-container {
+  width: 50%;
+}
+
+/*--------------------------
+------ INFO CONTAINER ------
+----------------------------*/
+
+.second-main-container {
+  width: 50%;
+}
+
+}
+
+@media only screen and (width > 75em) {
+}
+
+
