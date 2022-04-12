@@ -79,7 +79,7 @@ const About = () => {
           </div>
 
           <div onClick={handleClickBag} className="bag-container">
-            <img className="bag-empty" src={BagEmpty} alt="Shop bag empty" />
+            <img src={BagEmpty} alt="Shop bag empty" />
             <p
               className="number-one"
               style={{ display: addMe.showMe ? "block" : "none" }}

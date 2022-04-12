@@ -7,7 +7,6 @@
   flex-direction: column;
   background-color: var(--bright-color);
   color: var(--dark-color);
-  /* padding: 0; */
 }
 
 /*--------------------------
@@ -32,7 +31,7 @@
   width: 100%;
   justify-content: center;
   max-width: 36em;
-  padding-left: 4em;
+  padding: 0 1em;
   overflow: hidden;
 }
 
@@ -64,6 +63,7 @@
   align-self: flex-end;
   cursor: pointer;
   margin-right: 0.5rem;
+  margin-top: 3em;
 }
 
 .bag-container:hover,
@@ -304,7 +304,7 @@ margin-top: 0.5em;
 /* ----- TEXT AREA ----- */
 
 .about {
-  width: 60%;
+  width: 90%;
 }
 
 .about__name,
@@ -313,6 +313,7 @@ margin-top: 0.5em;
 }
 
 .about__name {
+  margin-top: 5em;
   font-size: 1.2rem;
   font-family: var(--main-font-thin);
 }
@@ -380,20 +381,13 @@ margin-top: 0.5em;
 
 /* --- SOFT SKILLS --- */
 
-.tools {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--main-font-medium);
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  text-align: right;
-  margin-right: 0.5rem;
+.tools,
+.tools-title {
+  display: none;
 }
 
-.tools-title {
-  margin-bottom: 0.5em;
-  text-transform: capitalize;
-  display: inline;
+.location-button-container .btn {
+  margin-bottom: 5em;
 }
 
 /* ====================================
@@ -408,10 +402,35 @@ margin-top: 0.5em;
 
 @media only screen and (width > 62em) {
 
+
+  .tools {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font-medium);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    text-align: right;
+    margin-right: 0.5rem;
+  }
+  
+  .tools-title {
+    margin-bottom: 0.5em;
+    text-transform: capitalize;
+    display: inline;
+  }
+
+
+  .bag-container {
+    margin-top: 0;
+  }
+
+  .second-main-container {
+    padding: 0 0 0 4em;
+  }
+
 .section--about .container {
   flex-direction: row;
 }
-
 
 .first-main-container {
   width: 50%;
@@ -424,6 +443,16 @@ margin-top: 0.5em;
 .second-main-container {
   width: 50%;
 }
+
+.about {
+  width: 60%;
+}
+
+.bagme {
+  margin-top: 0;
+}
+
+
 
 }
 
