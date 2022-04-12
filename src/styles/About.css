@@ -398,10 +398,14 @@ margin-top: 0.5em;
 }
 
 @media only screen and (width > 48em) {
-}
 
-@media only screen and (width > 62em) {
+  .second-main-container {
+    padding: 0 0 0 10em;
+  }
 
+  .second-main-container {
+    max-width: 41em;
+  }
 
   .tools {
     display: flex;
@@ -411,24 +415,23 @@ margin-top: 0.5em;
     text-transform: uppercase;
     text-align: right;
     margin-right: 0.5rem;
+    margin-bottom: 8em;
   }
-  
+
   .tools-title {
     margin-bottom: 0.5em;
     text-transform: capitalize;
     display: inline;
   }
 
+}
 
+@media only screen and (width > 62em) {
   .bag-container {
     margin-top: 0;
   }
 
-  .second-main-container {
-    padding: 0 0 0 4em;
-  }
-
-.section--about .container {
+  .section--about .container {
   flex-direction: row;
 }
 
@@ -436,11 +439,9 @@ margin-top: 0.5em;
   width: 50%;
 }
 
-/*--------------------------
------- INFO CONTAINER ------
-----------------------------*/
-
 .second-main-container {
+  padding: 0 0 0 4em;
+  max-width: 36em;
   width: 50%;
 }
 
@@ -448,10 +449,22 @@ margin-top: 0.5em;
   width: 60%;
 }
 
+.about__name {
+  margin-top: 0;
+}
+
+
 .bagme {
   margin-top: 0;
 }
 
+.location-button-container .btn {
+  margin-bottom: 0;
+}
+
+.tools {
+  margin-bottom: 0em;
+}
 
 
 }
