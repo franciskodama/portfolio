@@ -34,9 +34,9 @@ const Api = () => {
   };
 
   return (
-    <div className="section-api-external">
+    <div className="section--api-external">
       <img
-        className="icon-weather"
+        className="api__image"
         src={
           data.weather
             ? require(`../assets/images/${data.weather[0].icon}.png`)
@@ -45,13 +45,14 @@ const Api = () => {
         alt="weather condition"
       />
 
-      <section className="section section-api" id="api">
+      <section className="section section--api" id="api">
         <div className="container">
-          <div className="api--grid">
-            <div className="question-wrapper">
-              <h2 className="api--question">What city</h2>
-              <h2 className="api--question">are you in?</h2>
+          <div className="api__grid">
+            <div className="api__question-wrapper">
+              <h2 className="api__question">What city</h2>
+              <h2 className="api__question">are you in?</h2>
               <input
+                className="api__input"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 onKeyPress={searchLocation}
@@ -60,82 +61,86 @@ const Api = () => {
               />
             </div>
 
-            <p id="error-message">...Ops, city not found. Try again! :)</p>
+            <p id="api__error">...Ops, city not found. Try again! :)</p>
 
-            <h4 className="api--title-city">Weather in</h4>
-            <h3 className="api--city">{data.name}</h3>
-            <h3 className="api--country">
+            <h4 className="api__title-city">Weather in</h4>
+            <h3 className="api__city">{data.name}</h3>
+            <h3 className="api__country">
               {data.sys ? (
-                <p className="api--country">{data.sys.country}</p>
+                <p className="api__country">{data.sys.country}</p>
               ) : null}
             </h3>
 
-            <h4 className="api--log">
+            <h4 className="api__log">
               Longitude {data.coord ? <p>{data.coord.lon}</p> : null}
             </h4>
-            <h4 className="api--lat">
+            <h4 className="api__lat">
               Latitude {data.coord ? <p>{data.coord.lat}</p> : null}
             </h4>
 
-            <h3 className="api--description">
+            {/* =============== SECOND SIDE =============== */}
+
+            <h3 className="api__description">
               {data.weather ? <p>{data.weather[0].description}</p> : null}
             </h3>
 
-            <div className="feels-wrapper">
-              <h4 className="api--title-others">Feels like</h4>
+            <div className="api__feels-wrapper">
+              <h4 className="api__title-feels">Feels like</h4>
               <h3>
                 {data.main ? (
-                  <p className="data">{Math.trunc(data.main.feels_like)}</p>
+                  <p className="data-feels">
+                    {Math.trunc(data.main.feels_like)}
+                  </p>
                 ) : null}
               </h3>
             </div>
-            <h5 className="feels-celsius">°C</h5>
+            <h5 className="api__feels">°C</h5>
 
-            <div className="temp-wrapper">
-              <h4 className="api--title-temp">Current weather</h4>
+            <div className="api__temp-wrapper">
+              <h4 className="api__title-temp">Current weather</h4>
               <h3>
                 {data.main ? (
-                  <p className="temp">{Math.trunc(data.main.temp)}°C</p>
+                  <p className="api__temp">{Math.trunc(data.main.temp)}°C</p>
                 ) : null}
               </h3>
             </div>
 
-            <div className="wind-wrapper">
-              <h4 className="api--title-others">Wind</h4>
+            <div className="api__wind-wrapper">
+              <h4 className="api__title-others">Wind</h4>
               <h3>
                 {data.wind ? <p className="data">{data.wind.speed}</p> : null}
               </h3>
-              <h5 className="api--unit">km/h</h5>
+              <h5 className="api__unit">km/h</h5>
             </div>
 
-            <div className="pressure-wrapper">
-              <h4 className="api--title-others">Pressure</h4>
+            <div className="api__pressure-wrapper">
+              <h4 className="api__title-others">Pressure</h4>
               <h3>
                 {data.main ? (
                   <p className="data">{data.main.pressure}</p>
                 ) : null}
               </h3>
-              <h5 className="api--unit">kPa</h5>
+              <h5 className="api__unit">kPa</h5>
             </div>
 
-            <div className="humidity-wrapper">
-              <h4 className="api--title-others">Humidity</h4>
+            <div className="api__humidity-wrapper">
+              <h4 className="api__title-others">Humidity</h4>
               <h3>
                 {data.main ? (
                   <p className="data">{data.main.humidity}</p>
                 ) : null}
               </h3>
-              <h5 className="api--unit">%</h5>
+              <h5 className="api__unit">%</h5>
             </div>
 
-            <div className="visibility-wrapper">
-              <h4 className="api--title-others">Visibility</h4>
+            <div className="api__visibility-wrapper">
+              <h4 className="api__title-others">Visibility</h4>
               <p className="data">{data.visibility}</p>
-              <h5 className="api--unit">km</h5>
+              <h5 className="api__unit">km</h5>
             </div>
 
-            <div className="sunrise-wrapper">
-              <h4 className="api--title-others">Sunrise</h4>
+            <div className="api__sunrise-wrapper">
+              <h4 className="api__title-others">Sunrise</h4>
               <h3>
                 {data.sys ? (
                   <p className="data">
@@ -145,11 +150,11 @@ const Api = () => {
                   </p>
                 ) : null}
               </h3>
-              <h5 className="api--unit">a.m.</h5>
+              <h5 className="api__unit">a.m.</h5>
             </div>
 
-            <div className="sunset-wrapper">
-              <h4 className="api--title-others">Sunset</h4>
+            <div className="api__sunset-wrapper">
+              <h4 className="api__title-others">Sunset</h4>
               <h3>
                 {data.sys ? (
                   <p className="data">
@@ -159,12 +164,12 @@ const Api = () => {
                   </p>
                 ) : null}
               </h3>
-              <h5 className="api--unit">p.m.</h5>
+              <h5 className="api__unit">p.m.</h5>
             </div>
 
-            <div className="updated-wrapper">
-              <h4 className="api--date">Updated on</h4>
-              <h3 className="api--date">
+            <div className="api__updated-wrapper">
+              <h4 className="api__date">Updated on</h4>
+              <h3 className="api__date">
                 {new Date(data.dt * 1000 - data.timezone * 6000)
                   .toString()
                   .slice(4)}
