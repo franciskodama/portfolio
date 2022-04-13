@@ -92,3 +92,32 @@
   justify-content: space-between;
   margin-top: 2em;
 }
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+
+.section--contact .container {
+  width: 90%;
+}
+}
+
+@media only screen and (width > 48em) {
+
+.section--contact .container {
+  width: 80%;
+}
+}
+
+@media only screen and (width > 62em) {
+
+.section--contact .container {
+  width: 60%;
+}
+}
+
+@media only screen and (width > 75em) {
+}

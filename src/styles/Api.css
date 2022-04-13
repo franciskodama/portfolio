@@ -5,7 +5,7 @@
 .section--api {
   background-color: var(--bright-color);
   color: var(--dark-color);
-  padding: 6rem 0;
+  padding: 8rem 0;
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
 }
@@ -35,8 +35,6 @@
   display: flex;
   flex-direction: column;
   grid-column: 1/5;
-  grid-row: 1/2;
-  
   grid-row: 2/3;
   width: 18em;
 }
@@ -61,9 +59,8 @@
   display: none;
   grid-column: 1/5;
   grid-row: 3/4;
-
-  grid-row: 4/5;
-  margin-top: 2em;
+  margin-top: 0em;
+  margin-bottom: 4.8em;
   font-family: var(--main-font-regular);
   font-size: 0.9rem;
   width: 20em;
@@ -89,11 +86,8 @@
 
 .api__title-city {
   grid-column: 1/5;
-  grid-row: 2/3;
-  
   grid-row: 3/4;
   margin-top: 5em;
-  /* align-self: end; */
 }
 
 .api__city,
@@ -105,16 +99,12 @@
 
 .api__city {
   grid-column: 1/5;
-  grid-row: 3/4;
-  
   grid-row: 4/5;
   font-size: 3rem;
 }
 
 .api__country {
   grid-column: 1/4;
-  grid-row: 4/5;
-  
   grid-row: 5/6;
   font-size: 2rem;
 }
@@ -134,16 +124,12 @@
 
 .api__log {
   grid-column: 1/2;
-  grid-row: 5/6;
-  
   grid-row: 6/7;
   margin-top: 5em;
 }
 
 .api__lat {
   grid-column: 2/3;
-  grid-row: 5/6;
-  
   grid-row: 6/7;
 }
 
@@ -162,8 +148,6 @@
 
 .api__temp-wrapper {
   grid-column: 1/5;
-  grid-row: 7/8;
-  
   grid-row: 8/9;
 }
 
@@ -211,16 +195,12 @@
 
 .api__wind-wrapper {
   grid-column: 2/3;
-  grid-row: 8/9;
-  
   grid-row: 9/10;
   margin-top: 3em;
 }
 
 .api__pressure-wrapper {
   grid-column: 2/3;
-  grid-row: 9/10;
-  
   grid-row: 10/11;
   margin-top: 1em;
 
@@ -228,16 +208,12 @@
 
 .api__humidity-wrapper {
   grid-column: 3/5;
-  grid-row: 8/9;
-
   grid-row: 9/10;
   margin-top: 3em;
 }
 
 .api__visibility-wrapper {
   grid-column: 3/5;
-  grid-row: 9/10;
-  
   grid-row: 10/11;
   margin-top: 1em;
 }
@@ -259,8 +235,6 @@
 
 .api__updated-wrapper {
   grid-column: 3/5;
-  grid-row: 10/11;
-
   grid-row: 11/12;
   text-align: right;
   margin-top: 2em;
@@ -290,7 +264,7 @@
 @media only screen and (width > 48em) {
 
   .section--api {
-    padding: 10rem 0;
+    padding: 12rem 0;
   }
   
   .api__grid {
@@ -312,7 +286,7 @@
 
 
   .section--api {
-    padding: 10rem 0;
+    padding: 14rem 0;
   }
 
 
@@ -348,6 +322,8 @@
 #api__error {
   grid-column: 1/4;
   grid-row: 3/4;
+  margin-top: 2em;
+  margin-bottom: 0;
 }
 
 /* ---- CITY SECTION ---- */

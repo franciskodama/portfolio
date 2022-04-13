@@ -20,14 +20,14 @@ const Api = () => {
 
   const searchLocation = (e) => {
     if (e.key === "Enter") {
-      document.getElementById("error-message").style.display = "none";
+      document.getElementById("api__error").style.display = "none";
       Axios.get(url)
         .then((response) => {
           setData(response.data);
         })
         .catch((error) => {
           if (error.response) {
-            document.getElementById("error-message").style.display = "block";
+            document.getElementById("api__error").style.display = "block";
           }
         });
     }
