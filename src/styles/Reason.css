@@ -20,11 +20,11 @@
 /* ----- GRID ----- */
 
 .grid {
-  margin-top: 3em;
   display: flex;
   flex-wrap: wrap;
   gap: 0.3em;
   justify-content: center;
+  margin-top: 3em;
 }
 
 /* ----- LETTERS ----- */
@@ -37,7 +37,7 @@
   width: 1.5em;
   text-align: center;
   font-family: var(--main-font-light);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .letter-dark {

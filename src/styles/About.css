@@ -7,6 +7,7 @@
   flex-direction: column;
   background-color: var(--bright-color);
   color: var(--dark-color);
+  
 }
 
 /*--------------------------
@@ -304,7 +305,7 @@ margin-top: 0.5em;
 /* ----- TEXT AREA ----- */
 
 .about {
-  width: 90%;
+  width: 100%;
 }
 
 .about__name,
@@ -401,10 +402,12 @@ margin-top: 0.5em;
 
   .second-main-container {
     padding: 0 0 0 10em;
+    max-width: 41em;
+    align-items: left;
   }
 
-  .second-main-container {
-    max-width: 41em;
+  .about__description {
+    max-width: 35ch;
   }
 
   .tools {
@@ -446,7 +449,7 @@ margin-top: 0.5em;
 }
 
 .about {
-  width: 60%;
+  width: 70%;
 }
 
 .about__name {
