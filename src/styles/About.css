@@ -113,13 +113,13 @@
 .modal {
   display: block;
   position: absolute;
-  right: 50px;
-  top: 77px;
+  right: 65px;
+  top: 33px;
   color: var(--bright-color);
   background-color: var(--dark-color);
-  padding: 2em 1em 2em 2em;
+  padding: 1em 1em 1em 1em;
   height: 19em;
-  width: 23.5em;
+  width: 18em;
 }
 
 .modal:before {
@@ -177,6 +177,7 @@
 
 .modal__name {
   font-family: var(--main-font-regular);
+  line-height: 1.2rem;
 }
 
 .modal__email,
@@ -194,6 +195,7 @@ margin-top: 0.5em;
 }
 
 .modal__email {
+  display: none;
   padding-bottom: 0.5em;
   border-bottom: 0.5px dashed var(--bright-color);
 }
@@ -201,17 +203,21 @@ margin-top: 0.5em;
 /* ---- MODAL EMPTY ---- */
 
 .modal__empty {
+  background-position: 2em 1.5em;
+}
+
+.modal__empty {
   display: none;
   flex-direction: column;
   background-image: url(../assets/images/about-empty.svg);
   background-repeat: no-repeat;
   background-size: 6em;
-  background-position: 2em 1.5em;
+  background-position: 1em 1.5em;
 }
 
 .modal__empty-wrapper {
   margin-top: 2em;
-  margin-left: 9em;
+  margin-left: 8em;
   margin-bottom: 2.5em;
   position: relative;
 }
@@ -427,6 +433,28 @@ margin-top: 0.5em;
     display: inline;
   }
 
+/* --- MODAL --- */
+
+.modal {
+  right: 50px;
+  top: 77px;
+  padding: 2em 1em 2em 2em;
+  height: 19em;
+  width: 23.5em;
+}
+
+.modal__email {
+  display: block;
+}
+
+.modal__empty {
+  background-position: 2em 1.5em;
+}
+
+.modal__empty-wrapper {
+  margin-left: 9em;
+}
+
 }
 
 @media only screen and (width > 62em) {
@@ -474,5 +502,7 @@ margin-top: 0.5em;
 
 @media only screen and (width > 75em) {
 }
+
+
 
 
