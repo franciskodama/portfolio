@@ -119,7 +119,7 @@ export const whyData = {
     textTwo:
       "In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.",
     titleThree: "Tech used",
-    textThree: "React, Javascript, CSS, HTML, NPM, and Git.",
+    textThree: "React, Javascript, CSS, SASS, HTML, NPM, and Git.",
     titleFour: "Tools used",
     textFour: "Figma, Adobe Photoshop, and VS Code.",
     observation:
@@ -129,17 +129,15 @@ export const whyData = {
   },
   about: {
     titleOne: "Why?",
-    textOne:
-      "This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.",
+    textOne: `I created this page to serve as a real showcase for my future employer, who may be involved with e-commerce. Besides, the numerous "states" made it a good sandbox to practice my React skills.`,
     titleTwo: "Showcase",
-    textTwo:
-      "In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.",
-    titleThree: "Tools used",
-    textThree: "Figma, Adobe Photoshop, and VS Code",
-    titleFour: "Tech used",
-    textFour: "HTML, CSS, Javascript, React, Sass, NPM, and GIT",
-    observation:
-      "This portfolio was 100% created and programmed by Francis Kodama.",
+    textTwo: `This page has the following features: choosing a location is required to "add to my team". By clicking this button, an item will appear in the shop bag. When the customer clicks on the bag, I will appear as a product to be checked out with the location option. Next, the user can delete the item or click on "schedule an interview." They will be directed to the contact form with the data they picked.`,
+    titleThree: "Tech used",
+    textThree:
+      "As a starting point, I challenged myself to use either CSS Grid or Flexbox on each side of the page. Regarding JS, conditional was used to control the appearance of certain elements. Additionally, I used React events and React Hooks, such as useState and useRef.",
+    titleFour: "",
+    textFour: "",
+    observation: "",
     bottom: "-10%",
     left: "50%",
   },
@@ -160,9 +158,8 @@ export const whyData = {
     left: "50%",
   },
   api: {
-    titleOne: "Why?",
-    textOne:
-      "This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.",
+    titleOne: "",
+    textOne: "",
     titleTwo: "Showcase",
     textTwo:
       "In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.",
@@ -200,7 +197,7 @@ export const whyData = {
       "In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.",
     titleThree: "Tools used",
     textThree: "Figma, Adobe Photoshop, and VS Code",
-    titleFour: "Tech used",
+    titleFour: "",
     textFour: "HTML, CSS, Javascript, React, Sass, NPM, and GIT",
     observation:
       "This portfolio was 100% created and programmed by Francis Kodama.",

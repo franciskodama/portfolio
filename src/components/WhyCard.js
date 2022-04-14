@@ -75,27 +75,62 @@ const WhyCard = ({
           alt="close button icon"
         />
 
-        <li className="why__item">
-          <h2 className="why__title why__title--flag">{titleOne}</h2>
+        <li
+          className="why__item"
+          style={{ margin: titleOne ? "2.5em 0 2em 0" : "0" }}
+        >
+          <h2
+            className="why__title why__title--flag"
+            style={{ display: titleOne ? "block" : "none" }}
+          >
+            {titleOne}
+          </h2>
           <p className="why__description">{textOne}</p>
         </li>
 
-        <li className="why__item">
-          <h2 className="why__title why__title--bolt">{titleTwo}</h2>
+        <li
+          className="why__item"
+          style={{ marginBottom: titleTwo ? "2em" : "0" }}
+        >
+          <h2
+            className="why__title why__title--bolt"
+            style={{ display: titleTwo ? "block" : "none" }}
+          >
+            {titleTwo}
+          </h2>
           <p className="why__description">{textTwo}</p>
         </li>
 
-        <li className="why__item">
-          <h2 className="why__title why__title--robot">{titleThree}</h2>
+        <li
+          className="why__item"
+          style={{ marginBottom: titleThree ? "2em" : "0" }}
+        >
+          <h2
+            className="why__title why__title--robot"
+            style={{ display: titleThree ? "block" : "none" }}
+          >
+            {titleThree}
+          </h2>
           <p className="why__description">{textThree}</p>
         </li>
 
-        <li className="why__item">
-          <h2 className="why__title why__title--brush">{titleFour}</h2>
+        <li
+          className="why__item"
+          style={{ marginBottom: titleFour ? "2em" : "0" }}
+        >
+          <h2
+            className="why__title why__title--brush"
+            style={{ display: titleFour ? "block" : "none" }}
+          >
+            {titleFour}
+          </h2>
           <p className="why__description">{textFour}</p>
         </li>
 
-        <li className="why__footer">
+        <li
+          className="why__footer"
+          style={{ display: observation ? "flex" : "none" }}
+        >
           <img className="why__icon" src={Check} alt="icon check" />
           <p className="why__text">{observation}</p>
         </li>
