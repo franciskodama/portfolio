@@ -3,77 +3,127 @@ import { Link } from "react-scroll";
 import "../styles/Navbar.css";
 import "../App.css";
 import Logo from "../assets/logo-fkodama.svg";
+import Menu from "../assets/images/menu-hamburguer.svg";
+import Close from "../assets/images/card-icon-close-white.svg";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClickClose = () => {
+    setIsOpen(!isOpen);
+    setIsActive(false);
+  };
+
+  const hangleClickOpen = () => {
+    setIsOpen(!isOpen);
+    setIsActive(true);
+  };
+
+  const handleClickOnLink = () => {
+    setIsActive(false);
+    setIsOpen(false);
+  };
+
   return (
-    <header className="section section-header">
+    <header className="section section--header">
       <div className="container">
         <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
-          <img className="logo" src={Logo} />
+          <img className="navbar__logo" src={Logo} />
         </Link>
-        <nav className="navbar">
+        <div className="navbar__toggle">
+          <img
+            className="navbar__menu"
+            style={{
+              display: isOpen ? "none" : "block",
+              backgroundColor: "var(--dark-color)",
+            }}
+            onClick={hangleClickOpen}
+            src={Menu}
+            alt="hamburguer icon menu"
+          />
+          <img
+            className="navbar__close"
+            style={{
+              display: isOpen ? "block" : "none",
+            }}
+            onClick={handleClickClose}
+            src={Close}
+            alt="close icon menu"
+          />
+        </div>
+        <nav
+          className="navbar"
+          style={{ display: isActive ? "block" : "none" }}
+        >
           <Link
-            className="nav-item"
+            className="navbar__item"
             to="hero"
             spy={true}
             smooth={true}
             offset={50}
             duration={500}
+            onClick={handleClickOnLink}
           >
             {" "}
             home{" "}
           </Link>
           <Link
-            className="nav-item"
+            className="navbar__item"
             to="about"
             spy={true}
             smooth={true}
             offset={-150}
             duration={500}
+            onClick={handleClickOnLink}
           >
             {" "}
-            about{" "}
+            about me{" "}
           </Link>
           <Link
-            className="nav-item"
+            className="navbar__item"
             to="projects"
             spy={true}
             smooth={true}
             offset={-100}
             duration={500}
+            onClick={handleClickOnLink}
           >
             {" "}
             projects{" "}
           </Link>
           <Link
-            className="nav-item"
+            className="navbar__item"
             to="api"
             spy={true}
             smooth={true}
             offset={-150}
             duration={500}
+            onClick={handleClickOnLink}
           >
             {" "}
             api{" "}
           </Link>
           <Link
-            className="nav-item"
+            className="navbar__item"
             to="code"
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
+            onClick={handleClickOnLink}
           >
             {" "}
-            clean code{" "}
+            my code{" "}
           </Link>
           <Link
-            className="nav-item"
+            className="navbar__item"
             to="contact"
             spy={true}
             smooth={true}
             offset={-150}
             duration={500}
+            onClick={handleClickOnLink}
           >
             {" "}
             contact{" "}
