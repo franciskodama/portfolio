@@ -55,7 +55,6 @@ const WhyCard = ({
           Click me
         </span>
 
-        {/* <img className="eye" src={EyeOpen} alt="icon eye" /> */}
         <img
           className="eye"
           src={isCardShow ? EyeClosed : EyeOpen}

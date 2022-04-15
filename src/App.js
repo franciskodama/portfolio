@@ -71,7 +71,7 @@ const App = () => {
       <About />
       <Projects />
       <Api />
-      <CleanCode />
+      {/* <CleanCode /> */}
       <Contact />
       <Footer />
     </div>

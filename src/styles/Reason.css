@@ -1,36 +1,25 @@
-.section-reason {
+.section--reason {
   display: flex;
   flex-direction: column;
   max-width: 94em;
   margin: 0 auto;
-  height: auto;
 }
-
-.section-reason form {
-  margin: 6em auto 12em;
-}
-
-/* 
-.grid__input {
-  height: 3em;
-  width: 40em;
-  margin-right: 1em;
-} */
 
 /* ----- GRID ----- */
 
-.grid {
+.reason__grid {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3em;
   justify-content: center;
   margin-top: 3em;
+  margin-bottom: 10em;
 }
 
 /* ----- LETTERS ----- */
 
-.letter-bright,
-.letter-dark {
+.reason__letter-bright,
+.reason__letter-dark {
   border: 1px solid hsla(0, 0%, 100%, 0.2);
   text-transform: uppercase;
   height: 1.5em;
@@ -40,37 +29,49 @@
   font-size: 1.6rem;
 }
 
-.letter-dark {
+.reason__letter-dark {
   color: var(--third-color);
 }
+
+/* 
+.section--reason form {
+  margin: 6em auto 12em;
+} */
+
+/* 
+.grid__input {
+  height: 3em;
+  width: 40em;
+  margin-right: 1em;
+} */
 
 
 /* ====================================
             MEDIA QUERY
 ======================================= */
 
-    @media only screen and (width > 20em) {
-    }
-    
-    @media only screen and (width > 48em) {
-      .letter-bright,
-      .letter-dark {
-        height: 1.5em;
-        width: 1.5em;
-        font-size: 2rem;
-      }
-    }
-    
-    @media only screen and (width > 62em) {
-    }
-    
-    @media only screen and (width > 75em) {
-      
-      .letter-bright,
-      .letter-dark {
-        height: 1.3em;
-        width: 1.3em;
-        font-size: 3.8rem;
-      }
-    }
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+  .reason__letter-bright,
+  .reason__letter-dark {
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (width > 62em) {
+}
+
+@media only screen and (width > 75em) {
+
+  .reason__letter-bright,
+  .reason__letter-dark {
+    height: 1.3em;
+    width: 1.3em;
+    font-size: 3.8rem;
+  }
+}
     

@@ -1,4 +1,4 @@
-.section .section--about {
+.section--about {
   background-color: var(--dark-color);
 }
 
@@ -7,7 +7,6 @@
   flex-direction: column;
   background-color: var(--bright-color);
   color: var(--dark-color);
-  
 }
 
 /*--------------------------
@@ -316,7 +315,7 @@ margin-top: 0.5em;
 
 .about__name,
 .about__languages {
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
 }
 
 .about__name {
@@ -329,6 +328,7 @@ margin-top: 0.5em;
 .about__languages {
   font-size: 1.5rem;
   font-family: var(--main-font-medium);
+
 }
 
 .about__and {
@@ -458,6 +458,11 @@ margin-top: 0.5em;
 }
 
 @media only screen and (width > 62em) {
+
+  .section--about {
+    padding: 5em 5em 2em 5em;
+  }
+
   .bag-container {
     margin-top: 0;
   }
@@ -484,6 +489,10 @@ margin-top: 0.5em;
   margin-top: 0;
 }
 
+.about__name,
+.about__languages {
+  margin-bottom: 0.8em;
+}
 
 .bagme {
   margin-top: 0;

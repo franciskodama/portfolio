@@ -5,7 +5,7 @@
 .section--api {
   background-color: var(--bright-color);
   color: var(--dark-color);
-  padding: 8rem 0;
+  padding: 8em 0 10em 0;
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
 }
@@ -262,9 +262,8 @@
 }
 
 @media only screen and (width > 48em) {
-
   .section--api {
-    padding: 12rem 0;
+  padding: 12em 0 14em 0;
   }
   
   .api__grid {
@@ -279,191 +278,187 @@
   .api__image {
     left: calc(100vw - 80%);
   }
-
 }
 
 @media only screen and (width > 62em) {
-
-
   .section--api {
-    padding: 14rem 0;
+    padding: 14em 0 11em 0;
   }
 
+  .api__image {
+    width: 30em;
+    top: -14em;
+    left: calc(100vw - 47%);
+  }
 
-.api__image {
-  width: 30em;
-  top: -14em;
-  left: calc(100vw - 47%);
-}
+  /* ---- GRID ---- */
 
-/* ---- GRID ---- */
+  .api__grid {
+    grid-template-rows: repeat(9, auto);
+    grid-template-rows: auto auto 4em repeat(6, auto);
+    grid-template-columns: repeat(8, 1fr);
+    width: 65%;
+  }
 
-.api__grid {
-  grid-template-rows: repeat(9, auto);
-  grid-template-rows: auto auto 4em repeat(6, auto);
-  grid-template-columns: repeat(8, 1fr);
-  width: 65%;
-}
+  /* ---- INPUT SECTION ---- */
 
-/* ---- INPUT SECTION ---- */
+  .api__question-wrapper {
+    grid-column: 1/4;
+    grid-row: 2/4;
+  }
 
-.api__question-wrapper {
-  grid-column: 1/4;
-  grid-row: 2/4;
-}
+  .api__log,
+  .api__lat {
+    margin-top: 0;
+  }
 
-.api__log,
-.api__lat {
-  margin-top: 0;
-}
+  /* ---- ERROR MESSAGE ---- */
 
-/* ---- ERROR MESSAGE ---- */
+  #api__error {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
 
-#api__error {
-  grid-column: 1/4;
-  grid-row: 3/4;
-  margin-top: 2em;
-  margin-bottom: 0;
-}
+  /* ---- CITY SECTION ---- */
 
-/* ---- CITY SECTION ---- */
+  .api__title-city {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
 
-.api__title-city {
-  grid-column: 1/2;
-  grid-row: 5/6;
-}
+  .api__city,
+  .api__country {
+    line-height: 4.5rem;
+  }
 
-.api__city,
-.api__country {
-  line-height: 4.5rem;
-}
+  .api__city {
+    grid-column: 1/5;
+    grid-row: 6/7;
+    font-size: 4rem;
+  }
 
-.api__city {
-  grid-column: 1/5;
-  grid-row: 6/7;
-  font-size: 4rem;
-}
+  .api__country {
+    grid-column: 1/4;
+    grid-row: 7/8;
+    font-size: 3rem;
+  }
 
-.api__country {
-  grid-column: 1/4;
-  grid-row: 7/8;
-  font-size: 3rem;
-}
+  .api__log,
+  .api__lat {
+    margin-top: 2em;
+  }
 
-.api__log,
-.api__lat {
-  margin-top: 2em;
-}
+  .api__log {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
 
-.api__log {
-  grid-column: 1/2;
-  grid-row: 8/9;
-}
+  .api__lat {
+    grid-column: 2/3;
+    grid-row: 8/9;
+  }
 
-.api__lat {
-  grid-column: 2/3;
-  grid-row: 8/9;
-}
+  /* ---- TEMPERATURE SECTION ---- */
 
-/* ---- TEMPERATURE SECTION ---- */
+  .api__description {
+    grid-column: 1/9;
+    grid-row: 1/2;
+    text-align: right;
+    margin-bottom: 1.5em;
+    font-size: 2.25rem;
+  }
 
-.api__description {
-  grid-column: 1/9;
-  grid-row: 1/2;
-  text-align: right;
-  margin-bottom: 1.5em;
-  font-size: 2.25rem;
-}
+  .api__temp-wrapper {
+    grid-column: 7/9;
+    grid-row: 2/3;
+  }
 
-.api__temp-wrapper {
-  grid-column: 7/9;
-  grid-row: 2/3;
-}
+  /* ---- DATA SECTION ---- */
 
-/* ---- DATA SECTION ---- */
+  .data-feels {
+    display: block;
+  }
 
-.data-feels {
-  display: block;
-}
+  .api__temp {
+    margin-bottom: -0.5em;
+  }
 
-.api__temp {
-  margin-bottom: -0.5em;
-}
+  .api__temp-wrapper,
+  .api__feels-wrapper,
+  .api__wind-wrapper,
+  .api__pressure-wrapper,
+  .api__humidity-wrapper,
+  .api__visibility-wrapper,
+  .api__sunrise-wrapper,
+  .api__sunset-wrapper {
+    padding: 0.5em;
+    margin-left: 1em;
+  }
 
-.api__temp-wrapper,
-.api__feels-wrapper,
-.api__wind-wrapper,
-.api__pressure-wrapper,
-.api__humidity-wrapper,
-.api__visibility-wrapper,
-.api__sunrise-wrapper,
-.api__sunset-wrapper {
-  padding: 0.5em;
-  margin-left: 1em;
-}
+  .api__feels-wrapper {
+    display: block;
+    grid-column: 6/7;
+    grid-row: 2/3;
+    text-align: right;
+  }
 
-.api__feels-wrapper {
-  display: block;
-  grid-column: 6/7;
-  grid-row: 2/3;
-  text-align: right;
-}
+  .api__feels {
+    display: block;
+    grid-column: 7/8;
+    grid-row: 2/3;
+    font-size: 0.8rem;
+    margin-top: 3em;
+  }
 
-.api__feels {
-  display: block;
-  grid-column: 7/8;
-  grid-row: 2/3;
-  font-size: 0.8rem;
-  margin-top: 3em;
-}
+  .api__title-feels {
+    display: block
+  }
 
-.api__title-feels {
-  display: block
-}
+  .api__wind-wrapper {
+    grid-column: 7/8;
+    grid-row: 4/5;
+    margin-top: 0;
+  }
 
-.api__wind-wrapper {
-  grid-column: 7/8;
-  grid-row: 4/5;
-  margin-top: 0;
-}
+  .api__pressure-wrapper {
+    grid-column: 7/8;
+    grid-row: 5/6;
+    margin-top: 0;
+  }
 
-.api__pressure-wrapper {
-  grid-column: 7/8;
-  grid-row: 5/6;
-  margin-top: 0;
-}
+  .api__humidity-wrapper {
+    grid-column: 8/9;
+    grid-row: 4/5;
+    margin-top: 0;
+  }
 
-.api__humidity-wrapper {
-  grid-column: 8/9;
-  grid-row: 4/5;
-  margin-top: 0;
-}
+  .api__visibility-wrapper {
+    grid-column: 8/9;
+    grid-row: 5/6;
+    margin-top: 0;
+  }
 
-.api__visibility-wrapper {
-  grid-column: 8/9;
-  grid-row: 5/6;
-  margin-top: 0;
-}
+  /* 
+  .api__sunrise-wrapper {
+    grid-column: 8/9;
+    grid-row: 4/5;
+    margin-bottom: 1em;
+  }
 
-/* 
-.api__sunrise-wrapper {
-  grid-column: 8/9;
-  grid-row: 4/5;
-  margin-bottom: 1em;
-}
+  .api__sunset-wrapper {
+    grid-column: 8/9;
+    grid-row: 5/6;
+  } */
 
-.api__sunset-wrapper {
-  grid-column: 8/9;
-  grid-row: 5/6;
-} */
+  /* ---- UPDATED SECTION ---- */
 
-/* ---- UPDATED SECTION ---- */
-
-.api__updated-wrapper {
-  grid-column: 7/9;
-  grid-row: 7/8;
-  margin-top: 0;
-}
+  .api__updated-wrapper {
+    grid-column: 7/9;
+    grid-row: 7/8;
+    margin-top: 0;
+  }
 
 }
 

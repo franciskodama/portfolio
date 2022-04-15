@@ -14,7 +14,7 @@
 
 /* ------- ICONS CONTAINER ------ */
 
-.icons-wrapper {
+.avatar__icons-wrapper {
   grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
@@ -24,7 +24,7 @@
   /* width: 22em; */
 }
 
-.icons-title {
+.avatar__icons-title {
   grid-column: 2/3;
   grid-row: 1/2;
   font-size: 0.7rem;
@@ -34,7 +34,7 @@
   text-align: left;
 }
 
-.avatar-icon {
+.avatar__icon {
   border: 1px dashed var(--dark-color);
   padding: 0.5em;
   cursor: pointer;
@@ -43,7 +43,7 @@
 
 /* ---------- AVATAR ----------- */
 
-.avatar-image {
+.avatar__image {
   grid-column: 2/3;
   grid-row: 3/4;
   margin-top: 1em;
@@ -51,6 +51,31 @@
   z-index: 5;
 }
 
+/* ------ SKILLS TXT ---------- */
+
+.avatar__skills-wrapper {
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+
+.avatar__skills-title {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-family: var(--main-font-semibold);
+  font-size: 1.3rem;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.avatar__skills-description {
+  font-size: 0.8rem;
+  margin-bottom: 5em;
+}
+
+/* --- SPLINE 3D AVATAR --- */
+/* 
+ 
 iframe {
   position: relative;
   z-index: 0;
@@ -66,29 +91,7 @@ iframe {
   width: 50px;
   height: 50px;
   z-index: 1;
-}
-
-/* ------ SKILLS TXT ---------- */
-
-.skills-wrapper {
-  grid-column: 2/3;
-  grid-row: 5/6;
-}
-
-.skills-title {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  font-family: var(--main-font-semibold);
-  font-size: 1.3rem;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-}
-
-.skills-description {
-  font-size: 0.8rem;
-  margin-bottom: 5em;
-}
+}  */
 
 
 /* ====================================
@@ -100,40 +103,40 @@ iframe {
 
 @media only screen and (width > 48em) {
 
-  .inner-container {
-    grid-template-columns: 1fr 62px 1em 412px 1fr;
-    grid-template-rows: 5em auto auto 2em 8em 5em;
-  }
+.inner-container {
+  grid-template-columns: 1fr 62px 1em 412px 1fr;
+  grid-template-rows: 5em auto auto 2em 8em 5em;
+}
   
-.icons-wrapper {
+.avatar__icons-wrapper {
   grid-column: 2/3;
   grid-row: 3/4;
   flex-direction: column;
   width: 62px;
 }
 
-.avatar-icon {
+.avatar__icon {
   width: 4em;
 }
 
-.icons-title {
+.avatar__icons-title {
   grid-column: 2/3;
   grid-row: 2/3;
   margin-bottom: 0.5em;
 }
-.avatar-image {
+.avatar__image {
   grid-row: 3/4;
   grid-column: 4/5;
   width: 25.75em;
   margin-top: 0;
 }
 
-.skills-wrapper {
+.avatar__skills-wrapper {
   grid-column: 4/5;
   grid-row: 5/6;
 }
 
-.skills-title {
+.avatar__skills-title {
   grid-column: 4/5;
   grid-row: 2/3;
 }
@@ -155,86 +158,3 @@ iframe {
 
 @media only screen and (width > 75em) {
 }
-
-
-/* 
-
-.outter-container {
-  margin: 0 auto;
-  width: 100%;
-}
-
-.inner-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 62px 1em 412px 1fr;
-  grid-template-rows: 5em auto auto 2em 8em 5em;
-}
-
-.icons-wrapper {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 0.5em;
-  width: 62px;
-}
-
-.icons-title {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  font-size: 0.7rem;
-  font-family: var(--main-font-light);
-  margin-bottom: 0.5em;
-  text-align: center;
-}
-
-.avatar-icon {
-  border: 1px dashed var(--dark-color);
-  padding: 0.5em;
-  cursor: pointer;
-}
-
-.avatar-image {
-  grid-row: 3/4;
-  grid-column: 4/5;
-  width: 17em;
-  z-index: 5;
-}
-
-iframe {
-  position: relative;
-  z-index: 0;
-}
-
-.white-square {
-  display: block;
-  content: "";
-  position: absolute;
-  right: 4.5em;
-  bottom: 15em;
-  background-color: #eaeaea;
-  width: 50px;
-  height: 50px;
-  z-index: 1;
-}
-
-.skills-wrapper {
-  grid-column: 4/5;
-  grid-row: 5/6;
-  max-width: 9 0%;
-}
-
-.skills-title {
-  grid-column: 4/5;
-  grid-row: 2/3;
-  font-family: var(--main-font-semibold);
-  font-size: 1.3rem;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-}
-
-.skills-description {
-  font-size: 0.8rem;
-} */

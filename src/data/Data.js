@@ -1,4 +1,155 @@
 // ----------------------------------------
+// --------------- WHY CARD ---------------
+// ----------------------------------------
+
+export const whyData = {
+  reason: {
+    titleOne: "Why?",
+    textOne:
+      "This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.",
+    titleTwo: "Showcase",
+    textTwo:
+      "In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.",
+    titleThree: "Tech used",
+    textThree: "React, Javascript, CSS, SASS, HTML, NPM, and Git.",
+    titleFour: "Tools used",
+    textFour: "Figma, Adobe Photoshop, and VS Code.",
+    observation:
+      "This portfolio was 100% created and programmed by Francis Kodama.",
+    bottom: "10%",
+    left: "50%",
+  },
+  about: {
+    titleOne: "Why?",
+    textOne: `This page was created to serve as a real showcase for my future employer, who may be involved with e-commerce. Besides, the numerous "states" made it a good sandbox to practice my React skills.`,
+    titleTwo: "Showcase",
+    textTwo: `Go with the flow: choosing a location is required to "add to my team". By clicking this button, an item will appear in the shop bag. When the customer clicks on the bag, I will appear as a product to be checked out with the location chosen. Next, you can delete the item or click on "schedule an interview." You will be directed to the contact form with the data you picked.`,
+    titleThree: "Tech used",
+    textThree:
+      "As a starting point, I challenged myself to use either CSS Grid or Flexbox on each side of the page. Regarding JS, conditional was used to control the appearance of certain elements. Additionally, I used React events and React Hooks, such as useState and useRef.",
+    titleFour: "",
+    textFour: "",
+    observation: "",
+    bottom: "-5%",
+    left: "50%",
+  },
+  selectedProjects: {
+    titleOne: "Why?",
+    textOne:
+      "Managing props in reusable components was the goal of this page. The logic for displaying the active card, and for closing it if another card was activated, was also interesting and fun.",
+    titleTwo: "Showcase",
+    textTwo:
+      "The data is imported from another file, and the code creates the cards dynamically in two versions, the closed small card and the bigger opened card.",
+    titleThree: "Tech used",
+    textThree:
+      "I highlight here the React Hooks such as useState, useRef, and useEffect.",
+    titleFour: "",
+    textFour: "",
+    observation: "",
+    bottom: "20%",
+    left: "50%",
+  },
+  api: {
+    titleOne: "Why?",
+    textOne:
+      "I will certainly need to manage API interactions in my future job, so creating this portfolio page was crucial.",
+    titleTwo: "Showcase",
+    textTwo:
+      "Using hooks like useState, useEffect, fetching data from a third party, and promises were the key to this page. In addition, the treatment of data to calculate the time, and how to present the data on the screen to the user also contributed to my learning in React.",
+    titleThree: "Tech used",
+    textThree:
+      "Fetch request, promises, React hooks such as useState and useEffect, and some JS methods.",
+    titleFour: "",
+    textFour: "",
+    observation: "",
+    bottom: "10%",
+    left: "50%",
+  },
+  code: {
+    titleOne: "Why?",
+    textOne: "",
+    titleTwo: "Showcase",
+    textTwo: "",
+    titleThree: "Tech used",
+    textThree: "",
+    titleFour: "",
+    textFour: "",
+    observation: "",
+    bottom: "5%",
+    left: "50%",
+  },
+  contact: {
+    titleOne: "Why?",
+    textOne: "",
+    titleTwo: "Showcase",
+    textTwo: "",
+    titleThree: "Tech used",
+    textThree: "",
+    titleFour: "",
+    textFour: "",
+    observation: "",
+    bottom: "5%",
+    left: "50%",
+  },
+};
+
+// ----------------------------------------
+// ---------------- AVATAR ----------------
+// ----------------------------------------
+
+export const avatarData = [
+  {
+    key: 0,
+    title: "creative and innovation",
+    description:
+      "Due to his continuous curiosity and extensive advertising experience, he is always ready to contribute to the development of innovative solutions that can make a real impact.",
+    imgUrl: require("../assets/images/avatar-creative.jpg"),
+  },
+  {
+    key: 1,
+    title: "creative and innovation",
+    description:
+      "Due to his continuous curiosity and extensive advertising experience, he is always ready to contribute to the development of innovative solutions that can make a real impact.",
+    imgUrl: require("../assets/images/avatar-creative.jpg"),
+  },
+  {
+    key: 2,
+    title: "problem solving",
+    description:
+      "Possess the ability to handle and calmly identify solutions to difficult or unexpected situations both in programming challenges and in the workplace.",
+    imgUrl: require("../assets/images/avatar-problem2.jpg"),
+  },
+  {
+    key: 3,
+    title: "effective communication",
+    description:
+      "It is crucial that we are able to listen actively to the stakeholders, which was Francis' job for all of his life. Additionally, Francis has the gift of feeding it back to them, so they know it is correct.",
+    imgUrl: require("../assets/images/avatar-communication2.jpg"),
+  },
+  {
+    key: 4,
+    title: "lifelong learner",
+    description:
+      "Dedicated to continuous growth and development to keep up with changes in this new world. Aims to develop skills, master new technologies, in order to add value to the organization.",
+    imgUrl: require("../assets/images/avatar-learner2.jpg"),
+  },
+  {
+    key: 5,
+    title: "goal oriented",
+    description:
+      "Motivated by a clear vision, goals, and meaningful aspirations, he believes in hard work, choices, and persistence. Difficult to have him distracted from his goals.",
+    imgUrl: require("../assets/images/avatar-goal2.jpg"),
+  },
+  {
+    key: 6,
+    title: "positive attitude",
+    description:
+      "Demonstrates kindly interest and goodwill in relationships. Collaboration, flexibility, and empathy rank high on his list of top career skills.",
+    imgUrl: require("../assets/images/avatar-friendly.jpg"),
+  },
+];
+
+// ----------------------------------------
 // --------------- PROJECTS ---------------
 // ----------------------------------------
 
@@ -103,158 +254,6 @@ export const projects = [
     backTextTech:
       "100% React-based, it was the most important project I used to learn and display my skills in HTML, JSX, CSS, Javascript, and the React framework",
     visitIcon: true,
-  },
-];
-
-// ----------------------------------------
-// --------------- WHY CARD ---------------
-// ----------------------------------------
-
-export const whyData = {
-  reason: {
-    titleOne: "Why?",
-    textOne:
-      "This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.",
-    titleTwo: "Showcase",
-    textTwo:
-      "In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.",
-    titleThree: "Tech used",
-    textThree: "React, Javascript, CSS, SASS, HTML, NPM, and Git.",
-    titleFour: "Tools used",
-    textFour: "Figma, Adobe Photoshop, and VS Code.",
-    observation:
-      "This portfolio was 100% created and programmed by Francis Kodama.",
-    bottom: "20%",
-    left: "50%",
-  },
-  about: {
-    titleOne: "Why?",
-    textOne: `This page was created to serve as a real showcase for my future employer, who may be involved with e-commerce. Besides, the numerous "states" made it a good sandbox to practice my React skills.`,
-    titleTwo: "Showcase",
-    textTwo: `Go with the flow: choosing a location is required to "add to my team". By clicking this button, an item will appear in the shop bag. When the customer clicks on the bag, I will appear as a product to be checked out with the location chosen. Next, you can delete the item or click on "schedule an interview." You will be directed to the contact form with the data you picked.`,
-    titleThree: "Tech used",
-    textThree:
-      "As a starting point, I challenged myself to use either CSS Grid or Flexbox on each side of the page. Regarding JS, conditional was used to control the appearance of certain elements. Additionally, I used React events and React Hooks, such as useState and useRef.",
-    titleFour: "",
-    textFour: "",
-    observation: "",
-    bottom: "-10%",
-    left: "50%",
-  },
-  selectedProjects: {
-    titleOne: "Why?",
-    textOne:
-      "Managing props in reusable components was the goal of this page. The logic for displaying the active card, and for closing it if another card was activated, was also interesting and fun.",
-    titleTwo: "Showcase",
-    textTwo:
-      "The data is imported from another file, and the code creates the cards dynamically in two versions, the closed small card and the bigger opened card.",
-    titleThree: "Tech used",
-    textThree:
-      "I highlight here the React Hooks such as useState, useRef, and useEffect.",
-    titleFour: "",
-    textFour: "",
-    observation: "",
-    bottom: "20%",
-    left: "50%",
-  },
-  api: {
-    titleOne: "Why?",
-    textOne:
-      "I will certainly need to manage API interactions in my future job, so creating this portfolio page was crucial.",
-    titleTwo: "Showcase",
-    textTwo:
-      "Using hooks like useState, useEffect, fetching data from a third party, and promises were the key to this page. In addition, the treatment of data to calculate the time, and how to present the data on the screen to the user also contributed to my learning in React.",
-    titleThree: "Tech used",
-    textThree:
-      "Fetch request, promises, React hooks such as useState and useEffect, and some JS methods.",
-    titleFour: "",
-    textFour: "",
-    observation: "",
-    bottom: "10%",
-    left: "50%",
-  },
-  code: {
-    titleOne: "Why?",
-    textOne: "",
-    titleTwo: "Showcase",
-    textTwo: "",
-    titleThree: "Tech used",
-    textThree: "",
-    titleFour: "",
-    textFour: "",
-    observation: "",
-    bottom: "5%",
-    left: "50%",
-  },
-  contact: {
-    titleOne: "Why?",
-    textOne: "",
-
-    titleTwo: "Showcase",
-    textTwo: "",
-
-    titleThree: "Tech used",
-    textThree: "",
-    titleFour: "",
-    textFour: "",
-    observation: "",
-    bottom: "-15%",
-    left: "50%",
-  },
-};
-
-// ----------------------------------------
-// ---------------- AVATAR ----------------
-// ----------------------------------------
-
-export const avatarData = [
-  {
-    key: 0,
-    title: "Francis Kodama",
-    description: `Resourceful, curious, creative, and critical thinker, who loves to solve problems by designing and coding enjoyable, usable and useful products.`,
-    imgUrl: require("../assets/images/about-me2.png"),
-  },
-  {
-    key: 1,
-    title: "creative and innovation",
-    description:
-      "Due to his continuous curiosity and extensive advertising experience, he is always ready to contribute to the development of innovative solutions that can make a real impact.",
-    imgUrl: require("../assets/images/avatar-creative.jpg"),
-  },
-  {
-    key: 2,
-    title: "problem solving",
-    description:
-      "Possess the ability to handle and calmly identify solutions to difficult or unexpected situations both in programming challenges and in the workplace.",
-    imgUrl: require("../assets/images/avatar-problem2.jpg"),
-  },
-  {
-    key: 3,
-    title: "effective communication",
-    description:
-      "It is crucial that we are able to listen actively to the stakeholders, which was Francis' job for all of his life. Additionally, Francis has the gift of feeding it back to them, so they know it is correct.",
-    imgUrl: require("../assets/images/avatar-communication2.jpg"),
-  },
-  {
-    key: 4,
-    title: "lifelong learner",
-    description:
-      "Dedicated to continuous growth and development to keep up with changes in this new world. Aims to develop skills, master new technologies, in order to add value to the organization.",
-    imgUrl: require("../assets/images/avatar-learner2.jpg"),
-  },
-  {
-    key: 5,
-    title: "goal oriented",
-    description:
-      "Motivated by a clear vision, goals, and meaningful aspirations, he believes in hard work, choices, and persistence. Difficult to have him distracted from his goals.",
-    imgUrl: require("../assets/images/avatar-goal2.jpg"),
-  },
-  {
-    key: 6,
-    title: "positive attitude",
-    description:
-      "Demonstrates kindly interest and goodwill in relationships. Collaboration, flexibility, and empathy rank high on his list of top career skills.",
-    imgUrl: require("../assets/images/avatar-friendly.jpg"),
   },
 ];
 

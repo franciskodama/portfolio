@@ -83,15 +83,15 @@
 /* ----- WHY CARD ----- */
 
 .why {
-  position: relative;
+  position: absolute;
   display: none;
   flex-direction: column;
-  padding: 0 2em;
+  padding: 0 1.8em;
   background-color: var(--third-color);
-  width: max-content;
-  position: absolute;
-  bottom: 0em;
-  left: 2.9em;
+  width: 21em;
+  bottom: 3em;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .why__close {
@@ -105,7 +105,7 @@
 .why__item {
   display: flex;
   flex-direction: column;
-  width: 30ch;
+  width: auto;
 }
 
 .why__title {
@@ -159,4 +159,35 @@
 
 .why__icon {
   margin: 0 1em;
+}
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+  .why {
+    width: max-content;
+    padding: 0 2em;
+  }
+
+  .why__item {
+    width: 30ch;
+  }
+}
+
+@media only screen and (width > 62em) {
+
+.why {
+  transform: translate(0%);
+  bottom: 0em;
+  left: 2.9em;
+}
+}
+
+@media only screen and (width > 75em) {
 }

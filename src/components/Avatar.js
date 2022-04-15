@@ -12,20 +12,16 @@ import "../components/Avatar.css";
 const Avatar = () => {
   const [isShown, setIsShown] = useState(0);
 
-  const handleClick = () => {
-    return console.log("test");
-  };
-
   return (
     <div className="outter-container">
       <div className="inner-container">
-        <p className="icons-title">soft skills:</p>
+        <p className="avatar__icons-title">soft skills:</p>
 
-        <div className="icons-wrapper">
+        <div className="avatar__icons-wrapper">
           <img
             onMouseEnter={() => setIsShown(1)}
             onMouseLeave={() => setIsShown(0)}
-            className="avatar-icon"
+            className="avatar__icon"
             src={LightBulb}
             alt="creative"
           />
@@ -33,7 +29,7 @@ const Avatar = () => {
           <img
             onMouseEnter={() => setIsShown(2)}
             onMouseLeave={() => setIsShown(0)}
-            className="avatar-icon"
+            className="avatar__icon"
             src={Puzzle}
             alt="problem solving"
           />
@@ -41,7 +37,7 @@ const Avatar = () => {
           <img
             onMouseEnter={() => setIsShown(3)}
             onMouseLeave={() => setIsShown(0)}
-            className="avatar-icon"
+            className="avatar__icon"
             src={Robot}
             alt="passionate for technology"
           />
@@ -49,7 +45,7 @@ const Avatar = () => {
           <img
             onMouseEnter={() => setIsShown(4)}
             onMouseLeave={() => setIsShown(0)}
-            className="avatar-icon"
+            className="avatar__icon"
             src={Student}
             alt="constant learning"
           />
@@ -57,7 +53,7 @@ const Avatar = () => {
           <img
             onMouseEnter={() => setIsShown(5)}
             onMouseLeave={() => setIsShown(0)}
-            className="avatar-icon"
+            className="avatar__icon"
             src={Eye}
             alt="detail oriented"
           />
@@ -65,7 +61,7 @@ const Avatar = () => {
           <img
             onMouseEnter={() => setIsShown(6)}
             onMouseLeave={() => setIsShown(0)}
-            className="avatar-icon"
+            className="avatar__icon"
             src={Smile}
             alt="friendly"
           />
@@ -81,14 +77,14 @@ const Avatar = () => {
         <div className="white-square"></div> */}
 
         <img
-          className="avatar-image"
+          className="avatar__image"
           src={avatarData[isShown].imgUrl}
           alt="my avatar images"
         />
 
-        <div className="skills-wrapper">
-          <h3 className="skills-title">{avatarData[isShown].title}</h3>
-          <p className="skills-description">
+        <div className="avatar__skills-wrapper">
+          <h3 className="avatar__skills-title">{avatarData[isShown].title}</h3>
+          <p className="avatar__skills-description">
             {avatarData[isShown].description}
           </p>
         </div>

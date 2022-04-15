@@ -18,14 +18,14 @@ const Reason = () => {
   const createGrid = () => {
     for (let i = 0; i < arrOfLettersBright.length; i++) {
       arrOfDiv.push(
-        <div key={i} className="letter-bright">
+        <div key={i} className="reason__letter-bright">
           {arrOfLettersBright[i]}
         </div>
       );
     }
     for (let i = 0; i < arrOfLettersDark.length; i++) {
       arrOfDiv.push(
-        <div key={i + 100} className="letter-dark">
+        <div key={i + 100} className="reason__letter-dark">
           {arrOfLettersDark[i]}
         </div>
       );
@@ -38,33 +38,29 @@ const Reason = () => {
   const handleChange = (event) => {
     const letter = event.target.value;
     const divArray = [];
-    divArray.push(<div className="letter-bright">{letter}</div>);
+    divArray.push(<div className="reason__letter-bright">{letter}</div>);
     setCurrentArray((currentArray) => [...currentArray, divArray]);
-
-    console.log(currentArray);
     return currentArray;
   };
 
   return (
-    <section className="section section-reason">
-      <div className="grid">{createGrid()}</div>
-
+    <section className="section section--reason">
+      <div className="reason__grid">{createGrid()}</div>
       <div>{currentArray}</div>
 
-      <form>
-        {/* <input
-                className='grid__input'
-                onChange={handleChange}
-                type='text'
-                placeholder='type something here...'/> */}
-        {/* 
-               <Button
-                text='reload original message'
-                className='btn btn--third-color'
-               /> */}
-
+      {/* <form>
+        <input
+          className="grid__input"
+          onChange={handleChange}
+          type="text"
+          placeholder="type something here..."
+        />
+        <Button
+          text="reload original message"
+          className="btn btn--third-color"
+        />
         <div className="grid__input"></div>
-      </form>
+      </form> */}
 
       <WhyCard
         titleOne={whyData.reason.titleOne}

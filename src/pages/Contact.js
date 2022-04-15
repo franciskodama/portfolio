@@ -190,21 +190,20 @@ const Contact = () => {
             />
           </div>
         </form>
-
-        <WhyCard
-          titleOne={whyData.contact.titleOne}
-          textOne={whyData.contact.textOne}
-          titleTwo={whyData.contact.titleTwo}
-          textTwo={whyData.contact.textTwo}
-          titleThree={whyData.contact.titleThree}
-          textThree={whyData.contact.textThree}
-          titleFour={whyData.contact.titleFour}
-          textFour={whyData.contact.textFour}
-          observation={whyData.contact.observation}
-          bottom={whyData.contact.bottom}
-          left={whyData.contact.left}
-        />
       </div>
+      <WhyCard
+        titleOne={whyData.contact.titleOne}
+        textOne={whyData.contact.textOne}
+        titleTwo={whyData.contact.titleTwo}
+        textTwo={whyData.contact.textTwo}
+        titleThree={whyData.contact.titleThree}
+        textThree={whyData.contact.textThree}
+        titleFour={whyData.contact.titleFour}
+        textFour={whyData.contact.textFour}
+        observation={whyData.contact.observation}
+        bottom={whyData.contact.bottom}
+        left={whyData.contact.left}
+      />
     </section>
   );
 };

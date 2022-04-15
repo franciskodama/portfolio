@@ -78,7 +78,7 @@ const About = () => {
             <p>to work in Canada</p>
           </div>
 
-          <div onClick={handleClickBag} className="bag-container">
+          <div onClick={handleClickBag} className="bag-container" id="bag">
             <img src={BagEmpty} alt="Shop bag empty" />
             <p
               className="number-one"
@@ -221,12 +221,20 @@ const About = () => {
                 <label htmlFor="hybrid">Hybrid</label>
               </form>
 
-              <Button
-                className="btn btn--dark"
-                onClick={handleClickAddToTeam}
-                text="add to my team"
-                align="flex-start"
-              />
+              <Link
+                to="bag"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+              >
+                <Button
+                  className="btn btn--dark"
+                  onClick={handleClickAddToTeam}
+                  text="add to my team"
+                  align="flex-start"
+                />
+              </Link>
 
               <p
                 className={

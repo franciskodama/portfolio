@@ -1,5 +1,6 @@
 .section--contact {
   position: relative;
+  padding-bottom: 10em;
 }
 
 .section--contact .container {
@@ -66,7 +67,6 @@
 .form-contact {
   display: flex;
   flex-direction: column;
-  margin-bottom: 13em;
 }
 
 .form-contact__input {

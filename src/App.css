@@ -19,7 +19,8 @@
   --bright-color: #ffffff;
   --third-color: #ed1c24;
   --transparent: hsla(0, 0%, 0%, 0);
-  --gradient: linear-gradient(180deg, #1c1c1c, #393939);
+  --gradient: linear-gradient(to right top, #1c1c1c, #3a3939, #5a5959, #7c7b7a, #9f9f9d);
+  /* background-image: linear-gradient(to right top, #1c1c1c, #292a2b, #36393b, #43494a, #505959); */
 
   --dark-two-color: grey;
   --third-two-color: orange;

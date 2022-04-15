@@ -2,11 +2,11 @@
   position: relative;
   z-index: 10;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  margin-top: 10em;
   margin-bottom: -10vw;
-  height: auto;
-  padding-bottom: 30em;
   background-color: var(--dark-color);
+  border: 1px solid orange;
+  margin-top: 8em;
+  padding-bottom: 40em;
 }
 
 .projects {
@@ -18,10 +18,11 @@
 
 .projects__title {
   text-align: center;
-  margin-top: 5em;
   font-family: var(--main-font-regular);
   font-size: 1.5rem;
   text-transform: uppercase;
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 
@@ -33,9 +34,15 @@
 }
 
 @media only screen and (width > 48em) {
+  .section--projects {
+    padding-bottom: 26em;
+  }
 }
 
 @media only screen and (width > 62em) {
+  .section--projects {
+    padding-bottom: 20em;
+  }
 }
 
 @media only screen and (width > 75em) {
