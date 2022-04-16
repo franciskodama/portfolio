@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "../styles/Navbar.css";
 import "../App.css";
@@ -24,6 +24,10 @@ const Navbar = () => {
     setIsActive(false);
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    console.log(isOpen, isActive);
+  }, [isActive, isOpen]);
 
   return (
     <header className="section section--header">
@@ -60,7 +64,7 @@ const Navbar = () => {
 
         <nav
           className="navbar__extended"
-          style={{ display: isOpen ? "block" : "none" }}
+          style={{ display: isActive ? "block" : "none" }}
         >
           <Link
             className="navbar__item"

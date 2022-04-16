@@ -55,7 +55,7 @@ export const whyData = {
       "I will certainly need to manage API interactions in my future job, so creating this portfolio page was crucial.",
     titleTwo: "Showcase",
     textTwo:
-      "Using hooks like useState, useEffect, fetching data from a third party, and promises were the key to this page. In addition, the treatment of data to calculate the time, and how to present the data on the screen to the user also contributed to my learning in React.",
+      "Fetching data from a third party, and promises were the key to this page. Moreover, the method of calculating the time, as well as how to present the data on the screen to the user, also contributed to my learning of React.",
     titleThree: "Tech used",
     textThree:
       "Fetch request, promises, React hooks such as useState and useEffect, and some JS methods.",
@@ -80,11 +80,14 @@ export const whyData = {
   },
   contact: {
     titleOne: "Why?",
-    textOne: "",
+    textOne:
+      "In order to feel complete in my learning, I needed drag-and-drop functionality. In response, I created the Hello Generator, an easy way to get you in touch, and of course, schedule an interview! :)",
     titleTwo: "Showcase",
-    textTwo: "",
+    textTwo:
+      "The ability to program and be creative. In addition to the drag and drop feature, this page receives and manages props (the interview request and the location information) from the about me page.",
     titleThree: "Tech used",
-    textThree: "",
+    textThree:
+      "DragDropContext, Droppable, Draggable from React Beautiful DnD library.",
     titleFour: "",
     textFour: "",
     observation: "",
