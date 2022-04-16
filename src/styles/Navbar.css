@@ -30,12 +30,16 @@
   background-color: var(--third-color)
 }
 
+.navbar {
+  display: none;
+}
+
 .navbar__menu,
 .navbar__close {
   width: 40px;
 }
 
-.navbar {
+.navbar__extended {
   position: absolute;
   top: 4.2em;
   right: 0;
@@ -53,8 +57,7 @@
   color: var(--bright-color);
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(255, 0, 0, 0);
   transition: all 0.3s ease-in-out;
@@ -62,7 +65,6 @@
   margin-right: 1em;
   font-family: var(--main-font-thin);
   font-size: 1.5rem;
-  /* border: 1px solid orange; */
 }
 
 /* ------ NAV BAR ------ */
@@ -114,7 +116,7 @@
 }
 
 @media only screen and (width > 48em) {
-  .navbar {
+  .navbar__extended {
     padding: 5em 5em 3em 5em;
     width: 50%;
   }
@@ -125,8 +127,15 @@
 }
 
 @media only screen and (width > 62em) {
+
+  .navbar__toggle,
+  .navbar__extended  {
+    display: none;
+  }
+
   .navbar {
     position: relative;
+    top: 0;
     display: grid;
     grid-template-columns: 4.6rem 6.6rem 5.7rem 3.3rem 6rem 4.3rem;
     align-items: center;
@@ -134,7 +143,6 @@
     width: 35em;
     padding: 0;
     background-color: var(--dark-color);
-
   }
 
   .navbar__item {
