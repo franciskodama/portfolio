@@ -25,8 +25,8 @@ const Footer = () => {
         </h2>
 
         <p className="footer__aboutme">
-          A Webdeveloper with a huge experience in marketing, a natural leader,
-          curious, who find engagement challenge himself constantly.
+          A web developer with a great deal of experience in marketing, a
+          natural leader, curious, and constantly provoked by new challenges.
         </p>
 
         <div className="footer__menu">

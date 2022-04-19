@@ -5,8 +5,7 @@
  z-index: 2;
 }
 
-.color__square-first,
-.color__square-wrapper {
+.color__square-first {
     background-color: var(--third-color);
 }
 
@@ -22,17 +21,18 @@
 .color__square-wrapper {
     display: none;
     position: absolute;
-    bottom: 0; 
-    left: -6.5em;
+    bottom: 2.8em; 
+    left: 50%;
+    transform: translate(-50%);
     display: flex;
     flex-direction: column;
     width: auto;
-    padding: 0.5em 0.5em;
+    padding: 0.2em 0.2em;
 }
 
 .color__options {
     display: flex;
-    padding: 0.4em;
+    padding: 0.1em;
     cursor: pointer;
     border: 1px dashed transparent;
 }
@@ -44,9 +44,9 @@
 /* ------- PALETTE ------- */
 
 .color__square {
-    width: 25px;
-    height: 25px;
-    margin: 0.1em 0.2em;
+    width: 12px;
+    height: 12px;
+    margin: 0.1em 0.1em;
     border: 0.5px solid var(--bright-color);
 }
 
@@ -56,7 +56,7 @@
 
 .color-two {
     background-color:#ed1c24 ;
-    margin-left: 0.5em;
+    margin-left: 0.3em;
 }
 
 .color-three {
@@ -65,7 +65,7 @@
 
 .color-four {
     background-color: #F3A712;
-    margin-left: 0.5em;
+    margin-left: 0.3em;
 }
 
 .color-five {
@@ -74,5 +74,5 @@
 
 .color-six {
     background-color: #03A9F4;
-    margin-left: 0.5em;
+    margin-left: 0.3em;
 }

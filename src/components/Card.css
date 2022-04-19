@@ -7,7 +7,7 @@
 /* --------------------------- */
 
 .card-front {
-  display: flex;
+  /* display: none; */
   flex-direction: column;
   margin: 2em 0 1em 0;
   width: 270px;
@@ -209,15 +209,15 @@
 }
 
 /* ----- CARD ACTIVE ----- */
-/* 
+
 .card--active .card-front {
-  display: none;
+  display: flex;
 }
 
 .card--active .card-back {
   display: block;
 }
-*/
+
 
 /* ====================================
             MEDIA QUERY

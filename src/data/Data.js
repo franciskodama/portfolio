@@ -117,7 +117,7 @@ export const avatarData = [
   },
   {
     key: 2,
-    title: "problem solving",
+    title: "problem-solving",
     description:
       "Possess the ability to handle and calmly identify solutions to difficult or unexpected situations both in programming challenges and in the workplace.",
     imgUrl: require("../assets/images/avatar-problem2.jpg"),
@@ -133,12 +133,12 @@ export const avatarData = [
     key: 4,
     title: "lifelong learner",
     description:
-      "Dedicated to continuous growth and development to keep up with changes in this new world. Aims to develop skills, master new technologies, in order to add value to the organization.",
+      "Dedicated to continuous growth and development to keep up with changes in this new world. Aims to develop skills, and master new technologies, in order to add value to the organization.",
     imgUrl: require("../assets/images/avatar-learner2.jpg"),
   },
   {
     key: 5,
-    title: "goal oriented",
+    title: "goal-oriented",
     description:
       "Motivated by a clear vision, goals, and meaningful aspirations, he believes in hard work, choices, and persistence. Difficult to have him distracted from his goals.",
     imgUrl: require("../assets/images/avatar-goal2.jpg"),
@@ -147,7 +147,7 @@ export const avatarData = [
     key: 6,
     title: "positive attitude",
     description:
-      "Demonstrates kindly interest and goodwill in relationships. Collaboration, flexibility, and empathy rank high on his list of top career skills.",
+      "Demonstrates kindly interest and goodwill in his relationships. Collaboration, flexibility, and empathy are his top qualities developed over a strong and experienced career.",
     imgUrl: require("../assets/images/avatar-friendly.jpg"),
   },
 ];

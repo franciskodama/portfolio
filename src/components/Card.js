@@ -3,70 +3,58 @@ import "../components/Card.css";
 import IconClose from "../assets/images/card-icon-close.svg";
 
 const Card = ({ project }) => {
-  // const [isActive, setIsActive] = useState(false);
-  // const toggleClass = () => {
-  //    setIsActive(!isActive);
+  const [isBackActive, setIsBackActive] = useState(false);
+  const toggleClass = () => {
+    setIsBackActive(!isBackActive);
+  };
+
+  // const [isOpen, setIsOpen] = useState({
+  //   1: false,
+  //   2: false,
+  //   3: false,
+  //   4: false,
+  //   5: false,
+  // });
+
+  // const refCardFront = useRef(null);
+  // const refCardBack = useRef(null);
+  // let newStateOpen = {};
+  // let newStateClose = {};
+
+  // const handleClickToOpen = () => {
+  //   handleClickToClose();
+  //   newStateOpen = { ...isOpen, [project.id]: true };
+  //   setIsOpen(newStateOpen);
   // };
 
-  const [isOpen, setIsOpen] = useState({
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-    5: false,
-  });
+  // useEffect(() => {
+  //   console.log(project.id);
+  // }, [isOpen]);
 
-  const refCardFront = useRef(null);
-  const refCardBack = useRef(null);
-  let newState = {};
-  let newStateClose = {};
-
-  const handleClickToOpen = () => {
-    refCardBack.current.style.display = "none";
-
-    // newStateClose = {
-    //   1: false,
-    //   2: false,
-    //   3: false,
-    //   4: false,
-    //   5: false,
-    // };
-    // setIsOpen(newStateClose);
-    // console.log(newStateClose);
-
-    // let previousId = project.id;
-    // console.log(e.target);
-    // console.log(previousId);
-    // console.log(refCardBack.current.value);
-
-    newState = { ...isOpen, [project.id]: true };
-    setIsOpen(newState);
-  };
-
-  useEffect(() => {
-    // console.log(isOpen);
-  }, [isOpen]);
-
-  const handleClickToClose = () => {
-    refCardFront.current.style.display = "block";
-    refCardBack.current.style.display = "none";
-  };
+  // const handleClickToClose = () => {
+  //   newStateClose = {
+  //     1: false,
+  //     2: false,
+  //     3: false,
+  //     4: false,
+  //     5: false,
+  //   };
+  //   setIsOpen(newStateClose);
+  // };
 
   return (
-    <div
-      // className={isActive ? "card card--active" : "card"}
-      // onClick={toggleClass}
-      className="card"
-    >
+    <div className="card">
       {/* ========================== CARD FRONT ========================== */}
 
       <div
-        className="card-front"
-        ref={refCardFront}
-        onClick={handleClickToOpen}
-        style={{
-          display: isOpen[project.id] === false ? "block" : "none",
-        }}
+        className={!isBackActive ? "card--active card-front" : "card-front"}
+        // ref={refCardFront}
+        // onClick={handleClickToOpen}
+
+        onClick={toggleClass}
+        // style={{
+        //   display: isOpen[project.id] ? "none" : "block",
+        // }}
       >
         <p className="card-front__category">{project.category}</p>
         <div className="card-front__box">
@@ -89,17 +77,18 @@ const Card = ({ project }) => {
       {/* ========================== CARD BACK ========================== */}
 
       <div
-        className="card-back"
-        ref={refCardBack}
-        style={{
-          display: isOpen[project.id] === true ? "block" : "none",
-        }}
+        className={isBackActive ? "card--active card-back" : "card-back"}
+        // ref={refCardBack}
+        // style={{
+        //   display: isOpen[project.id] ? "block" : "none",
+        // }}
       >
         <div className="card-back__header">
           <p className="card-back__category">{project.category}</p>
           <img
             className="card-back__close"
-            onClick={handleClickToClose}
+            // onClick={handleClickToClose}
+            onClick={toggleClass}
             src={IconClose}
             alt="close button"
           />
@@ -140,3 +129,57 @@ const Card = ({ project }) => {
 };
 
 export default Card;
+
+// -------------------------------------
+// Hook to catch click outside of a Component
+// -------------------------------------
+
+// const useOutsideAlerter = (ref) => {
+//   useEffect(() => {
+//     const handleClickOutsideCard = (e) => {
+//       if (ref.current && !ref.current.contains(e.target)) {
+//         alert("clicked outside");
+//       }
+//     };
+//     document.addEventListener("mousedown", handleClickOutsideCard);
+//     return () => {
+//       document.removeEventListener("mousedown", handleClickOutsideCard);
+//     };
+//   }, [ref]);
+// };
+// useOutsideAlerter(refCardBack);
+
+// -------------------------------------
+// Hook to catch click outside of a Component | Second try
+// -------------------------------------
+
+// const useOutsideAlerter = (ref) => {
+//   useEffect(() => {
+//     const handleClickOutsideCard = (e) => {
+//       if (isOpen && !ref.current.contains(e.target)) {
+//         refCardBack.current.style.display = "none";
+//         refCardFront.current.style.display = "block";
+//       }
+//     };
+//     document.addEventListener("mousedown", handleClickOutsideCard);
+//     return () => {
+//       document.removeEventListener("mousedown", handleClickOutsideCard);
+//     };
+//   }, [ref]);
+// };
+
+// useOutsideAlerter(refCardBack);
+
+// -------------------------------------
+// Hook to see previous value
+// -------------------------------------
+
+// const usePrevious = (value) => {
+//   const ref = useRef();
+//   useEffect(() => {
+//     ref.current = value;
+//   }, [value]);
+//   return ref.current;
+// };
+
+// const prevState = usePrevious(isOpen);

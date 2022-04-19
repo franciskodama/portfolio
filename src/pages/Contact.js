@@ -55,6 +55,31 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 const Contact = () => {
+  const [status, setStatus] = useState("Submit");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Submit");
+    let result = await response.json();
+    alert(result.status);
+  };
+
+  // ======================================
+
   const [columns, setColumns] = useState(dropSpace);
   const [message, setMessage] = useState("");
   const [name, setName] = useState("");
@@ -146,11 +171,13 @@ const Contact = () => {
           <textarea
             className="form-contact__input text-area"
             placeholder="type some additional comments"
-            value={message}
             type="text"
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
+            id="message"
+            // value={message}
+            // onChange={(e) => {
+            //   setMessage(e.target.value);
+            // }}
+            required
           ></textarea>
 
           <div className="form-contact__input-wrapper">
@@ -158,20 +185,23 @@ const Contact = () => {
               className="form-contact__input"
               placeholder="name"
               type="text"
-              value={name}
-              onChange={(e) => {
-                setName(e.target.value);
-              }}
+              id="name"
+              // value={name}
+              // onChange={(e) => {
+              //   setName(e.target.value);
+              // }}
             />
 
             <input
               className="form-contact__input"
               placeholder="email"
-              value={email}
               type="text"
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              id="email"
+              // value={email}
+              // type="text"
+              // onChange={(e) => {
+              //   setEmail(e.target.value);
+              // }}
             />
           </div>
 
