@@ -21,11 +21,19 @@
   justify-content: center;
   border: 0;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 var(--bright-color), 0 0 var(--bright-color), 0 0 var(--bright-color);
+  transform: translateX(0) translateY(0);
 }
 
 .why-toggle--active {
   background-color: var(--third-color);
+  box-shadow: -1px -1px var(--bright-color), -2px -2px var(--bright-color), -3px -3px var(--bright-color);
+  transform: translateX(3px) translateY(3px);
 }
+
+
+
 
 .eye {
   width: 30px;
@@ -54,8 +62,6 @@
   display: block;
 }
 
-/* ----- BUTTON ANIMATION ----- */
-
 @keyframes icon-shake {
   50% {
     transform: translateX(2px) rotate(3deg);
@@ -83,8 +89,28 @@
   background-color: var(--third-color);
   width: 21em;
   bottom: 3em;
-  left: 50%;
-  transform: translate(-50%);
+  left: calc(-10.5em + 20px);
+  animation-name: card-open;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes card-open {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: 0% 100%;
+    box-shadow: 0 0 var(--bright-color), 0 0 var(--bright-color), 0 0 var(--bright-color);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: 0% 100%;
+    box-shadow: -1px -1px var(--bright-color), -2px -2px var(--bright-color), -3px -3px var(--bright-color);
+    transform: translateX(4px) translateY(4px);
+  }
 }
 
 .why__close {
@@ -166,6 +192,7 @@
   .why {
     width: max-content;
     padding: 0 2em;
+    left: -10.5em;
   }
 
   .why__item {

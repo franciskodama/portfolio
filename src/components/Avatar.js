@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import "../components/Avatar.css";
 import { avatarData } from "../data/Data";
 
 import LightBulb from "../assets/images/about-lightbulb.svg";
@@ -7,15 +8,15 @@ import Robot from "../assets/images/about-robot.svg";
 import Student from "../assets/images/about-student.svg";
 import Eye from "../assets/images/about-eye.svg";
 import Smile from "../assets/images/about-smile.svg";
-import "../components/Avatar.css";
 import gsap from "gsap";
 
 const Avatar = () => {
   const [isShown, setIsShown] = useState(0);
-  // const imageRef = useRef();
+  const [imgActive, setImgActive] = useState();
+  const imgRef = useRef();
 
   // useEffect(() => {
-  //   gsap.from(imageRef.current, {
+  //   gsap.from(imgRef.current, {
   //     opacity: 0.5,
   //   });
   // }, []);
@@ -85,8 +86,13 @@ const Avatar = () => {
         <div className="white-square"></div> */}
 
         <img
-          className="avatar__image"
-          // ref={imageRef}
+          // className="avatar__image"
+          className={
+            imgRef.current
+              ? "avatar__image avatar__image--active"
+              : "avatar__image"
+          }
+          ref={imgRef}
           src={avatarData[isShown].imgUrl}
           alt="my avatar images"
         />
