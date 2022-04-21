@@ -3,58 +3,63 @@ import "../components/Card.css";
 import IconClose from "../assets/images/card-icon-close.svg";
 
 const Card = ({ project }) => {
-  const [isBackActive, setIsBackActive] = useState(false);
-  const toggleClass = () => {
-    setIsBackActive(!isBackActive);
+  // const [isBackActive, setIsBackActive] = useState(false);
+  // const toggleClass = () => {
+  //   setIsBackActive(!isBackActive);
+  // };
+
+  const [isOpen, setIsOpen] = useState({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+  });
+
+  const refCardFront = useRef(null);
+  const refCardBack = useRef(null);
+  let newStateOpen = {};
+  let newStateClose = {};
+
+  const handleClickToOpen = () => {
+    handleClickToClose();
+    setIsOpen((prev) => ({ ...prev, [project.id]: true }));
+
+    // newStateOpen = { ...isOpen, [project.id]: true };
+    // setIsOpen(newStateOpen);
   };
 
-  // const [isOpen, setIsOpen] = useState({
-  //   1: false,
-  //   2: false,
-  //   3: false,
-  //   4: false,
-  //   5: false,
-  // });
+  useEffect(() => {
+    console.log(project.id);
+  }, [isOpen]);
 
-  // const refCardFront = useRef(null);
-  // const refCardBack = useRef(null);
-  // let newStateOpen = {};
-  // let newStateClose = {};
+  const handleClickToClose = () => {
+    setIsOpen((prev) => ({
+      prev: false,
+    }));
 
-  // const handleClickToOpen = () => {
-  //   handleClickToClose();
-  //   newStateOpen = { ...isOpen, [project.id]: true };
-  //   setIsOpen(newStateOpen);
-  // };
-
-  // useEffect(() => {
-  //   console.log(project.id);
-  // }, [isOpen]);
-
-  // const handleClickToClose = () => {
-  //   newStateClose = {
-  //     1: false,
-  //     2: false,
-  //     3: false,
-  //     4: false,
-  //     5: false,
-  //   };
-  //   setIsOpen(newStateClose);
-  // };
+    // newStateClose = {
+    //   1: false,
+    //   2: false,
+    //   3: false,
+    //   4: false,
+    //   5: false,
+    // };
+    // setIsOpen(newStateClose);
+  };
 
   return (
     <div className="card">
       {/* ========================== CARD FRONT ========================== */}
 
       <div
-        className={!isBackActive ? "card--active card-front" : "card-front"}
-        // ref={refCardFront}
-        // onClick={handleClickToOpen}
-
-        onClick={toggleClass}
-        // style={{
-        //   display: isOpen[project.id] ? "none" : "block",
-        // }}
+        // className={!isBackActive ? "card--active card-front" : "card-front"}
+        className="card-front"
+        ref={refCardFront}
+        onClick={handleClickToOpen}
+        style={{
+          display: isOpen[project.id] ? "none" : "block",
+        }}
       >
         <p className="card-front__category">{project.category}</p>
         <div className="card-front__box">
@@ -77,18 +82,18 @@ const Card = ({ project }) => {
       {/* ========================== CARD BACK ========================== */}
 
       <div
-        className={isBackActive ? "card--active card-back" : "card-back"}
-        // ref={refCardBack}
-        // style={{
-        //   display: isOpen[project.id] ? "block" : "none",
-        // }}
+        // className={isBackActive ? "card--active card-back" : "card-back"}
+        className="card-back"
+        ref={refCardBack}
+        style={{
+          display: isOpen[project.id] ? "block" : "none",
+        }}
       >
         <div className="card-back__header">
           <p className="card-back__category">{project.category}</p>
           <img
             className="card-back__close"
-            // onClick={handleClickToClose}
-            onClick={toggleClass}
+            onClick={handleClickToClose}
             src={IconClose}
             alt="close button"
           />

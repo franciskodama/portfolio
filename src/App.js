@@ -13,6 +13,10 @@ import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
 import Api from "./pages/Api";
 import CleanCode from "./pages/CleanCode";
+import Xray from "./pages/Xray";
+import Why from "./pages/Why";
+import { gsap } from "gsap";
+
 // import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
@@ -71,7 +75,11 @@ const App = () => {
       <About />
       <Projects />
       <Api />
+      <Why />
+
       {/* <CleanCode /> */}
+
+      <Xray />
       <Contact />
       <Footer />
     </div>

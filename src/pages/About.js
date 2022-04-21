@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import "../styles/About.css";
 import Button from "../components/Button";
@@ -9,6 +9,7 @@ import Trash from "../assets/images/about-trash.svg";
 import Close from "../assets/images/card-icon-close-white.svg";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
+import gsap from "gsap";
 
 const About = () => {
   const [location, setLocation] = useState({ data: "" });
@@ -18,6 +19,15 @@ const About = () => {
   const [inBag, setInBag] = useState(false);
   const refMessageEmpty = useRef(null);
   const refMessageFull = useRef(null);
+  const modalRef = useRef();
+
+  useEffect(() => {
+    gsap.from(modalRef.current, {
+      opacity: 0,
+      duration: 0.5,
+      scale: 0.9,
+    });
+  });
 
   const handleClickLocation = (e) => {
     const newLocation = { data: e.target.value };
@@ -91,6 +101,7 @@ const About = () => {
 
           <div
             className="modal"
+            ref={modalRef}
             style={{ display: showMessage.show ? "block" : "none" }}
           >
             <div className="modal__header">

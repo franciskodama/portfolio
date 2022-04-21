@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/Reason.css";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
 import Button from "../components/Button";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Reason = () => {
   const originalMessageBright =
-    "this portfolio has been built to showcase my variety of skills from creativity to code ";
+    ".this portfolio has been built to showcase my variety of skills from creativity to code ";
   const originalMessageDark =
-    "click on the eye below to know more about each page";
+    ".click on the eye below to know more about each page";
   const arrOfLettersBright = Array.from(originalMessageBright);
   const arrOfLettersDark = Array.from(originalMessageDark);
-
   let arrOfDiv = [];
   let arrOfDivUser = [];
 
@@ -43,9 +45,47 @@ const Reason = () => {
     return currentArray;
   };
 
+  // -------------- ANIMATION --------------
+
+  const gridRef = useRef();
+  const q = gsap.utils.selector(gridRef);
+
+  useEffect(() => {
+    gsap.from(q(".reason__letter-bright"), {
+      scrollTrigger: {
+        trigger: q(".reason__letter-bright"),
+        toggleActions: "restart pause reverse pause",
+        start: "top bottom",
+        end: "top 20%",
+        scrub: true,
+        pin: true,
+      },
+      duration: 0.5,
+      x: "1000",
+      stagger: 0.01,
+      yoyo: true,
+    });
+    gsap.from(q(".reason__letter-dark"), {
+      scrollTrigger: {
+        trigger: q(".reason__letter-dark"),
+        toggleActions: "restart pause reverse pause",
+        start: "top bottom",
+        end: "top center",
+        scrub: true,
+        pin: true,
+      },
+      duration: 0.5,
+      x: "-1000",
+      stagger: 0.01,
+      yoyo: true,
+    });
+  }, []);
+
   return (
     <section className="section section--reason">
-      <div className="reason__grid">{createGrid()}</div>
+      <div className="reason__grid" ref={gridRef}>
+        {createGrid()}
+      </div>
       <div>{currentArray}</div>
 
       {/* <form>

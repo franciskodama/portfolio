@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { avatarData } from "../data/Data";
 
 import LightBulb from "../assets/images/about-lightbulb.svg";
@@ -8,9 +8,17 @@ import Student from "../assets/images/about-student.svg";
 import Eye from "../assets/images/about-eye.svg";
 import Smile from "../assets/images/about-smile.svg";
 import "../components/Avatar.css";
+import gsap from "gsap";
 
 const Avatar = () => {
   const [isShown, setIsShown] = useState(0);
+  const imageRef = useRef();
+
+  useEffect(() => {
+    gsap.from(imageRef.current, {
+      opacity: 0.5,
+    });
+  }, []);
 
   return (
     <div className="outter-container">
@@ -78,6 +86,7 @@ const Avatar = () => {
 
         <img
           className="avatar__image"
+          ref={imageRef}
           src={avatarData[isShown].imgUrl}
           alt="my avatar images"
         />

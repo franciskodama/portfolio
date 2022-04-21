@@ -28,6 +28,7 @@
     flex-direction: column;
     width: auto;
     padding: 0.2em 0.2em;
+    z-index: -1;
 }
 
 .color__options {

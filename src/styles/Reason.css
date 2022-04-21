@@ -27,6 +27,7 @@
   text-align: center;
   font-family: var(--main-font-light);
   font-size: 1.6rem;
+  background-color: var(--dark-color);
 }
 
 .reason__letter-dark {

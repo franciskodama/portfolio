@@ -1,12 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import "../styles/Navbar.css";
 import "../App.css";
 import Logo from "../assets/logo-fkodama.svg";
 import Menu from "../assets/images/menu-hamburguer.svg";
 import Close from "../assets/images/card-icon-close-white.svg";
+import gsap from "gsap";
 
 const Navbar = () => {
+  const menuRef = useRef();
+  const q = gsap.utils.selector(menuRef);
+
+  useEffect(() => {
+    gsap.from(q(".navbar__item"), {
+      opacity: 0,
+      y: "-100%",
+      ease: "elastic",
+      duration: 1,
+      stagger: 0.1,
+    });
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setIsActive] = useState(false);
 
@@ -64,6 +78,7 @@ const Navbar = () => {
 
         <nav
           className="navbar__extended"
+          ref={menuRef}
           style={{ display: isActive ? "block" : "none" }}
         >
           <Link
@@ -102,6 +117,20 @@ const Navbar = () => {
             {" "}
             projects{" "}
           </Link>
+
+          <Link
+            className="navbar__item"
+            to="why"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={500}
+            onClick={handleClickOnLink}
+          >
+            {" "}
+            why{" "}
+          </Link>
+
           <Link
             className="navbar__item"
             to="api"
@@ -114,6 +143,7 @@ const Navbar = () => {
             {" "}
             api{" "}
           </Link>
+
           <Link
             className="navbar__item"
             to="code"
@@ -142,7 +172,7 @@ const Navbar = () => {
 
         {/* -------- NAVBAR HORIZONTAL -------- */}
 
-        <nav className="navbar">
+        <nav className="navbar" ref={menuRef}>
           <Link
             className="navbar__item"
             to="hero"
@@ -179,6 +209,20 @@ const Navbar = () => {
             {" "}
             projects{" "}
           </Link>
+
+          <Link
+            className="navbar__item"
+            to="why"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={500}
+            onClick={handleClickOnLink}
+          >
+            {" "}
+            why{" "}
+          </Link>
+
           <Link
             className="navbar__item"
             to="api"

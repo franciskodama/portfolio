@@ -1,8 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../components/Palette.css";
+import gsap from "gsap";
 
 const Color = ({ isActive, firstColors, secondColors, thirdColors }) => {
   const [toggle, setToggle] = useState(false);
+  const paletteRef = useRef();
+
+  useEffect(() => {
+    gsap.from(paletteRef.current, {
+      opacity: 0,
+      y: 50,
+    });
+  }, [toggle]);
 
   return (
     <div className="color">
@@ -13,6 +22,7 @@ const Color = ({ isActive, firstColors, secondColors, thirdColors }) => {
 
       <div
         className="color__square-wrapper"
+        ref={paletteRef}
         style={{ display: toggle ? "block" : "none" }}
       >
         <ul
