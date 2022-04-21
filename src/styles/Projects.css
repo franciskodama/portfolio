@@ -40,6 +40,8 @@
 
 @media only screen and (width > 62em) {
   .section--projects {
+    margin: 0 auto;
+    width: 70em;
     padding-bottom: 20em;
   }
 }

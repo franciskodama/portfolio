@@ -7,6 +7,7 @@
 
 
 .color__square-first {
+    display: none;
     width: 40px;
     height: 40px;
     background-image: url(../assets/images/ico-brush.svg);
@@ -73,4 +74,24 @@
 .color-six {
     background-color: #03A9F4;
     margin-left: 0.3em;
+}
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+}
+
+@media only screen and (width > 62em) {
+    .color__square-first {
+        display: block;
+    }
+}
+
+@media only screen and (width > 75em) {
 }

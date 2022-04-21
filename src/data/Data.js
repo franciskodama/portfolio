@@ -203,6 +203,22 @@ export const projects = [
   {
     id: 3,
     frontShow: true,
+    icon: require("../assets/images/card-icon-seletos.png"),
+    titleA: "SELETOS",
+    titleB: "website.",
+    titleC: "Seletos",
+    tech: "html css",
+    category: "website",
+    url: "https://fkodama.com/_dev/seletos",
+    image: require("../assets/images/card-squared-seletos.jpg"),
+    description:
+      "I am an experienced tech services entrepreneur/consultant product.",
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five but also the leap into electronic remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    visitIcon: true,
+  },
+  {
+    id: 4,
+    frontShow: true,
     icon: require("../assets/images/card-icon-spaceinvaders.png"),
     titleA: "SPACE INVADERS",
     titleB: "game.",
@@ -222,22 +238,6 @@ export const projects = [
     visitIcon: true,
   },
   {
-    id: 4,
-    frontShow: true,
-    icon: require("../assets/images/card-icon-seletos.png"),
-    titleA: "SELETOS",
-    titleB: "website.",
-    titleC: "Seletos",
-    tech: "html css",
-    category: "website",
-    url: "https://fkodama.com/_dev/seletos",
-    image: require("../assets/images/card-squared-seletos.jpg"),
-    description:
-      "I am an experienced tech services entrepreneur/consultant product.",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five but also the leap into electronic remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    visitIcon: true,
-  },
-  {
     id: 5,
     frontShow: true,
     icon: require("../assets/images/card-icon-mundial.png"),
@@ -247,6 +247,27 @@ export const projects = [
     tech: "html css",
     category: "website",
     url: "https://www.mundialcomunicacao.com.br/",
+    image: require("../assets/images/card-squared-mundial.jpg"),
+    frontText:
+      "I am an experienced tech services entrepreneur/consultant product.",
+    backText:
+      "100% React-based, it was the most important project I used to learn and display my skills in HTML, JSX, CSS, Javascript, and the React framework",
+    backTextPurpose:
+      "100% React-based, it was the most important project I used to learn and display my skills in HTML, JSX, CSS, Javascript, and the React framework",
+    backTextTech:
+      "100% React-based, it was the most important project I used to learn and display my skills in HTML, JSX, CSS, Javascript, and the React framework",
+    visitIcon: true,
+  },
+  {
+    id: 6,
+    frontShow: true,
+    icon: require("../assets/images/card-icon-resume.png"),
+    titleA: "RESUME",
+    titleB: "resume.",
+    titleC: "Resume Online",
+    tech: "html css js",
+    category: "resume online",
+    url: "http://kodes.ca/angelapodetz",
     image: require("../assets/images/card-squared-mundial.jpg"),
     frontText:
       "I am an experienced tech services entrepreneur/consultant product.",

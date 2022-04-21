@@ -106,6 +106,7 @@ textarea {
 .section {
   width: 100%;
   background-color: var(--dark-color);
+  overflow: hidden;
 }
 
 .container {

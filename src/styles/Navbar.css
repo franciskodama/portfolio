@@ -3,6 +3,7 @@
   width: 100%;
   z-index: 200;
   background-color: var(--dark-color);
+  overflow: visible;
 }
 
 .section--header .container {

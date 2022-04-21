@@ -12,7 +12,6 @@
   width: 90%;
 }
 
-
 .hero__title--typing {
   font-size: 1.5rem;
 }
@@ -23,10 +22,10 @@
   font-family: var(--main-font-semibold);
   font-size: 1.5rem;
   margin-bottom: 7em;
-  z-index: 100;
+  z-index: 3;
 }
 
-/* ------ VIDEO  ------ */
+/* ------ FILTER  ------ */
 
 .hero__filter {
   position: absolute;
@@ -50,7 +49,7 @@
   height: 40px;
   border: 0;
   cursor: pointer;
-  z-index: 10;
+  z-index: 3;
 }
 
 /* ------ TYPE EFFECT ------ */
@@ -82,8 +81,6 @@
   font-weight: 100;
 }
 
-
-
 .hero__title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -95,32 +92,29 @@
   color: var(--third-color);
 }
 
-
 /* ====================================
             MEDIA QUERY
 ======================================= */
 
-    @media only screen and (width > 20em) {
-    }
-    
-    @media only screen and (width > 48em) {
-    }
-    
-    @media only screen and (width > 62em) {
-    }
-    
-    @media only screen and (width > 75em) {
-
-.hero__info .hero__paragraphs {
-  font-size: 1.35rem;
+@media only screen and (width > 20em) {
 }
 
-.hero__title {
-  font-size: 2.35rem;
+@media only screen and (width > 48em) {
 }
 
-.hero__title--typing {
-  font-size: 2.5rem;
+@media only screen and (width > 62em) {
 }
 
+@media only screen and (width > 75em) {
+  .hero__info .hero__paragraphs {
+    font-size: 1.35rem;
+  }
+
+  .hero__title {
+    font-size: 2.35rem;
+  }
+
+  .hero__title--typing {
+    font-size: 2.5rem;
+  }
 }
