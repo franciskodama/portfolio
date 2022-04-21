@@ -197,8 +197,8 @@ const About = () => {
             </p>
             <p className="about__description">
               Resourceful, curious, creative, and critical thinker, who loves to
-              solve problems by designing and coding enjoyable, usable and
-              useful products.
+              solve problems by designing and coding enjoyable and useful
+              products.
             </p>
           </div>
 

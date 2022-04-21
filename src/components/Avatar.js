@@ -12,13 +12,13 @@ import gsap from "gsap";
 
 const Avatar = () => {
   const [isShown, setIsShown] = useState(0);
-  const imageRef = useRef();
+  // const imageRef = useRef();
 
-  useEffect(() => {
-    gsap.from(imageRef.current, {
-      opacity: 0.5,
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.from(imageRef.current, {
+  //     opacity: 0.5,
+  //   });
+  // }, []);
 
   return (
     <div className="outter-container">
@@ -86,7 +86,7 @@ const Avatar = () => {
 
         <img
           className="avatar__image"
-          ref={imageRef}
+          // ref={imageRef}
           src={avatarData[isShown].imgUrl}
           alt="my avatar images"
         />

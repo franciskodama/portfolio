@@ -51,6 +51,13 @@
   z-index: 5;
 }
 
+.avatar__image--active {
+  opacity: 1;
+}
+
+
+
+
 /* ------ SKILLS TXT ---------- */
 
 .avatar__skills-wrapper {

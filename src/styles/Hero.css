@@ -41,6 +41,20 @@
 
 /* ------ TYPE EFFECT ------ */
 
+.hero__scroll {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 40px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ------ TYPE EFFECT ------ */
+
 .hero__typing-effect {
   width: 100%;
   animation: typing 2s steps(18), effect 0.5s step-end infinite alternate;
@@ -84,7 +98,7 @@
 
 /* ====================================
             MEDIA QUERY
-    ======================================= */
+======================================= */
 
     @media only screen and (width > 20em) {
     }

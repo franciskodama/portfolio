@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Reason = () => {
   const originalMessageBright =
-    ".this portfolio has been built to showcase my variety of skills from creativity to code ";
+    " this portfolio has been built to showcase my variety of skills from creativity to code ";
   const originalMessageDark =
     ".click on the eye below to know more about each page";
   const arrOfLettersBright = Array.from(originalMessageBright);
@@ -60,7 +60,7 @@ const Reason = () => {
         scrub: true,
         pin: true,
       },
-      duration: 0.5,
+      duration: 1,
       x: "1000",
       stagger: 0.01,
       yoyo: true,
@@ -74,15 +74,16 @@ const Reason = () => {
         scrub: true,
         pin: true,
       },
-      duration: 0.5,
+      duration: 1,
       x: "-1000",
       stagger: 0.01,
       yoyo: true,
+      ease: "power1.inOut",
     });
   }, []);
 
   return (
-    <section className="section section--reason">
+    <section className="section section--reason" id="reason">
       <div className="reason__grid" ref={gridRef}>
         {createGrid()}
       </div>

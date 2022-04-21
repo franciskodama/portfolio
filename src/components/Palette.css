@@ -1,18 +1,15 @@
 .color {
  position: absolute;
- top: 45em;
+ top: 50%;
  right: 5%;    
  z-index: 2;
 }
 
-.color__square-first {
-    background-color: var(--third-color);
-}
 
 .color__square-first {
     width: 40px;
     height: 40px;
-    background-image: url(../assets/images/color-palette.svg);
+    background-image: url(../assets/images/ico-brush.svg);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -48,7 +45,7 @@
     width: 12px;
     height: 12px;
     margin: 0.1em 0.1em;
-    border: 0.5px solid var(--bright-color);
+    border: 1px solid var(--bright-color);
 }
 
 .color-one {

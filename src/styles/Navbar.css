@@ -18,6 +18,11 @@
   padding: 0.8em 0;
   width: 120px;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar__logo:hover {
+ transform: scale(1.03);
 }
 
 /* ------ NAV BAR ------ */

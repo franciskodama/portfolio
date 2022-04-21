@@ -1,17 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import "../styles/Why.css";
+import "../styles/WhyMe.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Why = () => {
-  const whyRef = useRef();
+const WhyMe = () => {
+  const whyMeRef = useRef();
 
   useEffect(() => {
-    gsap.to(whyRef.current, {
+    gsap.to(whyMeRef.current, {
       scrollTrigger: {
-        trigger: whyRef.current,
+        trigger: whyMeRef.current,
         toggleActions: "restart pause reverse pause",
         start: "top",
         end: "bottom",
@@ -26,9 +26,9 @@ const Why = () => {
   });
 
   return (
-    <section className="section section--why" id="why">
+    <section className="section section--whyme" id="whyme">
       <div className="container">
-        <h1 className="why__title" ref={whyRef}>
+        <h1 className="whyme__title" ref={whyMeRef}>
           WHY ME?
         </h1>
       </div>
@@ -36,4 +36,4 @@ const Why = () => {
   );
 };
 
-export default Why;
+export default WhyMe;

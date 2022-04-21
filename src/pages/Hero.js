@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-scroll";
 import Video from "../assets/images/hero-bg.mp4";
+import Scroll from "../assets/images/ico-scroll.svg";
+
 import "../styles/Hero.css";
 import { gsap } from "gsap";
 
@@ -17,7 +20,7 @@ const Hero = () => {
     });
     gsap.from(q(".hero__title"), {
       delay: 1,
-      x: "-120%",
+      x: -2000,
       ease: "elastic",
       delay: 2.5,
 
@@ -62,6 +65,10 @@ const Hero = () => {
           <p className="hero__paragraphs">Based in Ottawa, ON - Canada.</p>
         </div>
       </div>
+
+      <Link to="reason" spy={true} smooth={true} offset={-150} duration={500}>
+        <img src={Scroll} className="hero__scroll" />
+      </Link>
     </section>
   );
 };

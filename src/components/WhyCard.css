@@ -56,13 +56,6 @@
 
 /* ----- BUTTON ANIMATION ----- */
 
-/* .why-toggle__label:hover,
-.why-toggle__label:focus,
-.why-toggle__label:active {
-  display: block;
-  transform: translate(10px);
-} */
-
 @keyframes icon-shake {
   50% {
     transform: translateX(2px) rotate(3deg);
