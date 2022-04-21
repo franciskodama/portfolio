@@ -16,57 +16,19 @@
   top: -14em;
   left: calc(100vw - 100%);
   z-index: 10;
-  animation-name: weather-appear;
-  animation-duration: 40s;
-  animation-timing-function: ease;
-  animation-iteration-count: 10;
-  animation-fill-mode: both;
+  animation: weather-appear 6s ease-in-out 30;
 }
 
 @keyframes weather-appear {
-	0% {
-		transform: translate(0);
-	}
-
-	10% {
-		transform: translate(-10px, -10px);
-	}
-
-	20% {
-		transform: translate(10px, -10px);
-	}
-
-	30% {
-		transform: translate(-10px, 10px);
-	}
-
-	40% {
-		transform: translate(10px, 10px);
-	}
-
-	50% {
-		transform: translate(-10px, -10px);
-	}
-
-	60% {
-		transform: translate(10px, -10px);
-	}
-
-	70% {
-		transform: translate(-10px, 10px);
-	}
-
-	80% {
-		transform: translate(-10px, -10px);
-	}
-
-	90% {
-		transform: translate(10px, -10px);
-	}
-
-	100% {
-		transform: translate(0);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 /* ---- GRID ---- */
@@ -116,7 +78,7 @@
   font-size: 0.9rem;
   width: 20em;
   color: var(--bright-color);
-  background-color: var(--dark-color);
+  background-color: var(--third-color);
   padding: 0.5em;
   text-align: center;
   animation-name: appear;

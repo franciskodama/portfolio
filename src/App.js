@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "../src/styles/reset.css";
 import "../src/styles/fonts.css";
 import "./App.css";

@@ -30,7 +30,7 @@ const Card = ({ project }) => {
   };
 
   useEffect(() => {
-    console.log(project.id);
+    // console.log(project.id);
   }, [isOpen]);
 
   const handleClickToClose = () => {

@@ -21,6 +21,7 @@
   flex-direction: row;
   text-align: center;
   gap: 0.5em;
+  /* width: 22em; */
 }
 
 .avatar__icons-title {
@@ -48,53 +49,49 @@
   margin-top: 1em;
   width: 22em;
   z-index: 5;
+  /* animation: myAnim 2s ease 0s 1 normal forwards; */
 }
-
-.avatar__image--active {
-  animation: imageChange 1.5s ease-in-out 0s 1 normal forwards;
-}
- 
-@keyframes imageChange {
+/* 
+@keyframes myAnim {
 	0% {
+		animation-timing-function: ease-out;
 		transform: scale(1);
 		transform-origin: center center;
-    opacity: 0.5;
 	}
 
 	10% {
 		animation-timing-function: ease-in;
-		transform: scale(0.96);
+		transform: scale(0.91);
 	}
 
 	17% {
 		animation-timing-function: ease-out;
-		transform: scale(0.99);
-    opacity: 0.8;
+		transform: scale(0.98);
 	}
 
 	33% {
 		animation-timing-function: ease-in;
-		transform: scale(0.94);
+		transform: scale(0.87);
 	}
 
 	45% {
 		animation-timing-function: ease-out;
 		transform: scale(1);
-    opacity: 1;
 	}
-}
+} */
 
+/* 
+
+.avatar__image--active {
+  opacity: 1;
+}
+ */
 
 /* ------ SKILLS TXT ---------- */
 
 .avatar__skills-wrapper {
   grid-column: 2/3;
   grid-row: 5/6;
-}
-
-.avatar__skills-wrapper--active {
-  animation: imageChange 1.5s ease-in-out 0s 1 normal forwards;
-
 }
 
 .avatar__skills-title {
@@ -113,8 +110,8 @@
 }
 
 /* --- SPLINE 3D AVATAR --- */
-
 /* 
+ 
 iframe {
   position: relative;
   z-index: 0;
@@ -132,6 +129,7 @@ iframe {
   z-index: 1;
 }  */
 
+
 /* ====================================
             MEDIA QUERY
 ======================================= */
@@ -140,50 +138,57 @@ iframe {
 }
 
 @media only screen and (width > 48em) {
-  .inner-container {
-    grid-template-columns: 1fr 62px 1em 412px 1fr;
-    grid-template-rows: 5em auto auto 2em 8em 5em;
-  }
-    
-  .avatar__icons-wrapper {
-    grid-column: 2/3;
-    grid-row: 3/4;
-    flex-direction: column;
-    width: 62px;
-  }
 
-  .avatar__icon {
-    width: 4em;
-  }
+.inner-container {
+  grid-template-columns: 1fr 62px 1em 412px 1fr;
+  grid-template-rows: 5em auto auto 2em 8em 5em;
+}
+  
+.avatar__icons-wrapper {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  flex-direction: column;
+  width: 62px;
+}
 
-  .avatar__icons-title {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin-bottom: 0.5em;
-  }
-  .avatar__image {
-    grid-row: 3/4;
-    grid-column: 4/5;
-    width: 25.75em;
-    margin-top: 0;
-  }
+.avatar__icon {
+  width: 4em;
+}
 
-  .avatar__skills-wrapper {
-    grid-column: 4/5;
-    grid-row: 5/6;
-  }
+.avatar__icons-title {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-bottom: 0.5em;
+}
+.avatar__image {
+  grid-row: 3/4;
+  grid-column: 4/5;
+  width: 25.75em;
+  margin-top: 0;
+}
 
-  .avatar__skills-title {
-    grid-column: 4/5;
-    grid-row: 2/3;
-  }
+.avatar__skills-wrapper {
+  grid-column: 4/5;
+  grid-row: 5/6;
+}
+
+.avatar__skills-title {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
+
 }
 
 @media only screen and (width > 62em) {
-  .inner-container {
-    grid-template-columns: 2fr 62px 1em 412px 1fr;
-    grid-template-rows: 5em auto auto 2em 8em 5em;
-  }
+
+
+/* ------------- GRID ------------- */
+
+.inner-container {
+  grid-template-columns: 2fr 62px 1em 412px 1fr;
+  grid-template-rows: 5em auto auto 2em 8em 5em;
+}
 
 }
 
