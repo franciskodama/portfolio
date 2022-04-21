@@ -28,12 +28,9 @@
 
 .why-toggle--active {
   background-color: var(--third-color);
-  box-shadow: -1px -1px var(--bright-color), -2px -2px var(--bright-color), -3px -3px var(--bright-color);
+  box-shadow: -1px 1px var(--bright-color), -2px 2px var(--bright-color), -3px 3px var(--bright-color);
   transform: translateX(3px) translateY(3px);
 }
-
-
-
 
 .eye {
   width: 30px;
@@ -99,17 +96,16 @@
 @keyframes card-open {
   0% {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.5) translateX(0) translateY(0);
     transform-origin: 0% 100%;
     box-shadow: 0 0 var(--bright-color), 0 0 var(--bright-color), 0 0 var(--bright-color);
-    transform: translateX(0) translateY(0);
+    
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translateX(4px) translateY(4px);
     transform-origin: 0% 100%;
-    box-shadow: -1px -1px var(--bright-color), -2px -2px var(--bright-color), -3px -3px var(--bright-color);
-    transform: translateX(4px) translateY(4px);
+    box-shadow: -1px 1px var(--bright-color), -2px 2px var(--bright-color), -3px 3px var(--bright-color);
   }
 }
 
