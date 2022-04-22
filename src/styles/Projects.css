@@ -6,6 +6,7 @@
   background-color: var(--dark-color);
   margin-top: 8em;
   padding-bottom: 40em;
+  /* border: 3px solid orange; */
 }
 
 .projects {
@@ -13,6 +14,8 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  /* border: 3px solid green; */
+
 }
 
 .projects__title {
@@ -40,8 +43,7 @@
 
 @media only screen and (width > 62em) {
   .section--projects {
-    margin: 0 auto;
-    width: 70em;
+    width: 100%;
     padding-bottom: 20em;
   }
 }

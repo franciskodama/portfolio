@@ -60,24 +60,16 @@
 		transform-origin: center center;
     opacity: 0.5;
 	}
-
 	10% {
 		animation-timing-function: ease-in;
 		transform: scale(0.96);
 	}
-
 	17% {
 		animation-timing-function: ease-out;
 		transform: scale(0.99);
     opacity: 0.8;
 	}
-
-	33% {
-		animation-timing-function: ease-in;
-		transform: scale(0.94);
-	}
-
-	45% {
+  45% {
 		animation-timing-function: ease-out;
 		transform: scale(1);
     opacity: 1;

@@ -232,20 +232,12 @@ const About = () => {
                 <label htmlFor="hybrid">Hybrid</label>
               </form>
 
-              <Link
-                to="bag"
-                spy={true}
-                smooth={true}
-                offset={-150}
-                duration={500}
-              >
-                <Button
-                  className="btn btn--dark"
-                  onClick={handleClickAddToTeam}
-                  text="add to my team"
-                  align="flex-start"
-                />
-              </Link>
+              <Button
+                className="btn btn--dark"
+                onClick={handleClickAddToTeam}
+                text="add to my team"
+                align="flex-start"
+              />
 
               <p
                 className={

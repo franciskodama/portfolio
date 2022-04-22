@@ -454,7 +454,6 @@ margin-top: 0.5em;
 
 .modal {
   right: 50px;
-  top: 96px;
   padding: 2em 1em 2em 2em;
   height: 19em;
   width: 23.5em;
@@ -523,6 +522,9 @@ margin-top: 0.5em;
   margin-bottom: 0em;
 }
 
+.modal {
+  top: 94px;
+}
 
 }
 

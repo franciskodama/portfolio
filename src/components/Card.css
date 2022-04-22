@@ -1,10 +1,11 @@
 .card {
- margin: 0.5em;
- animation: card-float 5s ease-in-out 30;
- animation-direction: alternate-reverse;
+  position: relative;
+  margin: 0.5em;
+  animation: card-float 5s ease-in-out 30;
+  animation-direction: alternate-reverse;
 }
 
-@keyframes card-float {
+/* @keyframes card-float {
 	0%,
 	100% {
 		transform: translateX(0%);
@@ -12,25 +13,25 @@
 	}
 
 	15% {
-		transform: translateX(-30px) rotate(-6deg);
+		transform: translateX(-10px) rotate(-3deg);
 	}
 
 	30% {
-		transform: translateX(15px) rotate(6deg);
+		transform: translateX(7px) rotate(3deg);
 	}
 
 	45% {
-		transform: translateX(-15px) rotate(-3.6deg);
+		transform: translateX(-7px) rotate(-1.6deg);
 	}
 
 	60% {
-		transform: translateX(9px) rotate(2.4deg);
+		transform: translateX(4px) rotate(1deg);
 	}
 
 	75% {
-		transform: translateX(-6px) rotate(-1.2deg);
+		transform: translateX(-3px) rotate(-1deg);
 	}
-} 
+}  */
 
 /* --------------------------- */
 /* ------- FRONT CARD -------- */
@@ -102,10 +103,13 @@
   font-size: 2.25rem;
   line-height: 2.25rem;
   padding-bottom: 0.1em;
+  text-transform: uppercase;
 }
 
 .card-front__title--red {
+  text-transform: lowercase;
   color: var(--third-color);
+  font-family: var(--main-font-semibold);
   font-size: 1.8rem;
 }
 
@@ -124,24 +128,195 @@
   margin-top: 1.5em;
 }
 
-
 /* --------------------------- */
 /* -------- BACK CARD -------- */
 /* --------------------------- */
 
 .card-back {
-  display: none;
-  width: 22em;
-  background-color: var(--bright-color);
-  padding: 0.2em 1em 1em 1em;
-  margin: 2em 0;
-  border: 1px solid rgb(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: all 0.2s ease;
+  display: flex;
+  width: 100vw;
   color: var(--dark-color);
 }
 
-/* ------- HEADER ------- */
+.card-back__background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  max-width: 80em;
+  height: 60%;
+  margin: 0 auto;
+  padding: 5em 0;
+  animation: open-back-card 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+ @keyframes open-back-card {
+  0% {
+    transform: translateY(-150px) translateZ(130px) rotateX(-90deg);
+    transform-origin: top center;
+  }
+  100% {
+    transform: translateY(0) translateZ(0) rotateX(0deg);
+    transform-origin: top center;
+  }
+}
+
+.card-back__close {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  width: 32px;
+  cursor: pointer;
+}
+
+.card-back__first-container,
+.card-back__second-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding-bottom: 1em;
+}
+
+.card-back__first-wrapper, 
+.card-back__second-wrapper {
+  width: 27em;
+}
+
+.card-back__first-wrapper {
+  margin-left: 5em;
+}
+
+.card-back__second-wrapper {
+  margin-right: 5em;
+}
+
+/* ------- FIRST CONTAINER ------- */
+
+.card-back__main-title {
+  font-family: var(--main-font-heavy);
+  font-size: 3rem;
+  color: var(--dark-color);
+  line-height: 4rem;
+  text-transform: capitalize;
+}
+
+.card-back__main-title span {
+  text-transform: lowercase;
+  color: var(--bright-color);
+}
+
+.card-back__year{
+  color: var(--bright-color);
+  font-family: var(--main-font-semibold);
+  font-size: 1.5rem;
+  margin-bottom: 2em;
+}
+
+.card-back__image {
+  display: block;
+  width: 25em;
+  height: 35em;
+  margin-left: 2em;
+  box-shadow: -2em 2em rgb(0, 0, 0, 0.1);
+}
+
+.card-back__visit {
+  position: relative;
+  font-family: var(--main-font-semibold);
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--bright-color);
+  margin-top: 3em;
+  cursor: pointer;
+  text-align: end;
+}
+
+.card-back__visit::after {
+  position: absolute;
+  bottom: -0.1em;
+  right: 0;
+  content: "";
+  width: 7.4rem;
+  height: 1px;
+  color: var(--bright-color);
+  margin-top: 5em;
+  cursor: pointer;
+  text-align: end;
+  border-bottom: 2px solid var(--bright-color);
+}
+
+/* ------- SECOND CONTAINER ------- */
+
+.card-back__category {
+  color: var(--bright-color);
+  font-family: var(--main-font-semibold);
+  font-size: 1.25rem;
+  text-align: right;
+  margin-top: 3.3em;
+  margin-bottom: 2.5em;
+}
+
+.card-back__title {
+  font-family: var(--main-font-regular);
+  font-size: 1.2rem;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.card-back__title {
+  font-family: var(--main-font-heavy);
+  font-size: 1.2rem;
+}
+
+.card-back__text {
+  width: 35ch;
+}
+
+/* .card--active .card-front {
+  display: flex;
+}
+
+.card--active .card-back {
+  display: block;
+} */
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+  .card {
+    margin: 0 2em;
+  }
+
+  .card-front {
+    margin: 3em 0 2em 0;
+  }
+}
+
+@media only screen and (width > 62em) {
+}
+
+@media only screen and (width > 75em) {
+  .card {
+    margin: 2em;
+  }
+
+  .card-front {
+    margin: 2em 0 0 0;
+  }
+}
+
+
+
+
+/* 
+
 
 .card-back__header {
   display: flex;
@@ -161,14 +336,12 @@
   width: 32px;
 }
 
-/* ------- IMAGE ------- */
 
 .card-back__image {
   display: block;
   width: auto;
 }
 
-/* ----- MAIN TITLE ----- */
 
 .card-back__main-title {
   font-family: var(--main-font-semibold);
@@ -186,7 +359,6 @@
   font-family: var(--main-font-regular);
 }
 
-/* ------- INFO AREA -------- */
 
 .card-back__info-wrapper {
   display: flex;
@@ -194,7 +366,6 @@
   padding: 0.5em;
 }
 
-/* ------ PARAGRAPHS ------- */
 
 .card-back__title {
   font-family: var(--main-font-regular);
@@ -218,7 +389,6 @@
   background-image: url(../assets/images/card-icon-robot.svg);
 }
 
-/* ----- VISIT PROJECT ----- */
 
 .card-back__visit {
   font-family: var(--main-font-regular);
@@ -238,7 +408,6 @@
   background-size: 20px;
 }
 
-/* ----- CARD ACTIVE ----- */
 
 .card--active .card-front {
   display: flex;
@@ -246,51 +415,4 @@
 
 .card--active .card-back {
   display: block;
-}
-
-
-/* ====================================
-            MEDIA QUERY
-======================================= */
-
-@media only screen and (width > 20em) {
-}
-
-@media only screen and (width > 48em) {
-  .card {
-    margin: 0 2em;
-  }
-
-  .card-front {
-    margin: 3em 0 2em 0;
-  }
-
-  .card-back {
-    width: 31em;
-  }
-
-  .card-back__category {
-    padding-bottom: 0;
-  }
-
-  .card-back__info-wrapper {
-    padding: 0.7em;
-  }
-
-  .icon-visit {
-    background-position: 23em;
-  }
-}
-
-@media only screen and (width > 62em) {
-}
-
-@media only screen and (width > 75em) {
-  .card {
-    margin: 2em;
-  }
-
-  .card-front {
-    margin: 2em 0 0 0;
-  }
-}
+} */

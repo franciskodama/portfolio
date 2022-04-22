@@ -73,11 +73,11 @@ const App = () => {
       <About />
       <Projects />
       <Api />
-      <WhyMe />
+      {/* <WhyMe /> */}
 
       {/* <CleanCode /> */}
 
-      <Xray />
+      {/* <Xray /> */}
       <Contact />
       <Footer />
     </div>
