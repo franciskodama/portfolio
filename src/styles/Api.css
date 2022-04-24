@@ -16,7 +16,7 @@
   top: -14em;
   left: calc(100vw - 100%);
   z-index: 10;
-  animation: weather-appear 6s ease-in-out 30;
+  animation: weather-appear 6s ease-in-out infinite;
 }
 
 @keyframes weather-appear {

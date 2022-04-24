@@ -46,7 +46,7 @@ export const whyData = {
     titleFour: "",
     textFour: "",
     observation: "",
-    bottom: "20%",
+    bottom: "5%",
     left: "50%",
   },
   api: {

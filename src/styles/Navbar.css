@@ -1,7 +1,7 @@
 .section--header {
   position: fixed;
   width: 100%;
-  z-index: 200;
+  z-index: 100;
   background-color: var(--dark-color);
   overflow: visible;
 }
@@ -43,6 +43,7 @@
 .navbar__menu,
 .navbar__close {
   width: 40px;
+  cursor: pointer;
 }
 
 .navbar__extended {

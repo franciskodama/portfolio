@@ -72,9 +72,9 @@ const App = () => {
       <Reason />
       <About />
       <Projects />
+      <WhyMe />
       <Api />
 
-      {/* <WhyMe /> */}
       {/* <CleanCode /> */}
       {/* <Xray /> */}
 

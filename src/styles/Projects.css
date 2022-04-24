@@ -1,12 +1,8 @@
 .section--projects {
   position: relative;
-  z-index: 10;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  margin-bottom: -10vw;
   background-color: var(--dark-color);
   margin-top: 8em;
-  padding-bottom: 40em;
-  /* border: 3px solid orange; */
+  padding-bottom: 15em;
 }
 
 .projects {
@@ -14,8 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  /* border: 3px solid green; */
-
+  align-items: center;
 }
 
 .projects__title {
@@ -27,7 +22,6 @@
   margin-bottom: 1em;
 }
 
-
 /* ====================================
             MEDIA QUERY
 ======================================= */
@@ -37,14 +31,17 @@
 
 @media only screen and (width > 48em) {
   .section--projects {
-    padding-bottom: 26em;
+    padding-bottom: 10em;
   }
 }
 
 @media only screen and (width > 62em) {
   .section--projects {
     width: 100%;
-    padding-bottom: 20em;
+    padding-bottom: 15em;
+  }
+  .section--projects .container {
+    width: 80%;
   }
 }
 

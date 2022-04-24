@@ -30,6 +30,10 @@
   background-color: var(--dark-color);
 }
 
+.reason__letter-bright:hover,
+.reason__letter-dark:hover {
+}
+
 .reason__letter-dark {
   color: var(--third-color);
 }

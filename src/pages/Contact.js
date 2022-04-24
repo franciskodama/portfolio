@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import WhyCard from "../components/WhyCard";
-import { whyData } from "../data/Data";
+import axios from "axios";
 import "../styles/Contact.css";
-import Button from "../components/Button";
+import { whyData } from "../data/Data";
 import { contactData } from "../data/Data";
+import WhyCard from "../components/WhyCard";
+import Button from "../components/Button";
+
+// ======================================
 
 const dropSpace = {
   drag: {
@@ -55,27 +58,26 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 const Contact = () => {
-  const [status, setStatus] = useState("Submit");
+  // ======================================
+
+  const [sent, setSent] = useState(false);
+  const [text, setText] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
-    setStatus("Submit");
-    let result = await response.json();
-    alert(result.status);
+    setSent(true);
+    console.log(
+      columns.drop.items.map((element) => element.content) +
+        message +
+        name +
+        email
+    );
+    try {
+      await axios.post("http://localhost:4000/send_mail", {
+        text,
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   // ======================================
@@ -89,14 +91,7 @@ const Contact = () => {
     setMessage("");
   };
 
-  const handleClickSendMessage = () => {
-    console.log(
-      columns.drop.items.map((element) => element.content) +
-        message +
-        name +
-        email
-    );
-  };
+  // ======================================
 
   return (
     <section className="section section--contact" id="contact">
@@ -213,13 +208,27 @@ const Contact = () => {
               align="flex-start"
             />
 
-            <Button
-              onClick={handleClickSendMessage}
-              text="send"
-              align="flex-end"
-            />
+            {/* ================ */}
+
+            {/* ================ */}
+
+            {/* <Button onClick={handleSubmit} text="send" align="flex-end" /> */}
           </div>
         </form>
+
+        {!sent ? (
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+
+            <button type="submit">Send Email</button>
+          </form>
+        ) : (
+          <h1>Email Sent</h1>
+        )}
       </div>
       <WhyCard
         titleOne={whyData.contact.titleOne}

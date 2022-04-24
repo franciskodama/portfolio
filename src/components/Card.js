@@ -11,9 +11,6 @@ const Card = ({ project }) => {
     5: false,
   });
 
-  // const refCardFront = useRef(null);
-  // const refCardBack = useRef(null);
-
   const handleClickToOpen = () => {
     handleClickToClose();
     setIsOpen((prev) => ({ ...prev, [project.id]: true }));
@@ -35,7 +32,6 @@ const Card = ({ project }) => {
 
       <div
         className="card-front"
-        // ref={refCardFront}
         onClick={handleClickToOpen}
         style={{
           display: isOpen[project.id] ? "none" : "block",
@@ -61,10 +57,10 @@ const Card = ({ project }) => {
 
       <div
         className="card-back"
-        // ref={refCardBack}
         style={{
           display: isOpen[project.id] ? "block" : "none",
         }}
+        onClick={handleClickToClose}
       >
         <div
           className="card-back__background"

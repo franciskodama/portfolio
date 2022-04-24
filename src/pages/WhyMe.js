@@ -7,30 +7,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 const WhyMe = () => {
   const whyMeRef = useRef();
+  const q = gsap.utils.selector(whyMeRef);
 
   useEffect(() => {
-    gsap.to(whyMeRef.current, {
+    gsap.from(q(".whyme__letter"), {
       scrollTrigger: {
-        trigger: whyMeRef.current,
+        trigger: q(".whyme__letter"),
         toggleActions: "restart pause reverse pause",
-        start: "top",
-        end: "bottom",
-        markers: true,
+        start: "top bottom",
+        end: "top bottom",
         scrub: true,
-        pin: true,
       },
-      x: 100,
-      rotation: 360,
-      duration: 3,
+      x: "3000px",
+      duration: 4,
+      // ease: "elastic",
     });
   });
 
   return (
     <section className="section section--whyme" id="whyme">
       <div className="container">
-        <h1 className="whyme__title" ref={whyMeRef}>
-          WHY ME?
-        </h1>
+        <ul className="whyme__title" ref={whyMeRef}>
+          <li className="whyme__letter">W</li>
+          <li className="whyme__letter">H</li>
+          <li className="whyme__letter">Y</li>
+          <li className="whyme__letter">M</li>
+          <li className="whyme__letter">E</li>
+          <li className="whyme__letter">?</li>
+        </ul>
       </div>
     </section>
   );
