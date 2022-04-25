@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../components/Card.css";
 import IconClose from "../assets/images/card-icon-close-white.svg";
+import Line from "../assets/images/line-cracked.svg";
 
 const Card = ({ project }) => {
   const [isOpen, setIsOpen] = useState({
@@ -95,6 +96,9 @@ const Card = ({ project }) => {
               ) : null}
             </div>
           </div>
+
+          <img src={Line} alt="line separation" className="card-back__line" />
+
           <div className="card-back__second-container">
             <div className="card-back__second-wrapper">
               <p className="card-back__category">{project.category}</p>
@@ -120,57 +124,3 @@ const Card = ({ project }) => {
 };
 
 export default Card;
-
-// -------------------------------------
-// Hook to catch click outside of a Component
-// -------------------------------------
-
-// const useOutsideAlerter = (ref) => {
-//   useEffect(() => {
-//     const handleClickOutsideCard = (e) => {
-//       if (ref.current && !ref.current.contains(e.target)) {
-//         alert("clicked outside");
-//       }
-//     };
-//     document.addEventListener("mousedown", handleClickOutsideCard);
-//     return () => {
-//       document.removeEventListener("mousedown", handleClickOutsideCard);
-//     };
-//   }, [ref]);
-// };
-// useOutsideAlerter(refCardBack);
-
-// -------------------------------------
-// Hook to catch click outside of a Component | Second try
-// -------------------------------------
-
-// const useOutsideAlerter = (ref) => {
-//   useEffect(() => {
-//     const handleClickOutsideCard = (e) => {
-//       if (isOpen && !ref.current.contains(e.target)) {
-//         refCardBack.current.style.display = "none";
-//         refCardFront.current.style.display = "block";
-//       }
-//     };
-//     document.addEventListener("mousedown", handleClickOutsideCard);
-//     return () => {
-//       document.removeEventListener("mousedown", handleClickOutsideCard);
-//     };
-//   }, [ref]);
-// };
-
-// useOutsideAlerter(refCardBack);
-
-// -------------------------------------
-// Hook to see previous value
-// -------------------------------------
-
-// const usePrevious = (value) => {
-//   const ref = useRef();
-//   useEffect(() => {
-//     ref.current = value;
-//   }, [value]);
-//   return ref.current;
-// };
-
-// const prevState = usePrevious(isOpen);

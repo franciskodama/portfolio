@@ -105,7 +105,6 @@
   width: 100%;
   color: var(--dark-color);
   background-color: rgba(0, 0, 0, 0.7);
-  /* border: 5px solid orange; */
   overflow: scroll;
 }
 
@@ -148,33 +147,42 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 1em;
-  /* border: 2px dashed blue; */
   padding-bottom: 5em;
-}
-
-.card-back__second-container {
-  border-top: 2px dashed var(--dark-color) ;
 }
 
 .card-back__first-wrapper, 
 .card-back__second-wrapper {
-  /* border: 3px solid green; */
   width: 18em;
   align-self: center;
 }
 
-.card-back__first-wrapper {
+.card-back__line {
+  display: block;
+  width: 60em;
+  animation: line-movement 25s infinite linear;
+  padding: 1em;
 }
 
+ @keyframes line-movement {
+  0% {
+        transform: translateX(-40%) scale(2);
+  }
 
-.card-back__second-wrapper {
-}
+  50% {
+    transform: translateX(0%) scale(2);
+  }
+
+  100% {
+    transform: translateX(40%) scale(2);
+  }
+ }
+
 
 /* ------- FIRST CONTAINER ------- */
 
 .card-back__main-title {
   font-family: var(--main-font-heavy);
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: var(--dark-color);
   line-height: 4rem;
   text-transform: capitalize;
@@ -188,7 +196,7 @@
 .card-back__year {
   color: var(--bright-color);
   font-family: var(--main-font-semibold);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1em;
 }
 
@@ -252,15 +260,6 @@
   width: 30ch;
 }
 
-/* .card--active .card-front {
-  display: flex;
-}
-
-.card--active .card-back {
-  display: block;
-} */
-
-
 /* ====================================
             MEDIA QUERY
 ======================================= */
@@ -310,15 +309,11 @@
   .card-back__second-wrapper {
     width: 22.5em;
   }
-  
+
   .card-back__image {
     width: 20.25em;
     height: 28.85em;
   }
-
-    /* .card-back__main-title {
-    font-size: 3rem;
-  } */
 
   .card-back__text {
     width: 35ch;
@@ -329,8 +324,6 @@
   .card-back__background {
     top: 55%;
   }
-
-
 }
 
 @media only screen and (width > 75em) {
@@ -364,13 +357,9 @@
     width: 50%;
     align-items: center;
   }
-
-  .card-back__first-wrapper {
-    /* margin-left: 5em; */
-  }
-  
-  .card-back__second-wrapper {
-    /* margin-right: 5em; */
+    
+  .card-back__line {
+    display: none;
   }
 
   .card-back__close {
@@ -378,9 +367,13 @@
     top: 3%;
   }
 
+  .card-back__image {
+    width: 22.5em;
+    height: 31em;
+  }
+
   .card-back__category {
     text-align: right;
   }
-
 }
 

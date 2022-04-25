@@ -53,8 +53,8 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 60%;
-  padding: 2.5em 2em 0 2em;
+  width: 75%;
+  padding: 2.5em 2em 0 3em;
   background-color: var(--third-color);
 }
 
@@ -71,7 +71,7 @@
   margin-bottom: 1.5em;
   margin-right: 1em;
   font-family: var(--main-font-thin);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 /* ------ MOUSE OVER ------ */
