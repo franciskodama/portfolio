@@ -37,49 +37,38 @@
 	0% {
 		transform: scale3d(1, 1, 1) translateY(0) rotate(0deg);
 		transform-origin: 50% 50%;
-
 	}
-
     10% {
-		transform: rotate(8deg);
+		transform: rotate(4deg);
 	}
-
 	20%,
 	60% {
-		transform: rotate(-10deg);
+		transform: rotate(-5deg);
 	}
-
 	30% {
-		transform: scale3d(0.75, 1.25, 1) rotate(10deg);
+		transform: scale3d(0.75, 1.25, 1) rotate(5deg);
 	}
-
 	40% {
-		transform: scale3d(1.25, 0.75, 1) rotate(-10deg);
+		transform: scale3d(1.25, 0.75, 1) rotate(-5deg);
 	}
-
 	50% {
-		transform: scale3d(0.85, 1.15, 1) translateY(-10px) rotate(10deg);
+		transform: scale3d(0.85, 1.15, 1) translateY(-10px) rotate(5deg);
 	}
-
 	65% {
 		transform: scale3d(1.05, 0.95, 1);
 	}
-
 	75% {
-		transform: scale3d(0.95, 1.05, 1) rotate(10deg);
+		transform: scale3d(0.95, 1.05, 1) rotate(5deg);
 	}
     80% {
-		transform: rotate(-8deg);
+		transform: rotate(-4deg);
 	}
-
 	90% {
-		transform: rotate(8deg);
+		transform: rotate(4deg);
 	}
-
 	100% {
 		transform: scale3d(1, 1, 1) translateY(0);
 		transform-origin: 50% 50%;
-
 	}
 }
 

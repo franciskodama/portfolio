@@ -76,7 +76,7 @@ const App = () => {
       <Api />
 
       {/* <CleanCode /> */}
-      {/* <Xray /> */}
+      <Xray />
 
       <Contact />
       <Footer />
