@@ -66,7 +66,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <Link to="reason" spy={true} smooth={true} offset={-150} duration={500}>
+      <Link to="reason" spy={true} smooth={true} offset={-150} duration={2000}>
         <img src={Scroll} className="hero__scroll" />
       </Link>
     </section>

@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/Xray.css";
+import MagnifyingGlass from "../assets/images/code-check.svg";
+import Bubble from "../assets/images/code-bubble.png";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
 import { gsap } from "gsap";
@@ -24,7 +26,6 @@ const CleanCode = () => {
   //     duration: 2,
   //     x: "-300px",
   //     stagger: "0.1",
-  //     opacity: 0,
   //     scale: 0,
   //   });
   //   gsap.from(qQuote(".code__words--even--inverse"), {
@@ -55,7 +56,6 @@ const CleanCode = () => {
   return (
     <section
       id="code"
-      onClick={handleClick}
       className={
         !showBackground
           ? "section section--code"
@@ -83,7 +83,28 @@ const CleanCode = () => {
             Author of Clean Code
           </p>
         </div>
-
+        <div className="code__icon-wrapper" onClick={handleClick}>
+          <img
+            className="code__icon"
+            src={MagnifyingGlass}
+            alt="magnifying glass icon"
+          />
+          <p
+            className="code__icon-cta"
+            style={{ display: !showBackground ? "block" : "none" }}
+          >
+            CLICK HERE TO CHECK MY CODE
+          </p>
+          <p
+            className="code__icon-cta--bright"
+            style={{
+              display: showBackground ? "block" : "none",
+            }}
+          >
+            CLICK HERE AGAIN TO RETURN
+          </p>
+        </div>
+        <img className="code__bubble" src={Bubble} alt="bubble image" />
         <ul
           className="code__words-wrapper"
           style={{ display: showBackground ? "none" : "block" }}
