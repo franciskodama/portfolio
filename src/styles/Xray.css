@@ -1,133 +1,151 @@
 .section--code {
   position: relative;
   background: var(--dark-color);
-  background-color: rgb(67, 67, 67);
-  display: flex;
-  height: auto;
-  cursor: url(../assets/images/code-pointer.png), auto;
+  cursor: url(../assets/images/code-pointer.svg), auto;
 }
 
-.code__background {
-background-color: orange;
-}
-
-/* .section--code .container {
-  background-image: url('../assets/images/xray.jpg');
-  background-size: cover;
-}  */
-
-/* ------- X-RAY EFFECT ------- */
-
-/* 
-.image-be-masked {
-  width: 100%;
-  height: 100%;
-  background-image: url('../assets/images/xray.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  mask-image: url('../assets/images/mask-circle.png');
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
-
-.image-be-masked:hover {
-  mask-position: -10px -10px;
-} */
-
-/* 
-
-.mousearea {
-  position: relative;
-  height: 50em;
-  --maskX: 0;
-  --maskY: 0;
-  /* border: 1px red solid; */
-/* 
-.circle {
-  display: block;
-  position: absolute;
-  width: 300px;
-  top: calc(var(--maskY) - 150px);
-  left: calc(var(--maskX) - 150px);
-  transition: all 0.8s cubic-bezier(0.165,0.84,0.44,1);
-}  */
-
-/* .text-content {
-  background: pink;
-  color: white;
-  height: 100vh;
-}
-
-.mask-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.mask {
-  width: 50vh;
-  height: 50vh;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.mask-content {
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  background-image: url('../assets/images/mask-circle.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:100vh;
-  color:#ffffff;
-} */
-
-
-/* ------- QUOTE ------- */
-
-.code__quote-wrapper {
+.section--code .container {
   display: flex;
   flex-direction: column;
-  width: 55em;
-  text-align: right;
-  margin: 10em 0;
-  margin-right: 5em;
+  padding-bottom: 10em;
+  align-items: center;
+}
+ 
+/* ------- BG IMAGE ------- */
+
+.code__background {
+  background-image: url('../assets/images/xray.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: code-appearance 2s both;
 }
 
-.code--quote,
-.code--robert {
-  font-family: var(--main-font-semibold);
-  text-transform: none;
-}
-
-.code--quote {
-  font-size: 4rem;
-  line-height: 4.5rem;
-}
-
-.code--robert {
-  font-size: 2rem;
-  margin-top: 1em;
-  line-height: 3rem;
-}
-
-.code--author {
-  font-family: var(--main-font-ligth);
+ @keyframes code-appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* ------- WORDS ------- */
 
-.code--words {
-  text-align: center;
-  font-size: 3em;
-  font-family: var(--main-font-semibold);
-  text-transform: uppercase;
+.code__quote-wrapper {
+  align-self: flex-end;
+  margin-right: 2em;
 }
 
-.code--words:last-child {
-  margin-bottom: 5em;
+.code__quote,
+.code__words-wrapper {
+  font-family: var(--main-font-heavy);
+  font-size: 1.5em;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+  text-align: right;
+}
+
+.code__words-wrapper {
+  line-height: 2.3rem; 
+}
+
+.code__quote-wrapper,
+.code__words-wrapper {
+  animation: code-appearance 2s both;
+}
+
+.code__words-wrapper {
+  margin-top: 2em;
+  margin-right: 1.5em;
+}
+
+/* ------- QUOTE TRANSFORM ------- */
+
+.code__words--odd--inverse {
+  transform: skew(-60deg, 30deg) scaleY(.66667);
+  color: var(--bright-color);
+}
+
+.code__words--even--inverse {
+  transform: skew(0deg, 30deg) scaleY(1.33333);
+  color: var(--third-color);
+}
+
+/* ------- WORDS TRANSFORM ------- */
+
+.code__words--odd {
+  transform: skew(60deg, -30deg) scaleY(.66667);
+}
+
+.code__words--even {
+  transform: skew(0deg, -30deg) scaleY(1.33333);
+  color: var(--third-color);
+}
+
+/* ------- QUOTE ------- */
+
+.code__robert,
+.code_author {
+  font-family: var(--main-font-regular);
+  margin-left: 30em;
+}
+
+.code__robert {
+  font-size: 1rem;
+  margin-top: 10em;
+  line-height: 3rem;
+}
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+  .code__quote-wrapper {
+    align-self: flex-end;
+    margin-right: 17em;
+  }
+  
+  .code__quote,
+  .code__words-wrapper {
+  font-size: 2em;
+  line-height: 2.5rem;
+  }
+
+  .code__words-wrapper {
+    margin-top: 5em;
+    margin-right: 0;
+  }
+
+  .code__robert {
+    font-size: 1.5rem;
+    margin-top: 5em;
+    line-height: 2rem;
+  }
+
+  .code__robert,
+  .code_author {
+    margin-left: 5em;
+  }
+
+}
+
+@media only screen and (width > 62em) {  
+}
+
+@media only screen and (width > 75em) {
+  .code__quote,
+  .code__words-wrapper {
+    font-size: 3em;
+    line-height: 3.5rem;
+  }
+
+  .code__robert {
+    font-size: 2rem;
+    margin-top: 2em;
+    line-height: 3rem;
+  }
 }

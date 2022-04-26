@@ -1,65 +1,122 @@
 import React, { useEffect, useRef, useState } from "react";
+import "../styles/Xray.css";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
-import gsap from "gsap";
-import "../styles/Xray.css";
-import background from "../assets/images/xray.jpg";
-import Circle from "../assets/images/mask-circle.png";
-import MaskTest from "../assets/images/mask-test.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const CleanCode = () => {
+  const quoteRef = useRef();
+  const wordsRef = useRef();
+  const qQuote = gsap.utils.selector(quoteRef);
+  const qWords = gsap.utils.selector(wordsRef);
+
+  // useEffect(() => {
+  //   gsap.from(qQuote(".code__words--odd--inverse"), {
+  //     scrollTrigger: {
+  //       trigger: qQuote(".code__words--odd--inverse"),
+  //       toggleActions: "restart pause restart pause",
+  //       start: "center center",
+  //       end: "top top",
+  //       markers: true,
+  //     },
+  //     duration: 2,
+  //     x: "-300px",
+  //     stagger: "0.1",
+  //     opacity: 0,
+  //     scale: 0,
+  //   });
+  //   gsap.from(qQuote(".code__words--even--inverse"), {
+  //     scrollTrigger: {
+  //       trigger: qQuote(".code__words--even--inverse"),
+  //       toggleActions: "restart pause restart pause",
+  //       start: "center center",
+  //       end: "top top",
+  //     },
+  //     duration: 1,
+  //     x: "300px",
+  //     stagger: "0.5",
+  //     opacity: 0,
+  //     scale: 0,
+  //   });
+  // }, []);
+
   const [showBackground, setShowBackground] = useState(false);
 
   const handleClick = () => {
     setShowBackground(!showBackground);
   };
+
+  useEffect(() => {
+    console.log(showBackground);
+  }, [showBackground]);
+
   return (
-    <section className="section section--code" id="code">
+    <section
+      id="code"
+      onClick={handleClick}
+      className={
+        !showBackground
+          ? "section section--code"
+          : "section section--code code__background"
+      }
+      style={{ padding: showBackground && "35em" }}
+    >
       <div className="container">
-        <div className="code" onClick={handleClick}>
-          {showBackground && (
-            <div
-              className="code__background"
-              style={{
-                backgroundImage: `url(${background})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-            ></div>
-          )}
-          <div className="code__quote-wrapper">
-            <blockquote className="code--quote">
-              “Clean code always looks like it was written by <br></br>
-              <span className="red">someone who cares.”</span>
-            </blockquote>
-            <h4 className="code--robert">― Robert C. Martin</h4>
-            <h4 className="code--author">Author of Clean Code</h4>
-          </div>
-
-          <div className="code--words">meticulousness</div>
-          <div className="code--words">easy to read, easey to change</div>
-          <div className="code--words">keep it simple</div>
-          <div className="code--words">don't repeat your self</div>
-          <div className="code--words">naming conventions</div>
-          <div className="code--words">clear and concise</div>
-          <div className="code--words">consistent</div>
-          <div className="code--words">uncomplicate</div>
-          <div className="code--words">BEM (Block-Element-Modifier)</div>
-
-          <WhyCard
-            titleOne={whyData.code.titleOne}
-            textOne={whyData.code.textOne}
-            titleTwo={whyData.code.titleTwo}
-            textTwo={whyData.code.textTwo}
-            titleThree={whyData.code.titleThree}
-            textThree={whyData.code.textThree}
-            titleFour={whyData.code.titleFour}
-            textFour={whyData.code.textFour}
-            observation={whyData.code.observation}
-            bottom={whyData.code.bottom}
-            left={whyData.code.left}
-          />
+        <div
+          className="code__quote-wrapper"
+          style={{ display: showBackground ? "none" : "block" }}
+          ref={quoteRef}
+        >
+          <ul className="code__quote">
+            <li className="code__words--odd--inverse">"Clean code</li>
+            <li className="code__words--even--inverse">always looks like</li>
+            <li className="code__words--odd--inverse">it was written by</li>
+            <li className="code__words--even--inverse">someone who</li>
+            <li className="code__words--odd--inverse">cares."</li>
+          </ul>
+          <p className="code__robert code__words--odd--inverse">
+            ― Robert C. Martin
+          </p>
+          <p className="code_author code__words--odd--inverse">
+            Author of Clean Code
+          </p>
         </div>
+
+        <ul
+          className="code__words-wrapper"
+          style={{ display: showBackground ? "none" : "block" }}
+          ref={wordsRef}
+        >
+          <li className="code__words code__words--odd">meticulousness</li>
+          <li className="code__words code__words--even">
+            easy to read, easy to change
+          </li>
+          <li className="code__words code__words--odd">keep it simple</li>
+          <li className="code__words code__words--even">
+            don't repeat your self
+          </li>
+          <li className="code__words code__words--odd">naming conventions</li>
+          <li className="code__words code__words--even">clear and concise</li>
+          <li className="code__words code__words--odd">consistent</li>
+          <li className="code__words code__words--even">uncomplicate</li>
+          <li className="code__words code__words--odd">B.E.M.</li>
+        </ul>
+
+        <WhyCard
+          titleOne={whyData.code.titleOne}
+          textOne={whyData.code.textOne}
+          titleTwo={whyData.code.titleTwo}
+          textTwo={whyData.code.textTwo}
+          titleThree={whyData.code.titleThree}
+          textThree={whyData.code.textThree}
+          titleFour={whyData.code.titleFour}
+          textFour={whyData.code.textFour}
+          observation={whyData.code.observation}
+          bottom={whyData.code.bottom}
+          left={whyData.code.left}
+        />
       </div>
     </section>
   );

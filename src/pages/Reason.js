@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/Reason.css";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
-import Button from "../components/Button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
