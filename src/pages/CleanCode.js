@@ -1,148 +1,145 @@
 import React, { useEffect, useRef, useState } from "react";
+import "../styles/CleanCode.css";
+import MagnifyingGlass from "../assets/images/code-check.svg";
+import Bubble from "../assets/images/code-bubble.png";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
-import gsap from "gsap";
-import "../styles/CleanCode.css";
-import background from "../assets/images/xray.jpg";
-import Circle from "../assets/images/mask-circle.png";
-import MaskTest from "../assets/images/mask-test.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const CleanCode = () => {
-  // const [ showBackground, setShowBackground ] = useState({show: false})
+  const quoteRef = useRef();
+  const wordsRef = useRef();
+  const qQuote = gsap.utils.selector(quoteRef);
+  const qWords = gsap.utils.selector(wordsRef);
 
-  // const handleClick = () => {
-  //   setShowBackground(showBackground.show ? {show: false} : {show: true})
-  //   if(showBackground.show) {
-  //     document.getElementById('code__xray').style.display = 'block'
-  //   } else {
-  //     document.getElementById('code__xray').style.display = 'none'
-  //   }
-  // }
-
-  // console.clear();
-  // let container = document.querySelector(".container");
-  // let mask = document.querySelector(".mask");
-  // let maskContent = document.querySelector(".mask-content");
-
-  // window.addEventListener("load", init);
-
-  // function init() {
-
-  //   gsap.set(maskContent, {
-  //     width: container.offsetWidth,
-  //     height: container.offsetHeight
+  // useEffect(() => {
+  //   gsap.from(qQuote(".code__words--odd--inverse"), {
+  //     scrollTrigger: {
+  //       trigger: qQuote(".code__words--odd--inverse"),
+  //       toggleActions: "restart pause restart pause",
+  //       start: "center center",
+  //       end: "top top",
+  //       markers: true,
+  //     },
+  //     duration: 2,
+  //     x: "-300px",
+  //     stagger: "0.1",
+  //     scale: 0,
   //   });
-
-  //   container.addEventListener("mousemove", onMove);
-  // }
-
-  // function onMove(e) {
-
-  //   let x = e.pageX - 100;
-  //   let y = e.pageY - 100;
-
-  //   gsap.set(mask, {
-  //     x: x,
-  //     y: y
+  //   gsap.from(qQuote(".code__words--even--inverse"), {
+  //     scrollTrigger: {
+  //       trigger: qQuote(".code__words--even--inverse"),
+  //       toggleActions: "restart pause restart pause",
+  //       start: "center center",
+  //       end: "top top",
+  //     },
+  //     duration: 1,
+  //     x: "300px",
+  //     stagger: "0.5",
+  //     opacity: 0,
+  //     scale: 0,
   //   });
+  // }, []);
 
-  //   gsap.set(maskContent, {
-  //     x: -x,
-  //     y: -y
-  //   });
-  // }
+  const [showBackground, setShowBackground] = useState(false);
 
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  // const [ display, setDisplay ] = useState(false)
-
-  const refArea = useRef();
-  const refCircle = useRef();
-  const maskStyle = {
-    "--maskX": `${position.x}%`,
-    "--maskY": `${position.y}%`,
+  const handleClick = () => {
+    setShowBackground(!showBackground);
   };
 
-  const onMouseMove = (e) => {
-    const width = refArea.current.clientWidth;
-    const height = refArea.current.clientHeight;
-    const oX = (e.nativeEvent.offsetX / width) * 100;
-    const oY = (e.nativeEvent.offsetY / height) * 100;
-    setPosition({ x: oX, y: oY });
-    // setDisplay(true)
-    console.log(`X = ${Math.floor(oX)}`, `Y = ${Math.floor(oY)}`);
-  };
+  useEffect(() => {
+    console.log(showBackground);
+  }, [showBackground]);
 
-  const onMouseOut = (e) => {
-    setPosition({ x: 0, y: 0 });
-    // setDisplay(false)
-    // displayCircle()
-  };
+  // ------------------ BUBBLES ------------------
 
-  // const displayCircle = () => {
-  //   refCircle.style.display = "none"
-  // }
+  const createBubble = () => {
+    const section = document.getElementById("code");
+    const createElement = document.createElement("span");
+    let size = Math.random() * 120;
+    createElement.style.width = 20 + size + "px";
+    createElement.style.height = 20 + size + "px";
+    createElement.style.left = Math.random() * window.innerWidth + "px";
+    section.appendChild(createElement);
+    setTimeout(() => {
+      createElement.remove();
+    }, 6000);
+  };
+  setInterval(createBubble, 500);
 
   return (
-    <section className="section section--code" id="code">
+    <section
+      id="code"
+      className={
+        !showBackground
+          ? "section section--code"
+          : "section section--code code__background"
+      }
+      style={{ padding: showBackground && "35em" }}
+    >
       <div className="container">
         <div
-          className="mousearea"
-          ref={refArea}
-          onMouseMove={onMouseMove}
-          onMouseOut={onMouseOut}
+          className="code__quote-wrapper"
+          style={{ display: showBackground ? "none" : "block" }}
+          ref={quoteRef}
         >
-          <div className="image-be-masked"></div>
-
-          {/* <img src={background} className="image-be-masked" />           */}
-
+          <ul className="code__quote">
+            <li className="code__words--odd--inverse">"Clean code</li>
+            <li className="code__words--even--inverse">always looks like</li>
+            <li className="code__words--odd--inverse">it was written by</li>
+            <li className="code__words--even--inverse">someone who</li>
+            <li className="code__words--odd--inverse">cares."</li>
+          </ul>
+          <p className="code__robert code__words--odd--inverse">
+            ― Robert C. Martin
+          </p>
+          <p className="code_author code__words--odd--inverse">
+            Author of Clean Code
+          </p>
+        </div>
+        <div className="code__icon-wrapper" onClick={handleClick}>
           <img
-            className="circle"
-            ref={refCircle}
-            src={Circle}
-            style={maskStyle}
-            alt=""
+            className="code__icon"
+            src={MagnifyingGlass}
+            alt="magnifying glass icon"
           />
-        </div>
-
-        {/* 
-
-  <div class="text-content">
-    <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h1>
-  </div>
-  
-  <div class="mask-container">
-    <div class="mask">
-      <div class="mask-content">
-        <h1>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h1>
-      </div>
-    </div>    
-  </div> */}
-
-        {/* <div className="code" onClick={handleClick}> */}
-        {/* <div
-            id="code__xray"   
+          <p
+            className="code__icon-cta"
+            style={{ display: !showBackground ? "block" : "none" }}
+          >
+            CLICK HERE TO CHECK MY CODE
+          </p>
+          <p
+            className="code__icon-cta--bright"
             style={{
-              backgroundImage: `url(${background})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-            }}>
-        </div> */}
-
-        {/* <div className="code__quote-wrapper">
-          <blockquote className="code--quote">“Clean code always looks like it was written by <br></br><span className='red' >someone who cares.”</span></blockquote>
-          <h4 className="code--robert">― Robert C. Martin</h4>
-          <h4 className="code--author">Author of Clean Code</h4>
+              display: showBackground ? "block" : "none",
+            }}
+          >
+            CLICK HERE AGAIN TO RETURN
+          </p>
         </div>
-
-        <div className="code--words">meticulousness</div>
-        <div className="code--words">easy to read, easey to change</div>
-        <div className="code--words">keep it simple</div>
-        <div className="code--words">don't repeat your self</div>
-        <div className="code--words">naming conventions</div>
-        <div className="code--words">clear and concise</div>
-        <div className="code--words">consistent</div>
-        <div className="code--words">uncomplicate</div>
-        <div className="code--words">BEM (Block-Element-Modifier)</div> */}
+        <img className="code__bubble" src={Bubble} alt="bubble image" />
+        <ul
+          className="code__words-wrapper"
+          style={{ display: showBackground ? "none" : "block" }}
+          ref={wordsRef}
+        >
+          <li className="code__words code__words--odd">meticulousness</li>
+          <li className="code__words code__words--even">
+            easy to read, easy to change
+          </li>
+          <li className="code__words code__words--odd">keep it simple</li>
+          <li className="code__words code__words--even">
+            don't repeat your self
+          </li>
+          <li className="code__words code__words--odd">naming conventions</li>
+          <li className="code__words code__words--even">clear and concise</li>
+          <li className="code__words code__words--odd">consistent</li>
+          <li className="code__words code__words--even">uncomplicate</li>
+          <li className="code__words code__words--odd">B.E.M.</li>
+        </ul>
 
         <WhyCard
           titleOne={whyData.code.titleOne}
@@ -158,8 +155,6 @@ const CleanCode = () => {
           left={whyData.code.left}
         />
       </div>
-
-      {/* </div> */}
     </section>
   );
 };

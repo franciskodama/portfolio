@@ -80,6 +80,18 @@ const Navbar = () => {
           </Link>
           <Link
             className="navbar__item"
+            to="reason"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={2000}
+            onClick={handleClickOnLink}
+          >
+            {" "}
+            this{" "}
+          </Link>
+          <Link
+            className="navbar__item"
             to="about"
             spy={true}
             smooth={true}
@@ -169,6 +181,18 @@ const Navbar = () => {
           >
             {" "}
             home{" "}
+          </Link>
+          <Link
+            className="navbar__item"
+            to="reason"
+            spy={true}
+            smooth={true}
+            offset={-150}
+            duration={2000}
+            onClick={handleClickOnLink}
+          >
+            {" "}
+            this{" "}
           </Link>
           <Link
             className="navbar__item"

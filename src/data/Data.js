@@ -36,7 +36,7 @@ export const whyData = {
   selectedProjects: {
     titleOne: "Why?",
     textOne:
-      "Managing props in reusable components was the goal of this page. The logic for displaying the active card, and for closing it if another card was activated, was also interesting and fun.",
+      "Managing props in reusable components were the goal of this page. There are three primary reusable components in this portfolio: the project cards on this page, these red cards from where you are reading right now, and some buttons.",
     titleTwo: "Showcase",
     textTwo:
       "The data is imported from another file, and the code creates the cards dynamically in two versions, the closed small card and the bigger opened card.",
@@ -67,11 +67,14 @@ export const whyData = {
   },
   code: {
     titleOne: "Why?",
-    textOne: "",
+    textOne:
+      "As a professional obsessed with organization, standards, and clean code, I wanted to present this passion in a provocative and creative manner.",
     titleTwo: "Showcase",
-    textTwo: "",
+    textTwo:
+      "To be transparent, I want to show my code exactly as I write it. Thus, to view the original code of this page, click the magnifying glass icon.",
     titleThree: "Tech used",
-    textThree: "",
+    textThree:
+      "ScrollTrigger, CSS and JS animation, useState, useRef, and use Effect.",
     titleFour: "",
     textFour: "",
     observation: "",
@@ -168,16 +171,18 @@ export const projects = [
     category: "website",
     url: "https://www.fkodama.com",
     image: require("../assets/images/project-portfolio.jpg"),
-    frontText:
-      "I am an experienced tech services entrepreneur/consultant product.",
+    frontText: "100% React-based, this is my most important project built.",
     backText_titleOne: "why",
-    backText_textOne: "100% React-based, it was the most important project.",
+    backText_textOne: `Rather than make a "to-do list" project after taking a React course, I thought it would be more productive to build a bold project where I could apply what I've learned and study new things to go beyond what I already knew.`,
     backText_titleTwo: "how",
-    backText_textTwo: "100% React-based, it was the most important project.",
+    backText_textTwo:
+      "As a product strategist, I began the project by thinking about how to create a valuable portfolio that would benefit employers looking for talent with my skills.",
     backText_titleThree: "what",
-    backText_textThree: "100% React-based, it was the most important project.",
+    backText_textThree:
+      "From many sketches and planning to design the project on Figma and coding afterward. In each step, the portfolio was built intentionally gathering new knowledge and new understandings.",
     backText_titleFour: "tech",
-    backText_textFour: "100% React-based, it was the most important project.",
+    backText_textFour:
+      "100% React-based, JSX, CSS, SASS, and HTML. Besides that, some tools such as Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.",
     backgroundColor: "#FC9651",
     visitIcon: false,
   },
@@ -191,16 +196,18 @@ export const projects = [
     category: "video game",
     url: "https://fkodama.com/pacman/",
     image: require("../assets/images/project-pacman.jpg"),
-    frontText:
-      "I am an experienced tech services entrepreneur/consultant product.",
+    frontText: "100% React-based, this is my most important project built.",
     backText_titleOne: "why",
-    backText_textOne: "100% React-based, it was the most important project.",
+    backText_textOne: `Rather than make a "to-do list" project after taking a React course, I thought it would be more productive to build a bold project where I could apply what I've learned and study new things to go beyond what I already knew.`,
     backText_titleTwo: "how",
-    backText_textTwo: "100% React-based, it was the most important project.",
+    backText_textTwo:
+      "As a product strategist, I began the project by thinking about how to create a valuable portfolio that would benefit employers looking for talent with my skills.",
     backText_titleThree: "what",
-    backText_textThree: "100% React-based, it was the most important project.",
+    backText_textThree:
+      "From many sketches and planning to design the project on Figma and coding afterward. In each step, the portfolio was built intentionally gathering new knowledge and new understandings.",
     backText_titleFour: "tech",
-    backText_textFour: "100% React-based, it was the most important project.",
+    backText_textFour:
+      "100% React-based, JSX, CSS, SASS, and HTML. Besides that, some tools such as Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.",
     backgroundColor: "#FDD54D",
     visitIcon: true,
   },
