@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { AboutContext } from "./contexts/AboutContext";
 import "../src/styles/reset.css";
 import "../src/styles/fonts.css";
 import "./App.css";
@@ -17,6 +18,8 @@ import WhyMe from "./pages/WhyMe";
 // import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
+  const [location, setLocation] = useState({ data: "" });
+
   const root = document.querySelector(":root");
 
   const [isActive, setIsActive] = useState({
@@ -69,12 +72,16 @@ const App = () => {
         isActive={isActive}
       />
       <Reason />
-      <About />
-      <Projects />
-      {/* <WhyMe /> */}
-      <Api />
-      <CleanCode />
-      <Contact />
+
+      <AboutContext.Provider value={{ location, setLocation }}>
+        <About />
+        <Projects />
+        <WhyMe />
+        <Api />
+        <CleanCode />
+        <Contact />
+      </AboutContext.Provider>
+
       <Footer />
     </div>
   );

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AboutContext } from "../contexts/AboutContext";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import axios from "axios";
 import "../styles/Contact.css";
+import axios from "axios";
 import { whyData } from "../data/Data";
 import { contactData } from "../data/Data";
 import WhyCard from "../components/WhyCard";
@@ -58,6 +59,8 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 const Contact = () => {
+  const { location } = useContext(AboutContext);
+
   // ======================================
 
   const [sent, setSent] = useState(false);
@@ -69,7 +72,8 @@ const Contact = () => {
       columns.drop.items.map((element) => element.content) +
         message +
         name +
-        email
+        email +
+        location
     );
     try {
       await axios.post("http://localhost:4000/send_mail", {

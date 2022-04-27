@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
+import { AboutContext } from "../contexts/AboutContext";
 import { Link } from "react-scroll";
 import "../styles/About.css";
 import Button from "../components/Button";
@@ -12,7 +13,8 @@ import { whyData } from "../data/Data";
 import gsap from "gsap";
 
 const About = () => {
-  const [location, setLocation] = useState({ data: "" });
+  const { location, setLocation } = useContext(AboutContext);
+
   const [showMessageError, setShowMessageError] = useState(false);
   const [addMe, setAddMe] = useState({ showMe: false });
   const [showMessage, setShowMessage] = useState({ show: false });
