@@ -47,6 +47,7 @@ const CleanCode = () => {
 
   const handleClick = () => {
     setShowBackground(!showBackground);
+    // setInterval(createBubble, 500);
   };
 
   useEffect(() => {
@@ -67,7 +68,6 @@ const CleanCode = () => {
       createElement.remove();
     }, 6000);
   };
-  setInterval(createBubble, 500);
 
   return (
     <section
@@ -79,6 +79,8 @@ const CleanCode = () => {
       }
       style={{ padding: showBackground && "35em" }}
     >
+      {showBackground && <div className="degrade"></div>}
+
       <div className="container">
         <div
           className="code__quote-wrapper"
@@ -155,6 +157,9 @@ const CleanCode = () => {
           left={whyData.code.left}
         />
       </div>
+      {showBackground && (
+        <div className="degrade" style={{ transform: "rotate(180deg)" }}></div>
+      )}
     </section>
   );
 };

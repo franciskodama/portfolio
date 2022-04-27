@@ -96,7 +96,7 @@ const Contact = () => {
   return (
     <section className="section section--contact" id="contact">
       <div className="container">
-        <h1 className="main-title">hello generator</h1>
+        <h1 className="section-title">hello generator</h1>
         <p className="sub-title">Let me help you drop me a line! ;)</p>
 
         <DragDropContext

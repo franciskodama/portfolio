@@ -71,11 +71,11 @@ button {
   text-transform: uppercase;
 }
 
-.main-title {
-  margin-top: 5em;
+.section-title {
   font-family: var(--main-font-regular);
-  font-size: 1.5rem;
-  text-transform: uppercase;
+  font-size: 3rem;
+  text-transform: capitalize;
+  margin-top: 3em;
 }
 
 input,

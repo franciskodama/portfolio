@@ -112,10 +112,10 @@
 
 @keyframes number-one {
   0% {
-    transform: scale(50);
+    transform: scale(5);
     opacity: 0;
-    left: -10em;
-    top: 40em;
+    left: -25em;
+    top: 50em;
   }
   100% {
     transform: scale(1);

@@ -13,13 +13,8 @@
   align-items: center;
 }
 
-.projects__title {
+.section-title--projects {
   text-align: center;
-  font-family: var(--main-font-regular);
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin-top: 3em;
-  margin-bottom: 1em;
 }
 
 /* ====================================

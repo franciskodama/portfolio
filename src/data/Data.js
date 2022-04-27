@@ -179,9 +179,10 @@ export const projects = [
       "As a product strategist, I began the project by thinking about how to create a valuable portfolio that would benefit employers looking for talent with my skills.",
     backText_titleThree: "what",
     backText_textThree:
-      "From many sketches and planning to design the project on Figma and coding afterward. In each step, the portfolio was built intentionally gathering new knowledge and new understandings.",
-    backText_titleFour: "",
-    backText_textFour: "",
+      "From many sketches, designing the project on Figma, to coding afterward, in each step, the portfolio was built intentionally gathering new knowledge and new understandings.",
+    backText_titleFour: "tech",
+    backText_textFour:
+      "100% React-based, JSX, CSS, SASS, and HTML. Some tools used: Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.",
     // backText_textFour:"100% React-based, JSX, CSS, SASS, and HTML. Besides that, some tools such as Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.",
     backgroundColor: "#FC9651",
     visitIcon: false,
@@ -199,10 +200,10 @@ export const projects = [
     frontText: "Here's a tutorial project I took to a whole new level.",
     backText_titleOne: "why",
     backText_textOne:
-      "This was my first relevant project in Vanilla Javascript. After the couse, I built some projects following tutorials, until I got some fluency with the language.",
+      "After some courses, I focused on building projects following tutorials, until I got some fluency with the language. This was my first relevant project in Vanilla Javascript.",
     backText_titleTwo: "how",
     backText_textTwo:
-      "I followed a tutorial by Ania Kubow, but the design was really simple and there was no buttons on the screen for mobile user to play. That's was my oppportunitty to customize my application.",
+      "For this project, Ania Kubow's tutorial was very helpful. However, the design was really simple, and there were no buttons on the screen for mobile users to play. That was my opportunity to customize it myself.",
     backText_titleThree: "what",
     backText_textThree:
       "Using Javascript and CSS, I redesigned the entire game, adding buttons to start and play on mobile devices, and adding some sounds to create a better user experience.",
@@ -228,10 +229,10 @@ export const projects = [
       "Customizing template websites was already something I knew how to do. Now, it was time to build a website from scratch.",
     backText_titleTwo: "how",
     backText_textTwo:
-      "I found a client, received a briefing, and used my experience in digital marketing to design and code the entire website.",
+      "In response to a client's briefing, I used my experience in digital marketing to design and code the entire website.",
     backText_titleThree: "what",
     backText_textThree:
-      "The key features of the project were Flexbox, Display Grid, and Responsiveness in general.",
+      "The key features of the project were Flexbox, Display Grid, some simple animations, and Responsiveness in general.",
     backText_titleFour: "",
     backText_textFour: "",
     backgroundColor: "#BA88F9",
@@ -249,12 +250,15 @@ export const projects = [
     image: require("../assets/images/project-space.jpg"),
     frontText: "",
     backText_titleOne: "why",
-    backText_textOne: "",
+    backText_textOne:
+      "As I studied product management, agile, and some other things, I have not been coding for some time. I want to make my big return with a fun project to allow me to catch up with the syntax.",
     backText_titleTwo: "how",
-    backText_textTwo: "",
+    backText_textTwo:
+      "That's why I decided to build this project. This tutorial again from Ania Kubow (mentioned on the Pac Man project) uses a great deal of Vanilla Javascript logic. Therefore, it was a good place to restart.",
     backText_titleThree: "what",
-    backText_textThree: "",
-    backText_titleFour: "tech",
+    backText_textThree:
+      "As I did with Pac Man, I challenged myself to create new buttons and redesign the entire video game.",
+    backText_titleFour: "",
     backText_textFour: "",
     backgroundColor: "#70D1D5",
     visitIcon: true,
