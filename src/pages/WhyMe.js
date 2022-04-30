@@ -41,10 +41,19 @@ const WhyMe = () => {
           <li className="whyme__letter">E</li>
           <li className="whyme__letter">?</li>
         </ul>
-        <h3 className="whyme__words valuable">valuable for</h3>
+        {/* <h3 className="whyme__words valuable">valuable for</h3>
         <h3 className="whyme_words valuable-for">you</h3>
         <h3 className="whyme_words valuable-for">the company</h3>
-        <h3 className="whyme_words valuable-for">your user</h3>
+        <h3 className="whyme_words valuable-for">your user</h3> */}
+        <div className="test-wrapper">
+          <p className="whyme_words test test-1">T</p>
+          <p className="whyme_words test test-2">E</p>
+          <p className="whyme_words test test-3">S</p>
+          <p className="whyme_words test test-4">T</p>
+          <p className="whyme_words test-second test-m">C</p>
+          <p className="whyme_words test-second test-o">M</p>
+          <p className="whyme_words test-second test-r">E</p>
+        </div>
       </div>
     </section>
   );

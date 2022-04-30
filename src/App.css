@@ -20,7 +20,6 @@
   --third-color: #ed1c24;
   --transparent: hsla(0, 0%, 0%, 0);
   --gradient: linear-gradient(to right top, #1c1c1c, #3a3939, #5a5959, #7c7b7a, #9f9f9d);
-  /* background-image: linear-gradient(to right top, #1c1c1c, #292a2b, #36393b, #43494a, #505959); */
 
   --dark-two-color: grey;
   --third-two-color: orange;
@@ -78,6 +77,14 @@ button {
   text-align: center;
   margin-top: 3em;
 }
+
+/* .section-title {
+  color: transparent;
+  background-color: rgba(121, 133, 151, 0.5);
+  background-clip: text;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 5px 6px, rgba(0, 0, 0, 0.5) 1px 3px 3px;
+  transition: text-shadow .1s ease-out, background-color .2s ease-out;
+} */
 
 input,
 textarea,
