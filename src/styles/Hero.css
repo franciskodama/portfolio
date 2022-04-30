@@ -8,8 +8,10 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
   width: 90%;
+  border: 4px solid orange;
 }
 
 .hero__title--typing {
@@ -21,9 +23,51 @@
   flex-direction: column;
   font-family: var(--main-font-semibold);
   font-size: 1.5rem;
-  margin-bottom: 7em;
   z-index: 3;
 }
+
+/* ------ MOUSE OVER EFFECT  ------ */
+
+.hero__layers {
+  position: relative;
+  width: 40em;
+  height: 35em;
+  margin-right: 3em;
+  margin-bottom: 4em;
+  border: 5px solid red;
+}
+
+.hero__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-position: right; */
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+}
+
+.hero__layer:nth-child(1) {
+  background-image: url(../assets//images/hero-layer1.png);
+}
+
+.hero__layer:nth-child(2) {
+  background-image: url(../assets//images/hero-layer2.png);
+}
+
+.hero__layer:nth-child(3) {
+  background-image: url(../assets//images/hero-layer3.png);
+}
+
+.hero__layer:nth-child(4) {
+  background-image: url(../assets//images/hero-layer4.png);
+}
+
+.hero__layer:nth-child(5) {
+  background-image: url(../assets//images/hero-layer5.png);
+}
+
 
 /* ------ FILTER  ------ */
 
@@ -54,7 +98,7 @@
 
 /* ------ TYPE EFFECT ------ */
 
-.hero__typing-effect {
+/* .hero__typing-effect {
   width: 100%;
   animation: typing 2s steps(18), effect 0.5s step-end infinite alternate;
   white-space: nowrap;
@@ -73,7 +117,7 @@
   50% {
     border-color: transparent;
   }
-}
+} */
 
 .hero__info .hero__paragraphs {
   font-family: var(--main-font-thin);

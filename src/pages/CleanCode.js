@@ -1,18 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/CleanCode.css";
 import MagnifyingGlass from "../assets/images/code-check.svg";
-import Bubble from "../assets/images/code-bubble.png";
+// import Bubble from "../assets/images/code-bubble.png";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
 
 const CleanCode = () => {
-  const quoteRef = useRef();
-  const wordsRef = useRef();
-  const qQuote = gsap.utils.selector(quoteRef);
-  const qWords = gsap.utils.selector(wordsRef);
+  // const quoteRef = useRef();
+  // const wordsRef = useRef();
+  // const qQuote = gsap.utils.selector(quoteRef);
+  // const qWords = gsap.utils.selector(wordsRef);
 
   // useEffect(() => {
   //   gsap.from(qQuote(".code__words--odd--inverse"), {
@@ -47,11 +47,11 @@ const CleanCode = () => {
 
   const handleClick = () => {
     setShowBackground(!showBackground);
-    // setInterval(createBubble, 500);
+    setInterval(createBubble, 500);
   };
 
   useEffect(() => {
-    console.log(showBackground);
+    // console.log(showBackground);
   }, [showBackground]);
 
   // ------------------ BUBBLES ------------------
@@ -79,13 +79,15 @@ const CleanCode = () => {
       }
       style={{ padding: showBackground && "35em" }}
     >
+      <h1 className="section-title">clean code</h1>
+
       {showBackground && <div className="degrade"></div>}
 
       <div className="container">
         <div
           className="code__quote-wrapper"
           style={{ display: showBackground ? "none" : "block" }}
-          ref={quoteRef}
+          // ref={quoteRef}
         >
           <ul className="code__quote">
             <li className="code__words--odd--inverse">"Clean code</li>
@@ -94,12 +96,14 @@ const CleanCode = () => {
             <li className="code__words--even--inverse">someone who</li>
             <li className="code__words--odd--inverse">cares."</li>
           </ul>
-          <p className="code__robert code__words--odd--inverse">
-            ― Robert C. Martin
-          </p>
-          <p className="code_author code__words--odd--inverse">
-            Author of Clean Code
-          </p>
+          <div className="code__author-wrapper">
+            <p className="code__robert code__words--odd--inverse">
+              ― Robert C. Martin
+            </p>
+            <p className="code_author code__words--odd--inverse">
+              Author of Clean Code
+            </p>
+          </div>
         </div>
         <div className="code__icon-wrapper" onClick={handleClick}>
           <img
@@ -122,11 +126,11 @@ const CleanCode = () => {
             CLICK HERE AGAIN TO RETURN
           </p>
         </div>
-        <img className="code__bubble" src={Bubble} alt="bubble image" />
+        {/* <img className="code__bubble" src={Bubble} alt="bubble image" /> */}
         <ul
           className="code__words-wrapper"
           style={{ display: showBackground ? "none" : "block" }}
-          ref={wordsRef}
+          // ref={wordsRef}
         >
           <li className="code__words code__words--odd">meticulousness</li>
           <li className="code__words code__words--even">

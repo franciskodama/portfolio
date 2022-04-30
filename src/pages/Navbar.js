@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    console.log(isOpen, isActive);
+    // console.log(isOpen, isActive);
   }, [isActive, isOpen]);
 
   return (

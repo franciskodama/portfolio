@@ -75,6 +75,7 @@ button {
   font-family: var(--main-font-regular);
   font-size: 3rem;
   text-transform: capitalize;
+  text-align: center;
   margin-top: 3em;
 }
 

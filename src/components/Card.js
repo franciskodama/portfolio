@@ -18,7 +18,7 @@ const Card = ({ project }) => {
   };
 
   useEffect(() => {
-    console.log(project.id);
+    // console.log(project.id);
   }, [isOpen]);
 
   const handleClickToClose = () => {
@@ -30,7 +30,6 @@ const Card = ({ project }) => {
   return (
     <div className="card">
       {/* ========================== CARD FRONT ========================== */}
-
       <div
         className="card-front"
         onClick={handleClickToOpen}
