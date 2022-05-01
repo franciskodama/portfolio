@@ -79,24 +79,27 @@ const CleanCode = () => {
       }
       style={{ padding: showBackground && "35em" }}
     >
-      <h1 className="section-title">clean code</h1>
-
-      {showBackground && <div className="degrade"></div>}
+      <h1
+        className="section-title"
+        style={{ display: showBackground ? "none" : "block" }}
+      >
+        clean code
+      </h1>
 
       <div className="container">
         <ul
           className="code__quote"
           style={{ display: showBackground ? "none" : "block" }}
         >
-          <li className="code__words--odd--inverse">"clean code</li>
-          <li className="code__words--even--inverse">always looks like</li>
-          <li className="code__words--odd--inverse">it was written by</li>
-          <li className="code__words--even--inverse">someone who</li>
-          <li className="code__words--odd--inverse">cares."</li>
-          <li className="code__words--even--inverse stroke">
+          <li className="code__odd--inverse">"clean code</li>
+          <li className="code__even--inverse">always looks like</li>
+          <li className="code__odd--inverse">it was written by</li>
+          <li className="code__even--inverse">someone who</li>
+          <li className="code__odd--inverse">cares."</li>
+          <li className="code__even--inverse code--stroke">
             ― Robert C. Martin
           </li>
-          <li className="code__words--odd--inverse stroke">
+          <li className="code__odd--inverse code--stroke">
             Author of Clean Code
           </li>
         </ul>
@@ -107,14 +110,11 @@ const CleanCode = () => {
             src={MagnifyingGlass}
             alt="magnifying glass icon"
           />
-          <p
-            className="code__icon-cta"
-            style={{ display: !showBackground ? "block" : "none" }}
-          >
+          <p style={{ display: !showBackground ? "block" : "none" }}>
             CLICK HERE TO CHECK MY CODE
           </p>
           <p
-            className="code__icon-cta--bright"
+            className="code--bright"
             style={{
               display: showBackground ? "block" : "none",
             }}
@@ -128,19 +128,15 @@ const CleanCode = () => {
           style={{ display: showBackground ? "none" : "block" }}
           // ref={wordsRef}
         >
-          <li className="code__word code__words--odd">meticulousness</li>
-          <li className="code__word code__words--even">
-            easy to read, easy to change
-          </li>
-          <li className="code__word code__words--odd">keep it simple</li>
-          <li className="code__word code__words--even">
-            don't repeat your self
-          </li>
-          <li className="code__word code__words--odd">naming conventions</li>
-          <li className="code__word code__words--even">clear and concise</li>
-          <li className="code__word code__words--odd">consistent</li>
-          <li className="code__word code__words--even">uncomplicate</li>
-          <li className="code__word code__words--odd">B.E.M.</li>
+          <li className="code__odd">meticulousness</li>
+          <li className="code__even">easy to read, easy to change</li>
+          <li className="code__odd">keep it simple</li>
+          <li className="code__even">don't repeat your self</li>
+          <li className="code__odd">naming conventions</li>
+          <li className="code__even">clear and concise</li>
+          <li className="code__odd">consistent</li>
+          <li className="code__even">uncomplicate</li>
+          <li className="code__odd">B.E.M.</li>
         </ul>
 
         <WhyCard
@@ -157,9 +153,6 @@ const CleanCode = () => {
           left={whyData.code.left}
         />
       </div>
-      {showBackground && (
-        <div className="degrade" style={{ transform: "rotate(180deg)" }}></div>
-      )}
     </section>
   );
 };
