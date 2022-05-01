@@ -129,7 +129,7 @@ const Hero = () => {
             <h2 className="cube__text-c">react, js,</h2>
             <h2 className="cube__text-c">html, css,</h2>
             <h2 className="cube__text-c">sass, git</h2>
-            <h2 className="cube__text-c">git, figma</h2>
+            <h2 className="cube__text-c">npm, figma</h2>
             <h2 className="cube__text-c">adobe XD,</h2>
             <h2 className="cube__text-c">PHOTOSHOP</h2>
           </div>

@@ -50,7 +50,7 @@ position: absolute;
 
 .cube__text-a-wrapper {
   transform: skew(0deg, 30deg) scaleY(1.33333);
-  top: 45%;
+  top: 43%;
   left: 8.2%;
 }
 
@@ -58,6 +58,7 @@ position: absolute;
   transform: skew(60deg, -30deg) scaleY(.66667);
   top: 2%;
   left: 27%;
+
 }
 
 .cube__text-c-wrapper {
@@ -235,9 +236,17 @@ position: absolute;
     height: 13em;
   }
 
+  .cube__text-a-wrapper {
+    left: 9%;
+  }
+
+  .cube__text-b-wrapper {
+    left: 30%;
+  }
+  
   .cube__text-c-wrapper {
-    top: 37%;
-    left: 40%;
+    top: 35%;
+    left: 41%;
   }
 
   /* .hero__info .hero__paragraphs {

@@ -299,14 +299,17 @@ export const projects = [
     category: "resume online",
     url: "http://kodes.ca/angelapodetz",
     image: require("../assets/images/project-resume.jpg"),
-    frontText: "",
+    frontText: "Building a website based on the design reference.",
     backText_titleOne: "why",
-    backText_textOne: "",
+    backText_textOne:
+      "After completing my HTML and CSS course, I found this design offered by the author so people like me can practice building it using this design as a guide.",
     backText_titleTwo: "how",
-    backText_textTwo: "",
+    backText_textTwo:
+      "Despite being the beginning of my journey, I used advanced CSS techniques, such as flexbox and display grid, to construct this website.",
     backText_titleThree: "what",
-    backText_textThree: "",
-    backText_titleFour: "tech",
+    backText_textThree:
+      "Developing this single-page application was my first experience with JS: the logic to scroll the page from the menu.",
+    backText_titleFour: "",
     backText_textFour: "",
     backgroundColor: "#D3CFCC",
     visitIcon: true,
