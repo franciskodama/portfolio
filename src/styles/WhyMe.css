@@ -23,7 +23,6 @@
     font-family: var(--main-font-heavy);
     font-size: 6em;
     line-height: 0.9em;
-    /* border: 3px solid orange; */
     color: transparent;
     background-color: rgba(82,96,117,0.5);
     background-clip: text;

@@ -7,6 +7,9 @@ import { whyData } from "../data/Data";
 import { contactData } from "../data/Data";
 import WhyCard from "../components/WhyCard";
 import Button from "../components/Button";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 // ======================================
 
@@ -173,6 +176,7 @@ const Contact = () => {
             className="form-contact__input text-area"
             placeholder="type some additional comments"
             type="text"
+            name="comment"
             id="message"
             // value={message}
             // onChange={(e) => {
@@ -186,6 +190,7 @@ const Contact = () => {
               className="form-contact__input"
               placeholder="name"
               type="text"
+              name="name"
               id="name"
               // value={name}
               // onChange={(e) => {
@@ -197,6 +202,7 @@ const Contact = () => {
               className="form-contact__input"
               placeholder="email"
               type="text"
+              name="email"
               id="email"
               // value={email}
               // type="text"
