@@ -58,7 +58,6 @@ position: absolute;
   transform: skew(60deg, -30deg) scaleY(.66667);
   top: 2%;
   left: 27%;
-
 }
 
 .cube__text-c-wrapper {
@@ -74,15 +73,18 @@ position: absolute;
 }
 
 .cube__text-a {
-  color: grey;
+  color: var(--bright-color);
+  opacity: 0.4;
 }
 
 .cube__text-b {
   color: var(--bright-color);
+  opacity: 0.8;
 }
 
 .cube__text-c {
-  color: var(--third-color)
+  color: var(--third-color);
+  opacity: 0.8;
 }
 
 .cube__text-b:hover {
@@ -91,7 +93,7 @@ position: absolute;
 }
 
 .cube__text-a:hover {
-  color: var(--bright-color);
+  color: var(--third-color);
   transform: scale(1.1);
 }
 

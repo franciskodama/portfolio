@@ -112,6 +112,13 @@ const Card = ({ project }) => {
               <p className="card-back__text">{project.backText_textThree}</p>
               <h4 className="card-back__title">{project.backText_titleFour}</h4>
               <p className="card-back__text">{project.backText_textFour}</p>
+              <a
+                className="card-back__text card--bold"
+                href={project.backText_link}
+                target="_blank"
+              >
+                {project.backText_linkName}
+              </a>
             </div>
           </div>
         </div>

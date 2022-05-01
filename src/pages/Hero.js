@@ -121,9 +121,9 @@ const Hero = () => {
           <div className="cube__text-b-wrapper" ref={layerThreeRef}>
             <h2 className="cube__text-b">Front-end</h2>
             <h2 className="cube__text-b">developer </h2>
+            <h2 className="cube__text-b">-----------</h2>
             <h2 className="cube__text-b">product </h2>
             <h2 className="cube__text-b">strategy </h2>
-            <h2 className="cube__text-b">marketing </h2>
           </div>
           <div className="cube__text-c-wrapper" ref={layerFourRef}>
             <h2 className="cube__text-c">react, js,</h2>
