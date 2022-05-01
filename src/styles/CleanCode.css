@@ -4,7 +4,7 @@
   flex-direction: column;
   background: var(--dark-color);
   background: linear-gradient(180deg, var(--dark-color) 0%, rgba(41,41,41,1) 100%); 
-  border: 5px solid orange;
+  border: 1px solid orange;
 }
 
 .section--code .container {
@@ -14,44 +14,18 @@
   padding-bottom: 10em;
   align-items: center;
   justify-content: space-between;
-  border: 5px solid green;
+  border: 1px solid green;
   width: 100%;
-  height: 82em;
-  margin-top: 15em;
+  height: 93em;
+  margin-top: 10em;
 }
  
-/* ------- BG IMAGE ------- */
-
-.code__background {
-  display: flex;
-  flex-direction: column;
-  background-image: url('../assets/images/xray2.jpg');
-  background-repeat: no-repeat;
-  /* object-fit: cover; */
-  animation: code-appearance 0.3s both;
-}
-
- @keyframes code-appearance {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.degrade {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(180deg, rgba(255,0,0,0), rgba(255,0,0,1));
-}
-
 /* ------- SEE MY CODE ICON ------- */
 
 .code__icon-wrapper {
   position: absolute;
-  top: 35%;
-  left: 20%;
+  top: 39%;
+  left: 50%;
   width: 8em;
   text-align: center;
   font-family: var(--main-font-regular);
@@ -59,7 +33,6 @@
   line-height: 1rem;
   color: var(--third-color);
   cursor: pointer;
-  border: 1px solid blue;
 }
 
 .code__icon-cta--bright {
@@ -72,47 +45,30 @@
   width: 35px;
 }
 
-/* ------- BUBBLES ------- */
-
-.code__bubble {
-  display: none;
-}
-
 /* ------- WORDS ------- */
 
 .code__quote,
-.code__words-wrapper {
+.code__words {
   font-family: var(--main-font-heavy);
   font-size: 1.5em;
   text-transform: uppercase;
   line-height: 1.8rem;
   text-align: right;
+  width: 18em;  
+  height: 8em;
 }
 
-.code__quote-wrapper {
-  border: 2px dashed yellow;
+.code__quote {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px dashed yellow; */
 }
 
-.code__words-wrapper {
-  border: 2px dashed magenta;
-}
-
-.code__quote-wrapper,
-.code__words-wrapper {
+.code__quote,
+.code__words {
   animation: code-appearance 2s both;
 }
 
-/* ------- AUTHOR ------- */
-
-.code__author-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  border: 2px solid blue;
-  font-family: var(--main-font-regular);
-  line-height: 3rem;
-
-}
 
 /* ------- QUOTE TRANSFORM ------- */
 
@@ -138,7 +94,20 @@
   color: var(--third-color);
 }
 
+/* ------- STROKE ------- */
+
+.stroke {
+  font-size: 1.8rem;
+  line-height: 1.4em;
+  color: var(--dark-color);
+  -webkit-text-stroke: 0.5px var(--bright-color);
+  }
+  
 /* ------- BUBBLES ------- */
+
+.code__bubble {
+  display: none;
+}
 
 .section--code span {
   position: absolute;
@@ -177,6 +146,32 @@
   }
 }
 
+/* ------- BG IMAGE ------- */
+
+.code__background {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../assets/images/xray2.jpg');
+  background-repeat: no-repeat;
+  /* object-fit: cover; */
+  animation: code-appearance 0.3s both;
+}
+
+ @keyframes code-appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.degrade {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+
 /* ====================================
             MEDIA QUERY
 ======================================= */
@@ -186,7 +181,7 @@
 
 @media only screen and (width > 48em) {
   .code__quote,
-  .code__words-wrapper {
+  .code__words {
     font-size: 2em;
     line-height: 2.5rem;
   }
@@ -197,7 +192,7 @@
 
 @media only screen and (width > 75em) {
   .code__quote,
-  .code__words-wrapper {
+  .code__words {
     font-size: 3em;
     line-height: 3.5rem;
   }

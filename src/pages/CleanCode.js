@@ -84,27 +84,23 @@ const CleanCode = () => {
       {showBackground && <div className="degrade"></div>}
 
       <div className="container">
-        <div
-          className="code__quote-wrapper"
+        <ul
+          className="code__quote"
           style={{ display: showBackground ? "none" : "block" }}
-          // ref={quoteRef}
         >
-          <ul className="code__quote">
-            <li className="code__words--odd--inverse">"Clean code</li>
-            <li className="code__words--even--inverse">always looks like</li>
-            <li className="code__words--odd--inverse">it was written by</li>
-            <li className="code__words--even--inverse">someone who</li>
-            <li className="code__words--odd--inverse">cares."</li>
-          </ul>
-          <div className="code__author-wrapper">
-            <p className="code__robert code__words--odd--inverse">
-              ― Robert C. Martin
-            </p>
-            <p className="code_author code__words--odd--inverse">
-              Author of Clean Code
-            </p>
-          </div>
-        </div>
+          <li className="code__words--odd--inverse">"clean code</li>
+          <li className="code__words--even--inverse">always looks like</li>
+          <li className="code__words--odd--inverse">it was written by</li>
+          <li className="code__words--even--inverse">someone who</li>
+          <li className="code__words--odd--inverse">cares."</li>
+          <li className="code__words--even--inverse stroke">
+            ― Robert C. Martin
+          </li>
+          <li className="code__words--odd--inverse stroke">
+            Author of Clean Code
+          </li>
+        </ul>
+
         <div className="code__icon-wrapper" onClick={handleClick}>
           <img
             className="code__icon"
@@ -128,23 +124,23 @@ const CleanCode = () => {
         </div>
         {/* <img className="code__bubble" src={Bubble} alt="bubble image" /> */}
         <ul
-          className="code__words-wrapper"
+          className="code__words"
           style={{ display: showBackground ? "none" : "block" }}
           // ref={wordsRef}
         >
-          <li className="code__words code__words--odd">meticulousness</li>
-          <li className="code__words code__words--even">
+          <li className="code__word code__words--odd">meticulousness</li>
+          <li className="code__word code__words--even">
             easy to read, easy to change
           </li>
-          <li className="code__words code__words--odd">keep it simple</li>
-          <li className="code__words code__words--even">
+          <li className="code__word code__words--odd">keep it simple</li>
+          <li className="code__word code__words--even">
             don't repeat your self
           </li>
-          <li className="code__words code__words--odd">naming conventions</li>
-          <li className="code__words code__words--even">clear and concise</li>
-          <li className="code__words code__words--odd">consistent</li>
-          <li className="code__words code__words--even">uncomplicate</li>
-          <li className="code__words code__words--odd">B.E.M.</li>
+          <li className="code__word code__words--odd">naming conventions</li>
+          <li className="code__word code__words--even">clear and concise</li>
+          <li className="code__word code__words--odd">consistent</li>
+          <li className="code__word code__words--even">uncomplicate</li>
+          <li className="code__word code__words--odd">B.E.M.</li>
         </ul>
 
         <WhyCard
