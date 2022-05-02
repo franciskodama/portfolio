@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
+import "../styles/Contact.css";
 import { AboutContext } from "../contexts/AboutContext";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import "../styles/Contact.css";
 import axios from "axios";
 import { whyData } from "../data/Data";
 import { contactData } from "../data/Data";
@@ -64,20 +64,20 @@ const onDragEnd = (result, columns, setColumns) => {
 const Contact = () => {
   const { location } = useContext(AboutContext);
 
-  // ======================================
+  // =================== SEND EMAIL ===================
 
   const [sent, setSent] = useState(false);
   const [text, setText] = useState("");
 
   const handleSubmit = async (e) => {
     setSent(true);
-    console.log(
-      columns.drop.items.map((element) => element.content) +
-        message +
-        name +
-        email +
-        location
-    );
+    // console.log(
+    //   columns.drop.items.map((element) => element.content) +
+    //     message +
+    //     name +
+    //     email +
+    //     location
+    // );
     try {
       await axios.post("http://localhost:4000/send_mail", {
         text,
@@ -87,7 +87,7 @@ const Contact = () => {
     }
   };
 
-  // ======================================
+  // =================== DRAG N'DROP ===================
 
   const [columns, setColumns] = useState(dropSpace);
   const [message, setMessage] = useState("");
@@ -98,7 +98,7 @@ const Contact = () => {
     setMessage("");
   };
 
-  // ======================================
+  // =================== RETURN ===================
 
   return (
     <section className="section section--contact" id="contact">

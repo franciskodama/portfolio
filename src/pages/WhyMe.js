@@ -22,9 +22,12 @@ const WhyMe = () => {
       },
       x: "3000px",
       duration: 4,
-      // ease: "elastic",
     });
   });
+
+  // ------------------ PARALLAX ------------------
+
+  // ------------------ END PARALLAX ------------------
 
   return (
     <section className="section section--whyme" id="whyme">
@@ -44,7 +47,7 @@ const WhyMe = () => {
         {/* <h3 className="whyme__words valuable">valuable for</h3>
         <h3 className="whyme_words valuable-for">you</h3>
         <h3 className="whyme_words valuable-for">the company</h3>
-        <h3 className="whyme_words valuable-for">your user</h3> */}
+        <h3 className="whyme_words valuable-for">your user</h3>
         <div className="test-wrapper">
           <p className="whyme_words test test-1">T</p>
           <p className="whyme_words test test-2">E</p>
@@ -53,7 +56,9 @@ const WhyMe = () => {
           <p className="whyme_words test-second test-m">C</p>
           <p className="whyme_words test-second test-o">M</p>
           <p className="whyme_words test-second test-r">E</p>
-        </div>
+        </div> */}
+
+        {/* ------------------ PARALLAX ------------------ */}
       </div>
     </section>
   );

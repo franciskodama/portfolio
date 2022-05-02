@@ -24,18 +24,18 @@ app.post("/send_mail", cors(), async (req, res) => {
 
   await transport.sendMail({
     from: process.env.MAIL_FROM,
-    to: "hello@fkodama.com",
+    to: "kkk@fkodama.com",
     subject: "test email",
     html: `<div className="email" style="
         border: 1px solid black;
         padding: 20px;
         font-family: sans-serif;
         line-height: 2;
-        font-size: 20px; 
+        font-size: 20px;
         ">
         <h2>Here is your email!</h2>
         <p>${text}</p>
-    
+
         <p>All the best, FKodama</p>
          </div>
     `,
