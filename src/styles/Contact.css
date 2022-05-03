@@ -89,10 +89,9 @@
 
 .form-contact__buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 2em;
 }
-
 
 /* ====================================
             MEDIA QUERY

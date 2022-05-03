@@ -90,7 +90,7 @@ export const whyData = {
       "The ability to program and be creative. In addition to the drag and drop feature, this page receives and manages props (the interview request and the location information) from the about me page.",
     titleThree: "Tech used",
     textThree:
-      "DragDropContext, Droppable, Draggable from React Beautiful DnD library.",
+      "Hook useContext, DragDropContext, Droppable, Draggable from React Beautiful DnD library.",
     titleFour: "",
     textFour: "",
     observation: "",

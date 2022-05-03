@@ -27,7 +27,7 @@ const WhyMe = () => {
 
   // ------------------ PARALLAX ------------------
 
-  const [offsetY, setOffSetY] = useState(4658);
+  const [offsetY, setOffSetY] = useState(0);
   const handleScroll = () => setOffSetY(window.pageYOffset);
 
   useEffect(() => {

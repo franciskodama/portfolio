@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import "../styles/Contact.css";
 import { AboutContext } from "../contexts/AboutContext";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import axios from "axios";
 import { whyData } from "../data/Data";
 import { contactData } from "../data/Data";
 import WhyCard from "../components/WhyCard";
@@ -62,43 +61,59 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 const Contact = () => {
+  // ============= LOCATION FROM ABOUT ME =============
+
   const { location } = useContext(AboutContext);
 
   // =================== SEND EMAIL ===================
 
-  const [sent, setSent] = useState(false);
-  const [text, setText] = useState("");
-
+  const [status, setStatus] = useState("SEND");
   const handleSubmit = async (e) => {
-    setSent(true);
-    // console.log(
-    //   columns.drop.items.map((element) => element.content) +
-    //     message +
-    //     name +
-    //     email +
-    //     location
-    // );
-    try {
-      await axios.post("http://localhost:4000/send_mail", {
-        text,
-      });
-    } catch (error) {
-      console.error(error);
-    }
+    e.preventDefault();
+    setStatus("Sending...");
+    const { name, email, message } = e.target.elements;
+
+    const dragDropMessage = columns.drop.items.map(
+      (element) => element.content
+    );
+
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+      location: location.data,
+      messageDrag: dragDropMessage,
+    };
+
+    console.log(details);
+
+    let response = await fetch("http://localhost:4000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+
+    setStatus("Enviado");
+    let result = await response.json();
+
+    setInterval(() => {
+      setStatus(":)");
+    }, 2000);
+
+    setInterval(() => {
+      setStatus("Send");
+    }, 3000);
+
+    clearInterval();
+
+    console.log(result.status);
   };
 
   // =================== DRAG N'DROP ===================
 
   const [columns, setColumns] = useState(dropSpace);
-  const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
-  const handleClickClearMessage = () => {
-    setMessage("");
-  };
-
-  // =================== RETURN ===================
 
   return (
     <section className="section section--contact" id="contact">
@@ -169,22 +184,16 @@ const Contact = () => {
           })}
         </DragDropContext>
 
-        <form className="form-contact">
+        <form className="form-contact" onSubmit={handleSubmit}>
           <p className="form-contact__title">Additional comments:</p>
-
           <textarea
             className="form-contact__input text-area"
             placeholder="type some additional comments"
             type="text"
-            name="comment"
+            name="message"
             id="message"
-            // value={message}
-            // onChange={(e) => {
-            //   setMessage(e.target.value);
-            // }}
             required
-          ></textarea>
-
+          ></textarea>{" "}
           <div className="form-contact__input-wrapper">
             <input
               className="form-contact__input"
@@ -192,55 +201,28 @@ const Contact = () => {
               type="text"
               name="name"
               id="name"
-              // value={name}
-              // onChange={(e) => {
-              //   setName(e.target.value);
-              // }}
             />
-
             <input
               className="form-contact__input"
               placeholder="email"
               type="text"
               name="email"
               id="email"
-              // value={email}
-              // type="text"
-              // onChange={(e) => {
-              //   setEmail(e.target.value);
-              // }}
             />
           </div>
-
           <div className="form-contact__buttons">
-            <Button
+            {/* <Button
               className={"btn btn--dark-dark-bg"}
               onClick={handleClickClearMessage}
               text="clear"
               align="flex-start"
-            />
+            /> */}
 
-            {/* ================ */}
-
-            {/* ================ */}
-
-            {/* <Button onClick={handleSubmit} text="send" align="flex-end" /> */}
+            <button className="btn btn--third-color" type="submit">
+              {status}
+            </button>
           </div>
         </form>
-
-        {!sent ? (
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            />
-
-            <button type="submit">Send Email</button>
-          </form>
-        ) : (
-          <h1>Email Sent</h1>
-        )}
       </div>
       <WhyCard
         titleOne={whyData.contact.titleOne}

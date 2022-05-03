@@ -15,9 +15,6 @@
 
 .section--whyme .container {
     position: relative;
-    /* display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: 5fr 3fr 5fr; */
     height: 150em;
     border: 4px solid orange;
     width: 100%;
@@ -32,6 +29,7 @@
     background-image: url(../assets/images/whyme-background.webp);
     background-repeat: no-repeat;
     background-position: cover; */
+    border: 1px solid green;
 }
 
 .whyme__elements {
