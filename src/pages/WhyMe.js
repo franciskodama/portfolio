@@ -27,24 +27,50 @@ const WhyMe = () => {
 
   // ------------------ PARALLAX ------------------
 
+  const [offsetY, setOffSetY] = useState(4658);
+  const handleScroll = () => setOffSetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    console.log(offsetY);
+    // return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // ------------------ END PARALLAX ------------------
 
   return (
-    <section className="section section--whyme" id="whyme">
+    <section
+      className="section section--whyme"
+      id="whyme"
+      // style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+    >
       <div className="container">
-        <ul
-          className="whyme__title"
-          ref={whyMeRef}
-          onClick={() => setFirstClick(true)}
-        >
-          <li className="whyme__letter">W</li>
-          <li className="whyme__letter">H</li>
-          <li className="whyme__letter">Y</li>
-          <li className="whyme__letter">M</li>
-          <li className="whyme__letter">E</li>
-          <li className="whyme__letter">?</li>
-        </ul>
-        {/* <h3 className="whyme__words valuable">valuable for</h3>
+        {/* ------------------ PARALLAX ------------------ */}
+        <div className="whyme__background">
+          <div
+            className="whyme__elements"
+            style={{ transform: `translateY(${offsetY * 0.7}px)` }}
+          ></div>
+          <div
+            className="whyme__content"
+            style={{ transform: `translateY(${offsetY * 0.4}px)` }}
+          ></div>
+
+          <ul
+            className="whyme__title"
+            ref={whyMeRef}
+            onClick={() => setFirstClick(true)}
+            style={{ transform: `translateY(${offsetY * 0.9}px)` }}
+          >
+            <li className="whyme__letter">W</li>
+            <li className="whyme__letter">H</li>
+            <li className="whyme__letter">Y</li>
+            <li className="whyme__letter">M</li>
+            <li className="whyme__letter">E</li>
+            <li className="whyme__letter">?</li>
+          </ul>
+
+          {/* <h3 className="whyme__words valuable">valuable for</h3>
         <h3 className="whyme_words valuable-for">you</h3>
         <h3 className="whyme_words valuable-for">the company</h3>
         <h3 className="whyme_words valuable-for">your user</h3>
@@ -57,8 +83,7 @@ const WhyMe = () => {
           <p className="whyme_words test-second test-o">M</p>
           <p className="whyme_words test-second test-r">E</p>
         </div> */}
-
-        {/* ------------------ PARALLAX ------------------ */}
+        </div>
       </div>
     </section>
   );
