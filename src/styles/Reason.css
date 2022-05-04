@@ -55,10 +55,10 @@
             MEDIA QUERY
 ======================================= */
 
-@media only screen and (width > 20em) {
+@media only screen and (min-width: 20em) {
 }
 
-@media only screen and (width > 48em) {
+@media only screen and (min-width: 48em) {
   .reason__letter-bright,
   .reason__letter-dark {
     height: 1.5em;
@@ -67,10 +67,10 @@
   }
 }
 
-@media only screen and (width > 62em) {
+@media only screen and (min-width: 62em) {
 }
 
-@media only screen and (width > 75em) {
+@media only screen and (min-width: 75em) {
 
   .reason__letter-bright,
   .reason__letter-dark {

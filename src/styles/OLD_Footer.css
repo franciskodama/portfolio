@@ -1,0 +1,301 @@
+.footer__grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(12, auto);
+  width: 70%;
+  max-width: 80em;
+  padding-bottom: 4em;
+}
+
+.section--footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(40, 40, 40);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+
+/* ---- FLEX  ---- */
+
+.footer__contact,
+.footer__design {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- GRID + HIDDEN (OR SHOW) ---- */
+
+.footer__title-about {
+  grid-row: 1/2;
+}
+
+.footer__aboutme {
+  grid-row: 2/3;
+  max-width: 23ch;
+}
+
+.footer__menu,
+.footer__title-menu {
+  display: none;
+}
+
+.footer__title-contact {
+  grid-row: 5/6;
+}
+
+.footer__contact {
+  grid-row: 6/7;
+}
+
+.footer__title-icons {
+  grid-row: 7/8;
+}
+
+.footer__icons {
+  grid-row: 8/9;
+}
+
+.footer__logo {
+  grid-row: 9/10;
+}
+
+.footer__resume {
+  grid-row: 10/11;
+}
+
+.footer__design {
+  grid-row: 11/12;
+}
+
+/* ---- GENERAL TYPOGRAPHY ---- */
+
+.footer__title {
+  font-family: var(--main-font-semibold);
+  font-size: 1rem;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+
+.footer__aboutme,
+.footer__menu,
+.footer__email,
+.footer__send,
+.footer__localization {
+  font-size: 0.9rem;
+}
+
+.footer__icons,
+.footer__menu-item,
+.footer__send,
+.resume-container {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.footer__menu-item:hover,
+.footer__send:hover,
+.footer__resume:hover {
+  color: var(--third-color);
+  transform: translate(3px);
+}
+
+.footer__icon-item {
+  position: relative;
+}
+
+.footer__icon-item:hover::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  border: 1.4px solid var(--third-color);
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  z-index: 10;
+}
+
+.section--footer h2 span {
+  color: var(--third-color);
+}
+
+.footer__send {
+  text-decoration: underline;
+}
+
+.footer__email,
+.footer__menu-item {
+  margin-bottom: 0.5rem;
+}
+
+/* ---- LOGO ---- */
+
+.footer__logo {
+  display: none;
+  /* width: 120px;
+  opacity: 0.4;
+  margin: 4em 0; */
+}
+
+/* ---- DESIGN ---- */
+
+.footer__design {
+  font-size: 0.8rem;
+  margin-top: 4em;
+}
+
+/* ---- GET CONNECTED ---- */
+
+.footer__icons {
+  display: flex;
+  flex-wrap: wrap;
+  height: 70%;
+  align-items: flex-start;
+}
+
+.section--footer .footer__icons img {
+  width: 35px;
+  margin-right: 1em;
+}
+
+/* ---- LAST CONTAINER ---- */
+
+.footer__resume {
+  display: flex;
+  margin-top: 3em;
+  align-items: flex-end;
+}
+
+.footer__resume-title {
+  font-family: var(--main-font-semibold);
+  margin-right: 1em;
+  line-height: 1;
+ }
+
+.footer__localization {
+  display: none;
+}
+
+.footer__resume p,
+.footer__localization {
+  font-size: 0.7rem;
+}
+
+/* ---- UTIL ---- */
+
+.footer--bold {
+  font-family: var(--main-font-regular);
+}
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (width > 20em) {
+}
+
+@media only screen and (width > 48em) {
+}
+
+@media only screen and (width > 62em) {
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    column-gap: 4em;
+    width: 60%;
+  }
+
+/* ---- GRID + HIDDEN (OR SHOW) ---- */
+
+.footer__title-about {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.footer__title-menu {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: block;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__title-contact {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.footer__title-icons {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+
+.footer__aboutme {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.footer__menu {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.footer__contact {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.footer__icons {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+
+.footer__logo {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.footer__design {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+
+.footer__resume {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+
+.footer__localization {
+  grid-column: 4/5;
+  grid-row: 4/5;
+}
+
+/* --- MARGIN --- */
+
+.footer__logo {
+  display: block;
+  width: 120px;
+  opacity: 0.4;
+}
+
+.footer__design {
+  margin: 0;
+}
+
+.footer__localization {
+  display: block;
+  text-align: left;
+  align-self: flex-end;
+  margin-top: 5em;
+}
+
+
+}
+
+@media only screen and (width > 75em) {
+}
+

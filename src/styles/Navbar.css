@@ -90,10 +90,10 @@
             MEDIA QUERY
 ======================================= */
 
-@media only screen and (width > 20em) {
+@media only screen and (min-width: 20em) {
 }
 
-@media only screen and (width > 48em) {
+@media only screen and (min-width: 48em) {
   .navbar__extended {
     padding: 5em 5em 3em 5em;
     width: 50%;
@@ -104,7 +104,7 @@
   }
 }
 
-@media only screen and (width > 62em) {
+@media only screen and (min-width: 62em) {
   .navbar__toggle,
   .navbar__extended,
   .navbar__extended .navbar__item {
@@ -135,6 +135,6 @@
 
 }
 
-@media only screen and (width > 75em) {
+@media only screen and (min-width: 75em) {
 }
 

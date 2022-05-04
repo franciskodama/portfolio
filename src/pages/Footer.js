@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Footer.scss";
 import { Link } from "react-scroll";
 import LogoFooter from "../assets/images/logo-fkodama-footer.svg";
 import Linkedin from "../assets/images/ico-linkedin-white.svg";
@@ -9,7 +10,7 @@ import "../styles/Footer.css";
 
 const Footer = () => {
   return (
-    <section className="section section--footer">
+    <section className="section footer">
       <div className="footer__grid">
         <h2 className="footer__title footer__title-about">
           ABOUT<span>ME</span>
