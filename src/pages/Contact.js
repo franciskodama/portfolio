@@ -67,10 +67,10 @@ const Contact = () => {
 
   // =================== SEND EMAIL ===================
 
-  const [status, setStatus] = useState("SEND");
+  const [status, setStatus] = useState("SUBMIT");
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus("SENDING...");
     const { name, email, message } = e.target.elements;
 
     const dragDropMessage = columns.drop.items.map(
@@ -85,8 +85,6 @@ const Contact = () => {
       messageDrag: dragDropMessage,
     };
 
-    console.log(details);
-
     let response = await fetch("http://localhost:4000/contact", {
       method: "POST",
       headers: {
@@ -95,16 +93,12 @@ const Contact = () => {
       body: JSON.stringify(details),
     });
 
-    setStatus("Enviado");
+    setStatus("SENT");
     let result = await response.json();
 
     setInterval(() => {
-      setStatus(":)");
-    }, 2000);
-
-    setInterval(() => {
-      setStatus("Send");
-    }, 3000);
+      setStatus("SUBMIT");
+    }, 4000);
 
     clearInterval();
 
@@ -218,7 +212,16 @@ const Contact = () => {
               align="flex-start"
             /> */}
 
-            <button className="btn btn--third-color" type="submit">
+            <button
+              className="btn btn--third-color"
+              style={{
+                backgroundColor:
+                  status === "SENT"
+                    ? "var(--dark-color)"
+                    : "var(--third-color)",
+              }}
+              type="submit"
+            >
               {status}
             </button>
           </div>

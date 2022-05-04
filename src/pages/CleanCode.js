@@ -130,13 +130,14 @@ const CleanCode = () => {
         >
           <li className="code__odd">meticulousness</li>
           <li className="code__even">easy to read, easy to change</li>
-          <li className="code__odd">keep it simple</li>
-          <li className="code__even">don't repeat your self</li>
           <li className="code__odd">naming conventions</li>
+          <li className="code__even">don't repeat your self</li>
+          <li className="code__odd">keep it simple</li>
           <li className="code__even">clear and concise</li>
           <li className="code__odd">consistent</li>
           <li className="code__even">uncomplicate</li>
           <li className="code__odd">B.E.M.</li>
+          <li className="code__even">D.R.Y.</li>
         </ul>
 
         <WhyCard
