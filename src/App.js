@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
 import Api from "./pages/Api";
 import CleanCode from "./pages/CleanCode";
 import WhyMe from "./pages/WhyMe";
@@ -75,6 +76,7 @@ const App = () => {
 
       <AboutContext.Provider value={{ location, setLocation }}>
         <About />
+        <Skills />
         <Projects />
         <WhyMe />
         <Api />
