@@ -110,12 +110,12 @@ const Contact = () => {
   const [columns, setColumns] = useState(dropSpace);
 
   return (
-    <section className="section section--contact" id="contact">
+    <section className="section contact" id="contact">
       <div className="container">
         <h1 className="section-title" style={{ textAlign: "left" }}>
           hello generator
         </h1>
-        <p className="sub-title">Let me help you drop me a line! ;)</p>
+        <p>Let me help you drop me a line! ;)</p>
 
         <DragDropContext
           onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
@@ -181,7 +181,7 @@ const Contact = () => {
         <form className="form-contact" onSubmit={handleSubmit}>
           <p className="form-contact__title">Additional comments:</p>
           <textarea
-            className="form-contact__input text-area"
+            className="form-contact__input form-contact__input--textarea"
             placeholder="type some additional comments"
             type="text"
             name="message"

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { AboutContext } from "./contexts/AboutContext";
 import "../src/styles/reset.css";
-import "../src/styles/fonts.css";
+import "../src/utils/fonts.css";
 import "./App.css";
 import Navbar from "./pages/Navbar";
 import Hero from "./pages/Hero";
@@ -11,11 +11,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
 import Api from "./pages/Api";
 import CleanCode from "./pages/CleanCode";
 import WhyMe from "./pages/WhyMe";
-
+import Skills from "./pages/Skills";
 // import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
