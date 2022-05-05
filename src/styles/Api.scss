@@ -1,85 +1,59 @@
 /* ---- WEATHER ICON ---- */
+
 .api-external {
   position: relative;
-}
 
-.api-external__image {
-  width: 30em;
-  position: absolute;
-  top: -14em;
-  left: calc(100vw - 100%);
-  z-index: 10;
-  -webkit-animation: weather-appear 6s ease-in-out infinite;
-          animation: weather-appear 6s ease-in-out infinite;
-}
+  &__image {
+    width: 30em;
+    position: absolute;
+    top: -14em;
+    left: calc(100vw - 100%);
+    z-index: 10;
+    animation: weather-appear 6s ease-in-out infinite;
+  }
 
-@-webkit-keyframes weather-appear {
-  0% {
-    -webkit-transform: translatey(0px);
-            transform: translatey(0px);
-  }
-  50% {
-    -webkit-transform: translatey(-20px);
-            transform: translatey(-20px);
-  }
-  100% {
-    -webkit-transform: translatey(0px);
-            transform: translatey(0px);
-  }
-}
+  @keyframes weather-appear {
+    0% {
+      transform: translatey(0px);
+    }
 
-@keyframes weather-appear {
-  0% {
-    -webkit-transform: translatey(0px);
-            transform: translatey(0px);
-  }
-  50% {
-    -webkit-transform: translatey(-20px);
-            transform: translatey(-20px);
-  }
-  100% {
-    -webkit-transform: translatey(0px);
-            transform: translatey(0px);
+    50% {
+      transform: translatey(-20px);
+    }
+
+    100% {
+      transform: translatey(0px);
+    }
   }
 }
 
 /* ---- API START ---- */
+
 .api {
   background-color: var(--bright-color);
   color: var(--dark-color);
   padding: 8em 0 10em 0;
   width: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
 }
 
 /* ---- GRID ---- */
+
 .api__grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: (auto)[12];
-      grid-template-rows: repeat(12, auto);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(12, auto);
   width: 90%;
   margin: 0 auto;
   margin-bottom: 3em;
 }
 
 /* ---- INPUT SECTION ---- */
+
 .api__question-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  flex-direction: column;
   grid-column: 1/5;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
   grid-row: 2/3;
   width: 18em;
 }
@@ -99,13 +73,10 @@
 }
 
 /* ---- ERROR MESSAGE ---- */
+
 #api__error {
   display: none;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-column: 1/5;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
   grid-row: 3/4;
   margin-top: 0em;
   margin-bottom: 4.8em;
@@ -116,42 +87,25 @@
   background-color: var(--third-color);
   padding: 0.5em;
   text-align: center;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 0.35s;
-          animation-duration: 0.35s;
+  animation-name: appear;
+  animation-duration: 0.35s;
   z-index: -10;
-}
-
-@-webkit-keyframes appear {
-  0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
 }
 
 @keyframes appear {
   0% {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    transform: translateY(-30px);
   }
+
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 
 /* ---- CITY SECTION ---- */
+
 .api__title-city {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-column: 1/5;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
   grid-row: 3/4;
   margin-top: 5em;
 }
@@ -164,21 +118,13 @@
 }
 
 .api__city {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-column: 1/5;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
   grid-row: 4/5;
   font-size: 3rem;
 }
 
 .api__country {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-column: 1/4;
-  -ms-grid-row: 5;
-  -ms-grid-row-span: 1;
   grid-row: 5/6;
   font-size: 2rem;
 }
@@ -197,32 +143,22 @@
 }
 
 .api__log {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 1;
   grid-row: 6/7;
   margin-top: 5em;
 }
 
 .api__lat {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
   grid-column: 2/3;
-  -ms-grid-row: 6;
-  -ms-grid-row-span: 1;
   grid-row: 6/7;
 }
 
 /* ---- TEMPERATURE SECTION ---- */
+
 .api__description {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-column: 1/5;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
   grid-row: 1/2;
+
   font-family: var(--main-font-semibold);
   font-size: 1.8rem;
   text-transform: capitalize;
@@ -231,15 +167,12 @@
 }
 
 .api__temp-wrapper {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-column: 1/5;
-  -ms-grid-row: 8;
-  -ms-grid-row-span: 1;
   grid-row: 8/9;
 }
 
 /* ---- DATA SECTION ---- */
+
 .data,
 .api__feels,
 .data-feels {
@@ -265,13 +198,8 @@
 .api__visibility-wrapper,
 .api__sunrise-wrapper,
 .api__sunset-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: right;
   padding: 0.5em;
   margin-left: 1em;
@@ -286,41 +214,26 @@
 }
 
 .api__wind-wrapper {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
   grid-column: 2/3;
-  -ms-grid-row: 9;
-  -ms-grid-row-span: 1;
   grid-row: 9/10;
   margin-top: 3em;
 }
 
 .api__pressure-wrapper {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
   grid-column: 2/3;
-  -ms-grid-row: 10;
-  -ms-grid-row-span: 1;
   grid-row: 10/11;
   margin-top: 1em;
+
 }
 
 .api__humidity-wrapper {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
   grid-column: 3/5;
-  -ms-grid-row: 9;
-  -ms-grid-row-span: 1;
   grid-row: 9/10;
   margin-top: 3em;
 }
 
 .api__visibility-wrapper {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
   grid-column: 3/5;
-  -ms-grid-row: 10;
-  -ms-grid-row-span: 1;
   grid-row: 10/11;
   margin-top: 1em;
 }
@@ -339,12 +252,9 @@
 }
 
 /* ---- UPDATED SECTION ---- */
+
 .api__updated-wrapper {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
   grid-column: 3/5;
-  -ms-grid-row: 11;
-  -ms-grid-row-span: 1;
   grid-row: 11/12;
   text-align: right;
   margin-top: 2em;
@@ -362,19 +272,27 @@
   font-size: 0.8rem;
 }
 
+
+
 /* ====================================
             MEDIA QUERY
 ======================================= */
+
+@media only screen and (min-width: 20em) {}
+
 @media only screen and (min-width: 48em) {
   .api-external__image {
     left: calc(100vw - 80%);
   }
+
   .api {
     padding: 12em 0 14em 0;
+
+    &__grid {
+      width: 60%;
+    }
   }
-  .api__grid {
-    width: 60%;
-  }
+
   .api__updated-wrapper {
     max-width: 20ch;
     justify-self: flex-end;
@@ -387,120 +305,104 @@
     top: -14em;
     left: calc(100vw - 47%);
   }
+
   .api {
     padding: 14em 0 11em 0;
+
+    &__grid {
+      grid-template-rows: repeat(9, auto);
+      grid-template-rows: auto auto 4em repeat(6, auto);
+      grid-template-columns: repeat(8, 1fr);
+      width: 65%;
+    }
   }
-  .api__grid {
-    -ms-grid-rows: (auto)[9];
-        grid-template-rows: repeat(9, auto);
-    -ms-grid-rows: auto auto 4em (auto)[6];
-        grid-template-rows: auto auto 4em repeat(6, auto);
-    -ms-grid-columns: (1fr)[8];
-        grid-template-columns: repeat(8, 1fr);
-    width: 65%;
-  }
+
+
   /* ---- INPUT SECTION ---- */
+
   .api__question-wrapper {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-column: 1/4;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
     grid-row: 2/4;
   }
+
   .api__log,
   .api__lat {
     margin-top: 0;
   }
+
   /* ---- ERROR MESSAGE ---- */
+
   #api__error {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-column: 1/4;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
     margin-top: 2em;
     margin-bottom: 0;
   }
+
   /* ---- CITY SECTION ---- */
+
   .api__title-city {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
     grid-column: 1/2;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
     grid-row: 5/6;
   }
+
   .api__city,
   .api__country {
     line-height: 4.5rem;
   }
+
   .api__city {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
     grid-column: 1/5;
-    -ms-grid-row: 6;
-    -ms-grid-row-span: 1;
     grid-row: 6/7;
     font-size: 4rem;
   }
+
   .api__country {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
     grid-column: 1/4;
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 1;
     grid-row: 7/8;
     font-size: 3rem;
   }
+
   .api__log,
   .api__lat {
     margin-top: 2em;
   }
+
   .api__log {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
     grid-column: 1/2;
-    -ms-grid-row: 8;
-    -ms-grid-row-span: 1;
     grid-row: 8/9;
   }
+
   .api__lat {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
     grid-column: 2/3;
-    -ms-grid-row: 8;
-    -ms-grid-row-span: 1;
     grid-row: 8/9;
   }
+
   /* ---- TEMPERATURE SECTION ---- */
+
   .api__description {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 8;
     grid-column: 1/9;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     grid-row: 1/2;
     text-align: right;
     margin-bottom: 1.5em;
     font-size: 2.25rem;
   }
+
   .api__temp-wrapper {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 2;
     grid-column: 7/9;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
   }
+
   /* ---- DATA SECTION ---- */
+
   .data-feels {
     display: block;
   }
+
   .api__temp {
     margin-bottom: -0.5em;
   }
+
   .api__temp-wrapper,
   .api__feels-wrapper,
   .api__wind-wrapper,
@@ -512,66 +414,50 @@
     padding: 0.5em;
     margin-left: 1em;
   }
+
   .api__feels-wrapper {
     display: block;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 1;
     grid-column: 6/7;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
     text-align: right;
   }
+
   .api__feels {
     display: block;
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 1;
     grid-column: 7/8;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
     font-size: 0.8rem;
     margin-top: 3em;
   }
+
   .api__title-feels {
-    display: block;
+    display: block
   }
+
   .api__wind-wrapper {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 1;
     grid-column: 7/8;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
     grid-row: 4/5;
     margin-top: 0;
   }
+
   .api__pressure-wrapper {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 1;
     grid-column: 7/8;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
     grid-row: 5/6;
     margin-top: 0;
   }
+
   .api__humidity-wrapper {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 1;
     grid-column: 8/9;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
     grid-row: 4/5;
     margin-top: 0;
   }
+
   .api__visibility-wrapper {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 1;
     grid-column: 8/9;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
     grid-row: 5/6;
     margin-top: 0;
   }
+
   /* 
   .api__sunrise-wrapper {
     grid-column: 8/9;
@@ -583,15 +469,15 @@
     grid-column: 8/9;
     grid-row: 5/6;
   } */
+
   /* ---- UPDATED SECTION ---- */
+
   .api__updated-wrapper {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 2;
     grid-column: 7/9;
-    -ms-grid-row: 7;
-    -ms-grid-row-span: 1;
     grid-row: 7/8;
     margin-top: 0;
   }
+
 }
-/*# sourceMappingURL=Api.css.map */
+
+@media only screen and (min-width: 75em) {}

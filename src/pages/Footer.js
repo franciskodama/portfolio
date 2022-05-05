@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Footer.scss";
+
 import { Link } from "react-scroll";
 import LogoFooter from "../assets/images/logo-fkodama-footer.svg";
 import Linkedin from "../assets/images/ico-linkedin-white.svg";
@@ -11,26 +12,32 @@ import "../styles/Footer.css";
 const Footer = () => {
   return (
     <section className="section footer">
+      {" "}
       <div className="footer__grid">
-        <h2 className="footer__title footer__title-about">
-          ABOUT<span>ME</span>
-        </h2>
-        <h2 className="footer__title footer__title-menu">
-          GET<span>BACK</span>
-        </h2>
-        <h2 className="footer__title footer__title-contact">
-          GET<span>IN TOUCH</span>
-        </h2>
-        <h2 className="footer__title footer__title-icons">
-          GET<span>CONNECTED</span>
-        </h2>
-
+        {" "}
+        <h2 className="footer__title">
+          {" "}
+          ABOUT<span>ME</span>{" "}
+        </h2>{" "}
+        <h2 className="footer__title">
+          {" "}
+          GET<span>BACK</span>{" "}
+        </h2>{" "}
+        <h2 className="footer__title">
+          {" "}
+          GET<span>IN TOUCH</span>{" "}
+        </h2>{" "}
+        <h2 className="footer__title">
+          {" "}
+          GET<span>CONNECTED</span>{" "}
+        </h2>{" "}
         <p className="footer__aboutme">
+          {" "}
           A web developer with a great deal of experience in marketing, a
-          natural leader, curious, and constantly provoked by new challenges.
-        </p>
-
+          natural leader, curious, and constantly provoked by new challenges.{" "}
+        </p>{" "}
         <div className="footer__menu">
+          {" "}
           <Link
             className="footer__menu-item"
             to="hero"
@@ -41,7 +48,7 @@ const Footer = () => {
           >
             {" "}
             home{" "}
-          </Link>
+          </Link>{" "}
           <Link
             className="footer__menu-item"
             to="about"
@@ -52,7 +59,7 @@ const Footer = () => {
           >
             {" "}
             about{" "}
-          </Link>
+          </Link>{" "}
           <Link
             className="footer__menu-item"
             to="projects"
@@ -63,7 +70,7 @@ const Footer = () => {
           >
             {" "}
             projects{" "}
-          </Link>
+          </Link>{" "}
           <Link
             className="footer__menu-item"
             to="api"
@@ -74,7 +81,7 @@ const Footer = () => {
           >
             {" "}
             api{" "}
-          </Link>
+          </Link>{" "}
           <Link
             className="footer__menu-item"
             to="code"
@@ -85,7 +92,7 @@ const Footer = () => {
           >
             {" "}
             clean code{" "}
-          </Link>
+          </Link>{" "}
           <Link
             className="footer__menu-item"
             to="contact"
@@ -96,11 +103,11 @@ const Footer = () => {
           >
             {" "}
             contact{" "}
-          </Link>
-        </div>
-
+          </Link>{" "}
+        </div>{" "}
         <div className="footer__contact">
-          <p className="footer__email">fk@fkodama.com</p>
+          {" "}
+          <p className="footer__email">fk@fkodama.com</p>{" "}
           <Link
             className="footer__send"
             to="contact"
@@ -111,50 +118,51 @@ const Footer = () => {
           >
             {" "}
             send message{" "}
-          </Link>
-        </div>
-
+          </Link>{" "}
+        </div>{" "}
         <div className="footer__icons">
+          {" "}
           <a
             className="footer__icon-item"
             href="https://github.com/franciskodama"
             target="_blank"
           >
-            <img src={Git} alt="logo Github" />
-          </a>
+            {" "}
+            <img src={Git} alt="logo Github" />{" "}
+          </a>{" "}
           <a
             className="footer__icon-item"
             href="https://www.linkedin.com/in/kodama/"
             target="_blank"
           >
-            <img src={Linkedin} alt="logo Linkedin" />
-          </a>
+            {" "}
+            <img src={Linkedin} alt="logo Linkedin" />{" "}
+          </a>{" "}
           <a
             className="footer__icon-item"
             href="https://www.instagram.com/franciskodama/"
             target="_blank"
           >
-            <img src={Insta} alt="logo Instagram" />
-          </a>
-        </div>
-
-        <img className="footer__logo" src={LogoFooter} alt="logo fkodama" />
-
+            {" "}
+            <img src={Insta} alt="logo Instagram" />{" "}
+          </a>{" "}
+        </div>{" "}
+        <img className="footer__logo" src={LogoFooter} alt="logo fkodama" />{" "}
         <div className="footer__design">
-          <p>Designed and built by</p>
-          <p className="footer--bold">Francis Kodama</p>
-          <p>Copyright 2022</p>
-        </div>
-
+          {" "}
+          <p>Designed and built by</p>{" "}
+          <p className="footer--bold">Francis Kodama</p> <p>Copyright 2022</p>{" "}
+        </div>{" "}
         <div className="footer__resume">
-          <h2 className="footer__resume-title">RESUME</h2>
-          <p>Download</p>
-          <p className="footer--bold">Resumé</p>
-        </div>
-        <p className="footer__localization">
-          Ottawa, ON - <span className="footer-bold">Canada</span>
-        </p>
-      </div>
+          {" "}
+          <h2 className="footer__resume-title">RESUME</h2> <p>Download</p>{" "}
+          <p className="footer--bold">Resumé</p>{" "}
+        </div>{" "}
+        <p className="footer__location">
+          {" "}
+          Ottawa, ON - <span className="footer-bold">Canada</span>{" "}
+        </p>{" "}
+      </div>{" "}
     </section>
   );
 };

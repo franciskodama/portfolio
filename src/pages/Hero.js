@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/Hero.css";
+
 import { Link } from "react-scroll";
 import Video from "../assets/images/hero-bg.mp4";
 import Scroll from "../assets/images/ico-scroll.svg";
@@ -71,7 +72,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="section section--hero" id="hero">
+    <section className="section hero" id="hero">
+      {" "}
       <video
         autoPlay
         loop
@@ -87,72 +89,37 @@ const Hero = () => {
           zIndex: "1",
         }}
       >
-        <source src={Video} type="video/mp4" />
-      </video>
-
-      <div className="hero__filter"></div>
-
+        {" "}
+        <source src={Video} type="video/mp4" />{" "}
+      </video>{" "}
+      <div className="hero__filter"></div>{" "}
       <div className="container" ref={layersWrapperRef}>
-        {/* --------------- INFO  --------------- */}
-
-        {/* <div className="hero__info" ref={infoRef}>
-          <p className="hero__paragraphs">Hi, I'm Francis Kodama.</p>
-          <div className="hero__typing-effect">
-            <h1 className="hero__title--typing">Front-end developer </h1>
-          </div>
-          <h2 className="hero__title hero__title--highlight">
-            html, css, js, React,
-          </h2>
-          <h2 className="hero__title">GIT, npm, FIGMA.</h2>
-          <p className="hero__paragraphs">Based in Ottawa, ON - Canada.</p>
-        </div> */}
-
+        {" "}
         {/* --------------- CUBE --------------- */}
-
-        <div className="cube__wrapper" onMouseMove={onMoveHandler}>
-          <div className="cube__text-a-wrapper" ref={layerTwoRef}>
-            <h2 className="cube__text-a">hey, I'm</h2>
-            <h2 className="cube__text-a">Francis</h2>
-            <h2 className="cube__text-a">Kodama</h2>
-            <h2 className="cube__text-a">Based in</h2>
-            <h2 className="cube__text-a">Ottawa,</h2>
-            <h2 className="cube__text-a">Canada.</h2>
-          </div>
-          <div className="cube__text-b-wrapper" ref={layerThreeRef}>
-            <h2 className="cube__text-b">Front-end</h2>
-            <h2 className="cube__text-b">developer </h2>
-            <h2 className="cube__text-b">-----------</h2>
-            <h2 className="cube__text-b">product </h2>
-            <h2 className="cube__text-b">strategy </h2>
-          </div>
-          <div className="cube__text-c-wrapper" ref={layerFourRef}>
-            <h2 className="cube__text-c">react, js,</h2>
-            <h2 className="cube__text-c">html, css,</h2>
-            <h2 className="cube__text-c">sass, git</h2>
-            <h2 className="cube__text-c">npm, figma</h2>
-            <h2 className="cube__text-c">adobe XD,</h2>
-            <h2 className="cube__text-c">PHOTOSHOP</h2>
-          </div>
-        </div>
-
-        {/* --------------- IMAGES --------------- */}
-        {/* 
-        <div
-          className="hero__layers"
-          ref={layersWrapperRef}
-          onMouseMove={onMoveHandler}
-        >
-          <img src="" alt="" className="hero__layer" ref={layerTwoRef} />
-          <img src="" alt="" className="hero__layer" ref={layerOneRef} />
-          <img src="" alt="" className="hero__layer" ref={layerThreeRef} />
-          <img src="" alt="" className="hero__layer" ref={layerFourRef} />
-          <img src="" alt="" className="hero__layer" ref={layerFiveRef} />
-        </div> */}
-      </div>
-
+        <div className="cube" onMouseMove={onMoveHandler}>
+          {" "}
+          <div className="cube__left" ref={layerTwoRef}>
+            {" "}
+            <h2>hey, I'm</h2>
+            <h2>Francis</h2> <h2>Kodama</h2> <h2>Based in</h2> <h2>Ottawa, </h2>{" "}
+            <h2>Canada.</h2>{" "}
+          </div>{" "}
+          <div className="cube__top" ref={layerThreeRef}>
+            {" "}
+            <h2>Front-end</h2> <h2>developer </h2> <h2>-----------</h2>{" "}
+            <h2>product </h2> <h2>strategy </h2>{" "}
+          </div>{" "}
+          <div className="cube__right" ref={layerFourRef}>
+            {" "}
+            <h2>react, js, </h2> <h2>html, css, </h2> <h2>sass, git</h2>{" "}
+            <h2>npm, figma</h2> <h2>adobe XD, </h2> <h2>PHOTOSHOP</h2>{" "}
+          </div>{" "}
+        </div>{" "}
+      </div>{" "}
       <Link to="reason" spy={true} smooth={true} offset={-150} duration={2000}>
-        <img src={Scroll} className="hero__scroll" />
-      </Link>
+        {" "}
+        <img src={Scroll} className="hero__scroll" />{" "}
+      </Link>{" "}
     </section>
   );
 };

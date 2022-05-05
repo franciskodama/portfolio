@@ -34,9 +34,9 @@ const Api = () => {
   };
 
   return (
-    <div className="section--api-external">
+    <div className="api-external">
       <img
-        className="api__image"
+        className="api-external__image"
         src={
           data.weather
             ? require(`../assets/images/${data.weather[0].icon}.png`)
@@ -45,7 +45,7 @@ const Api = () => {
         alt="weather condition"
       />
 
-      <section className="section section--api" id="api">
+      <section className="section api" id="api">
         <div className="container">
           <div className="api__grid">
             <div className="api__question-wrapper">
