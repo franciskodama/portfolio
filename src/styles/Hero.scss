@@ -29,7 +29,7 @@
   }
 }
 
-.container {
+.hero .container {
   @include flexCenter(row);
   position: relative;
   height: 100%;

@@ -1,3 +1,5 @@
+@import '../utils/utils';
+
 /* ---- WEATHER ICON ---- */
 
 .api-external {
@@ -27,7 +29,9 @@
   }
 }
 
-/* ---- API START ---- */
+/* ====================================
+              API START
+======================================= */
 
 .api {
   background-color: var(--bright-color);
@@ -35,42 +39,198 @@
   padding: 8em 0 10em 0;
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+
+  /* ---- GRID ---- */
+    
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, auto);
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+  }
+
+  /* ---- INPUT ---- */
+
+  &__question {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    width: 18em;
+    line-height: 3rem;
+    font-family: var(--main-font-semibold);
+    font-size: 2.8rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  &__input {
+    height: 3em;
+    width: 18em;
+    margin-top: 0.7em;
+    margin-right: 1em;
+  }
+
+  /* ---- LOCATION ---- */
+
+  &__location-title {
+    grid-column: 1/5;
+    grid-row: 3/4;
+    margin-top: 5em;
+  }
+
+  &__city,
+  &__country {
+    font-family: var(--main-font-semibold);
+    text-transform: uppercase;
+    line-height: 3.5rem;
+  }
+
+  &__city {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    font-size: 3rem;
+  }
+  
+  &__country {
+    grid-column: 1/4;
+    grid-row: 5/6;
+    font-size: 2rem;
+  }
+  
+  &__log,
+&__lat {
+  font-family: var(--main-font-regular);
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-top: 5em;
 }
 
-/* ---- GRID ---- */
-
-.api__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(12, auto);
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 3em;
+&__log {
+  grid-column: 1/2;
+  grid-row: 6/7;
 }
 
-/* ---- INPUT SECTION ---- */
+&__lat {
+  grid-column: 2/3;
+  grid-row: 6/7;
+}
 
-.api__question-wrapper {
+/* ---- CURRENT WEATHER PHRASE ---- */
+
+&__description {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  font-family: var(--main-font-semibold);
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 3.5em;
+}
+
+/* ---- DATA WRAPPERS ---- */
+
+&__temp-wrapper,
+&__feels-wrapper,
+&__wind-wrapper,
+&__pressure-wrapper,
+&__humidity-wrapper,
+&__visibility-wrapper,
+&__sunrise-wrapper,
+&__sunset-wrapper {
   display: flex;
   flex-direction: column;
+  text-align: right;
+  padding: 0.5em;
+  margin-left: 1em;
+}
+
+&__temp-wrapper {
   grid-column: 1/5;
-  grid-row: 2/3;
-  width: 18em;
+  grid-row: 8/9;
 }
 
-.api__question {
-  line-height: 2.8rem;
+&__wind-wrapper {
+  grid-column: 2/3;
+  grid-row: 9/10;
+  margin-top: 3em;
+}
+
+&__pressure-wrapper {
+  grid-column: 2/3;
+  grid-row: 10/11;
+  margin-top: 1em;
+}
+
+&__humidity-wrapper {
+  grid-column: 3/5;
+  grid-row: 9/10;
+  margin-top: 3em;
+}
+
+&__visibility-wrapper {
+  grid-column: 3/5;
+  grid-row: 10/11;
+  margin-top: 1em;
+}
+
+&__sunrise-wrapper,
+&__sunset-wrapper {
+    display: none;
+}
+
+/* ---- TITLES ---- */
+
+&__location-title,
+&__temp-title,
+&__feels-title,
+&__others-title {
+  font-family: var(--main-font-regular);
+}
+
+/* ---- DATA ---- */
+
+.data,
+&__feels,
+.data-feels {
   font-family: var(--main-font-semibold);
-  font-size: 2.8rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
 }
 
-.api__input {
-  height: 3em;
-  width: 100%;
-  margin-top: 0.7em;
-  margin-right: 1em;
+&__feels-title,
+.data-feels,
+&__feels-c {
+  display: none;
 }
+
+&__temp {
+  font-family: var(--main-font-semibold);
+  font-size: 5rem;
+  margin-bottom: -0.5em;
+}
+
+&__unit {
+  font-family: var(--main-font-light);
+  font-size: 0.8rem;
+}
+
+/* ---- UPDATED ---- */
+
+&__updated-wrapper {
+  grid-column: 3/5;
+  grid-row: 11/12;
+  text-align: right;
+  margin-top: 2em;
+}
+
+&__date {
+  font-family: var(--main-font-light);
+  font-size: 0.8rem;
+}
+
+}
+
 
 /* ---- ERROR MESSAGE ---- */
 
@@ -87,9 +247,9 @@
   background-color: var(--third-color);
   padding: 0.5em;
   text-align: center;
-  animation-name: appear;
   animation-duration: 0.35s;
   z-index: -10;
+  animation-name: appear;
 }
 
 @keyframes appear {
@@ -101,178 +261,6 @@
     transform: translateY(0px);
   }
 }
-
-/* ---- CITY SECTION ---- */
-
-.api__title-city {
-  grid-column: 1/5;
-  grid-row: 3/4;
-  margin-top: 5em;
-}
-
-.api__city,
-.api__country {
-  font-family: var(--main-font-semibold);
-  text-transform: uppercase;
-  line-height: 3.5rem;
-}
-
-.api__city {
-  grid-column: 1/5;
-  grid-row: 4/5;
-  font-size: 3rem;
-}
-
-.api__country {
-  grid-column: 1/4;
-  grid-row: 5/6;
-  font-size: 2rem;
-}
-
-.api__log,
-.api__lat {
-  font-family: var(--main-font-regular);
-  font-size: 0.8rem;
-  display: inline-block;
-  margin-top: 2em;
-}
-
-.api__log,
-.api__lat {
-  margin-top: 5em;
-}
-
-.api__log {
-  grid-column: 1/2;
-  grid-row: 6/7;
-  margin-top: 5em;
-}
-
-.api__lat {
-  grid-column: 2/3;
-  grid-row: 6/7;
-}
-
-/* ---- TEMPERATURE SECTION ---- */
-
-.api__description {
-  grid-column: 1/5;
-  grid-row: 1/2;
-
-  font-family: var(--main-font-semibold);
-  font-size: 1.8rem;
-  text-transform: capitalize;
-  text-align: center;
-  margin-bottom: 3.5em;
-}
-
-.api__temp-wrapper {
-  grid-column: 1/5;
-  grid-row: 8/9;
-}
-
-/* ---- DATA SECTION ---- */
-
-.data,
-.api__feels,
-.data-feels {
-  font-family: var(--main-font-semibold);
-  font-size: 1.5rem;
-}
-
-.data-feels {
-  display: none;
-}
-
-.api__temp {
-  font-family: var(--main-font-semibold);
-  font-size: 5rem;
-  margin-bottom: -0.5em;
-}
-
-.api__temp-wrapper,
-.api__feels-wrapper,
-.api__wind-wrapper,
-.api__pressure-wrapper,
-.api__humidity-wrapper,
-.api__visibility-wrapper,
-.api__sunrise-wrapper,
-.api__sunset-wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  padding: 0.5em;
-  margin-left: 1em;
-}
-
-.api__title-feels {
-  display: none;
-}
-
-.api__feels {
-  display: none;
-}
-
-.api__wind-wrapper {
-  grid-column: 2/3;
-  grid-row: 9/10;
-  margin-top: 3em;
-}
-
-.api__pressure-wrapper {
-  grid-column: 2/3;
-  grid-row: 10/11;
-  margin-top: 1em;
-
-}
-
-.api__humidity-wrapper {
-  grid-column: 3/5;
-  grid-row: 9/10;
-  margin-top: 3em;
-}
-
-.api__visibility-wrapper {
-  grid-column: 3/5;
-  grid-row: 10/11;
-  margin-top: 1em;
-}
-
-.api__sunrise-wrapper {
-  display: none;
-}
-
-.api__sunset-wrapper {
-  display: none;
-}
-
-.api__unit {
-  font-family: var(--main-font-light);
-  font-size: 0.8rem;
-}
-
-/* ---- UPDATED SECTION ---- */
-
-.api__updated-wrapper {
-  grid-column: 3/5;
-  grid-row: 11/12;
-  text-align: right;
-  margin-top: 2em;
-}
-
-.api__title-city,
-.api__title-temp,
-.api__title-feels,
-.api__title-others {
-  font-family: var(--main-font-regular);
-}
-
-.api__date {
-  font-family: var(--main-font-light);
-  font-size: 0.8rem;
-}
-
-
 
 /* ====================================
             MEDIA QUERY
@@ -293,7 +281,7 @@
     }
   }
 
-  .api__updated-wrapper {
+  &__updated-wrapper {
     max-width: 20ch;
     justify-self: flex-end;
   }
@@ -315,72 +303,62 @@
       grid-template-columns: repeat(8, 1fr);
       width: 65%;
     }
-  }
 
+    /* ---- INPUT ---- */
 
-  /* ---- INPUT SECTION ---- */
-
-  .api__question-wrapper {
+  &__question-wrapper {
     grid-column: 1/4;
     grid-row: 2/4;
   }
 
-  .api__log,
-  .api__lat {
+  &__log,
+  &__lat {
     margin-top: 0;
   }
 
-  /* ---- ERROR MESSAGE ---- */
 
-  #api__error {
-    grid-column: 1/4;
-    grid-row: 3/4;
-    margin-top: 2em;
-    margin-bottom: 0;
-  }
+  /* ---- location SECTION ---- */
 
-  /* ---- CITY SECTION ---- */
-
-  .api__title-city {
+  &__location-title {
     grid-column: 1/2;
     grid-row: 5/6;
   }
 
-  .api__city,
-  .api__country {
+  &__city,
+  &__country {
     line-height: 4.5rem;
   }
 
-  .api__city {
+  &__city {
     grid-column: 1/5;
     grid-row: 6/7;
     font-size: 4rem;
   }
 
-  .api__country {
+  &__country {
     grid-column: 1/4;
     grid-row: 7/8;
     font-size: 3rem;
   }
 
-  .api__log,
-  .api__lat {
+  &__log,
+  &__lat {
     margin-top: 2em;
   }
 
-  .api__log {
+  &__log {
     grid-column: 1/2;
     grid-row: 8/9;
   }
 
-  .api__lat {
+  &__lat {
     grid-column: 2/3;
     grid-row: 8/9;
   }
 
   /* ---- TEMPERATURE SECTION ---- */
 
-  .api__description {
+  &__description {
     grid-column: 1/9;
     grid-row: 1/2;
     text-align: right;
@@ -388,7 +366,7 @@
     font-size: 2.25rem;
   }
 
-  .api__temp-wrapper {
+  &__temp-wrapper {
     grid-column: 7/9;
     grid-row: 2/3;
   }
@@ -399,85 +377,101 @@
     display: block;
   }
 
-  .api__temp {
+  &__temp {
     margin-bottom: -0.5em;
   }
 
-  .api__temp-wrapper,
-  .api__feels-wrapper,
-  .api__wind-wrapper,
-  .api__pressure-wrapper,
-  .api__humidity-wrapper,
-  .api__visibility-wrapper,
-  .api__sunrise-wrapper,
-  .api__sunset-wrapper {
+  &__temp-wrapper,
+  &__feels-wrapper,
+  &__wind-wrapper,
+  &__pressure-wrapper,
+  &__humidity-wrapper,
+  &__visibility-wrapper,
+  &__sunrise-wrapper,
+  &__sunset-wrapper {
     padding: 0.5em;
     margin-left: 1em;
   }
 
-  .api__feels-wrapper {
+  &__feels-wrapper {
     display: block;
     grid-column: 6/7;
     grid-row: 2/3;
     text-align: right;
   }
 
-  .api__feels {
+  &__feels-c {
     display: block;
     grid-column: 7/8;
     grid-row: 2/3;
+    font-family: var(--main-font-semibold);
     font-size: 0.8rem;
     margin-top: 3em;
   }
 
-  .api__title-feels {
+  &__feels-title {
     display: block
   }
 
-  .api__wind-wrapper {
+  &__wind-wrapper {
     grid-column: 7/8;
     grid-row: 4/5;
     margin-top: 0;
   }
 
-  .api__pressure-wrapper {
+  &__pressure-wrapper {
     grid-column: 7/8;
     grid-row: 5/6;
     margin-top: 0;
   }
 
-  .api__humidity-wrapper {
+  &__humidity-wrapper {
     grid-column: 8/9;
     grid-row: 4/5;
     margin-top: 0;
   }
 
-  .api__visibility-wrapper {
+  &__visibility-wrapper {
     grid-column: 8/9;
     grid-row: 5/6;
     margin-top: 0;
   }
 
   /* 
-  .api__sunrise-wrapper {
+  &__sunrise-wrapper {
     grid-column: 8/9;
     grid-row: 4/5;
     margin-bottom: 1em;
   }
 
-  .api__sunset-wrapper {
+  &__sunset-wrapper {
     grid-column: 8/9;
     grid-row: 5/6;
   } */
 
   /* ---- UPDATED SECTION ---- */
 
-  .api__updated-wrapper {
+  &__updated-wrapper {
     grid-column: 7/9;
     grid-row: 7/8;
     margin-top: 0;
   }
 
+  }
+
+
+  
+
+
+
+  /* ---- ERROR MESSAGE ---- */
+
+  #api__error {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 75em) {}

@@ -31,7 +31,7 @@
   z-index: 3;
 }
 
-.container {
+.hero .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
