@@ -1,6 +1,8 @@
+
 /* ====================================
         VARIABLES
 ======================================= */
+
 :root {
   --main-font-thin: "axiformathin", sans-serif;
   --main-font-light: "axiformalight", sans-serif;
@@ -8,12 +10,15 @@
   --main-font-medium: "axiformamedium", sans-serif;
   --main-font-semibold: "axiformasemibold", sans-serif;
   --main-font-heavy: "axiformaheavy", sans-serif;
+
   --second-font: "Hubballi", cursive;
+
   --dark-color: #1c1c1c;
   --bright-color: #ffffff;
   --third-color: #ed1c24;
   --transparent: hsla(0, 0%, 0%, 0);
   --gradient: linear-gradient(to right top, #1c1c1c, #3a3939, #5a5959, #7c7b7a, #9f9f9d);
+
   --dark-two-color: grey;
   --third-two-color: orange;
   --dark-three-color: indigo;
@@ -23,9 +28,9 @@
 /* ====================================
               STARTERS
 ======================================= */
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -56,6 +61,7 @@ a:active {
 /* ====================================
             TYPOGRAPHY
 ======================================= */
+
 h1,
 h2,
 button {
@@ -72,33 +78,6 @@ button {
 
 input,
 textarea,
-::-webkit-input-placeholder {
-  font-family: var(--main-font-light);
-  font-size: 1rem;
-  line-height: 1.5;
-  padding-left: 1em;
-}
-
-input,
-textarea,
-:-ms-input-placeholder {
-  font-family: var(--main-font-light);
-  font-size: 1rem;
-  line-height: 1.5;
-  padding-left: 1em;
-}
-
-input,
-textarea,
-::-ms-input-placeholder {
-  font-family: var(--main-font-light);
-  font-size: 1rem;
-  line-height: 1.5;
-  padding-left: 1em;
-}
-
-input,
-textarea,
 ::placeholder {
   font-family: var(--main-font-light);
   font-size: 1rem;
@@ -111,25 +90,15 @@ textarea {
   color: var(--dark-color);
 }
 
-::-webkit-input-placeholder {
-  color: #bfbdbd;
-}
-
-:-ms-input-placeholder {
-  color: #bfbdbd;
-}
-
-::-ms-input-placeholder {
-  color: #bfbdbd;
-}
-
 ::placeholder {
-  color: #bfbdbd;
+  color: rgb(191, 189, 189);
 }
+
 
 /* ====================================
             LAYOUT
 ======================================= */
+
 .section {
   width: 100%;
   background-color: var(--dark-color);
@@ -148,4 +117,15 @@ textarea {
 /* ====================================
             MEDIA QUERY
 ======================================= */
-/*# sourceMappingURL=App.css.map */
+
+@media only screen and (min-width: 20em) {
+}
+
+@media only screen and (min-width: 48em) {
+}
+
+@media only screen and (min-width: 62em) {
+}
+
+@media only screen and (min-width: 75em) {
+}

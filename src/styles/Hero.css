@@ -1,5 +1,5 @@
 /* ====================================
-        MIXIN
+                 MIXIN
 ======================================= */
 .hero {
   background: var(--gradient);
@@ -146,14 +146,15 @@
     height: 13em;
   }
   .cube__left {
-    left: 9%;
+    top: 42%;
+    left: 13%;
   }
   .cube__top {
-    left: 30%;
+    left: 30.5%;
   }
   .cube__right {
-    top: 37%;
-    left: 40%;
+    top: 38%;
+    left: 47%;
   }
 }
 /*# sourceMappingURL=Hero.css.map */
