@@ -50,7 +50,7 @@ const Card = ({ project }) => {
             <h3 className="card-front__tech">{project.tech}</h3>
           </div>
         </div>
-        <p className="card-front__text">{project.frontText}</p>
+        <p className="card-front__description">{project.frontText}</p>
       </div>
 
       {/* ========================== CARD BACK ========================== */}

@@ -128,10 +128,10 @@ iframe {
             MEDIA QUERY
 ======================================= */
 
-@media only screen and (width > 20em) {
+@media only screen and (min-width: 20em) {
 }
 
-@media only screen and (width > 48em) {
+@media only screen and (min-width: 48em) {
   .inner-container {
     grid-template-columns: 1fr 62px 1em 412px 1fr;
     grid-template-rows: 5em auto auto 2em 8em 5em;
@@ -171,7 +171,7 @@ iframe {
   }
 }
 
-@media only screen and (width > 62em) {
+@media only screen and (min-width: 62em) {
   .inner-container {
     grid-template-columns: 2fr 62px 1em 412px 1fr;
     grid-template-rows: 5em auto auto 2em 8em 5em;
@@ -179,5 +179,5 @@ iframe {
 
 }
 
-@media only screen and (width > 75em) {
+@media only screen and (min-width: 75em) {
 }

@@ -6,12 +6,12 @@ import { projects, whyData } from "../data/Data";
 
 const Projects = () => {
   return (
-    <section className="section section--projects" id="projects">
+    <section className="section projects" id="projects">
       <div className="container">
         <h2 className="section-title section-title--projects">
           selected projects
         </h2>
-        <div className="projects">
+        <div className="projects-wrapper">
           {projects.map((project) => (
             <Card key={project.id} project={project} />
           ))}

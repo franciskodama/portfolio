@@ -10,23 +10,20 @@
 }
 
 .projects-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 /* ====================================
             MEDIA QUERY
 ======================================= */
+
+@media only screen and (min-width: 20em) {
+}
+
 @media only screen and (min-width: 48em) {
   .projects {
     padding-bottom: 10em;
@@ -37,9 +34,12 @@
   .projects {
     width: 100%;
     padding-bottom: 15em;
-  }
-  .projects .container {
-    width: 80%;
+
+    .container {
+      width: 80%;
+    }
   }
 }
-/*# sourceMappingURL=Projects.css.map */
+
+@media only screen and (min-width: 75em) {
+}
