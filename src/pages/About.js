@@ -78,22 +78,22 @@ const About = () => {
   };
 
   return (
-    <section className="section section--about" id="about">
+    <section className="section about" id="about">
       <div className="container">
-        <div className="first-main-container">
+        <div className="about__avatar-container">
           <Avatar />
         </div>
 
-        <div className="second-main-container">
-          <div className="visa-tag">
-            <p className="work-permit">WORK PERMIT VALID</p>
+        <div className="about__info-container">
+          <div className="work-permit">
+            <p className="work-permit__text">WORK PERMIT VALID</p>
             <p>to work in Canada</p>
           </div>
 
-          <div onClick={handleClickBag} className="bag-container" id="bag">
+          <div onClick={handleClickBag} className="bag" id="bag">
             <img src={BagEmpty} alt="Shop bag empty" />
             <p
-              className="number-one"
+              className="bag__number-one"
               style={{ display: addMe.showMe ? "block" : "none" }}
             >
               1
@@ -145,7 +145,7 @@ const About = () => {
                 </div>
                 <img
                   onClick={handleClickDelete}
-                  className="icon-delete"
+                  className="modal__delete"
                   src={Trash}
                   alt="icon trash to delete"
                 />
@@ -185,7 +185,7 @@ const About = () => {
             {/* ===================== MODAL END ===================== */}
           </div>
 
-          <div className="about">
+          <div className="about__container">
             <h3 className="about__name">Francis Kodama</h3>
             <h2 className="about__job">Front-end Developer</h2>
             <h2 className="about__languages">
@@ -205,12 +205,12 @@ const About = () => {
           </div>
 
           <div className="bottom-container">
-            <div className="location-button-container">
-              <p className="location-title">location:</p>
-              <form className="location">
+            <div className="location">
+              <p className="location__title">location:</p>
+              <form className="location__form">
                 <input
                   onClick={handleClickLocation}
-                  className="input-radio"
+                  className="location__input"
                   type="radio"
                   name="location"
                   value="remote"
@@ -218,7 +218,7 @@ const About = () => {
                 <label htmlFor="remote">Remote</label>
                 <input
                   onClick={handleClickLocation}
-                  className="input-radio"
+                  className="location__input"
                   type="radio"
                   name="location"
                   value="ottawa"
@@ -226,7 +226,7 @@ const About = () => {
                 <label htmlFor="ottawa">Ottawa</label>
                 <input
                   onClick={handleClickLocation}
-                  className="input-radio"
+                  className="location__input"
                   type="radio"
                   name="location"
                   value="hybrid"
@@ -243,15 +243,17 @@ const About = () => {
 
               <p
                 className={
-                  showMessageError ? "error-location--active" : "error-location"
+                  showMessageError
+                    ? "location__error--active"
+                    : "location__error"
                 }
               >
                 ...Ops, choose a location
               </p>
             </div>
 
-            <div className="tools">
-              <p className="tools-title">included:</p>
+            <div className="about__skills">
+              <p className="about__skills-title">included:</p>
               <p>git</p>
               <p>jira</p>
               <p>agile</p>
