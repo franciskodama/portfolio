@@ -30,7 +30,7 @@ const Navbar = () => {
   }, [isActive, isOpen]);
 
   return (
-    <header className="section section--header">
+    <header className="section navbar">
       <div className="container">
         <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
           <img className="navbar__logo" src={Logo} />
@@ -169,7 +169,7 @@ const Navbar = () => {
 
         {/* -------- NAVBAR HORIZONTAL -------- */}
 
-        <nav className="navbar">
+        <nav className="navbar__horizontal">
           <Link
             className="navbar__item"
             to="hero"

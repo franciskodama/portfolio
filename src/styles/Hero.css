@@ -77,7 +77,7 @@
 .cube__left {
   -webkit-transform: skew(0deg, 30deg) scaleY(1.33333);
           transform: skew(0deg, 30deg) scaleY(1.33333);
-  top: 43%;
+  top: 47%;
   left: 8.2%;
   color: var(--bright-color);
   opacity: 0.4;
@@ -87,7 +87,7 @@
   -webkit-transform: skew(60deg, -30deg) scaleY(0.66667);
           transform: skew(60deg, -30deg) scaleY(0.66667);
   top: 2%;
-  left: 27%;
+  left: 30%;
   color: var(--bright-color);
   opacity: 0.8;
 }
@@ -95,7 +95,7 @@
 .cube__right {
   -webkit-transform: skew(0deg, -30deg) scaleY(1.33333);
           transform: skew(0deg, -30deg) scaleY(1.33333);
-  top: 38%;
+  top: 39%;
   left: 48%;
   color: var(--third-color);
   opacity: 0.8;

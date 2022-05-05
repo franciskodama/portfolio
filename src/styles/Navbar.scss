@@ -1,0 +1,147 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--dark-color);
+  overflow: visible;
+
+  & .container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+
+  /* ------ LOGO FKODAMA ------ */
+
+  &__logo {
+    padding: 0.8em 0;
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__logo:hover {
+  transform: scale(1.03);
+  }
+
+  /* ------ TOGGLE ------ */
+
+  &__toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--third-color)
+  }
+
+  /* ------ NAV BAR ------ */
+
+  &__horizontal {
+    display: none;
+  }
+
+  &__menu,
+  &__close {
+    width: 40px;
+    cursor: pointer;
+  }
+
+  &__extended {
+    position: absolute;
+    top: 4.2em;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 75%;
+    padding: 2.5em 2em 0 3em;
+    background-color: var(--third-color);
+  }
+
+  &__item {
+    position: relative;
+    font-family: var(--main-font-light);
+    color: var(--bright-color);
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(255, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 1.5em;
+    margin-right: 1em;
+    font-family: var(--main-font-thin);
+    font-size: 1.3rem;
+
+  /* ------ MOUSE OVER ------ */
+
+    &:hover::first-letter {
+      color: var(--dark-color);
+    }
+  
+    &:hover,
+    &:focus,
+    &:active {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (min-width: 20em) {
+}
+
+@media only screen and (min-width: 48em) {
+  .navbar {
+    &__extended {
+      padding: 5em 5em 3em 5em;
+      width: 50%;
+    }
+  
+    &__item {
+      margin-right: 3em;
+    }
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .navbar {
+    &__toggle,
+    &__extended,
+    &__extended &__item {
+      display: none;
+    }
+  
+    &__horizontal {
+      position: relative;
+      top: 0;
+      display: grid;
+      grid-template-columns: 4.6rem 3.3rem 6.6rem 5.8rem 3.6rem 3.3rem 6rem 4.3rem;
+      align-items: center;
+      justify-content: flex-end;
+      width: 40em;
+      padding: 0;
+      background-color: var(--dark-color);
+    }
+  
+    &__item {
+      font-size: 1rem;
+      margin: 0;
+    }
+  
+    &__item:hover::first-letter {
+      color: var(--third-color);
+      font-family: var(--main-font-regular);
+    }
+  }
+}
+
+@media only screen and (min-width: 75em) {
+}
+

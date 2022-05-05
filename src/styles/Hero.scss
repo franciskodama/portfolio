@@ -58,7 +58,7 @@
 
   &__left {
     transform: skew(0deg, 30deg) scaleY(1.33333);
-    top: 43%;
+    top: 47%;
     left: 8.2%;
     color: var(--bright-color);
     opacity: 0.4;
@@ -67,14 +67,14 @@
   &__top {
     transform: skew(60deg, -30deg) scaleY(.66667);
     top: 2%;
-    left: 27%;
+    left: 30%;
     color: var(--bright-color);
     opacity: 0.8;
   }
 
   &__right {
     transform: skew(0deg, -30deg) scaleY(1.33333);
-    top: 38%;
+    top: 39%;
     left: 48%;
     color: var(--third-color);
     opacity: 0.8;
