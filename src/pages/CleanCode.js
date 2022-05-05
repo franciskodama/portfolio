@@ -73,9 +73,7 @@ const CleanCode = () => {
     <section
       id="code"
       className={
-        !showBackground
-          ? "section section--code"
-          : "section section--code code__background"
+        !showBackground ? "section code" : "section code code__background"
       }
       style={{ padding: showBackground && "35em" }}
     >
