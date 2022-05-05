@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AboutContext } from "./contexts/AboutContext";
-import "../src/styles/reset.css";
+import "../src/utils/reset.css";
 import "../src/utils/fonts.css";
 import "./App.css";
 import Navbar from "./pages/Navbar";

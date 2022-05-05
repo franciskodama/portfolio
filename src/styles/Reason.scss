@@ -1,0 +1,80 @@
+.reason {
+  display: flex;
+  flex-direction: column;
+  max-width: 94em;
+  margin: 0 auto;
+
+  /* ----- GRID ----- */
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 10em;
+  }
+  
+  /* ----- LETTERS ----- */
+
+  &__letter-bright,
+  &__letter-dark {
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  text-transform: uppercase;
+  height: 1.5em;
+  width: 1.5em;
+  text-align: center;
+  font-family: var(--main-font-light);
+  font-size: 1.6rem;
+  background-color: var(--dark-color);
+  }
+}
+
+.reason__letter-dark {
+  color: var(--third-color);
+}
+
+/* 
+.section--reason form {
+  margin: 6em auto 12em;
+} 
+
+.grid__input {
+  height: 3em;
+  width: 40em;
+  margin-right: 1em;
+} */
+
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (min-width: 20em) {
+}
+
+@media only screen and (min-width: 48em) {
+  .reason {
+    &__letter-bright,
+    &__letter-dark {
+      height: 1.5em;
+      width: 1.5em;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 62em) {
+}
+
+@media only screen and (min-width: 75em) {
+  .reason {
+    &__letter-bright,
+    &__letter-dark {
+      height: 1.3em;
+      width: 1.3em;
+      font-size: 3.8rem;
+    }
+  }
+}
+    

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC,EAAE,CAAC;EAChB,SAAS,EAAE,KAAK;EAChB,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "ErrorPage.scss"
+    ],
+    "names": [],
+    "file": "ErrorPage.css"
+}

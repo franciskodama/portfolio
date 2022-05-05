@@ -82,7 +82,7 @@ const Reason = () => {
   }, []);
 
   return (
-    <section className="section section--reason" id="reason">
+    <section className="section reason" id="reason">
       <div className="reason__grid" ref={gridRef}>
         {createGrid()}
       </div>
