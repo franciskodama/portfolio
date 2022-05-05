@@ -31,8 +31,8 @@ const Color = ({ isActive, firstColors, secondColors, thirdColors }) => {
           }
           onClick={firstColors}
         >
-          <li className="color__square color-one"></li>
-          <li className="color__square color-two"></li>
+          <li className="color__square color--one"></li>
+          <li className="color__square color--two"></li>
         </ul>
         <ul
           className={
@@ -40,8 +40,8 @@ const Color = ({ isActive, firstColors, secondColors, thirdColors }) => {
           }
           onClick={secondColors}
         >
-          <li className="color__square color-three"></li>
-          <li className="color__square color-four"></li>
+          <li className="color__square color--three"></li>
+          <li className="color__square color--four"></li>
         </ul>
         <ul
           className={
@@ -49,8 +49,8 @@ const Color = ({ isActive, firstColors, secondColors, thirdColors }) => {
           }
           onClick={thirdColors}
         >
-          <li className="color__square color-five"></li>
-          <li className="color__square color-six"></li>
+          <li className="color__square color--five"></li>
+          <li className="color__square color--six"></li>
         </ul>
       </div>
     </div>

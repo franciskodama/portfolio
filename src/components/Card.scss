@@ -1,6 +1,16 @@
 .card {
   position: relative;
   margin: 0.5em;
+
+  /* ------- FONT BOLD BRIGHT ------- */
+
+  &--bold {
+    font-family: var(--main-font-semibold);
+    color: var(--bright-color);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.1em;
+    font-size: 0.8rem;
+  }
 }
 
 /* --------------------------- */
@@ -41,19 +51,17 @@
       var(--bright-color) 0px 0px 0px 0px inset,
       var(--dark-color) -10px 10px 0px -1px,
       var(--bright-color) 0px 0px;
-  
 
-  }
-  
-  &__box:hover {
-    transform: translate(10px, -10px);
-    box-shadow: 
-      var(--bright-color) 0px 0px 0px 0px inset,
-      var(--dark-color) -10px 10px 0px -1px,
-      var(--bright-color) -10px 10px;
-    color: var(--dark-color);
-    background-image: radial-gradient(#000000 0.5px, #f6f6f6 0.5px);
-    background-size: 10px 10px;
+      &:hover {
+        transform: translate(10px, -10px);
+        box-shadow: 
+          var(--bright-color) 0px 0px 0px 0px inset,
+          var(--dark-color) -10px 10px 0px -1px,
+          var(--bright-color) -10px 10px;
+        color: var(--dark-color);
+        background-image: radial-gradient(#000000 0.5px, #f6f6f6 0.5px);
+        background-size: 10px 10px;
+      }
   }
 
   /* ------ TITLES ------ */
@@ -109,7 +117,7 @@
   z-index: 15;
   display: flex;
   width: 100%;
-  color: var(--dark-color);
+  color: #1c1c1c;
   background-color: rgba(0, 0, 0, 0.7);
   overflow: scroll;
 
@@ -187,7 +195,7 @@
   &__main-title {
     font-family: var(--main-font-heavy);
     font-size: 2.7rem;
-    color: var(--dark-color);
+    color: #1c1c1c;
     line-height: 4rem;
     text-transform: capitalize;
 
@@ -197,8 +205,13 @@
     }
   }
 
+  &__year,
+  &__visit,
+  &__category {
+    color: #ffffff;
+  }
+
   &__year {
-    color: var(--bright-color);
     font-family: var(--main-font-semibold);
     font-size: 1.2rem;
     margin-bottom: 1em;
@@ -217,7 +230,6 @@
     font-family: var(--main-font-semibold);
     font-size: 1.25rem;
     text-decoration: none;
-    color: var(--bright-color);
     margin-top: 3em;
     cursor: pointer;
     text-align: end;
@@ -240,7 +252,6 @@
   /* ------- SECOND CONTAINER ------- */
 
   &__category {
-    color: var(--bright-color);
     font-family: var(--main-font-semibold);
     font-size: 1.25rem;
     text-align: left;
@@ -263,16 +274,6 @@
   &__text {
     width: 30ch;
   }
-}
-
-/* ------- BOLD BRIGHT ------- */
-
-.card--bold {
-  font-family: var(--main-font-semibold);
-  color: var(--bright-color);
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 0.1em;
-  font-size: 0.8rem;
 }
 
 /* ====================================

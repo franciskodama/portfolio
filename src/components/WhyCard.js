@@ -41,14 +41,16 @@ const WhyCard = ({
     <div className="why-container" style={{ bottom: bottom, left: left }}>
       <button
         ref={refButton}
-        className={`why-toggle ${isCardShow ? "why-toggle--active" : ""}`}
+        className={`why-container__toggle ${
+          isCardShow ? "why-container__toggle--active" : ""
+        }`}
         onMouseEnter={onMouseEnterHandler}
         onMouseLeave={onMouseOutHandler}
         onClick={clickHandler}
       >
         <span
-          className={`why-toggle__label ${
-            isOnMouse && !isCardShow ? "why-toggle__label--active" : null
+          className={`why-container__label ${
+            isOnMouse && !isCardShow ? "why-container__label--active" : null
           }`}
           ref={refButtonLabel}
         >
@@ -56,7 +58,7 @@ const WhyCard = ({
         </span>
 
         <img
-          className="eye"
+          className="why-container__eye"
           src={isCardShow ? EyeClosed : EyeOpen}
           alt="icon eye"
         />
@@ -130,8 +132,8 @@ const WhyCard = ({
           className="why__footer"
           style={{ display: observation ? "flex" : "none" }}
         >
-          <img className="why__icon" src={Check} alt="icon check" />
-          <p className="why__text">{observation}</p>
+          <img className="why__footer-icon" src={Check} alt="icon check" />
+          <p className="why__footer-text">{observation}</p>
         </li>
       </ul>
     </div>

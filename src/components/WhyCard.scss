@@ -1,0 +1,206 @@
+.why-container {
+  position: absolute;
+  display: flex;
+  width: max-content;
+  align-items: flex-end;
+  transform: translate(-50%);
+  color: var(--bright-color);
+  z-index: 10;
+
+  /* ----- TOGGLE ----- */
+
+  &__toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark-color);
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 var(--bright-color), 0 0 var(--bright-color), 0 0 var(--bright-color);
+    transform: translateX(0) translateY(0);
+    cursor: pointer;
+  }
+
+  &__toggle--active {
+    background-color: var(--third-color);
+    box-shadow: -1px 1px var(--bright-color), -2px 2px var(--bright-color), -3px 3px var(--bright-color);
+    transform: translateX(3px) translateY(3px);
+  }
+
+  &__label {
+    display: none;
+    position: absolute;
+    top: -2em;
+    left: -6px;
+    color: var(--bright-color);
+    font-family: var(--main-font-regular);
+    font-size: 0.65rem;
+    width: 50px;  
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0.7rem;
+    animation-name: icon-shake;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &__label--active {
+    display: block;
+  }
+
+  @keyframes icon-shake {
+    50% {
+      transform: translateX(2px) rotate(3deg);
+    }
+    100% {
+      transform: translateX(-2px) rotate(-3deg);
+    }
+  }
+  @keyframes hvr-buzz {
+    50% {
+      transform: translateX(2px) rotate(3deg);
+    }
+    100% {
+      transform: translateX(-2px) rotate(-3deg);
+    }
+  }
+
+  &__eye {
+    width: 30px;
+  }
+}
+
+/* ====================================
+                  CARD
+======================================= */
+
+.why {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  padding: 0 1.8em;
+  background-color: var(--third-color);
+  width: 21em;
+  bottom: 3em;
+  left: calc(-10.5em + 20px);
+  animation: card-open 0.3s linear both;
+
+  &__close {
+    position: absolute;
+    top: 0em;
+    right: 0em;
+    padding: 0.5em;
+    cursor: pointer;
+  }
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  
+  &__title {
+    font-family: var(--main-font-semibold);
+    font-size: 1.1rem;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    padding-left: 2.5em;
+    padding-bottom: 0.5em;
+  }
+  
+  &__title--flag {
+    background-image: url("../assets/images/why-icon-flag.svg");
+  }
+  
+  &__title--bolt {
+    background-image: url("../assets/images/why-icon-bolt.svg");
+  }
+  
+  &__title--brush {
+    background-image: url("../assets/images/why-icon-brush.svg");
+  }
+  
+  &__title--robot {
+    background-image: url("../assets/images/why-icon-robot.svg");
+  }
+  
+  &__description {
+    font-family: var(--main-font-light);
+  }
+  
+  /* ----- FOOTER ----- */
+  
+  &__footer {
+    display: flex;
+    align-items: center;
+    background-color: var(--bright-color);
+    color: var(--third-color);
+    text-transform: uppercase;
+    font-family: var(--main-font-regular);
+    font-size: 0.7rem;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  
+  &__footer-text {
+    width: 32ch;
+    padding: 0.5em 0;
+  }
+  
+  &__footer-icon {
+    margin: 0 1em;
+  }
+}
+
+@keyframes card-open {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateX(0) translateY(0);
+    transform-origin: 0% 100%;
+    box-shadow: 0 0 var(--bright-color), 0 0 var(--bright-color), 0 0 var(--bright-color);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(4px) translateY(4px);
+    transform-origin: 0% 100%;
+    box-shadow: -1px 1px var(--bright-color), -2px 2px var(--bright-color), -3px 3px var(--bright-color);
+  }
+}
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (min-width: 20em) {
+}
+
+@media only screen and (min-width: 48em) {
+  .why {
+    width: max-content;
+    padding: 0 2em;
+    left: -10.5em;
+
+    &__item {
+      width: 30ch;
+    }
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .why {
+    transform: translate(0%);
+    bottom: 0em;
+    left: 2.9em;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+}

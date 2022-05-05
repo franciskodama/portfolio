@@ -17,8 +17,8 @@ const Avatar = () => {
   }, [isShown]);
 
   return (
-    <div className="outter-container">
-      <div className="inner-container">
+    <div className="avatar-container">
+      <div className="avatar">
         <p className="avatar__icons-title">soft skills:</p>
 
         <div className="avatar__icons-wrapper">

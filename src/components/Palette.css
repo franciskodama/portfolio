@@ -1,0 +1,94 @@
+.color {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  z-index: 2;
+  /* ------- PALETTE ------- */
+  /* ------- COLORS ------- */
+}
+
+.color__square-first {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-image: url(../assets/images/ico-brush.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.color__square-wrapper {
+  display: none;
+  position: absolute;
+  bottom: 2.8em;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: auto;
+  padding: 0.2em 0.2em;
+  z-index: -1;
+}
+
+.color__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.1em;
+  cursor: pointer;
+  border: 1px dashed transparent;
+}
+
+.color__square {
+  width: 12px;
+  height: 12px;
+  margin: 0.1em 0.1em;
+  border: 1px solid var(--bright-color);
+}
+
+.color--active {
+  border-color: var(--bright-color);
+}
+
+.color--one {
+  background-color: #1c1c1c;
+}
+
+.color--two {
+  background-color: #ed1c24;
+  margin-left: 0.3em;
+}
+
+.color--three {
+  background-color: #29335C;
+}
+
+.color--four {
+  background-color: #F3A712;
+  margin-left: 0.3em;
+}
+
+.color--five {
+  background-color: #757575;
+}
+
+.color--six {
+  background-color: #03A9F4;
+  margin-left: 0.3em;
+}
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+@media only screen and (min-width: 62em) {
+  .color__square-first {
+    display: block;
+  }
+}
+/*# sourceMappingURL=Palette.css.map */

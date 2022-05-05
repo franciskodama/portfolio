@@ -1,6 +1,15 @@
 .card {
   position: relative;
   margin: 0.5em;
+  /* ------- FONT BOLD BRIGHT ------- */
+}
+
+.card--bold {
+  font-family: var(--main-font-semibold);
+  color: var(--bright-color);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.1em;
+  font-size: 0.8rem;
 }
 
 /* --------------------------- */
@@ -113,7 +122,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  color: var(--dark-color);
+  color: #1c1c1c;
   background-color: rgba(0, 0, 0, 0.7);
   overflow: scroll;
   /* ------- FIRST CONTAINER ------- */
@@ -241,7 +250,7 @@
 .card-back__main-title {
   font-family: var(--main-font-heavy);
   font-size: 2.7rem;
-  color: var(--dark-color);
+  color: #1c1c1c;
   line-height: 4rem;
   text-transform: capitalize;
 }
@@ -251,8 +260,11 @@
   color: var(--bright-color);
 }
 
+.card-back__year, .card-back__visit, .card-back__category {
+  color: #ffffff;
+}
+
 .card-back__year {
-  color: var(--bright-color);
   font-family: var(--main-font-semibold);
   font-size: 1.2rem;
   margin-bottom: 1em;
@@ -272,7 +284,6 @@
   font-family: var(--main-font-semibold);
   font-size: 1.25rem;
   text-decoration: none;
-  color: var(--bright-color);
   margin-top: 3em;
   cursor: pointer;
   text-align: end;
@@ -293,7 +304,6 @@
 }
 
 .card-back__category {
-  color: var(--bright-color);
   font-family: var(--main-font-semibold);
   font-size: 1.25rem;
   text-align: left;
@@ -315,15 +325,6 @@
 
 .card-back__text {
   width: 30ch;
-}
-
-/* ------- BOLD BRIGHT ------- */
-.card--bold {
-  font-family: var(--main-font-semibold);
-  color: var(--bright-color);
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 0.1em;
-  font-size: 0.8rem;
 }
 
 /* ====================================

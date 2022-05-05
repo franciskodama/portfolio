@@ -1,0 +1,179 @@
+.avatar-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ------------- GRID ------------- */
+
+.avatar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1em auto auto 1em;
+  grid-template-rows: repeat(6, auto);
+
+  /* ------- ICONS ------ */
+
+  &__icons-wrapper {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 0.5em;
+  }
+
+  &__icons-title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 0.7rem;
+    font-family: var(--main-font-light);
+    margin-top: 5em;
+    margin-bottom: 0.5em;
+    text-align: left;
+  }
+
+  &__icon {
+    border: 1px dashed var(--dark-color);
+    padding: 0.5em;
+    width: 3.25em;
+    cursor: pointer;
+  }
+
+  /* ---------- AVATAR ----------- */
+
+  &__image {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: 1em;
+    width: 22em;
+    z-index: 5;
+  }
+
+  &__image--active {
+    animation: imageChange 1.5s ease-in-out 0s 1 normal forwards;
+  }
+
+  @keyframes imageChange {
+    0% {
+      transform: scale(1);
+      transform-origin: center center;
+      opacity: 0.5;
+    }
+    10% {
+      animation-timing-function: ease-in;
+      transform: scale(0.96);
+    }
+    17% {
+      animation-timing-function: ease-out;
+      transform: scale(0.99);
+      opacity: 0.8;
+    }
+    45% {
+      animation-timing-function: ease-out;
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* ------ SKILLS TXT ---------- */
+
+  &__skills-wrapper {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+
+  &__skills-wrapper--active {
+    animation: imageChange 1.5s ease-in-out 0s 1 normal forwards;
+  }
+
+  &__skills-title {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-family: var(--main-font-semibold);
+    font-size: 1.3rem;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+
+  &__skills-description {
+    font-size: 0.8rem;
+    margin-bottom: 5em;
+  }
+}
+
+/* --- SPLINE 3D AVATAR --- */
+
+/* 
+iframe {
+  position: relative;
+  z-index: 0;
+}
+
+.white-square {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 4.5em;
+  bottom: 15em;
+  background-color: #eaeaea;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}  */
+
+/* ====================================
+            MEDIA QUERY
+======================================= */
+
+@media only screen and (min-width: 20em) {
+}
+
+@media only screen and (min-width: 48em) {
+  .avatar {
+    grid-template-columns: 1fr 62px 1em 412px 1fr;
+    grid-template-rows: 5em auto auto 2em 8em 5em;
+
+    &__icons-wrapper {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      flex-direction: column;
+      width: 62px;
+    }
+  
+    &__icon {
+      width: 4em;
+    }
+  
+    &__icons-title {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin-bottom: 0.5em;
+    }
+    &__image {
+      grid-row: 3/4;
+      grid-column: 4/5;
+      width: 25.75em;
+      margin-top: 0;
+    }
+  
+    &__skills-wrapper {
+      grid-column: 4/5;
+      grid-row: 5/6;
+    }
+  
+    &__skills-title {
+      grid-column: 4/5;
+      grid-row: 2/3;
+    }
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .avatar {
+    grid-template-columns: 2fr 62px 1em 412px 1fr;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+}
