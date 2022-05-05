@@ -4,65 +4,69 @@
   font-size: 1rem;
   padding: 0.7em 2em;
   cursor: pointer;
+
+  /* ------ DARK BG BRIGHT ----- */
+
+  &--dark {
+    color: var(--bright-color);
+    border: 1px solid var(--dark-color);
+    background-color: var(--dark-color);
+    transition: all 0.2s ease;
+    z-index: 1;
+  }
+
+  &--dark:hover {
+    transform: translate(5px, -5px);
+    box-shadow: var(--dark-color) 0px 0px 0px 0px inset,
+      var(--bright-color) -5px 5px 0px -1px, var(--dark-color) -5px 5px;
+  }
+
+  /* ------ DARK BG DARK ----- */
+
+  &--dark-dark-bg {
+    color: var(--bright-color);
+    border: 1px solid var(--bright-color);
+    background-color: var(--dark-color);
+    transition: all 0.2s ease;
+  }
+
+  &--dark-dark-bg:hover {
+    transform: translate(5px, -5px);
+    box-shadow: var(--dark-color) 0px 0px 0px 0px inset,
+      var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
+  }
+
+  /* ------ BRIGHT ----- */
+
+  &--bright {
+    color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    background-color: var(--bright-color);
+    transition: all 0.2s ease;
+  }
+
+  &--bright:hover {
+    transform: translate(5px, -5px);
+    box-shadow: var(--third-color) 0px 0px 0px 0px inset,
+      var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
+  }
+
+  /* ------ THIRD COLOR ----- */
+
+  &--third-color {
+    color: var(--bright-color);
+    border: 1px solid var(--third-color);
+    background-color: var(--third-color);
+    transition: all 0.2s ease;
+  }
+
+  &--third-color:hover {
+    transform: translate(5px, -5px);
+    box-shadow: var(--third-color) 0px 0px 0px 0px inset,
+      var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
+  }
 }
 
-/* ------ DARK BG BRIGHT ----- */
 
-.btn--dark {
-  color: var(--bright-color);
-  border: 1px solid var(--dark-color);
-  background-color: var(--dark-color);
-  transition: all 0.2s ease;
-  z-index: 1;
-}
 
-.btn--dark:hover {
-  transform: translate(5px, -5px);
-  box-shadow: var(--dark-color) 0px 0px 0px 0px inset,
-    var(--bright-color) -5px 5px 0px -1px, var(--dark-color) -5px 5px;
-}
 
-/* ------ DARK BG DARK ----- */
-
-.btn--dark-dark-bg {
-  color: var(--bright-color);
-  border: 1px solid var(--bright-color);
-  background-color: var(--dark-color);
-  transition: all 0.2s ease;
-}
-
-.btn--dark-dark-bg:hover {
-  transform: translate(5px, -5px);
-  box-shadow: var(--dark-color) 0px 0px 0px 0px inset,
-    var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
-}
-
-/* ------ BRIGHT ----- */
-
-.btn--bright {
-  color: var(--dark-color);
-  border: 1px solid var(--dark-color);
-  background-color: var(--bright-color);
-  transition: all 0.2s ease;
-}
-
-.btn--bright:hover {
-  transform: translate(5px, -5px);
-  box-shadow: var(--third-color) 0px 0px 0px 0px inset,
-    var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
-}
-
-/* ------ THIRD COLOR ----- */
-
-.btn--third-color {
-  color: var(--bright-color);
-  border: 1px solid var(--third-color);
-  background-color: var(--third-color);
-  transition: all 0.2s ease;
-}
-
-.btn--third-color:hover {
-  transform: translate(5px, -5px);
-  box-shadow: var(--third-color) 0px 0px 0px 0px inset,
-    var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
-}

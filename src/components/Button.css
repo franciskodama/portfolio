@@ -1,0 +1,73 @@
+.btn {
+  display: inline-block;
+  font-family: var(--main-font-medium);
+  font-size: 1rem;
+  padding: 0.7em 2em;
+  cursor: pointer;
+  /* ------ DARK BG BRIGHT ----- */
+  /* ------ DARK BG DARK ----- */
+  /* ------ BRIGHT ----- */
+  /* ------ THIRD COLOR ----- */
+}
+
+.btn--dark {
+  color: var(--bright-color);
+  border: 1px solid var(--dark-color);
+  background-color: var(--dark-color);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.btn--dark:hover {
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
+  -webkit-box-shadow: var(--dark-color) 0px 0px 0px 0px inset, var(--bright-color) -5px 5px 0px -1px, var(--dark-color) -5px 5px;
+          box-shadow: var(--dark-color) 0px 0px 0px 0px inset, var(--bright-color) -5px 5px 0px -1px, var(--dark-color) -5px 5px;
+}
+
+.btn--dark-dark-bg {
+  color: var(--bright-color);
+  border: 1px solid var(--bright-color);
+  background-color: var(--dark-color);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.btn--dark-dark-bg:hover {
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
+  -webkit-box-shadow: var(--dark-color) 0px 0px 0px 0px inset, var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
+          box-shadow: var(--dark-color) 0px 0px 0px 0px inset, var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
+}
+
+.btn--bright {
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+  background-color: var(--bright-color);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.btn--bright:hover {
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
+  -webkit-box-shadow: var(--third-color) 0px 0px 0px 0px inset, var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
+          box-shadow: var(--third-color) 0px 0px 0px 0px inset, var(--dark-color) -5px 5px 0px -1px, var(--bright-color) -5px 5px;
+}
+
+.btn--third-color {
+  color: var(--bright-color);
+  border: 1px solid var(--third-color);
+  background-color: var(--third-color);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.btn--third-color:hover {
+  -webkit-transform: translate(5px, -5px);
+          transform: translate(5px, -5px);
+  -webkit-box-shadow: var(--third-color) 0px 0px 0px 0px inset, var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
+          box-shadow: var(--third-color) 0px 0px 0px 0px inset, var(--dark-color) -5px 5px 0px -1px, var(--third-color) -5px 5px;
+}
+/*# sourceMappingURL=Button.css.map */
