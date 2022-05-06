@@ -8,6 +8,7 @@ const Color = ({ isActive, firstColors, secondColors, thirdColors }) => {
 
   useEffect(() => {
     gsap.from(paletteRef.current, {
+      delay: 0.5,
       opacity: 0,
       y: 50,
     });
@@ -16,7 +17,11 @@ const Color = ({ isActive, firstColors, secondColors, thirdColors }) => {
   return (
     <div className="color">
       <div
-        className="color__square-first"
+        className={
+          toggle
+            ? "color__square-first color__icon--close"
+            : "color__square-first color__icon--open"
+        }
         onClick={() => setToggle(!toggle)}
       ></div>
 

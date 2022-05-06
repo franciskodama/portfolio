@@ -11,10 +11,22 @@
   display: none;
   width: 40px;
   height: 40px;
-  background-image: url(../assets/images/ico-brush.svg);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.color__icon--open {
+  background-image: url(../assets/images/ico-brush.svg);
+  opacity: 1;
+}
+
+.color__icon--close {
+  background-image: url(../assets/images/ico-brush-close.svg);
+  opacity: 1;
 }
 
 .color__square-wrapper {
@@ -41,8 +53,8 @@
   display: -ms-flexbox;
   display: flex;
   padding: 0.1em;
-  cursor: pointer;
   border: 1px dashed transparent;
+  cursor: pointer;
 }
 
 .color__square {

@@ -94,7 +94,7 @@ export const whyData = {
     titleFour: "",
     textFour: "",
     observation: "",
-    bottom: "9%",
+    bottom: "6%",
     left: "50%",
   },
 };

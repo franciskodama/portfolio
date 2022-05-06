@@ -100,7 +100,7 @@
     
   &__buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 2em;
   }
 }
@@ -110,24 +110,26 @@
 ======================================= */
 
 @media only screen and (min-width: 20em) {
-
-.contact .container {
-  width: 90%;
-}
+  .contact .container {
+    width: 90%;
+  }
 }
 
 @media only screen and (min-width: 48em) {
-
-.contact .container {
-  width: 80%;
-}
+  .contact .container {
+    width: 80%;
+  }
 }
 
 @media only screen and (min-width: 62em) {
+  .contact .container {
+    width: 60%;
+  }
 
-.contact .container {
-  width: 60%;
-}
+  .form-contact__buttons {
+    justify-content: flex-end;
+    margin-top: 1em;
+  }
 }
 
 @media only screen and (min-width: 75em) {

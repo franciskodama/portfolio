@@ -8,10 +8,21 @@
         display: none;
         width: 40px;
         height: 40px;
-        background-image: url(../assets/images/ico-brush.svg);
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    &__icon--open {
+        background-image: url(../assets/images/ico-brush.svg);
+        opacity: 1;
+    }
+
+    &__icon--close {
+        background-image: url(../assets/images/ico-brush-close.svg);
+        opacity: 1;
     }
 
     &__square-wrapper {
@@ -30,8 +41,8 @@
     &__options {
         display: flex;
         padding: 0.1em;
-        cursor: pointer;
         border: 1px dashed transparent;
+        cursor: pointer;
     }
     /* ------- PALETTE ------- */
 
