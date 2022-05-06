@@ -7,6 +7,7 @@
     background-color: var(--bright-color);
     color: var(--dark-color);
     margin-top: 5em;
+    margin-bottom: 6em;
   }
 
   /*--------------------------
@@ -456,6 +457,8 @@
 
     & .container {
       flex-direction: row;
+      margin-bottom: 3em;
+
     }
 
     &__avatar-container {

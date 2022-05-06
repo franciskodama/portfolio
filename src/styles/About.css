@@ -21,6 +21,7 @@
   background-color: var(--bright-color);
   color: var(--dark-color);
   margin-top: 5em;
+  margin-bottom: 6em;
 }
 
 .about__avatar-container {
@@ -547,6 +548,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-bottom: 3em;
   }
   .about__avatar-container {
     width: 50%;

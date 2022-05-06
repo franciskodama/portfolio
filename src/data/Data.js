@@ -30,7 +30,7 @@ export const whyData = {
     titleFour: "",
     textFour: "",
     observation: "",
-    bottom: "-5%",
+    bottom: "0.5%",
     left: "50%",
   },
   selectedProjects: {
@@ -354,22 +354,10 @@ export const contactData = [
   },
   {
     id: "9",
-    content: "Cool!!!",
+    content: "Are you freelancing?",
   },
   {
     id: "10",
-    content: "I did not like your website, and I will tell you why...",
-  },
-  {
-    id: "11",
-    content: "See you soon!",
-  },
-  {
-    id: "12",
-    content: "Take care!",
-  },
-  {
-    id: "13",
     content: "Thanks! :)",
   },
 ];
