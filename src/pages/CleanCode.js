@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/CleanCode.css";
-import MagnifyingGlass from "../assets/images/code-check.svg";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
 
@@ -64,12 +63,14 @@ const CleanCode = () => {
 
         <div className="code__icon-wrapper" onClick={handleClick}>
           <img
-            className="code__icon"
-            src={MagnifyingGlass}
-            alt="magnifying glass icon"
+            className={
+              showBackground
+                ? "code__icon code__icon--open"
+                : "code__icon code__icon--close"
+            }
           />
           <p style={{ display: !showBackground ? "block" : "none" }}>
-            CLICK HERE TO CHECK MY CODE
+            CHECK MY CODE
           </p>
           <p
             className="code--bright"
@@ -77,7 +78,7 @@ const CleanCode = () => {
               display: showBackground ? "block" : "none",
             }}
           >
-            CLICK HERE AGAIN TO RETURN
+            RETURN
           </p>
         </div>
         <ul

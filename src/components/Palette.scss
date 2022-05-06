@@ -11,18 +11,14 @@
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
-        opacity: 0;
-        transition: opacity 1s ease;
     }
 
     &__icon--open {
         background-image: url(../assets/images/ico-brush.svg);
-        opacity: 1;
     }
 
     &__icon--close {
         background-image: url(../assets/images/ico-brush-close.svg);
-        opacity: 1;
     }
 
     &__square-wrapper {
