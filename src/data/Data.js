@@ -16,7 +16,7 @@ export const whyData = {
     textFour: "Figma, Adobe Photoshop, and VS Code.",
     observation:
       "This portfolio was 100% created and programmed by Francis Kodama.",
-    bottom: "10%",
+    bottom: "5%",
     left: "50%",
   },
   about: {

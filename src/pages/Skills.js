@@ -3,20 +3,59 @@ import "../styles/Skills.css";
 import { Parallax } from "react-parallax";
 import CloudOne from "../assets/images/skills-cloud-1.svg";
 import CloudTwo from "../assets/images/skills-cloud-2.svg";
+import Background from "../assets/images/xx-bg-test.jpg";
 
 const Skills = () => {
   return (
-    <section className="section section--skills">
+    <section className="section skills">
       <div className="container">
-        <div className="circle"></div>
-        <img className="skills__cloud-one" src={CloudOne} />
-        <img
-          className="skills__cloud-one"
-          src={CloudOne}
-          // style={{ transform: "rotate(180deg) translateY(5em)" }}
-        />
-        <img className="skills__cloud-two" src={CloudTwo} />
-        <img className="skills__cloud-two position" src={CloudTwo} />
+        <Parallax
+          bgImage={Background}
+          style={{ width: "100%", height: "50em" }}
+          strength={1500}
+          // blur={{ min: 0, max: 10 }}
+          renderLayer={(percentage) => (
+            <div
+              className="square"
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                width: "10em",
+                height: "10em",
+                transform: `scale(${percentage * 5} )`,
+              }}
+            ></div>
+          )}
+        >
+          {/* <img
+            className="skills__cloud-one"
+            strength={500}
+            src={CloudOne}
+            style={{ transform: "translate(-15em, 15em)" }}
+          /> */}
+
+          {/* <img
+            className="skills__cloud-one"
+            strength={-500}
+            src={CloudOne}
+            style={{ transform: "rotateX(180deg)" }}
+          /> */}
+
+          {/* <img
+            className="skills__cloud-two"
+            strength={1000}
+            src={CloudTwo}
+            style={{ transform: "translate(15em, 15em)" }}
+          />
+
+          <img
+            className="skills__cloud-two"
+            strength={-1000}
+            src={CloudTwo}
+            style={{ transform: "rotateX(180deg)" }}
+          /> */}
+        </Parallax>
       </div>
     </section>
   );
