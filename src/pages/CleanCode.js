@@ -1,48 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/CleanCode.css";
 import MagnifyingGlass from "../assets/images/code-check.svg";
-// import Bubble from "../assets/images/code-bubble.png";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
 
 const CleanCode = () => {
-  // const quoteRef = useRef();
-  // const wordsRef = useRef();
-  // const qQuote = gsap.utils.selector(quoteRef);
-  // const qWords = gsap.utils.selector(wordsRef);
-
-  // useEffect(() => {
-  //   gsap.from(qQuote(".code__words--odd--inverse"), {
-  //     scrollTrigger: {
-  //       trigger: qQuote(".code__words--odd--inverse"),
-  //       toggleActions: "restart pause restart pause",
-  //       start: "center center",
-  //       end: "top top",
-  //       markers: true,
-  //     },
-  //     duration: 2,
-  //     x: "-300px",
-  //     stagger: "0.1",
-  //     scale: 0,
-  //   });
-  //   gsap.from(qQuote(".code__words--even--inverse"), {
-  //     scrollTrigger: {
-  //       trigger: qQuote(".code__words--even--inverse"),
-  //       toggleActions: "restart pause restart pause",
-  //       start: "center center",
-  //       end: "top top",
-  //     },
-  //     duration: 1,
-  //     x: "300px",
-  //     stagger: "0.5",
-  //     opacity: 0,
-  //     scale: 0,
-  //   });
-  // }, []);
-
   const [showBackground, setShowBackground] = useState(false);
 
   const handleClick = () => {
@@ -50,9 +12,7 @@ const CleanCode = () => {
     setInterval(createBubble, 500);
   };
 
-  useEffect(() => {
-    // console.log(showBackground);
-  }, [showBackground]);
+  useEffect(() => {}, [showBackground]);
 
   // ------------------ BUBBLES ------------------
 
@@ -120,11 +80,9 @@ const CleanCode = () => {
             CLICK HERE AGAIN TO RETURN
           </p>
         </div>
-        {/* <img className="code__bubble" src={Bubble} alt="bubble image" /> */}
         <ul
           className="code__words"
           style={{ display: showBackground ? "none" : "block" }}
-          // ref={wordsRef}
         >
           <li className="code__odd">meticulousness</li>
           <li className="code__even">easy to read, easy to change</li>
@@ -157,3 +115,41 @@ const CleanCode = () => {
 };
 
 export default CleanCode;
+
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// gsap.registerPlugin(ScrollTrigger);
+
+// const quoteRef = useRef();
+// const wordsRef = useRef();
+// const qQuote = gsap.utils.selector(quoteRef);
+// const qWords = gsap.utils.selector(wordsRef);
+
+// useEffect(() => {
+//   gsap.from(qQuote(".code__words--odd--inverse"), {
+//     scrollTrigger: {
+//       trigger: qQuote(".code__words--odd--inverse"),
+//       toggleActions: "restart pause restart pause",
+//       start: "center center",
+//       end: "top top",
+//       markers: true,
+//     },
+//     duration: 2,
+//     x: "-300px",
+//     stagger: "0.1",
+//     scale: 0,
+//   });
+//   gsap.from(qQuote(".code__words--even--inverse"), {
+//     scrollTrigger: {
+//       trigger: qQuote(".code__words--even--inverse"),
+//       toggleActions: "restart pause restart pause",
+//       start: "center center",
+//       end: "top top",
+//     },
+//     duration: 1,
+//     x: "300px",
+//     stagger: "0.5",
+//     opacity: 0,
+//     scale: 0,
+//   });
+// }, []);

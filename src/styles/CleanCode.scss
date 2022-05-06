@@ -22,15 +22,15 @@
     margin-bottom: 10em;
   }
 
-  /* ------- BG IMAGE ------- */
+  /* ------- BACKGROUND ------- */
 
   &__background {
     display: flex;
     flex-direction: column;
     background-image: url("../assets/images/xray.jpg");
     background-repeat: no-repeat;
-    /* object-fit: cover; */
     animation: code-appearance 0.3s both;
+    height: 135em;
   }
 
   @keyframes code-appearance {
@@ -154,8 +154,7 @@
 }
 
 .code--bright {
-  background-color: var(--bright-color);
-  color: var(--dark-color);
+  color: var(--bright-color);
   padding: 0.3em;
 }
 

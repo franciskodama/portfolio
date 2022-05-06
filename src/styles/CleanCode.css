@@ -10,7 +10,7 @@
   background: var(--dark-color);
   background: -webkit-gradient(linear, left top, left bottom, from(var(--dark-color)), to(#292929));
   background: linear-gradient(180deg, var(--dark-color) 0%, #292929 100%);
-  /* ------- BG IMAGE ------- */
+  /* ------- BACKGROUND ------- */
   /* ------- SEE MY CODE ICON ------- */
   /* ------- WORDS ------- */
   /* ------- QUOTE TRANSFORM ------- */
@@ -50,9 +50,9 @@
           flex-direction: column;
   background-image: url("../assets/images/xray.jpg");
   background-repeat: no-repeat;
-  /* object-fit: cover; */
   -webkit-animation: code-appearance 0.3s both;
           animation: code-appearance 0.3s both;
+  height: 135em;
 }
 
 @-webkit-keyframes code-appearance {
@@ -200,8 +200,7 @@
 }
 
 .code--bright {
-  background-color: var(--bright-color);
-  color: var(--dark-color);
+  color: var(--bright-color);
   padding: 0.3em;
 }
 

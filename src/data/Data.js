@@ -78,7 +78,7 @@ export const whyData = {
     titleFour: "",
     textFour: "",
     observation: "",
-    bottom: "-5%",
+    bottom: "1%",
     left: "50%",
   },
   contact: {
