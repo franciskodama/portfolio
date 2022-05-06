@@ -177,13 +177,12 @@ export const projects = [
     backText_titleTwo: "how",
     backText_textTwo:
       "As a product strategist, I began the project by thinking about how to create a valuable portfolio that would benefit employers looking for talent with my skills.",
-    backText_titleThree: "what",
-    backText_textThree:
-      "From many sketches, designing the project on Figma, to coding afterward, in each step, the portfolio was built intentionally gathering new knowledge and new understandings.",
-    backText_titleFour: "tech",
+    // backText_titleThree: "what",
+    // backText_textThree:
+    //   "From many sketches, designing the project on Figma, to coding afterward, in each step, the portfolio was built intentionally gathering new knowledge and new understandings.",
+    backText_titleFour: "what",
     backText_textFour:
       "100% React-based, JSX, CSS, SASS, and HTML. Some tools used: Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.",
-    // backText_textFour:"100% React-based, JSX, CSS, SASS, and HTML. Besides that, some tools such as Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.",
     backgroundColor: "#FC9651",
     visitIcon: false,
   },
@@ -195,7 +194,7 @@ export const projects = [
     year: "2021",
     tech: "html css js",
     category: "video game",
-    url: "https://fkodama.com/pacman/",
+    url: "https://fkodama.com/_dev/pacman/",
     image: require("../assets/images/project-pacman.jpg"),
     frontText: "Here's a tutorial project I took to a whole new level.",
     backText_titleOne: "why",
@@ -211,7 +210,7 @@ export const projects = [
     backText_textFour: "",
     backText_linkName: "Compare with original: Ania Kubów's Tutorial",
     backText_link: "https://www.youtube.com/watch?v=CeUGlSl2i4Q&t=45s",
-    backgroundColor: "#FDD54D",
+    backgroundColor: "#efbe1c",
     visitIcon: true,
   },
   {
@@ -248,7 +247,7 @@ export const projects = [
     year: "2021",
     tech: "html css js",
     category: "video game",
-    url: "https://fkodama.com/spaceinvaders/",
+    url: "https://fkodama.com/_dev/space-invaders/",
     image: require("../assets/images/project-space.jpg"),
     frontText:
       "It's pretty awesome to build classic video games. You learn to play!",

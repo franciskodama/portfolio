@@ -1,16 +1,6 @@
 .card {
   position: relative;
   margin: 0.5em;
-
-  /* ------- FONT BOLD BRIGHT ------- */
-
-  &--bold {
-    font-family: var(--main-font-semibold);
-    color: var(--bright-color);
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 0.1em;
-    font-size: 0.8rem;
-  }
 }
 
 /* --------------------------- */
@@ -28,23 +18,18 @@
   }
   
   &__category {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: var(--main-font-light);
     padding-bottom: 0.8rem;
-  }
-  
-  &__icon {
-    width: 32px;
-    margin-top: 1em;
   }
   
   &__box {
     position: relative;
     width: 240px;
-    height: 240px;
     border: 1px solid var(--bright-color);
     background: var(--dark-color);
     padding-left: 1em;
+    padding-bottom: 1em;
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow:
@@ -63,6 +48,11 @@
         background-size: 10px 10px;
       }
   }
+    
+  &__icon {
+    width: 25px;
+    margin-top: 1em;
+  }
 
   /* ------ TITLES ------ */
   
@@ -74,19 +64,20 @@
     width: 15em;
   }
   
+  &__title--red {
+    display: none;
+    text-transform: lowercase;
+    color: var(--third-color);
+    font-family: var(--main-font-semibold);
+    font-size: 1.2rem;
+  }
+
   &__title {
     font-family: var(--main-font-semibold);
     font-size: 1.4rem;
     line-height: 2.25rem;
     padding-bottom: 0.1em;
     text-transform: uppercase;
-  }
-  
-  &__title--red {
-    text-transform: lowercase;
-    color: var(--third-color);
-    font-family: var(--main-font-semibold);
-    font-size: 1.2rem;
   }
   
   &__tech {
@@ -96,11 +87,9 @@
     text-transform: uppercase;
   }
   
-  /* ----- TEXT ----- */
-  
   &__description {
     font-family: var(--main-font-thin);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 0.8em;
   }
 }
@@ -123,7 +112,7 @@
 
   &__background {
     position: absolute;
-    top: 93%;
+    top: 100%;
     left: 0;
     right: 0;
     display: flex;
@@ -160,7 +149,6 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 1em;
-    padding-bottom: 5em;
   }
 
   &__first-wrapper, 
@@ -231,8 +219,8 @@
     font-size: 1.25rem;
     text-decoration: none;
     margin-top: 3em;
-    cursor: pointer;
     text-align: end;
+    cursor: pointer;
 
     ::after {
       position: absolute;
@@ -242,7 +230,7 @@
       width: 7.4rem;
       height: 1px;
       color: var(--bright-color);
-      margin-top: 5em;
+      margin-top: 4em;
       cursor: pointer;
       text-align: end;
       border-bottom: 2px solid var(--bright-color);
@@ -255,7 +243,7 @@
     font-family: var(--main-font-semibold);
     font-size: 1.25rem;
     text-align: left;
-    margin-top: 3em;
+    margin-top: 1.5em;
     margin-bottom: 1.5em;
   }
 
@@ -273,6 +261,15 @@
 
   &__text {
     width: 30ch;
+    font-size: 0.9rem;
+
+    &--bold {
+      display: none;
+    }
+
+    &--last {
+      margin-bottom: 5em;
+    }
   }
 }
 
@@ -292,19 +289,29 @@
     width: 270px;
     margin: 2em 0 1em 0;
 
+    &__category {
+      font-size: 1rem;
+    }
+
     &__box {
       width: 270px;
       height: 270px;
       transition: all 0.2s ease;
     }
-  
-    &__title {
-      font-size: 2.25rem;
-      line-height: 2.25rem;
+
+    &__icon {
+      width: 32px;
+      margin-top: 1em;
     }
   
     &__title--red {
+      display: block;
       font-size: 1.8rem;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
     }
   
     &__description {
@@ -318,6 +325,10 @@
       top: 75%;
     }
   
+    &__category {
+      margin-top: 2.5em;
+    }
+
     &__first-wrapper, 
     &__second-wrapper {
       width: 22.5em;
@@ -329,7 +340,20 @@
     }
   
     &__text {
+      font-size: 1rem;
       width: 35ch;
+
+      &--bold {
+        display: block;
+        font-family: var(--main-font-semibold);
+        color: var(--bright-color);
+        background-color: rgba(0, 0, 0, 0.1);
+        font-size: 0.8rem;
+      }
+      
+      &--last {
+        margin-bottom: 0;
+      }
     }
   }
 }

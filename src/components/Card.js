@@ -109,11 +109,15 @@ const Card = ({ project }) => {
               <h4 className="card-back__title">
                 {project.backText_titleThree}
               </h4>
-              <p className="card-back__text">{project.backText_textThree}</p>
+              <p className="card-back__text card-back__text--last">
+                {project.backText_textThree}
+              </p>
               <h4 className="card-back__title">{project.backText_titleFour}</h4>
-              <p className="card-back__text">{project.backText_textFour}</p>
+              <p className="card-back__text card-back__text--last">
+                {project.backText_textFour}
+              </p>
               <a
-                className="card-back__text card--bold"
+                className="card-back__text card-back__text--bold"
                 href={project.backText_link}
                 target="_blank"
               >
