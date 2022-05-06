@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <header className="section navbar">
       <div className="container">
-        <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
+        <Link to="hero" spy={true} smooth={true} offset={0} duration={500}>
           <img className="navbar__logo" src={Logo} />
         </Link>
 
@@ -71,7 +71,7 @@ const Navbar = () => {
             to="hero"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
@@ -83,7 +83,7 @@ const Navbar = () => {
             to="reason"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={-50}
             duration={2000}
             onClick={handleClickOnLink}
           >
@@ -95,7 +95,7 @@ const Navbar = () => {
             to="about"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
@@ -107,7 +107,7 @@ const Navbar = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
@@ -158,7 +158,7 @@ const Navbar = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
@@ -175,7 +175,7 @@ const Navbar = () => {
             to="hero"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
@@ -187,7 +187,7 @@ const Navbar = () => {
             to="reason"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={-50}
             duration={2000}
             onClick={handleClickOnLink}
           >
@@ -199,7 +199,7 @@ const Navbar = () => {
             to="about"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
@@ -211,7 +211,7 @@ const Navbar = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
@@ -261,7 +261,7 @@ const Navbar = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >

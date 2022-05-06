@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
+import AboveApi from "./pages/AboveApi";
 import Api from "./pages/Api";
 import CleanCode from "./pages/CleanCode";
 import WhyMe from "./pages/WhyMe";
@@ -78,6 +79,7 @@ const App = () => {
         {/* <Skills /> */}
         <Projects />
         {/* <WhyMe /> */}
+        <AboveApi />
         <Api />
         <CleanCode />
         <Contact />

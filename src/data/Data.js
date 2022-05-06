@@ -78,7 +78,7 @@ export const whyData = {
     titleFour: "",
     textFour: "",
     observation: "",
-    bottom: "5%",
+    bottom: "-5%",
     left: "50%",
   },
   contact: {
@@ -94,7 +94,7 @@ export const whyData = {
     titleFour: "",
     textFour: "",
     observation: "",
-    bottom: "5%",
+    bottom: "9%",
     left: "50%",
   },
 };

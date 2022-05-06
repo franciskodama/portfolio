@@ -13,7 +13,14 @@
   --bright-color: #ffffff;
   --third-color: #ed1c24;
   --transparent: hsla(0, 0%, 0%, 0);
-  --gradient: linear-gradient(to right top, #1c1c1c, #3a3939, #5a5959, #7c7b7a, #9f9f9d);
+  --gradient: linear-gradient(
+    to right top,
+    #1c1c1c,
+    #3a3939,
+    #5a5959,
+    #7c7b7a,
+    #9f9f9d
+  );
   --dark-two-color: grey;
   --third-two-color: orange;
   --dark-three-color: indigo;
@@ -25,7 +32,7 @@
 ======================================= */
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }

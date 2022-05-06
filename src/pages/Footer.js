@@ -43,7 +43,7 @@ const Footer = () => {
             to="hero"
             spy={true}
             smooth={true}
-            offset={50}
+            offset={0}
             duration={500}
           >
             {" "}
@@ -54,7 +54,7 @@ const Footer = () => {
             to="about"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={0}
             duration={500}
           >
             {" "}
@@ -65,7 +65,7 @@ const Footer = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={0}
             duration={500}
           >
             {" "}
@@ -113,7 +113,7 @@ const Footer = () => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-150}
+            offset={0}
             duration={500}
           >
             {" "}

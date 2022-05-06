@@ -20,8 +20,8 @@
 
 .hero__scroll {
   position: absolute;
-  bottom: 5%;
-  left: 50%;
+  bottom: 3%;
+  left: 49%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   width: 40px;
