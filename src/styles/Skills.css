@@ -3,6 +3,8 @@
 ======================================= */
 .skills {
   background-color: var(--dark-color);
+  background-color: indigo;
+  height: 100vh;
 }
 
 .skills .container {
@@ -20,14 +22,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  margin: 0em auto;
+  height: 100vh;
+  background-image: url(../assets/images/xx-bg-test.jpg);
 }
 
 .skills__cloud-one,
 .skills__cloud-two {
   width: 10em;
   height: 10em;
-  background-color: red;
 }
 
 .square {

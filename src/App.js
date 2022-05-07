@@ -16,6 +16,7 @@ import Api from "./pages/Api";
 import CleanCode from "./pages/CleanCode";
 import WhyMe from "./pages/WhyMe";
 import Skills from "./pages/Skills";
+import { ParallaxProvider } from "react-scroll-parallax";
 // import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
@@ -64,28 +65,30 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <Palette
-        firstColors={firstColors}
-        secondColors={secondColors}
-        thirdColors={thirdColors}
-        isActive={isActive}
-      />
-      <Reason />
+      <ParallaxProvider>
+        <Navbar />
+        <Hero />
+        <Palette
+          firstColors={firstColors}
+          secondColors={secondColors}
+          thirdColors={thirdColors}
+          isActive={isActive}
+        />
+        <Reason />
 
-      <AboutContext.Provider value={{ location, setLocation }}>
-        <About />
-        <Skills />
-        <Projects />
-        {/* <WhyMe /> */}
-        <AboveApi />
-        <Api />
-        <CleanCode />
-        <Contact />
-      </AboutContext.Provider>
+        <AboutContext.Provider value={{ location, setLocation }}>
+          <About />
+          <Skills />
+          <Projects />
+          {/* <WhyMe /> */}
+          <AboveApi />
+          <Api />
+          <CleanCode />
+          <Contact />
+        </AboutContext.Provider>
 
-      <Footer />
+        <Footer />
+      </ParallaxProvider>
     </div>
   );
 };

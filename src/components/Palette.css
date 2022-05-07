@@ -14,19 +14,14 @@
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  opacity: 0;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
 }
 
 .color__icon--open {
   background-image: url(../assets/images/ico-brush.svg);
-  opacity: 1;
 }
 
 .color__icon--close {
   background-image: url(../assets/images/ico-brush-close.svg);
-  opacity: 1;
 }
 
 .color__square-wrapper {

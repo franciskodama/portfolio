@@ -6,8 +6,7 @@
   background: linear-gradient(
     180deg,
     var(--dark-color) 0%,
-    rgba(41, 41, 41, 1) 100%
-  );
+    rgba(41, 41, 41, 1) 100%);
 
   & .container {
     position: relative;
@@ -55,21 +54,6 @@
     line-height: 1rem;
     color: var(--third-color);
     cursor: pointer;
-  }
-
-  &__icon {
-    width: 32px;
-    height: 32px;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &--open {
-      background-image: url(../assets//images/code-check-return.svg);
-    }
-
-    &--close {
-      background-image: url(../assets//images/code-check.svg);
-    }
   }
 
   /* ------- WORDS ------- */

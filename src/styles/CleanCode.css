@@ -86,21 +86,6 @@
   cursor: pointer;
 }
 
-.code__icon {
-  width: 32px;
-  height: 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.code__icon--open {
-  background-image: url(../assets//images/code-check-return.svg);
-}
-
-.code__icon--close {
-  background-image: url(../assets//images/code-check.svg);
-}
-
 .code__quote, .code__words {
   font-family: var(--main-font-heavy);
   font-size: 1.2em;

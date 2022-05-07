@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/CleanCode.css";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
+import ZoomIn from "../assets/images/code-check.svg";
+import ZoomOut from "../assets/images/code-check-return.svg";
 
 const CleanCode = () => {
   const [showBackground, setShowBackground] = useState(false);
@@ -60,15 +62,13 @@ const CleanCode = () => {
             Author of Clean Code
           </li>
         </ul>
-
         <div className="code__icon-wrapper" onClick={handleClick}>
           <img
-            className={
-              showBackground
-                ? "code__icon code__icon--open"
-                : "code__icon code__icon--close"
-            }
+            className="code__icon"
+            src={!showBackground ? ZoomIn : ZoomOut}
+            alt="icon zoom in or out"
           />
+
           <p style={{ display: !showBackground ? "block" : "none" }}>
             CHECK MY CODE
           </p>

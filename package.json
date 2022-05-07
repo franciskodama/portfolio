@@ -24,6 +24,7 @@
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.6",
+    "react-scroll-parallax": "^3.2.0",
     "sass": "^1.51.0",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4",

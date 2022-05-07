@@ -2,12 +2,16 @@
 
 .skills {
     background-color: var(--dark-color);
+    background-color: indigo;
+    height: 100vh;
 
     & .container {
         @include flexCenter(column);
         width: 100%;
-        margin: 0em auto;
-        // background-image: url(../assets/images/xx-bg-test.jpg); 
+        height: 100vh;
+
+        background-image: url(../assets/images/xx-bg-test.jpg); 
+
         // background-color: aliceblue;
         // box-shadow: 0.2em 0.2em 1em var(--dark-color) inset;
         // border-radius: 50%;
@@ -18,7 +22,6 @@
 .skills__cloud-two {
     width: 10em;
     height: 10em;
-    background-color: red;
 }
 
 .square {
