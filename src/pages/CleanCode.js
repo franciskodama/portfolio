@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Parallax } from "react-scroll-parallax";
 import "../styles/CleanCode.css";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
@@ -38,65 +39,79 @@ const CleanCode = () => {
       }
       style={{ padding: showBackground && "35em" }}
     >
-      <h1
-        className="section-title"
-        style={{ display: showBackground ? "none" : "block" }}
-      >
-        clean code
-      </h1>
-
+      <Parallax opacity={[0, 1.5]}>
+        <h1
+          className="section-title"
+          style={{ display: showBackground ? "none" : "block" }}
+        >
+          clean code
+        </h1>
+      </Parallax>
       <div className="container">
-        <ul
-          className="code__quote"
-          style={{ display: showBackground ? "none" : "block" }}
+        <Parallax
+          scale={[1.8, 0.8]}
+          opacity={[0, 1.5]}
+          translateX={["-100%", "50%"]}
         >
-          <li className="code__odd--inverse">"clean code</li>
-          <li className="code__even--inverse">always looks like</li>
-          <li className="code__odd--inverse">it was written by</li>
-          <li className="code__even--inverse">someone who</li>
-          <li className="code__odd--inverse">cares."</li>
-          <li className="code__even--inverse code--stroke">
-            ― Robert C. Martin
-          </li>
-          <li className="code__odd--inverse code--stroke">
-            Author of Clean Code
-          </li>
-        </ul>
-        <div className="code__icon-wrapper" onClick={handleClick}>
-          <img
-            className="code__icon"
-            src={!showBackground ? ZoomIn : ZoomOut}
-            alt="icon zoom in or out"
-          />
-
-          <p style={{ display: !showBackground ? "block" : "none" }}>
-            CHECK MY CODE
-          </p>
-          <p
-            className="code--bright"
-            style={{
-              display: showBackground ? "block" : "none",
-            }}
+          <ul
+            className="code__quote"
+            style={{ display: showBackground ? "none" : "block" }}
           >
-            RETURN
-          </p>
-        </div>
-        <ul
-          className="code__words"
-          style={{ display: showBackground ? "none" : "block" }}
-        >
-          <li className="code__odd">meticulousness</li>
-          <li className="code__even">easy to read, easy to change</li>
-          <li className="code__odd">naming conventions</li>
-          <li className="code__even">don't repeat your self</li>
-          <li className="code__odd">keep it simple</li>
-          <li className="code__even">clear and concise</li>
-          <li className="code__odd">consistent</li>
-          <li className="code__even">uncomplicate</li>
-          <li className="code__odd">B.E.M.</li>
-          <li className="code__even">D.R.Y.</li>
-        </ul>
+            <li className="code__odd--inverse">"clean code</li>
+            <li className="code__even--inverse">always looks like</li>
+            <li className="code__odd--inverse">it was written by</li>
+            <li className="code__even--inverse">someone who</li>
+            <li className="code__odd--inverse">cares."</li>
+            <li className="code__even--inverse code--stroke">
+              ― Robert C. Martin
+            </li>
+            <li className="code__odd--inverse code--stroke">
+              Author of Clean Code
+            </li>
+          </ul>
+        </Parallax>
+        <Parallax opacity={[0, 2]} translateY={["-100%", "50%"]}>
+          <div className="code__icon-wrapper" onClick={handleClick}>
+            <img
+              className="code__icon"
+              src={!showBackground ? ZoomIn : ZoomOut}
+              alt="icon zoom in or out"
+            />
+            <p style={{ display: !showBackground ? "block" : "none" }}>
+              CHECK MY CODE
+            </p>
+            <p
+              className="code--bright"
+              style={{
+                display: showBackground ? "block" : "none",
+              }}
+            >
+              RETURN
+            </p>
+          </div>
+        </Parallax>
 
+        <Parallax
+          scale={[1.4, 0.8]}
+          opacity={[0, 2]}
+          translateX={["50%", "-100%"]}
+        >
+          <ul
+            className="code__words"
+            style={{ display: showBackground ? "none" : "block" }}
+          >
+            <li className="code__odd">meticulousness</li>
+            <li className="code__even">easy to read, easy to change</li>
+            <li className="code__odd">naming conventions</li>
+            <li className="code__even">don't repeat your self</li>
+            <li className="code__odd">keep it simple</li>
+            <li className="code__even">clear and concise</li>
+            <li className="code__odd">consistent</li>
+            <li className="code__even">uncomplicate</li>
+            <li className="code__odd">B.E.M.</li>
+            <li className="code__even">D.R.Y.</li>
+          </ul>
+        </Parallax>
         <WhyCard
           titleOne={whyData.code.titleOne}
           textOne={whyData.code.textOne}

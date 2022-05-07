@@ -79,7 +79,7 @@ const About = () => {
   };
 
   return (
-    <Parallax opacity={[0, 2.5]}>
+    <Parallax opacity={[0, 2]} scale={[1.2, 0.8]}>
       <section className="section about" id="about">
         <div className="container">
           <div className="about__avatar-container">

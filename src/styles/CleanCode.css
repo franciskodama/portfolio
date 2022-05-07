@@ -77,12 +77,10 @@
   position: absolute;
   top: 33%;
   left: 50%;
-  width: 8em;
   text-align: center;
   font-family: var(--main-font-regular);
   font-size: 0.7rem;
   line-height: 1rem;
-  color: var(--third-color);
   cursor: pointer;
 }
 
@@ -102,6 +100,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.code__words {
+  margin-top: 4em;
 }
 
 .code__odd--inverse {
@@ -206,9 +208,6 @@
 @media only screen and (min-width: 48em) {
   .code .container {
     height: 70em;
-  }
-  .code__icon-wrapper {
-    top: 39%;
   }
   .code__quote, .code__words {
     font-size: 2em;

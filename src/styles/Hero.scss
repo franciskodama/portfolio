@@ -57,28 +57,55 @@
   }
 
   &__left {
-    transform: skew(0deg, 30deg) scaleY(1.33333);
+    transform: translateY(500px);
     top: 47%;
     left: 8.2%;
     color: var(--bright-color);
-    opacity: 0.4;
+    opacity: 0;
+    animation: cube-left-up 0.5s ease-in-out forwards;
+
   }
 
   &__top {
-    transform: skew(60deg, -30deg) scaleY(.66667);
+    transform: translateY(500px);
     top: 2%;
     left: 30%;
     color: var(--bright-color);
-    opacity: 0.8;
+    opacity: 0;
+    animation: cube-top-up 0.5s ease-in-out forwards;
   }
 
   &__right {
-    transform: skew(0deg, -30deg) scaleY(1.33333);
+    transform: translateY(500px);
     top: 39%;
     left: 48%;
     color: var(--third-color);
-    opacity: 0.8;
+    opacity: 0;
+    animation: cube-right-up 0.5s ease-in-out forwards;
+
   }
+
+  @keyframes cube-left-up {
+    100% {
+      transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
+    opacity: 0.4;
+    }
+  }
+  
+  @keyframes cube-top-up {
+    100% {
+      transform: skew(60deg, -30deg) scaleY(.66667) translateY(0);
+    opacity: 0.8;
+    }
+  }
+
+  @keyframes cube-right-up {
+    100% {
+      transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
+    opacity: 0.8;
+    }
+  }
+
 
   /* ------ HOVER  ------ */
 

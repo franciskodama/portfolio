@@ -1,4 +1,4 @@
-.code {
+  .code {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -47,12 +47,10 @@
     position: absolute;
     top: 33%;
     left: 50%;
-    width: 8em;
     text-align: center;
     font-family: var(--main-font-regular);
     font-size: 0.7rem;
     line-height: 1rem;
-    color: var(--third-color);
     cursor: pointer;
   }
 
@@ -72,6 +70,10 @@
 
   &__quote {
     display: flex;
+  }
+
+  &__words {
+  margin-top: 4em;
   }
 
   /* ------- QUOTE TRANSFORM ------- */
@@ -166,9 +168,9 @@
       height: 70em;
     }
   
-    &__icon-wrapper {
-      top: 39%;
-    }
+    // &__icon-wrapper {
+    //   top: 35%;
+    // }
   
     &__quote,
     &__words {
@@ -197,9 +199,5 @@
       font-size: 3em;
       line-height: 3.5rem;
     }
-  
-    // &__icon {
-    //   width: 32px;
-    // }
   }
 }

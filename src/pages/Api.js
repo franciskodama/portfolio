@@ -44,7 +44,6 @@ const Api = () => {
         }
         alt="weather condition"
       />
-
       <section className="section api" id="api">
         <div className="container">
           <div className="api__grid">
@@ -62,7 +61,6 @@ const Api = () => {
             </div>
 
             <p id="api__error">...Ops, city not found. Try again! :)</p>
-
             <h4 className="api__location-title">Weather in</h4>
             <h3 className="api__city">{data.name}</h3>
             {data.sys ? (
@@ -75,13 +73,11 @@ const Api = () => {
             <h4 className="api__lat">
               Latitude {data.coord ? <p>{data.coord.lat}</p> : null}
             </h4>
-
             {/* =============== SECOND SIDE =============== */}
 
             <h3 className="api__description">
               {data.weather ? <p>{data.weather[0].description}</p> : null}
             </h3>
-
             <div className="api__feels-wrapper">
               <h4 className="api__feels-title">Feels like</h4>
               <h3>
@@ -102,7 +98,6 @@ const Api = () => {
                 ) : null}
               </h3>
             </div>
-
             <div className="api__wind-wrapper">
               <h4 className="api__others-title">Wind</h4>
               <h3>

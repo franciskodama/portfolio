@@ -7,19 +7,17 @@ import CloudTwo from "../assets/images/skills-cloud-2.svg";
 import Background from "../assets/images/xx-bg-test.jpg";
 
 const Skills = () => {
-  const { cloudOneRef } =
-    useParallax < HTMLDivElement > { speed: 10, translateX: [-20, 20] };
+  // const { cloudOneRef } =
+  //   useParallax < HTMLDivElement > { speed: 10, translateX: [-20, 20] };
 
   return (
-    <Parallax
-    // speed={-10} translateY={[100, 100]}
-    >
-      <section className="section skills">
-        <div className="container">
-          <img className="skills__cloud-one" ref={cloudOneRef} src={CloudOne} />
-        </div>
-      </section>
-    </Parallax>
+    <section className="section skills">
+      <div className="container">
+        <Parallax speed={-10} translateX={[1000, 100]}>
+          <img className="skills__cloud-one" src={CloudOne} />
+        </Parallax>
+      </div>
+    </section>
   );
 };
 
