@@ -176,7 +176,7 @@ export const projects = [
     backText_textOne: `Rather than make a "to-do list" project after taking a React course, I thought it would be more productive to build a bold project where I could apply what I've learned and study new things to go beyond what I already knew.`,
     backText_titleTwo: "how",
     backText_textTwo:
-      "As a product strategist, I began the project by thinking about how to create a valuable portfolio that would benefit employers looking for talent with my skills.",
+      "As a product strategist, I began by thinking about how to create a portfolio that would appeal to employers seeking talent with my skills.",
     // backText_titleThree: "what",
     // backText_textThree:
     //   "From many sketches, designing the project on Figma, to coding afterward, in each step, the portfolio was built intentionally gathering new knowledge and new understandings.",

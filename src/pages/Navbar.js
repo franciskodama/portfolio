@@ -115,7 +115,7 @@ const Navbar = () => {
             projects{" "}
           </Link>
 
-          <Link
+          {/* <Link
             className="navbar__item"
             to="whyme"
             spy={true}
@@ -126,7 +126,7 @@ const Navbar = () => {
           >
             {" "}
             why{" "}
-          </Link>
+          </Link> */}
 
           <Link
             className="navbar__item"
@@ -219,7 +219,7 @@ const Navbar = () => {
             projects{" "}
           </Link>
 
-          <Link
+          {/* <Link
             className="navbar__item"
             to="whyme"
             spy={true}
@@ -230,7 +230,7 @@ const Navbar = () => {
           >
             {" "}
             why{" "}
-          </Link>
+          </Link> */}
 
           <Link
             className="navbar__item"

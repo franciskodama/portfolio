@@ -136,8 +136,8 @@
     top: 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 4.6rem 3.3rem 6.6rem 5.8rem 3.6rem 3.3rem 6rem 4.3rem;
-        grid-template-columns: 4.6rem 3.3rem 6.6rem 5.8rem 3.6rem 3.3rem 6rem 4.3rem;
+    -ms-grid-columns: 4.6rem 3.3rem 6.6rem 5.8rem 3.6rem 6rem 4.3rem;
+        grid-template-columns: 4.6rem 3.3rem 6.6rem 5.8rem 3.6rem 6rem 4.3rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

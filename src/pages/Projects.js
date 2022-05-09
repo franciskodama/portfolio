@@ -15,9 +15,9 @@ const Projects = () => {
 
         <div className="projects__wrapper">
           {projects.map((project) => (
-            <Parallax opacity={[0, 3]} speed={0} scale={[1.1, 0.9]}>
-              <Card key={project.id} project={project} />
-            </Parallax>
+            // <Parallax opacity={[0, 3]} speed={0} scale={[1.1, 0.9]}>
+            <Card key={project.id} project={project} />
+            // </Parallax>
           ))}
         </div>
         <WhyCard

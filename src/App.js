@@ -78,7 +78,7 @@ const App = () => {
 
         <AboutContext.Provider value={{ location, setLocation }}>
           <About />
-          <Skills />
+          {/* <Skills /> */}
           <Projects />
           {/* <WhyMe /> */}
           <AboveApi />

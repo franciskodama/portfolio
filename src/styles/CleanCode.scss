@@ -44,6 +44,7 @@
   /* ------- SEE MY CODE ICON ------- */
 
   &__icon-wrapper {
+    display: none;
     position: absolute;
     top: 33%;
     left: 50%;
@@ -198,6 +199,10 @@
     &__words {
       font-size: 3em;
       line-height: 3.5rem;
+    }
+
+    &__icon-wrapper {
+      display: block;
     }
   }
 }
