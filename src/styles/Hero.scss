@@ -1,7 +1,7 @@
 @import '../utils/utils';
 
 .hero {
-  background: var(--gradient);
+  background: var(--dark-color);
   height: 100vh;
   padding-top: 7.5em;
 
@@ -24,8 +24,8 @@
     width: 40px;
     height: 40px;
     border: 0;
-    z-index: 3;
     cursor: pointer;
+    z-index: 3;
   }
 }
 
@@ -57,62 +57,56 @@
   }
 
   &__left {
-    transform: translateY(500px);
+    transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
     top: 47%;
     left: 8.2%;
     color: var(--bright-color);
     opacity: 0;
-    animation: cube-left-up 0.5s ease-in-out forwards;
-
+    animation: cube-left-up 3s 1s forwards;
   }
 
   &__top {
-    transform: translateY(500px);
+    transform: skew(60deg, -30deg) scaleY(.66667) translateY(0);
     top: 2%;
     left: 30%;
     color: var(--bright-color);
     opacity: 0;
-    animation: cube-top-up 0.5s ease-in-out forwards;
+    animation: cube-top-up 3s 1s forwards;
   }
 
   &__right {
-    transform: translateY(500px);
+    transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
     top: 39%;
     left: 48%;
     color: var(--third-color);
     opacity: 0;
-    animation: cube-right-up 0.5s ease-in-out forwards;
-
+    animation: cube-right-up 3s 1s forwards;
   }
 
   @keyframes cube-left-up {
-    100% {
-      transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
-    opacity: 0.4;
-    }
+      100% {
+      opacity: 0.4;
+      }
   }
   
   @keyframes cube-top-up {
-    100% {
-      transform: skew(60deg, -30deg) scaleY(.66667) translateY(0);
-    opacity: 0.8;
-    }
+      100% {
+      opacity: 0.8;
+      }
   }
 
   @keyframes cube-right-up {
     100% {
-      transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
     opacity: 0.8;
     }
   }
-
 
   /* ------ HOVER  ------ */
 
   &__left h2,
   &__top h2,
   &__right h2 {
-    transition: all 0.3s ease;
+    transition: all 0.1s 
   }
 
   &__top h2:hover {

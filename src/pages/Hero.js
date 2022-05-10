@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import "../styles/Hero.css";
 import { Link } from "react-scroll";
+import "../styles/Hero.css";
 import Video from "../assets/images/hero-bg.mp4";
 import Scroll from "../assets/images/ico-scroll.svg";
 
@@ -36,7 +36,6 @@ const Hero = () => {
 
   return (
     <section className="section hero" id="hero">
-      {" "}
       <video
         autoPlay
         loop
@@ -52,37 +51,30 @@ const Hero = () => {
           zIndex: "1",
         }}
       >
-        {" "}
-        <source src={Video} type="video/mp4" />{" "}
-      </video>{" "}
-      <div className="hero__filter"></div>{" "}
+        <source src={Video} type="video/mp4" />
+      </video>
+      <div className="hero__filter"></div>
       <div className="container" ref={sidesWrapperRef}>
-        {" "}
         {/* --------------- CUBE --------------- */}
         <div className="cube" onMouseMove={onMoveHandler}>
-          {" "}
           <div className="cube__left" ref={sideLeftRef}>
-            {" "}
             <h2>hey, I'm</h2>
-            <h2>Francis</h2> <h2>Kodama</h2> <h2>Based in</h2> <h2>Ottawa, </h2>{" "}
-            <h2>Canada.</h2>{" "}
-          </div>{" "}
+            <h2>Francis</h2> <h2>Kodama</h2> <h2>Based in</h2> <h2>Ottawa, </h2>
+            <h2>Canada.</h2>
+          </div>
           <div className="cube__top" ref={sideTopRef}>
-            {" "}
-            <h2>Front-end</h2> <h2>developer </h2> <h2>-----------</h2>{" "}
-            <h2>product </h2> <h2>strategy </h2>{" "}
-          </div>{" "}
+            <h2>Front-end</h2> <h2>developer </h2> <h2>-----------</h2>
+            <h2>product </h2> <h2>strategy </h2>
+          </div>
           <div className="cube__right" ref={sideRightRef}>
-            {" "}
-            <h2>react, js, </h2> <h2>html, css, </h2> <h2>sass, git</h2>{" "}
-            <h2>npm, figma</h2> <h2>adobe XD, </h2> <h2>PHOTOSHOP</h2>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+            <h2>react, js, </h2> <h2>html, css, </h2> <h2>sass, git</h2>
+            <h2>npm, figma</h2> <h2>adobe XD, </h2> <h2>PHOTOSHOP</h2>
+          </div>
+        </div>
+      </div>
       <Link to="reason" spy={true} smooth={true} offset={-150} duration={2000}>
-        {" "}
-        <img src={Scroll} className="hero__scroll" />{" "}
-      </Link>{" "}
+        <img src={Scroll} className="hero__scroll" />
+      </Link>
     </section>
   );
 };

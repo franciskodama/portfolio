@@ -2,7 +2,7 @@
                  MIXIN
 ======================================= */
 .hero {
-  background: var(--gradient);
+  background: var(--dark-color);
   height: 100vh;
   padding-top: 7.5em;
 }
@@ -75,82 +75,70 @@
 }
 
 .cube__left {
-  -webkit-transform: translateY(500px);
-          transform: translateY(500px);
+  -webkit-transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
+          transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
   top: 47%;
   left: 8.2%;
   color: var(--bright-color);
   opacity: 0;
-  -webkit-animation: cube-left-up 0.5s ease-in-out forwards;
-          animation: cube-left-up 0.5s ease-in-out forwards;
+  -webkit-animation: cube-left-up 3s 1s forwards;
+          animation: cube-left-up 3s 1s forwards;
 }
 
 .cube__top {
-  -webkit-transform: translateY(500px);
-          transform: translateY(500px);
+  -webkit-transform: skew(60deg, -30deg) scaleY(0.66667) translateY(0);
+          transform: skew(60deg, -30deg) scaleY(0.66667) translateY(0);
   top: 2%;
   left: 30%;
   color: var(--bright-color);
   opacity: 0;
-  -webkit-animation: cube-top-up 0.5s ease-in-out forwards;
-          animation: cube-top-up 0.5s ease-in-out forwards;
+  -webkit-animation: cube-top-up 3s 1s forwards;
+          animation: cube-top-up 3s 1s forwards;
 }
 
 .cube__right {
-  -webkit-transform: translateY(500px);
-          transform: translateY(500px);
+  -webkit-transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
+          transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
   top: 39%;
   left: 48%;
   color: var(--third-color);
   opacity: 0;
-  -webkit-animation: cube-right-up 0.5s ease-in-out forwards;
-          animation: cube-right-up 0.5s ease-in-out forwards;
+  -webkit-animation: cube-right-up 3s 1s forwards;
+          animation: cube-right-up 3s 1s forwards;
 }
 
 @-webkit-keyframes cube-left-up {
   100% {
-    -webkit-transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
-            transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
     opacity: 0.4;
   }
 }
 
 @keyframes cube-left-up {
   100% {
-    -webkit-transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
-            transform: skew(0deg, 30deg) scaleY(1.33333) translateY(0);
     opacity: 0.4;
   }
 }
 
 @-webkit-keyframes cube-top-up {
   100% {
-    -webkit-transform: skew(60deg, -30deg) scaleY(0.66667) translateY(0);
-            transform: skew(60deg, -30deg) scaleY(0.66667) translateY(0);
     opacity: 0.8;
   }
 }
 
 @keyframes cube-top-up {
   100% {
-    -webkit-transform: skew(60deg, -30deg) scaleY(0.66667) translateY(0);
-            transform: skew(60deg, -30deg) scaleY(0.66667) translateY(0);
     opacity: 0.8;
   }
 }
 
 @-webkit-keyframes cube-right-up {
   100% {
-    -webkit-transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
-            transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
     opacity: 0.8;
   }
 }
 
 @keyframes cube-right-up {
   100% {
-    -webkit-transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
-            transform: skew(0deg, -30deg) scaleY(1.33333) translateY(0);
     opacity: 0.8;
   }
 }
@@ -158,8 +146,8 @@
 .cube__left h2,
 .cube__top h2,
 .cube__right h2 {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 .cube__top h2:hover {
