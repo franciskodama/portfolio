@@ -27,11 +27,30 @@ const Card = ({ project }) => {
     }));
   };
 
+  // ========================== ANIMATION ==========================
+
+  const reveal = () => {
+    const reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  };
+
+  window.addEventListener("scroll", reveal);
+  reveal();
+
   return (
     <div className="card">
       {/* ========================== CARD FRONT ========================== */}
       <div
-        className="card-front"
+        className="card-front reveal"
         onClick={handleClickToOpen}
         style={{
           display: isOpen[project.id] ? "none" : "block",

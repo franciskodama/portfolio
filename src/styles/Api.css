@@ -92,7 +92,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 18em;
   line-height: 3rem;
   font-family: var(--main-font-semibold);
   font-size: 2.8rem;
@@ -101,7 +100,6 @@
 
 .api__input {
   height: 3em;
-  width: 18em;
   margin-top: 0.7em;
   margin-right: 1em;
 }
@@ -389,13 +387,8 @@
         grid-template-columns: repeat(8, 1fr);
     width: 65%;
   }
-  .api__question-wrapper {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1/4;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    grid-row: 2/4;
+  .api__question, .api__input {
+    width: 18em;
   }
   .api__log, .api__lat {
     margin-top: 0;

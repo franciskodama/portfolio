@@ -7,12 +7,24 @@
 /* ------- FRONT CARD -------- */
 /* --------------------------- */
 
+  .reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
 .card-front {
   flex-direction: column;
   margin: 1em 0;
   width: 240px;
   text-align: left;
-
+  
   :first-child {
     margin-left: 0;
   }

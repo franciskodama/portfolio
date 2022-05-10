@@ -3,6 +3,7 @@ import Axios from "axios";
 import "../styles/Api.css";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
+import { Parallax } from "react-scroll-parallax";
 
 const Api = () => {
   const [data, setData] = useState({});
@@ -59,7 +60,6 @@ const Api = () => {
                 type="text"
               />
             </div>
-
             <p id="api__error">...Ops, city not found. Try again! :)</p>
             <h4 className="api__location-title">Weather in</h4>
             <h3 className="api__city">{data.name}</h3>
@@ -78,6 +78,7 @@ const Api = () => {
             <h3 className="api__description">
               {data.weather ? <p>{data.weather[0].description}</p> : null}
             </h3>
+
             <div className="api__feels-wrapper">
               <h4 className="api__feels-title">Feels like</h4>
               <h3>

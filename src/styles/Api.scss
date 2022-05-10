@@ -58,7 +58,6 @@
     grid-row: 2/3;
     display: flex;
     flex-direction: column;
-    width: 18em;
     line-height: 3rem;
     font-family: var(--main-font-semibold);
     font-size: 2.8rem;
@@ -67,7 +66,6 @@
   
   &__input {
     height: 3em;
-    width: 18em;
     margin-top: 0.7em;
     margin-right: 1em;
   }
@@ -306,9 +304,9 @@
 
     /* ---- INPUT ---- */
 
-  &__question-wrapper {
-    grid-column: 1/4;
-    grid-row: 2/4;
+  &__question,
+  &__input {
+    width: 18em;
   }
 
   &__log,

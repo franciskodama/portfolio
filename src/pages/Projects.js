@@ -9,15 +9,13 @@ const Projects = () => {
   return (
     <section className="section projects" id="projects">
       <div className="container">
-        <Parallax opacity={[0, 3]}>
+        <Parallax opacity={[0, 3]} scale={[1.5, 0.9]}>
           <h2 className="section-title projects__title">selected projects</h2>
         </Parallax>
 
         <div className="projects__wrapper">
           {projects.map((project) => (
-            // <Parallax opacity={[0, 3]} speed={0} scale={[1.1, 0.9]}>
             <Card key={project.id} project={project} />
-            // </Parallax>
           ))}
         </div>
         <WhyCard

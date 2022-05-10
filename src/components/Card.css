@@ -6,6 +6,21 @@
 /* --------------------------- */
 /* ------- FRONT CARD -------- */
 /* --------------------------- */
+.reveal {
+  position: relative;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
 .card-front {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
