@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Reason = () => {
   const originalMessageBright =
-    " this portfolio has been built to showcase my variety of skills from creativity to code ";
+    "this portfolio has been built to showcase my variety of skills from creativity to code";
   const originalMessageDark =
     ".click on the eye below to know more about each page";
   const arrOfLettersBright = Array.from(originalMessageBright);
@@ -19,14 +19,14 @@ const Reason = () => {
   const createGrid = () => {
     for (let i = 0; i < arrOfLettersBright.length; i++) {
       arrOfDiv.push(
-        <div key={i} className="reason__letter-bright">
+        <div key={i} className="reason__letter-bright reason__reveal-bright">
           {arrOfLettersBright[i]}
         </div>
       );
     }
     for (let i = 0; i < arrOfLettersDark.length; i++) {
       arrOfDiv.push(
-        <div key={i + 100} className="reason__letter-dark">
+        <div key={i + 100} className="reason__letter-dark reason__reveal-dark">
           {arrOfLettersDark[i]}
         </div>
       );
@@ -43,6 +43,36 @@ const Reason = () => {
     setCurrentArray((currentArray) => [...currentArray, divArray]);
     return currentArray;
   };
+
+  // ========================== ANIMATION ==========================
+
+  const reasonReveal = () => {
+    const revealsBright = document.querySelectorAll(".reason__reveal-bright");
+    const revealsDark = document.querySelectorAll(".reason__reveal-dark");
+    const elementVisible = 250;
+    let windowHeight = window.innerHeight;
+
+    for (var i = 0; i < revealsBright.length; i++) {
+      let elementTop = revealsBright[i].getBoundingClientRect().top;
+      if (elementTop < windowHeight - elementVisible) {
+        revealsBright[i].classList.add("reason__reveal--active");
+      } else {
+        revealsBright[i].classList.remove("reason__reveal--active");
+      }
+    }
+
+    for (var i = 0; i < revealsDark.length; i++) {
+      let elementTop = revealsDark[i].getBoundingClientRect().top;
+      if (elementTop < windowHeight - elementVisible) {
+        revealsDark[i].classList.add("reason__reveal--active");
+      } else {
+        revealsDark[i].classList.remove("reason__reveal--active");
+      }
+    }
+  };
+
+  window.addEventListener("scroll", reasonReveal);
+  reasonReveal();
 
   // -------------- ANIMATION --------------
 
@@ -87,20 +117,6 @@ const Reason = () => {
         {createGrid()}
       </div>
       <div>{currentArray}</div>
-
-      {/* <form>
-        <input
-          className="grid__input"
-          onChange={handleChange}
-          type="text"
-          placeholder="type something here..."
-        />
-        <Button
-          text="reload original message"
-          className="btn btn--third-color"
-        />
-        <div className="grid__input"></div>
-      </form> */}
 
       <WhyCard
         titleOne={whyData.reason.titleOne}

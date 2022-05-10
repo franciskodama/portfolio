@@ -41,16 +41,32 @@
   color: var(--third-color);
 }
 
-/* 
-.section--reason form {
-  margin: 6em auto 12em;
-} 
+/* ------- ANIMATION -------- */
+.reason__reveal-bright,
+.reason__reveal-dark {
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 2s all ease;
+  transition: 2s all ease;
+}
 
-.grid__input {
-  height: 3em;
-  width: 40em;
-  margin-right: 1em;
-} */
+.reason__reveal-bright {
+  -webkit-transform: translateX(-1000px);
+          transform: translateX(-1000px);
+}
+
+.reason__reveal-dark {
+  -webkit-transform: translateX(1000px);
+          transform: translateX(1000px);
+}
+
+.reason__reveal-bright.reason__reveal--active,
+.reason__reveal-dark.reason__reveal--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
 /* ====================================
             MEDIA QUERY
 ======================================= */

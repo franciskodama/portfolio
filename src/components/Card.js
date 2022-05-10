@@ -30,15 +30,16 @@ const Card = ({ project }) => {
   // ========================== ANIMATION ==========================
 
   const reveal = () => {
-    const reveals = document.querySelectorAll(".reveal");
+    const reveals = document.querySelectorAll(".card-front__reveal");
+
     for (var i = 0; i < reveals.length; i++) {
       let windowHeight = window.innerHeight;
       let elementTop = reveals[i].getBoundingClientRect().top;
       let elementVisible = 150;
       if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
+        reveals[i].classList.add("card-front__reveal--active");
       } else {
-        reveals[i].classList.remove("active");
+        reveals[i].classList.remove("card-front__reveal--active");
       }
     }
   };
@@ -50,7 +51,7 @@ const Card = ({ project }) => {
     <div className="card">
       {/* ========================== CARD FRONT ========================== */}
       <div
-        className="card-front reveal"
+        className="card-front card-front__reveal"
         onClick={handleClickToOpen}
         style={{
           display: isOpen[project.id] ? "none" : "block",

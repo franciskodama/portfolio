@@ -3,7 +3,7 @@
   flex-direction: column;
   max-width: 94em;
   margin: 0 auto;
-
+  
   /* ----- GRID ----- */
 
   &__grid {
@@ -34,17 +34,29 @@
   color: var(--third-color);
 }
 
-/* 
-.section--reason form {
-  margin: 6em auto 12em;
-} 
 
-.grid__input {
-  height: 3em;
-  width: 40em;
-  margin-right: 1em;
-} */
+/* ------- ANIMATION -------- */
 
+.reason__reveal-bright,
+.reason__reveal-dark {
+  position: relative;
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.reason__reveal-bright {
+  transform: translateX(-1000px);
+}
+
+.reason__reveal-dark {
+  transform: translateX(1000px);
+}
+
+.reason__reveal-bright.reason__reveal--active,
+.reason__reveal-dark.reason__reveal--active {
+  transform: translateX(0);
+  opacity: 1;
+}
 
 /* ====================================
             MEDIA QUERY

@@ -3,20 +3,23 @@
   margin: 0.5em;
 }
 
+/* ------- ANIMATION -------- */
+
+.card-front__reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.card-front__reveal.card-front__reveal--active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* --------------------------- */
 /* ------- FRONT CARD -------- */
 /* --------------------------- */
-
-  .reveal {
-    position: relative;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 1s all ease;
-  }
-  .reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-  }
 
 
 .card-front {
