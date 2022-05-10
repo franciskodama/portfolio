@@ -2,13 +2,58 @@
   background-color: var(--dark-color);
 
   & .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: var(--bright-color);
     color: var(--dark-color);
     margin-top: 5em;
     margin-bottom: 6em;
+    
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: red;
+    //   z-index: 10;
+    // }
   }
+
+
+  &__container-reveal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color);
+    z-index: 10;
+    transform: translate(0);
+    opacity: 1;
+    transition: 2s all ease-in-out;
+  }
+
+  &__container-reveal.about__container-reveal--active {
+    transform: translate(5000px);
+    opacity: 0;
+  }
+
+/* ------- ANIMATION -------- */
+
+.card-front__reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.card-front__reveal.card-front__reveal--active{
+  transform: translateY(0);
+  opacity: 1;
+}
 
   /*--------------------------
   ----- AVATAR CONTAINER -----

@@ -78,9 +78,30 @@ const About = () => {
     console.log(`location: ${location.data}`);
   };
 
+  // ========================== ANIMATION ==========================
+
+  const revealAbout = () => {
+    const reveals = document.querySelectorAll(".about__container-reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("about__container-reveal--active");
+      } else {
+        reveals[i].classList.remove("about__container-reveal--active");
+      }
+    }
+  };
+
+  window.addEventListener("scroll", revealAbout);
+  revealAbout();
+
   return (
     <section className="section about" id="about">
       <div className="container">
+        <div className="about__container-reveal"></div>
         <div className="about__avatar-container">
           <Avatar />
         </div>
