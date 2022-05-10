@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+### Hi there! I'm Francis Kodama! 👋
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## WELCOME TO MY PORTFOLIO PROJECT. 😎
 
-## Available Scripts
+<hr />
 
-In the project directory, you can run:
+# this.Project 📖
 
-### `npm start`
+100% React-based, this is my most important project built.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Why?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Rather than make a "to-do list" project after taking a React course, I thought it would be more productive to build a bold project where I could apply what I've learned and study new things to go beyond what I already knew.
+</br>
+</br>
 
-### `npm test`
+## How?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As a product strategist, I began by thinking about how to create a portfolio that would appeal to employers seeking talent with my skills.
+</br>
+</br>
 
-### `npm run build`
+## What?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+From many sketches, designing the project on Figma, to coding afterward, in each step, the portfolio was built intentionally gathering new knowledge and new understandings.
+</br>
+</br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+100% React-based, JSX, CSS, SASS, and HTML. Some tools used: Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.
+</br>
+</br>
 
-### `npm run eject`
+<hr />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# About Me 😎
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🇧🇷 I’m a **Front-end Developer** with a strong understanding of industry trends, as well as of the entire web development process, including development, UX/UI design, product management, and client services.
+</br>
+</br>
+🚀 My mission is to create exciting projects that will inspire others and change their behavior in a positive way while providing me with new challenges so I never stop learning.
+</br>
+</br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<a href="https://www.fkodama.com/" target="_blank">
+<img align="left" width="196px" src="https://www.fkodama.com/_permanent/git/portfolio.svg"  />
+</a>
 
-## Learn More
+</br>
+</br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<hr />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### ⚡ Connect with me:
 
-### Code Splitting
+<br />
+<a href="https://www.fkodama.com/" target="_blank">
+<img align="left" width="40px" src="https://www.fkodama.com/_permanent/git/website.svg"  />
+</a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<a href="https://www.linkedin.com/in/kodama/" target="_blank">
+  <img align="left" width="40px" src="https://www.fkodama.com/_permanent/git/linkedin.svg"  />
+</a>
+<a href="https://www.instagram.com" target="_blank">
+  <img align="left" width="40px" src="https://www.fkodama.com/_permanent/git/instagram.svg"  />
+</a>
+<a href="mailto:fk@fkodama.com">
+  <img align="left" width="43px" src="https://www.fkodama.com/_permanent/git/email.svg" />
+</a>
 
-### Analyzing the Bundle Size
+</br>
+</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<hr />
