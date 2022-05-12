@@ -69,6 +69,11 @@
 
   &__resume {
     grid-row: 10/11;
+    &:active,
+    &:visited,
+    &:link {
+      color: var(--bright-color)
+    }
   }
 
   &__design {

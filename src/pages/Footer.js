@@ -6,6 +6,7 @@ import LogoFooter from "../assets/images/logo-fkodama-footer.svg";
 import Linkedin from "../assets/images/ico-linkedin-white.svg";
 import Insta from "../assets/images/ico-instagram-white.svg";
 import Git from "../assets/images/ico-github-white.svg";
+import Resume from "../assets/2022-francis-kodama-resume.pdf";
 
 import "../styles/Footer.css";
 
@@ -153,11 +154,11 @@ const Footer = () => {
           <p>Designed and built by</p>{" "}
           <p className="footer--bold">Francis Kodama</p> <p>Copyright 2022</p>{" "}
         </div>{" "}
-        <div className="footer__resume">
+        <a className="footer__resume" href={Resume} target="_blank">
           {" "}
           <h2 className="footer__resume-title">RESUME</h2> <p>Download</p>{" "}
           <p className="footer--bold">Resumé</p>{" "}
-        </div>{" "}
+        </a>{" "}
         <p className="footer__location">
           {" "}
           Ottawa, ON - <span className="footer-bold">Canada</span>{" "}
