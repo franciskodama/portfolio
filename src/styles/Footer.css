@@ -106,6 +106,14 @@
   grid-row: 10/11;
 }
 
+.footer__resume-link {
+  cursor: pointer;
+}
+
+.footer__resume-link:active, .footer__resume-link:visited, .footer__resume-link:link {
+  color: var(--bright-color);
+}
+
 .footer__design {
   -ms-grid-row: 11;
   -ms-grid-row-span: 1;
@@ -130,10 +138,11 @@
   text-decoration: underline;
 }
 
-.footer__menu-item:hover, .footer__send:hover, .footer__resume:hover {
+.footer__menu-item:hover, .footer__send:hover, .footer__resume-link:hover {
+  font-family: var(--main-font-semibold);
   color: var(--third-color);
-  -webkit-transform: translate(3px);
-          transform: translate(3px);
+  -webkit-transform: translateX(-3px);
+          transform: translateX(-3px);
 }
 
 .footer__logo {

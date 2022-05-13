@@ -69,9 +69,14 @@
 
   &__resume {
     grid-row: 10/11;
-    &:active,
-    &:visited,
-    &:link {
+  }
+
+  &__resume-link {
+    cursor: pointer;
+
+      &:active,
+      &:visited,
+      &:link {
       color: var(--bright-color)
     }
   }
@@ -106,9 +111,10 @@
 
   &__menu-item:hover,
   &__send:hover,
-  &__resume:hover {
+  &__resume-link:hover {
+    font-family: var(--main-font-semibold);
     color: var(--third-color);
-    transform: translate(3px);
+    transform: translateX(-3px);
   }
 
   &__logo {

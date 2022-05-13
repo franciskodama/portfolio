@@ -1,14 +1,11 @@
 import React from "react";
-import "../styles/Footer.scss";
-
+import "../styles/Footer.css";
 import { Link } from "react-scroll";
 import LogoFooter from "../assets/images/logo-fkodama-footer.svg";
 import Linkedin from "../assets/images/ico-linkedin-white.svg";
 import Insta from "../assets/images/ico-instagram-white.svg";
 import Git from "../assets/images/ico-github-white.svg";
 import Resume from "../assets/2022-francis-kodama-resume.pdf";
-
-import "../styles/Footer.css";
 
 const Footer = () => {
   return (
@@ -154,11 +151,14 @@ const Footer = () => {
           <p>Designed and built by</p>{" "}
           <p className="footer--bold">Francis Kodama</p> <p>Copyright 2022</p>{" "}
         </div>{" "}
-        <a className="footer__resume" href={Resume} target="_blank">
+        <div className="footer__resume">
           {" "}
-          <h2 className="footer__resume-title">RESUME</h2> <p>Download</p>{" "}
+          <h2 className="footer__resume-title">RESUME</h2>
+          <a className="footer__resume-link" href={Resume} target="_blank">
+            <p>Download</p>
+          </a>
           <p className="footer--bold">Resumé</p>{" "}
-        </a>{" "}
+        </div>{" "}
         <p className="footer__location">
           {" "}
           Ottawa, ON - <span className="footer-bold">Canada</span>{" "}
