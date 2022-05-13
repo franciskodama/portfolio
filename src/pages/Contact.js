@@ -1,15 +1,15 @@
 import React, { useState, useContext } from "react";
-import { Parallax } from "react-scroll-parallax";
 import "../styles/Contact.css";
 import { AboutContext } from "../contexts/AboutContext";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { whyData } from "../data/Data";
 import { contactData } from "../data/Data";
 import WhyCard from "../components/WhyCard";
-import Button from "../components/Button";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+// import Button from "../components/Button";
+// import { useForm } from "react-hook-form";
+// import { yupResolver } from "@hookform/resolvers/yup";
+// import * as yup from "yup";
+import axios from "axios";
 
 // ======================================
 
@@ -62,9 +62,25 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 const Contact = () => {
-  // ============= LOCATION FROM ABOUT ME =============
+  // ============= LOCATION FROM ABOUT ME PAGE ========
 
   const { location } = useContext(AboutContext);
+
+  // =================== SEND EMAIL ===================
+
+  // const [sent, setSent] = useState(false);
+  // const [text, setText] = useState("");
+
+  // const handleSend = async (e) => {
+  //   setSent(true);
+  //   try {
+  //     await axios.post("http://localhost:2525/send_mail", {
+  //       text,
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   // =================== SEND EMAIL ===================
 
@@ -227,6 +243,21 @@ const Contact = () => {
           </div>
         </form>
       </div>
+
+      {/* {!sent ? (
+        <form onSubmit={handleSend}>
+          <input
+            type="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+
+          <button type="submit">Send Email</button>
+        </form>
+      ) : (
+        <h1>Email Sent</h1>
+      )} */}
+
       <WhyCard
         titleOne={whyData.contact.titleOne}
         textOne={whyData.contact.textOne}
