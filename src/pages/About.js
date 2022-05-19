@@ -108,7 +108,7 @@ const About = () => {
 
         <div className="about__info-container">
           <div className="work-permit">
-            <p className="work-permit__text">WORK PERMIT VALID</p>
+            <p className="work-permit__text">VALID WORK PERMIT</p>
             <p>to work in Canada</p>
           </div>
 
@@ -215,8 +215,8 @@ const About = () => {
             </h2>
             <p className="about__description">
               I'm an experienced tech services provider with a strong
-              understanding of industry trends, as well as of the entire web
-              development process, including development, UX/UI design, product
+              understanding of the industry trends, as well as of the entire web
+              development process, including coding, UX/UI design, product
               management, and client services.
             </p>
             <p className="about__description">

@@ -159,7 +159,7 @@ export const projects = [
     title0: "this.",
     titleA: "Portfolio",
     year: "2022",
-    tech: "... + react",
+    tech: "react, js, html, sass",
     category: "website",
     url: "https://www.fkodama.com",
     image: require("../assets/images/project-portfolio.jpg"),
@@ -168,13 +168,10 @@ export const projects = [
     backText_textOne: `Rather than make a "to-do list" project after taking a React course, I thought it would be more productive to build a bold project where I could apply what I've learned and study new things to go beyond what I already knew.`,
     backText_titleTwo: "how",
     backText_textTwo:
-      "As a product strategist, I began by thinking about how to create a portfolio that would appeal to employers seeking talent with my skills.",
-    // backText_titleThree: "what",
-    // backText_textThree:
-    //   "From many sketches, designing the project on Figma, to coding afterward, in each step, the portfolio was built intentionally gathering new knowledge and new understandings.",
+      "As a product strategist, I began by thinking about how to create a portfolio that would appeal to employers seeking talents with my skills.",
     backText_titleFour: "what",
     backText_textFour:
-      "100% React-based, JSX, CSS, SASS, and HTML. Some tools used: Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.",
+      "100% React-based, JSX, SASS, and HTML. Some tools used: Git, VisualCode, Figma, Adobe Photoshop, and Adobe Premiere.",
     backgroundColor: "#FC9651",
     visitIcon: false,
   },
