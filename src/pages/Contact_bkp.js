@@ -1,17 +1,16 @@
 import React, { useState, useContext } from "react";
 import "../styles/Contact.css";
+import WhyCard from "../components/WhyCard";
 import { AboutContext } from "../contexts/AboutContext";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { whyData } from "../data/Data";
 import { contactData } from "../data/Data";
-import WhyCard from "../components/WhyCard";
+import { db } from "../firebase";
 // import Button from "../components/Button";
 // import { useForm } from "react-hook-form";
 // import { yupResolver } from "@hookform/resolvers/yup";
 // import * as yup from "yup";
 import axios from "axios";
-
-import { db } from "../firebase";
 
 // ======================================
 
@@ -68,16 +67,72 @@ const Contact = () => {
 
   const { location } = useContext(AboutContext);
 
-  // ============= SEND EMAIL FIREBASE ================
+  // =================== SEND EMAIL ===================
+  // https://www.youtube.com/watch?v=_3-By9QfFa0
+
+  // const [sent, setSent] = useState(false);
+  // const [text, setText] = useState("");
+
+  // const handleSend = async (e) => {
+  //   setSent(true);
+  //   try {
+  //     await axios.post("http://localhost:2525/send_mail", {
+  //       text,
+  //     });
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
+  // =================== SEND EMAIL ===================
+  // https://w3collective.com/react-contact-form/
+
+  // const [status, setStatus] = useState("SUBMIT");
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setStatus("SENDING...");
+  //   const { name, email, message } = e.target.elements;
+
+  //   const dragDropMessage = columns.drop.items.map(
+  //     (element) => element.content
+  //   );
+
+  //   let details = {
+  //     name: name.value,
+  //     email: email.value,
+  //     message: message.value,
+  //     location: location.data,
+  //     messageDrag: dragDropMessage,
+  //   };
+
+  //   let response = await fetch("http://localhost:4000/contact", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json;charset=utf-8",
+  //     },
+  //     body: JSON.stringify(details),
+  //   });
+
+  //   setStatus("SENT");
+  //   let result = await response.json();
+
+  //   setInterval(() => {
+  //     setStatus("SUBMIT");
+  //   }, 4000);
+
+  //   clearInterval();
+
+  //   console.log(result.status);
+  // };
+
+  // =================== SEND EMAIL FIREBASE ===========
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("SUBMIT");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("SENDING...");
 
     const dragDropMessage = columns.drop.items.map(
       (element) => element.content
@@ -92,16 +147,10 @@ const Contact = () => {
         messageDrag: dragDropMessage,
       })
       .then(() => {
-        setStatus("SENT");
-
-        setInterval(() => {
-          setStatus("SUBMIT");
-        }, 5000);
-
-        clearInterval();
+        alert("Message sent!");
       })
       .catch((error) => {
-        console.log(error.message);
+        alert(error.message);
       });
 
     setName("");
@@ -191,7 +240,8 @@ const Contact = () => {
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            name="message"
+            // name="message"
+            // id="message"
             required
           ></textarea>{" "}
           <div className="form-contact__input-wrapper">
@@ -203,7 +253,8 @@ const Contact = () => {
               onChange={(e) => {
                 setName(e.target.value);
               }}
-              name="name"
+              // name="name"
+              // id="name"
             />
             <input
               className="form-contact__input"
@@ -213,7 +264,8 @@ const Contact = () => {
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
-              name="email"
+              // name="email"
+              // id="email"
             />
           </div>
           <div className="form-contact__buttons">
@@ -224,17 +276,8 @@ const Contact = () => {
               align="flex-start"
             /> */}
 
-            <button
-              className="btn btn--third-color"
-              type="submit"
-              style={{
-                backgroundColor:
-                  status === "SENT"
-                    ? "var(--dark-color)"
-                    : "var(--third-color)",
-              }}
-            >
-              {status}
+            <button className="btn btn--third-color" type="submit">
+              submit
             </button>
 
             {/* 
