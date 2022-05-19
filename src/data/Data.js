@@ -6,16 +6,15 @@ export const whyData = {
   reason: {
     titleOne: "Why?",
     textOne:
-      "This portfolio was created to help me gain a deeper understanding and practice of the languages I work with.",
+      "This portfolio has been created to help me gain a deeper understanding and practice of the languages I work with.",
     titleTwo: "Showcase",
     textTwo:
-      "In addition, the portfolio displays my varied skills which go since the conception of the project, creativity, design, and coding.",
+      "In addition, the portfolio displays my varied skill set which extends from conception to creativity, design, and coding.",
     titleThree: "Tech used",
     textThree: "React, Javascript, CSS, SASS, HTML, NPM, and Git.",
     titleFour: "Tools used",
     textFour: "Figma, Adobe Photoshop, and VS Code.",
-    observation:
-      "This portfolio was 100% created and programmed by Francis Kodama.",
+    observation: "This portfolio was 100% created and programmed by me. :)",
     bottom: "5%",
     left: "50%",
   },
@@ -105,52 +104,45 @@ export const whyData = {
 
 export const avatarData = [
   {
-    key: 0,
-    title: "creative and innovation",
-    description:
-      "Due to his continuous curiosity and extensive advertising experience, he is always ready to contribute to the development of innovative solutions that can make a real impact.",
-    imgUrl: require("../assets/images/avatar-creative.jpg"),
-  },
-  {
     key: 1,
     title: "creative and innovation",
     description:
-      "Due to his continuous curiosity and extensive advertising experience, he is always ready to contribute to the development of innovative solutions that can make a real impact.",
+      "Due to my continuous curiosity and extensive advertising experience, I am always ready to contribute to the development of innovative solutions that can make a real impact.",
     imgUrl: require("../assets/images/avatar-creative.jpg"),
   },
   {
     key: 2,
     title: "problem-solving",
     description:
-      "Possess the ability to handle and calmly identify solutions to difficult or unexpected situations both in programming challenges and in the workplace.",
+      "I have the ability to handle and calmly identify solutions to difficult or unexpected situations both in programming challenges and in the workplace.",
     imgUrl: require("../assets/images/avatar-problem2.jpg"),
   },
   {
     key: 3,
     title: "effective communication",
     description:
-      "It is crucial that we are able to listen actively to the stakeholders, which was Francis' job for all of his life. Additionally, Francis has the gift of feeding it back to them, so they know it is correct.",
+      "Listening actively to the stakeholders is crucial, which has been my job for all my life. Good communication is one of my most valuable qualities.",
     imgUrl: require("../assets/images/avatar-communication2.jpg"),
   },
   {
     key: 4,
     title: "lifelong learner",
     description:
-      "Dedicated to continuous growth and development to keep up with changes in this new world. Aims to develop skills, and master new technologies, in order to add value to the organization.",
+      "I find joy in continuous growth and development to keep up with changes in this new world. My aim is to develop skills and master new technologies in order to add value to the projects I work on.",
     imgUrl: require("../assets/images/avatar-learner2.jpg"),
   },
   {
     key: 5,
     title: "goal-oriented",
     description:
-      "Motivated by a clear vision, goals, and meaningful aspirations, he believes in hard work, choices, and persistence. Difficult to have him distracted from his goals.",
+      "Motivated by my vision, goals, and meaningful aspirations, I really believe in hard work, good choices, and persistence. I am rarely distracted from my goals.",
     imgUrl: require("../assets/images/avatar-goal2.jpg"),
   },
   {
     key: 6,
     title: "positive attitude",
     description:
-      "Demonstrates kindly interest and goodwill in his relationships. Collaboration, flexibility, and empathy are his top qualities developed over a strong and experienced career.",
+      "I am truly interested in deep relationships. Collaboration, flexibility, and empathy are some qualities I have developed over a strong and consistent career.",
     imgUrl: require("../assets/images/avatar-friendly.jpg"),
   },
 ];
