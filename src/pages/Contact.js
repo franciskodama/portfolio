@@ -236,53 +236,9 @@ const Contact = () => {
             >
               {status}
             </button>
-
-            {/* 
-            <button
-              className="btn btn--third-color"
-              style={{
-                backgroundColor:
-                  status === "SENT"
-                    ? "var(--dark-color)"
-                    : "var(--third-color)",
-              }}
-              type="submit"
-            >
-              {status}
-            </button> */}
-
-            {/* ARCTICLE SOLUTION
-            <button
-              className="btn btn--third-color"
-              style={{
-                backgroundColor:
-                  status === "SENT"
-                    ? "var(--dark-color)"
-                    : "var(--third-color)",
-              }}
-              type="submit"
-            >
-              {status}
-            </button> */}
           </div>
         </form>
       </div>
-
-      {/* 
-      DARWIN SOLUTION      
-      {!sent ? (
-        <form onSubmit={handleSend}>
-          <input
-            type="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
-
-          <button type="submit">Send Email</button>
-        </form>
-      ) : (
-        <h1>Email Sent</h1>
-      )} */}
 
       <WhyCard
         titleOne={whyData.contact.titleOne}
