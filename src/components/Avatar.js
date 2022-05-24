@@ -3,18 +3,18 @@ import "../components/Avatar.css";
 import { avatarData } from "../data/Data";
 import LightBulb from "../assets/images/about-lightbulb.svg";
 import Puzzle from "../assets/images/about-puzzle.svg";
-import Robot from "../assets/images/about-robot.svg";
+import Chat from "../assets/images/about-chat.svg";
 import Student from "../assets/images/about-student.svg";
 import Eye from "../assets/images/about-eye.svg";
 import Smile from "../assets/images/about-smile.svg";
 
 const Avatar = () => {
-  const [isShown, setIsShown] = useState(0);
+  const [isImgShown, setIsImgShown] = useState(0);
   const [imgActive, setImgActive] = useState(false);
 
   useEffect(() => {
     setImgActive(true);
-  }, [isShown]);
+  }, [isImgShown]);
 
   return (
     <div className="avatar-container">
@@ -24,7 +24,7 @@ const Avatar = () => {
         <div className="avatar__icons-wrapper">
           <img
             onClick={() => {
-              setIsShown(1);
+              setIsImgShown(1);
               setImgActive(false);
             }}
             className="avatar__icon"
@@ -34,7 +34,7 @@ const Avatar = () => {
 
           <img
             onClick={() => {
-              setIsShown(2);
+              setIsImgShown(2);
               setImgActive(false);
             }}
             className="avatar__icon"
@@ -44,17 +44,17 @@ const Avatar = () => {
 
           <img
             onClick={() => {
-              setIsShown(3);
+              setIsImgShown(3);
               setImgActive(false);
             }}
             className="avatar__icon"
-            src={Robot}
+            src={Chat}
             alt="passionate for technology"
           />
 
           <img
             onClick={() => {
-              setIsShown(4);
+              setIsImgShown(4);
               setImgActive(false);
             }}
             className="avatar__icon"
@@ -64,7 +64,7 @@ const Avatar = () => {
 
           <img
             onClick={() => {
-              setIsShown(5);
+              setIsImgShown(5);
               setImgActive(false);
             }}
             className="avatar__icon"
@@ -74,7 +74,7 @@ const Avatar = () => {
 
           <img
             onClick={() => {
-              setIsShown(6);
+              setIsImgShown(6);
               setImgActive(false);
             }}
             className="avatar__icon"
@@ -83,20 +83,11 @@ const Avatar = () => {
           />
         </div>
 
-        {/* <iframe
-          className="avatar-image"
-          src="https://my.spline.design/untitled-93c1753c6b5d2f301c418a677de96cc2/"
-          frameBorder="0"
-          width="100%"
-          height="100%"
-        ></iframe>
-        <div className="white-square"></div> */}
-
         <img
           className={
             imgActive ? "avatar__image avatar__image--active" : "avatar__image"
           }
-          src={avatarData[isShown].imgUrl}
+          src={avatarData[isImgShown].imgUrl}
           alt="my avatar images"
         />
 
@@ -107,9 +98,11 @@ const Avatar = () => {
               : "avatar__skills-wrapper"
           }
         >
-          <h3 className="avatar__skills-title">{avatarData[isShown].title}</h3>
+          <h3 className="avatar__skills-title">
+            {avatarData[isImgShown].title}
+          </h3>
           <p className="avatar__skills-description">
-            {avatarData[isShown].description}
+            {avatarData[isImgShown].description}
           </p>
         </div>
       </div>

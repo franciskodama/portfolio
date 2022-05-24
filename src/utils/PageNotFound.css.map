@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,sBAAsB,CAAC;EACrB,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "PageNotFound.scss"
+    ],
+    "names": [],
+    "file": "PageNotFound.css"
+}

@@ -104,6 +104,13 @@ export const whyData = {
 
 export const avatarData = [
   {
+    key: 0,
+    title: "creative and innovation",
+    description:
+      "Due to my continuous curiosity and extensive advertising experience, I am always ready to contribute to the development of innovative solutions that can make a real impact.",
+    imgUrl: require("../assets/images/avatar-creative.jpg"),
+  },
+  {
     key: 1,
     title: "creative and innovation",
     description:
@@ -115,14 +122,14 @@ export const avatarData = [
     title: "problem-solving",
     description:
       "I have the ability to handle and calmly identify solutions to difficult or unexpected situations both in programming challenges and in the workplace.",
-    imgUrl: require("../assets/images/avatar-problem2.jpg"),
+    imgUrl: require("../assets/images/avatar-problem.jpg"),
   },
   {
     key: 3,
     title: "effective communication",
     description:
       "Listening actively to the stakeholders is crucial, which has been my job for all my life. Good communication is one of my most valuable qualities.",
-    imgUrl: require("../assets/images/avatar-communication2.jpg"),
+    imgUrl: require("../assets/images/avatar-communication.jpg"),
   },
   {
     key: 4,
@@ -136,7 +143,7 @@ export const avatarData = [
     title: "goal-oriented",
     description:
       "Motivated by my vision, goals, and meaningful aspirations, I really believe in hard work, good choices, and persistence. I am rarely distracted from my goals.",
-    imgUrl: require("../assets/images/avatar-goal2.jpg"),
+    imgUrl: require("../assets/images/avatar-goal.jpg"),
   },
   {
     key: 6,

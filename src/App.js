@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { AboutContext } from "./contexts/AboutContext";
 import "../src/utils/reset.css";
 import "../src/utils/fonts.css";
@@ -17,7 +17,6 @@ import CleanCode from "./pages/CleanCode";
 import WhyMe from "./pages/WhyMe";
 import Skills from "./pages/Skills";
 import { ParallaxProvider } from "react-scroll-parallax";
-// import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
   const [location, setLocation] = useState({ data: "" });
