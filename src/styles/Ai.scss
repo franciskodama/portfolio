@@ -1,293 +1,125 @@
-.container-api {
-    font-family: var(--font-light);
-    line-height: 1.3;
-    text-align: center;
-    width: 100%;
-    max-width: 55em;
-    margin: 0 auto;
-    padding: 0 1em;
-    border: 1px solid orange;
+.ai {
+  position: relative;
+  padding-bottom: 10em;
+  text-align: center;
+
+  .container {
+    width: 60%;
+    margin-bottom: 2em;
   }
-  
-  .section-api {
-    width: 100%;
-    color: var(--color-bright);
+
+  &__question {
+    margin: 0.8em 0 5em 0;
   }
-    
-  /* ====================================
-                  HEADER
-  ======================================= */
-  .container-api {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    background-color: var(--color-dark);
-  }
-  
-  /* ====================================
-                  MAIN
-  ======================================= */
-  
-  .question {
-    font-family: var(--font-medium);
-    font-size: 1rem;
-    margin: 1em 0 0.2em 0;
-  }
-  
-  .title {
-    font-family: var(--font-semibold);
-    font-size: 2rem;
-    margin: 0.2em 0 1em 0;
-    border: 1px solid var(--color-bright);
-    border-radius: 10px;
-    padding: 0.3em;
-  }
-  
-  /* ====================================
-                  EXAMPLES
-  ======================================= */
-  
-  .examples {
-    color: var(--color-third);
-    border: 1px dashed var(--color-third);
-    border-radius: 10px;
+
+  &__examples {
+    color: var(--third-color);
+    border: 1px dashed var(--third-color);
     padding: 1em;
     margin-bottom: 2em;
+  }
   
-    &__title {
-      font-family: var(--font-semibold);
+  &__examples-title {
+      font-family: var(--main-font-semibold);
       margin-bottom: 1em;
     }
   
-    &__item {
-      font-family: var(--font-light);
-      font-size: 1rem;
-      line-height: 1.5;
-      color: var(--color-bright);
-      list-style-type: decimal; 
-      list-style-position: inside;
-      text-align: left;
-    }
-  }
-  
-  /* ====================================
-                  SELECT
-  ======================================= */
-  
-  .select-and-button {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2em;
-  }
-  
-  .engine-icon {
-    display: none;
-    width: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-  }
-  
-  .modal {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 4rem;
-    transform: translateX(-50%);
-    color: var(--color-bright);
-    background-color: var(--color-third);
-    padding: 2em;
-    width: auto;
-    text-align: left;
-    border-radius: 5px;
-    animation: modal-open 0.3s linear both;
-    z-index: 10;
-  
-    @keyframes modal-open {
-      0% {
-        opacity: 0;
-        transform: scale(0) translateX(-50%);
-        transform-origin: 0% 100%;
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1) translateX(-50%);
-        transform-origin: 0% 100%;
-      }
-    }
-  
-    &:before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-top: 12px solid transparent;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent;
-      border-bottom: 12px solid var(--color-third);
-      top: -23px;
-      left: 107px;
-    }
-  
-    &__title {
-      font-family: var(--font-semibold);
-      font-size: 0.8rem;
-      width: 8rem;
-      margin-right: 2em;
-    }
-  
-    &__engine {
-      padding-left: 2em;
-    }
-  
-    &__engine-title {
-      font-family: var(--font-medium);
-      text-transform: uppercase;
-      margin-bottom: 1em;
-    }
-  
-    &__engine-description {
-      font-family: var(--font-regular);
-      font-size: 0.8rem;
-      width: 10em;
-    }
-  }
-  
-  .engine-title {
-    font-family: var(--font-medium);
-    display: inline;
-    margin-left: 0.5em;
-  
-  }
-  
-  .select {
-    font-family: var(--font-semibold);
+  &__examples-item {
+    font-family: var(--main-font-light);
     font-size: 1rem;
-    text-transform: uppercase;
-    padding: 0.7em 2em;
-    margin-left: 1em;
-    border-radius: 5px;
-    background-color: var(--color-dark);
-    color: var(--bright-color);
-    cursor: pointer;
-  }
-  
-  /* ====================================
-                  BUTTON
-  ======================================= */
-  
-  .btn {
-    display: inline-block;
-    font-family: var(--font-semibold);
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding: 0.7em 2em;
-    margin-left: 3em;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn--color {
-    color: var(--bright-color);
-    border: 1px solid var(--color-third);
-    background-color: var(--color-third);
-    transition: all 0.2s ease;
-  }
-      
-  .btn--color:hover {
-    transform: translate(5px, -5px);
-    box-shadow: var(--color-third) 0px 0px 0px 0px inset,
-    var(--color-dark) -5px 5px 0px -1px, var(--color-third) -5px 5px;
-  }
-  
-  /* ====================================
-                  RESULT
-  ======================================= */
-  
-  .result {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    color: var(--color-dark);
-    font-family: var(--font-light);
     line-height: 1.5;
-    
-    &__item {
-      text-align: left;
-      padding: 1em 1em;
-      background-color: var(--color-bright);
-      margin-bottom: 1em;
-      border-radius: 5px;
-      animation-name: appear;
-      animation-duration: 0.5s;
-      animation-timing-function: ease-in;
-      animation-fill-mode: forwards;
-    }
+    color: var(--bright-color);
+    list-style-type: decimal; 
+    list-style-position: inside;
+    text-align: left;
+  }
+
+  textarea {
+    width: 100%;
+    height: 7em;
+  }
+
+  &__button {
+    margin: 1em;
+  }
+}
   
-      &__wrapper {
-      display: flex;
+/* ====================================
+                RESULT
+======================================= */
+
+.result {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  color: var(--dark-color);
+  font-family: var(--main-font-light);
+  line-height: 1.5;
+  
+  &__item {
+    text-align: left;
+    padding: 1em 1em;
+    background-color: var(--bright-color);
+    margin-bottom: 1em;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+
+    &__wrapper {
+    display: flex;
+  }
+
+  &__title {
+    padding: 0.5em 0;
+    width: 25%;
+    font-family: var(--main-font-medium);
+    font-size: 0.8rem;
+  }
+
+  &__text {
+    padding: 0.5em 0 0.5em 1em;
+    width: 75%;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+  /* ====================================
+              MEDIA QUERY
+  ======================================= */
+
+@media only screen and (min-width: 48em) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .result {
+    &__item {
+      padding-left: 2em;
+      padding-right: 2em;
     }
   
     &__title {
-      padding: 0.5em 0;
-      width: 25%;
-      font-family: var(--font-medium);
-      font-size: 0.8rem;
+      font-size: 1rem;
+      width: 20%;
     }
   
     &__text {
-      padding: 0.5em 0 0.5em 1em;
-      width: 75%;
+      padding-left: 0;
+      width: 80%;
     }
   }
+}
   
-  @keyframes appear {
-    0% {
-      opacity: 0;
-      transform: translateY(50%);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  
-    /* ====================================
-                MEDIA QUERY
-    ======================================= */
-  
-  @media only screen and (min-width: 48em) {
-    .title {
-      font-size: 3rem;
-    }
-  
-    .engine-icon {
-      display: block;
-    }
-  
-    .result {
-      &__item {
-        padding-left: 2em;
-        padding-right: 2em;
-      }
-    
-      &__title {
-        font-size: 1rem;
-        width: 20%;
-      }
-    
-      &__text {
-        padding-left: 0;
-        width: 80%;
-      }
-    }
-  }
-    

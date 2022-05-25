@@ -1,6 +1,7 @@
 .contact {
   position: relative;
   padding-bottom: 10em;
+  border-top: 0.2px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact .container {
