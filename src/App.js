@@ -14,8 +14,10 @@ import Projects from "./pages/Projects";
 import AboveApi from "./pages/AboveApi";
 import Api from "./pages/Api";
 import CleanCode from "./pages/CleanCode";
-import WhyMe from "./pages/WhyMe";
-import Skills from "./pages/Skills";
+import Ai from "./pages/Ai";
+
+// import WhyMe from "./pages/WhyMe";
+// import Skills from "./pages/Skills";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 const App = () => {
@@ -77,6 +79,7 @@ const App = () => {
 
         <AboutContext.Provider value={{ location, setLocation }}>
           <About />
+          <Ai />
           {/* <Skills /> */}
           <Projects />
           {/* <WhyMe /> */}
