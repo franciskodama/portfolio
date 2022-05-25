@@ -9,13 +9,12 @@ import WhyCard from "../components/WhyCard";
 // import { useForm } from "react-hook-form";
 // import { yupResolver } from "@hookform/resolvers/yup";
 // import * as yup from "yup";
-import axios from "axios";
 
 import { db } from "../firebase";
 
 // ======================================
 
-const dropSpace = {
+let dropSpace = {
   drag: {
     name: "drag from here:",
     items: contactData,

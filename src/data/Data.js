@@ -201,7 +201,7 @@ export const projects = [
       "For this project, Ania Kubow's tutorial was very helpful. However, the design was really simple, and there were no buttons on the screen for mobile users to play. That was my opportunity to customize it myself.",
     backText_titleThree: "what",
     backText_textThree:
-      "Using Javascript and CSS, I redesigned the entire game, adding buttons to start and play on mobile devices, and adding some sounds to create a better user experience.",
+      "Using Javascript and CSS, I redesigned the entire game, adding buttons to start and play on mobile devices and then, create a better user experience.",
     backText_titleFour: "",
     backText_textFour: "",
     backText_linkName: "Compare with original: Ania Kubów's Tutorial",
