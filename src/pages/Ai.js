@@ -1,16 +1,21 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Configuration, OpenAIApi } from "openai";
 import "../styles/Ai.css";
+import React, { useEffect, useState } from "react";
+import { Configuration, OpenAIApi } from "openai";
 
 const Ai = () => {
   const [status, setStatus] = useState("Get your suggestion");
   const [prompt, setPrompt] = useState("");
-  const [result, setResult] = useState("");
-  const textAreaRef = useRef(null);
+  // const [newPrompt, setNewPrompt] = useState("");
 
-  useEffect(() => {
-    textAreaRef.current.focus();
-  }, []);
+  const [result, setResult] = useState("");
+  const [isResultActive, setIsResultActive] = useState(false);
+
+  // useEffect(() => {
+  //   if (result) {
+  //     setNewPrompt(prompt);
+  //     setPrompt("");
+  //   }
+  // }, [prompt, result]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -24,16 +29,17 @@ const Ai = () => {
     openai
       .createCompletion("text-curie-001", {
         prompt: prompt,
-        temperature: 1,
+        temperature: 0.7,
         max_tokens: 200,
         top_p: 1,
-        frequency_penalty: 0.5,
-        presence_penalty: 0.5,
+        frequency_penalty: 0,
+        presence_penalty: 0,
       })
       .then((response) => {
+        setIsResultActive(true);
         setPrompt(prompt);
         setResult(response.data.choices[0].text.trim());
-        setStatus("Try more suggestions :)");
+        setStatus("Wow! I want more suggestions :)");
       })
       .catch((error) => console.log(error.message));
   };
@@ -47,7 +53,7 @@ const Ai = () => {
         </p>
         <form onSubmit={onSubmit}>
           <div className="ai__examples">
-            <h2 className="ai__examples-title">Check out some examples:</h2>
+            <h2 className="ai__examples-title">some examples how to ask me:</h2>
             <ul>
               <li className="ai__examples-item">
                 Suggest a drama movie based on a true story with a good score on
@@ -65,7 +71,6 @@ const Ai = () => {
             </ul>
           </div>
           <textarea
-            ref={textAreaRef}
             type="text"
             name="prompt"
             placeholder="Give me a good suggestion of..."
@@ -87,7 +92,10 @@ const Ai = () => {
           </button>
         </form>
 
-        <ul className="result">
+        <ul
+          className="result"
+          style={{ display: isResultActive ? "flex" : "none" }}
+        >
           <li className="result__item">
             <div className="result__wrapper">
               <h4 className="result__title">Your question:</h4>

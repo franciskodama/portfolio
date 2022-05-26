@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../components/Card.css";
 import IconClose from "../assets/images/card-icon-close-white.svg";
 import Line from "../assets/images/line-cracked.svg";
@@ -102,13 +102,14 @@ const Card = ({ project }) => {
               <img
                 className="card-back__image"
                 src={project.image}
-                alt="main image project"
+                alt="main project"
               />
               {project.visitIcon ? (
                 <a
                   className="card-back__visit-wraper"
                   href={project.url}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <p className="card-back__visit icon-visit">visit project</p>
                 </a>
@@ -140,6 +141,7 @@ const Card = ({ project }) => {
                 className="card-back__text card-back__text--bold"
                 href={project.backText_link}
                 target="_blank"
+                rel="noreferrer"
               >
                 {project.backText_linkName}
               </a>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import "../styles/Navbar.css";
 import "../App.css";
@@ -33,7 +33,7 @@ const Navbar = () => {
     <header className="section navbar">
       <div className="container">
         <Link to="hero" spy={true} smooth={true} offset={0} duration={500}>
-          <img className="navbar__logo" src={Logo} />
+          <img className="navbar__logo" alt="logo fkodama" src={Logo} />
         </Link>
 
         {/* -------- NAVBAR TOGGLE -------- */}

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState, useContext } from "react";
 import { AboutContext } from "../contexts/AboutContext";
-import { Parallax } from "react-scroll-parallax";
 import { Link } from "react-scroll";
 import "../styles/About.css";
 import Button from "../components/Button";
@@ -145,7 +144,7 @@ const About = () => {
                 <img
                   className="modal__image"
                   src={Thumbnail}
-                  alt="thumbanail image avatar"
+                  alt="thumbanail avatar"
                 />
                 <div className="modal__text-wrapper">
                   <h4 className="modal__name">Francis Kodama</h4>

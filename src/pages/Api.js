@@ -3,7 +3,6 @@ import Axios from "axios";
 import "../styles/Api.css";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
-import { Parallax } from "react-scroll-parallax";
 
 const Api = () => {
   const [data, setData] = useState({});

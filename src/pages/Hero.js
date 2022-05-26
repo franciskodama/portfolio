@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-scroll";
 import "../styles/Hero.css";
 import Video from "../assets/images/hero-bg.mp4";
@@ -73,7 +73,7 @@ const Hero = () => {
         </div>
       </div>
       <Link to="reason" spy={true} smooth={true} offset={-150} duration={2000}>
-        <img src={Scroll} className="hero__scroll" />
+        <img src={Scroll} className="hero__scroll" alt="icon to scroll" />
       </Link>
     </section>
   );

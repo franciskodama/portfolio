@@ -28,7 +28,7 @@
   &__examples-item {
     font-family: var(--main-font-light);
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.8;
     color: var(--bright-color);
     list-style-type: decimal; 
     list-style-position: inside;
@@ -38,6 +38,7 @@
   textarea {
     width: 100%;
     height: 7em;
+    padding: 1em;
   }
 
   &__button {
@@ -50,23 +51,24 @@
 ======================================= */
 
 .result {
-  display: flex;
+  display: none;
   flex-direction: column-reverse;
   width: 100%;
   color: var(--dark-color);
   font-family: var(--main-font-light);
   line-height: 1.5;
   margin-top: 3em;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
   
   &__item {
     text-align: left;
     padding: 1em 1em;
     background-color: var(--bright-color);
     margin-bottom: 1em;
-    animation-name: appear;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
   }
 
     &__wrapper {

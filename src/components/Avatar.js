@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../components/Avatar.css";
 import { avatarData } from "../data/Data";
 import LightBulb from "../assets/images/about-lightbulb.svg";

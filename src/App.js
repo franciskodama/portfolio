@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AboutContext } from "./contexts/AboutContext";
+import { ParallaxProvider } from "react-scroll-parallax";
 import "../src/utils/reset.css";
 import "../src/utils/fonts.css";
 import "./App.css";
@@ -16,9 +17,10 @@ import Api from "./pages/Api";
 import CleanCode from "./pages/CleanCode";
 import Ai from "./pages/Ai";
 
+console.log(process.env);
+
 // import WhyMe from "./pages/WhyMe";
 // import Skills from "./pages/Skills";
-import { ParallaxProvider } from "react-scroll-parallax";
 
 const App = () => {
   const [location, setLocation] = useState({ data: "" });

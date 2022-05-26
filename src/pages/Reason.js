@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import "../styles/Reason.css";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
@@ -14,7 +14,6 @@ const Reason = () => {
   const arrOfLettersBright = Array.from(originalMessageBright);
   const arrOfLettersDark = Array.from(originalMessageDark);
   let arrOfDiv = [];
-  let arrOfDivUser = [];
 
   const createGrid = () => {
     for (let i = 0; i < arrOfLettersBright.length; i++) {
@@ -24,24 +23,14 @@ const Reason = () => {
         </div>
       );
     }
-    for (let i = 0; i < arrOfLettersDark.length; i++) {
+    for (let l = 0; l < arrOfLettersDark.length; l++) {
       arrOfDiv.push(
-        <div key={i + 100} className="reason__letter-dark reason__reveal-dark">
-          {arrOfLettersDark[i]}
+        <div key={l + 100} className="reason__letter-dark reason__reveal-dark">
+          {arrOfLettersDark[l]}
         </div>
       );
     }
     return arrOfDiv;
-  };
-
-  const [currentArray, setCurrentArray] = useState([]);
-
-  const handleChange = (event) => {
-    const letter = event.target.value;
-    const divArray = [];
-    divArray.push(<div className="reason__letter-bright">{letter}</div>);
-    setCurrentArray((currentArray) => [...currentArray, divArray]);
-    return currentArray;
   };
 
   // ========================== ANIMATION ==========================
@@ -52,21 +41,21 @@ const Reason = () => {
     const elementVisible = 250;
     let windowHeight = window.innerHeight;
 
-    for (var i = 0; i < revealsBright.length; i++) {
-      let elementTop = revealsBright[i].getBoundingClientRect().top;
+    for (var a = 0; a < revealsBright.length; a++) {
+      let elementTop = revealsBright[a].getBoundingClientRect().top;
       if (elementTop < windowHeight - elementVisible) {
-        revealsBright[i].classList.add("reason__reveal--active");
+        revealsBright[a].classList.add("reason__reveal--active");
       } else {
-        revealsBright[i].classList.remove("reason__reveal--active");
+        revealsBright[a].classList.remove("reason__reveal--active");
       }
     }
 
-    for (var i = 0; i < revealsDark.length; i++) {
-      let elementTop = revealsDark[i].getBoundingClientRect().top;
+    for (var b = 0; b < revealsDark.length; b++) {
+      let elementTop = revealsDark[b].getBoundingClientRect().top;
       if (elementTop < windowHeight - elementVisible) {
-        revealsDark[i].classList.add("reason__reveal--active");
+        revealsDark[b].classList.add("reason__reveal--active");
       } else {
-        revealsDark[i].classList.remove("reason__reveal--active");
+        revealsDark[b].classList.remove("reason__reveal--active");
       }
     }
   };
@@ -116,8 +105,6 @@ const Reason = () => {
       <div className="reason__grid" ref={gridRef}>
         {createGrid()}
       </div>
-      <div>{currentArray}</div>
-
       <WhyCard
         titleOne={whyData.reason.titleOne}
         textOne={whyData.reason.textOne}
