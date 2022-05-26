@@ -296,7 +296,7 @@ export const projects = [
     year: "2021",
     tech: "html css js",
     category: "resume online",
-    url: "http://kodes.ca/angelapodetz",
+    url: "https://www.fkodama.com/_dev/resume-online/",
     image: require("../assets/images/project-resume.jpg"),
     frontText: "Building a website based on the design reference.",
     backText_titleOne: "why",
