@@ -97,7 +97,7 @@
   
   &__tech {
     font-family: var(--main-font-semibold);
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--third-color);
     text-transform: uppercase;
   }
@@ -330,6 +330,10 @@
       line-height: 2.25rem;
     }
   
+    &__tech {
+      font-size: 1.3rem;
+    }
+      
     &__description {
       font-size: 1rem;
       margin-top: 1.5em;

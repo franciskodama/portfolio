@@ -4,7 +4,8 @@
   text-align: center;
 
   .container {
-    width: 60%;
+    padding-top: 6em;
+    width: 90%;
     margin-bottom: 2em;
   }
 
@@ -55,6 +56,7 @@
   color: var(--dark-color);
   font-family: var(--main-font-light);
   line-height: 1.5;
+  margin-top: 3em;
   
   &__item {
     text-align: left;
@@ -101,6 +103,16 @@
   ======================================= */
 
 @media only screen and (min-width: 48em) {
+  .ai {
+    // padding-bottom: 10em;
+  
+    .container {
+      // padding-top: 6em;
+      width: 60%;
+      // margin-bottom: 2em;
+    }
+  }
+  
   .title {
     font-size: 3rem;
   }

@@ -104,6 +104,18 @@ const Navbar = () => {
           </Link>
           <Link
             className="navbar__item"
+            to="ai"
+            spy={true}
+            smooth={true}
+            offset={100}
+            duration={500}
+            onClick={handleClickOnLink}
+          >
+            {" "}
+            a.i.{" "}
+          </Link>
+          <Link
+            className="navbar__item"
             to="projects"
             spy={true}
             smooth={true}
@@ -205,6 +217,18 @@ const Navbar = () => {
           >
             {" "}
             about me{" "}
+          </Link>
+          <Link
+            className="navbar__item"
+            to="ai"
+            spy={true}
+            smooth={true}
+            offset={100}
+            duration={500}
+            onClick={handleClickOnLink}
+          >
+            {" "}
+            a.i.{" "}
           </Link>
           <Link
             className="navbar__item"

@@ -33,7 +33,7 @@ const Ai = () => {
       .then((response) => {
         setPrompt(prompt);
         setResult(response.data.choices[0].text.trim());
-        setStatus("Wow! I want more suggestions :)");
+        setStatus("Try more suggestions :)");
       })
       .catch((error) => console.log(error.message));
   };
@@ -43,7 +43,7 @@ const Ai = () => {
       <div className="container">
         <h1 className="section-title">TV Suggestion Helper</h1>
         <p className="ai__question">
-          Can't you figure out what to watch on TV?
+          Can't you figure out what to watch on TV? Ask me.
         </p>
         <form onSubmit={onSubmit}>
           <div className="ai__examples">
@@ -73,7 +73,6 @@ const Ai = () => {
             onChange={(e) => setPrompt(e.target.value)}
             required
           />
-
           <button
             className="btn btn--third-color ai__button"
             type="submit"

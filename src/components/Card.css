@@ -105,7 +105,7 @@
 
 .card-front__tech {
   font-family: var(--main-font-semibold);
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: var(--third-color);
   text-transform: uppercase;
 }
@@ -374,6 +374,9 @@
   .card-front__title {
     font-size: 2.25rem;
     line-height: 2.25rem;
+  }
+  .card-front__tech {
+    font-size: 1.3rem;
   }
   .card-front__description {
     font-size: 1rem;

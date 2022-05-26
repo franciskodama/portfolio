@@ -73,7 +73,6 @@
 
   &__resume-link {
     cursor: pointer;
-
       &:active,
       &:visited,
       &:link {
@@ -175,13 +174,17 @@
   }
 }
 
+.footer__resume-link {
+  display: block;
+}
+
+.footer--bold {
+  display: block;
+}
+
 /* ====================================
             MEDIA QUERY
 ======================================= */
-
-@media only screen and (min-width: 20em) {}
-
-@media only screen and (min-width: 48em) {}
 
 @media only screen and (min-width: 62em) {
 
@@ -277,9 +280,4 @@
       margin-top: 5em;
     }
   }
-
-
-
 }
-
-@media only screen and (min-width: 75em) {}

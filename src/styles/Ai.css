@@ -5,7 +5,8 @@
 }
 
 .ai .container {
-  width: 60%;
+  padding-top: 6em;
+  width: 90%;
   margin-bottom: 2em;
 }
 
@@ -59,6 +60,7 @@
   color: var(--dark-color);
   font-family: var(--main-font-light);
   line-height: 1.5;
+  margin-top: 3em;
 }
 
 .result__item {
@@ -124,6 +126,9 @@
               MEDIA QUERY
   ======================================= */
 @media only screen and (min-width: 48em) {
+  .ai .container {
+    width: 60%;
+  }
   .title {
     font-size: 3rem;
   }

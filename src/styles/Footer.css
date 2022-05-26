@@ -210,6 +210,14 @@
   font-family: var(--main-font-regular);
 }
 
+.footer__resume-link {
+  display: block;
+}
+
+.footer--bold {
+  display: block;
+}
+
 /* ====================================
             MEDIA QUERY
 ======================================= */

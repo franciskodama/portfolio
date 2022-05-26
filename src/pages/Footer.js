@@ -124,6 +124,7 @@ const Footer = () => {
             className="footer__icon-item"
             href="https://github.com/franciskodama"
             target="_blank"
+            rel="noreferrer"
           >
             {" "}
             <img src={Git} alt="logo Github" />{" "}
@@ -132,6 +133,7 @@ const Footer = () => {
             className="footer__icon-item"
             href="https://www.linkedin.com/in/kodama/"
             target="_blank"
+            rel="noreferrer"
           >
             {" "}
             <img src={Linkedin} alt="logo Linkedin" />{" "}
@@ -140,6 +142,7 @@ const Footer = () => {
             className="footer__icon-item"
             href="https://www.instagram.com/franciskodama/"
             target="_blank"
+            rel="noreferrer"
           >
             {" "}
             <img src={Insta} alt="logo Instagram" />{" "}
@@ -148,13 +151,21 @@ const Footer = () => {
         <img className="footer__logo" src={LogoFooter} alt="logo fkodama" />{" "}
         <div className="footer__design">
           {" "}
-          <p>Designed and built by</p>{" "}
-          <p className="footer--bold">Francis Kodama</p> <p>Copyright 2022</p>{" "}
+          <p>Designed and built by</p>
+          <div className="div-nth-display-none"></div>
+          <p className="footer--bold">Francis Kodama</p>
+          <p>Copyright 2022</p>
         </div>{" "}
         <div className="footer__resume">
           {" "}
           <h2 className="footer__resume-title">RESUME</h2>
-          <a className="footer__resume-link" href={Resume} target="_blank">
+          <div className="div-nth-display-none"></div>
+          <a
+            className="footer__resume-link"
+            href={Resume}
+            target="_blank"
+            rel="noreferrer"
+          >
             <p>Download</p>
           </a>
           <p className="footer--bold">Resumé</p>{" "}
