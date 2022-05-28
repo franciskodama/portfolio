@@ -1,6 +1,7 @@
 import "../styles/Ai.css";
 import React, { useEffect, useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
+import Hand from "../assets/images/hand.png";
 
 const Ai = () => {
   const [status, setStatus] = useState("Get your suggestion");
@@ -51,7 +52,7 @@ const Ai = () => {
         <p className="ai__question">
           Can't you figure out what to watch on TV? Ask me.
         </p>
-        <form onSubmit={onSubmit}>
+        <form className="ai__form" onSubmit={onSubmit}>
           <div className="ai__examples">
             <h2 className="ai__examples-title">some examples how to ask me:</h2>
             <ul>
@@ -70,7 +71,16 @@ const Ai = () => {
               </li>
             </ul>
           </div>
+          <div className="ai__form-hands">
+            <img
+              src={Hand}
+              style={{ transform: "scaleX(-1)" }}
+              alt="hand over crystal ball"
+            />
+            <img src={Hand} alt="hand over crystal ball" />
+          </div>
           <textarea
+            className="ai__textarea"
             type="text"
             name="prompt"
             placeholder="Give me a good suggestion of..."

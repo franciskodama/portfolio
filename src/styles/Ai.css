@@ -36,10 +36,28 @@
   text-align: left;
 }
 
-.ai textarea {
-  width: 100%;
-  height: 7em;
+.ai__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ai__textarea {
+  text-align: center;
+  width: 35em;
+  height: 35em;
   padding: 1em;
+  border-radius: 50%;
+  padding-top: 15em;
+  padding-bottom: 15em;
+  overflow: hidden;
 }
 
 .ai__button {
