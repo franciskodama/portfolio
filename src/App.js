@@ -17,8 +17,6 @@ import Api from "./pages/Api";
 import CleanCode from "./pages/CleanCode";
 import Ai from "./pages/Ai";
 
-console.log(process.env);
-
 // import WhyMe from "./pages/WhyMe";
 // import Skills from "./pages/Skills";
 
@@ -66,6 +64,8 @@ const App = () => {
     });
   };
 
+  let color = isActive;
+
   return (
     <div className="App">
       <ParallaxProvider>
@@ -81,7 +81,7 @@ const App = () => {
 
         <AboutContext.Provider value={{ location, setLocation }}>
           <About />
-          <Ai />
+          <Ai color={color} />
           {/* <Skills /> */}
           <Projects />
           {/* <WhyMe /> */}

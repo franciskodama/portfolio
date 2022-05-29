@@ -1,22 +1,33 @@
 import "../styles/Ai.css";
 import React, { useEffect, useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
-import Hand from "../assets/images/hand.png";
 import WhyCard from "../components/WhyCard";
 import { whyData } from "../data/Data";
 
-const Ai = () => {
+const Ai = ({ color }) => {
   const [status, setStatus] = useState("Ask me");
   const [prompt, setPrompt] = useState("");
   const [newPrompt, setNewPrompt] = useState("");
-
   const [result, setResult] = useState("");
   const [isResultActive, setIsResultActive] = useState(false);
+  let imageHand = "";
+
+  const HandImageColor = () => {
+    if (color.first) {
+      imageHand = require("../assets/images/hand-black-bg.png");
+    } else if (color.second) {
+      imageHand = require("../assets/images/hand-blue-bg.png");
+    } else if (color.third) {
+      imageHand = require("../assets/images/hand-grey-bg.png");
+    }
+  };
+  HandImageColor();
 
   useEffect(() => {
     if (result) {
       setNewPrompt(prompt);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [result]);
 
   const onSubmit = (e) => {
@@ -41,7 +52,7 @@ const Ai = () => {
         setIsResultActive(true);
         setPrompt(prompt);
         setResult(response.data.choices[0].text.trim());
-        setStatus("ASK ME AGAIN)");
+        setStatus("ASK ME AGAIN");
         setPrompt("");
       })
       .catch((error) => console.log(error.message));
@@ -67,9 +78,6 @@ const Ai = () => {
                 loves to work out and challenge herself.{" "}
               </li>
               <li className="ai__examples-item">
-                Give me 3 suggestions of animation movies.
-              </li>
-              <li className="ai__examples-item">
                 Correct this to standard English: She no went to the market.
               </li>
               <li className="ai__examples-item">
@@ -81,11 +89,15 @@ const Ai = () => {
           <div>
             <img
               className="ai__hand"
-              src={Hand}
-              style={{ transform: "scaleX(-1)" }}
+              src={imageHand}
+              style={{ transform: "scaleX(-1)", marginRight: "4em" }}
               alt="hand over crystal ball"
             />
-            <img className="ai__hand" src={Hand} alt="hand over crystal ball" />
+            <img
+              className="ai__hand"
+              src={imageHand}
+              alt="hand over crystal ball"
+            />
           </div>
           <textarea
             className="ai__textarea"
@@ -112,6 +124,7 @@ const Ai = () => {
 
         <ul
           className="result"
+          id="ai-result"
           style={{ display: isResultActive ? "flex" : "none" }}
         >
           <li className="result__item">

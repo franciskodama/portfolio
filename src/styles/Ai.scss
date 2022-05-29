@@ -43,7 +43,7 @@
   }
 
   &__hand {
-    width: 10em;
+    width: 8.5em;
   }
 
   &__textarea {
@@ -54,6 +54,10 @@
     padding: 5em 5em;
     margin-bottom: 3em;
     overflow:hidden;
+    box-shadow:
+    0 -2.5em 4em 2em rgba(255, 255, 255, 0.4),
+    inset 0 -2.5em 1.5em 1em rgba(0,0,0,0.1);
+    border: 2px solid rgba(0,0,0,0.2);
   }
   
   &__button {
@@ -72,7 +76,7 @@
   color: var(--dark-color);
   font-family: var(--main-font-light);
   line-height: 1.5;
-  margin-top: 3em;
+  margin-top: 1em;
   opacity: 0;
   animation-name: appear;
   animation-duration: 0.5s;
