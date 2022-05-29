@@ -130,10 +130,47 @@
       width: 60%;
     }
 
-    &__hand {
+    &__hand-left {
       width: 25em;
+      animation: hand-left-float 4s ease-in-out infinite;
     }
   
+    @keyframes hand-left-float {
+      0% {
+        transform: translateX(30px) scale(0.8);
+      }
+  
+      50% {
+        transform: translateX(-50px) scale(1.1);
+      }
+  
+      100% {
+        transform: translateX(30px) scale(0.8);
+      }
+    }
+
+    &__hand-right {
+      width: 25em;
+      animation: hand-right-float 4s ease-in-out infinite;
+    }
+  
+    @keyframes hand-right-float {
+      0% {
+        transform: translateX(50px) scale(1.1);
+      }
+  
+      50% {
+        transform: translateX(-50px) scale(0.8);
+      }
+  
+      100% {
+        transform: translateX(50px) scale(1.1);
+      }
+    }
+
+
+
+
     &__textarea {
       width: 35em;
       height: 35em;

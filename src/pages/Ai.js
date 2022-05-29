@@ -10,15 +10,19 @@ const Ai = ({ color }) => {
   const [newPrompt, setNewPrompt] = useState("");
   const [result, setResult] = useState("");
   const [isResultActive, setIsResultActive] = useState(false);
-  let imageHand = "";
+  let imageRightHand = "";
+  let imageLeftHand = "";
 
   const HandImageColor = () => {
     if (color.first) {
-      imageHand = require("../assets/images/hand-black-bg.png");
+      imageRightHand = require("../assets/images/hand-right-black-bg.png");
+      imageLeftHand = require("../assets/images/hand-left-black-bg.png");
     } else if (color.second) {
-      imageHand = require("../assets/images/hand-blue-bg.png");
+      imageRightHand = require("../assets/images/hand-right-blue-bg.png");
+      imageLeftHand = require("../assets/images/hand-left-blue-bg.png");
     } else if (color.third) {
-      imageHand = require("../assets/images/hand-grey-bg.png");
+      imageRightHand = require("../assets/images/hand-right-grey-bg.png");
+      imageLeftHand = require("../assets/images/hand-left-grey-bg.png");
     }
   };
   HandImageColor();
@@ -88,14 +92,14 @@ const Ai = ({ color }) => {
           </div>
           <div>
             <img
-              className="ai__hand"
-              src={imageHand}
-              style={{ transform: "scaleX(-1)", marginRight: "4em" }}
+              className="ai__hand-left"
+              src={imageLeftHand}
+              style={{ marginRight: "4em" }}
               alt="hand over crystal ball"
             />
             <img
-              className="ai__hand"
-              src={imageHand}
+              className="ai__hand-right"
+              src={imageRightHand}
               alt="hand over crystal ball"
             />
           </div>
