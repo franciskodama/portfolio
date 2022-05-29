@@ -17,7 +17,7 @@
     color: var(--third-color);
     border: 1px dashed var(--third-color);
     padding: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 7em;
   }
   
   &__examples-title {
@@ -45,11 +45,11 @@
     text-align: center;
     width: 35em;
     height: 35em;
-    padding: 1em;
-
     border-radius: 50%;
     padding-top: 15em;
     padding-bottom: 15em;
+    padding: 15em 5em;
+    margin-bottom: 3em;
     overflow:hidden;
   }
   

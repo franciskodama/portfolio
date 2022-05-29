@@ -4,19 +4,18 @@ import { Configuration, OpenAIApi } from "openai";
 import Hand from "../assets/images/hand.png";
 
 const Ai = () => {
-  const [status, setStatus] = useState("Get your suggestion");
+  const [status, setStatus] = useState("Ask me");
   const [prompt, setPrompt] = useState("");
-  // const [newPrompt, setNewPrompt] = useState("");
+  const [newPrompt, setNewPrompt] = useState("");
 
   const [result, setResult] = useState("");
   const [isResultActive, setIsResultActive] = useState(false);
 
-  // useEffect(() => {
-  //   if (result) {
-  //     setNewPrompt(prompt);
-  //     setPrompt("");
-  //   }
-  // }, [prompt, result]);
+  useEffect(() => {
+    if (result) {
+      setNewPrompt(prompt);
+    }
+  }, [result]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +23,7 @@ const Ai = () => {
     const configuration = new Configuration({
       apiKey: process.env.REACT_APP_OPENAI_API_KEY,
     });
-    setStatus("THINKING...");
+    setStatus("Thinking...");
     const openai = new OpenAIApi(configuration);
 
     openai
@@ -40,7 +39,8 @@ const Ai = () => {
         setIsResultActive(true);
         setPrompt(prompt);
         setResult(response.data.choices[0].text.trim());
-        setStatus("Wow! I want more suggestions :)");
+        setStatus("ASK ME AGAIN)");
+        setPrompt("");
       })
       .catch((error) => console.log(error.message));
   };
@@ -48,30 +48,35 @@ const Ai = () => {
   return (
     <section className="section ai" id="ai">
       <div className="container">
-        <h1 className="section-title">TV Suggestion Helper</h1>
-        <p className="ai__question">
-          Can't you figure out what to watch on TV? Ask me.
-        </p>
+        <h1 className="section-title">Crystal Ball</h1>
+        <p className="ai__question">A.I. technology or Witchcraft?</p>
         <form className="ai__form" onSubmit={onSubmit}>
           <div className="ai__examples">
-            <h2 className="ai__examples-title">some examples how to ask me:</h2>
+            <h2 className="ai__examples-title">
+              Here are some suggestions for what to ask for:
+            </h2>
             <ul>
               <li className="ai__examples-item">
                 Suggest a drama movie based on a true story with a good score on
                 the rotten tomatoes website.
               </li>
               <li className="ai__examples-item">
-                What Brazilian comedy shows can I watch on Netflix today?
+                I need a gift suggestion for my wife. She is 35 years old and
+                loves to work out and challenge herself.{" "}
               </li>
               <li className="ai__examples-item">
                 Give me 3 suggestions of animation movies.
               </li>
               <li className="ai__examples-item">
-                What's the best thriller series available on Prime in Canada?
+                Correct this to standard English: She no went to the market.
+              </li>
+              <li className="ai__examples-item">
+                Write a recipe based on these ingredients: meat, cheddar cheese,
+                onions, sour cream, and rice.
               </li>
             </ul>
           </div>
-          <div className="ai__form-hands">
+          <div>
             <img
               src={Hand}
               style={{ transform: "scaleX(-1)" }}
@@ -83,7 +88,7 @@ const Ai = () => {
             className="ai__textarea"
             type="text"
             name="prompt"
-            placeholder="Give me a good suggestion of..."
+            placeholder="Ask me anything, but at your own risk."
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             required
@@ -109,10 +114,10 @@ const Ai = () => {
           <li className="result__item">
             <div className="result__wrapper">
               <h4 className="result__title">Your question:</h4>
-              <p className="result__text">{prompt}</p>
+              <p className="result__text">{newPrompt}</p>
             </div>
             <div className="result__wrapper">
-              <h4 className="result__title">My Suggestion:</h4>
+              <h4 className="result__title">My wisdow:</h4>
               <p className="result__text">{result}</p>
             </div>
           </li>
