@@ -58,6 +58,7 @@
     0 -2.5em 4em 2em rgba(255, 255, 255, 0.4),
     inset 0 -2.5em 1.5em 1em rgba(0,0,0,0.1);
     border: 2px solid rgba(0,0,0,0.2);
+    z-index: 2;
   }
   
   &__button {

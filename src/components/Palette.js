@@ -1,18 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "../components/Palette.css";
-import gsap from "gsap";
 
 const Color = ({ isActive, firstColors, secondColors, thirdColors }) => {
   const [toggle, setToggle] = useState(false);
   const paletteRef = useRef();
-
-  useEffect(() => {
-    gsap.from(paletteRef.current, {
-      delay: 0.5,
-      opacity: 0,
-      y: 50,
-    });
-  }, [toggle]);
 
   return (
     <div className="color">

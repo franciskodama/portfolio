@@ -4,34 +4,52 @@
  right: 5%;    
  z-index: 2;
 
+ 
     &__square-first {
         display: none;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         background-repeat: no-repeat;
         background-position: center;
+    }
+    
+    &__icon--open,
+    &__icon--close {
+        background-size: 32px;
+        padding: 1em;
         cursor: pointer;
     }
 
     &__icon--open {
-        background-image: url(../assets/images/ico-brush.svg);
+        background-image: url(../assets/images/ico-brush.png);
     }
 
     &__icon--close {
-        background-image: url(../assets/images/ico-brush-close.svg);
+        background-image: url(../assets/images/ico-brush-close.png);
     }
 
     &__square-wrapper {
         display: none;
         position: absolute;
-        bottom: 2.8em; 
-        left: 50%;
-        transform: translate(-50%);
+        bottom: 2em; 
+        left: 0%;
         display: flex;
         flex-direction: column;
         width: auto;
         padding: 0.2em 0.2em;
         z-index: -1;
+        animation: colors-up 1s ease-in-out forwards;
+    }
+
+    @keyframes colors-up {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(-30%);
+            opacity: 1;
+        }
     }
 
     &__options {

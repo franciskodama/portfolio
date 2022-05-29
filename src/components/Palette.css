@@ -9,28 +9,31 @@
 
 .color__square-first {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.color__icon--open, .color__icon--close {
+  background-size: 32px;
+  padding: 1em;
   cursor: pointer;
 }
 
 .color__icon--open {
-  background-image: url(../assets/images/ico-brush.svg);
+  background-image: url(../assets/images/ico-brush.png);
 }
 
 .color__icon--close {
-  background-image: url(../assets/images/ico-brush-close.svg);
+  background-image: url(../assets/images/ico-brush-close.png);
 }
 
 .color__square-wrapper {
   display: none;
   position: absolute;
-  bottom: 2.8em;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  bottom: 2em;
+  left: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,6 +44,34 @@
   width: auto;
   padding: 0.2em 0.2em;
   z-index: -1;
+  -webkit-animation: colors-up 1s ease-in-out forwards;
+          animation: colors-up 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes colors-up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 1;
+  }
+}
+
+@keyframes colors-up {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 1;
+  }
 }
 
 .color__options {
