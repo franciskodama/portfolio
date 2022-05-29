@@ -1,7 +1,6 @@
 .ai {
   position: relative;
   padding-bottom: 10em;
-  text-align: center;
 
   .container {
     padding-top: 6em;
@@ -11,6 +10,7 @@
 
   &__question {
     margin: 0.8em 0 5em 0;
+    text-align: center;
   }
 
   &__examples {
@@ -18,6 +18,7 @@
     border: 1px dashed var(--third-color);
     padding: 1em;
     margin-bottom: 7em;
+    text-align: center;
   }
   
   &__examples-title {
@@ -41,14 +42,16 @@
     align-items: center;
   }
 
+  &__hand {
+    width: 10em;
+  }
+
   &__textarea {
     text-align: center;
-    width: 35em;
-    height: 35em;
+    width: 20em;
+    height: 20em;
     border-radius: 50%;
-    padding-top: 15em;
-    padding-bottom: 15em;
-    padding: 15em 5em;
+    padding: 5em 5em;
     margin-bottom: 3em;
     overflow:hidden;
   }
@@ -118,12 +121,18 @@
 
 @media only screen and (min-width: 48em) {
   .ai {
-    // padding-bottom: 10em;
-  
     .container {
-      // padding-top: 6em;
       width: 60%;
-      // margin-bottom: 2em;
+    }
+
+    &__hand {
+      width: 25em;
+    }
+  
+    &__textarea {
+      width: 35em;
+      height: 35em;
+      padding: 15em 5em;
     }
   }
   

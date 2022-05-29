@@ -2,6 +2,8 @@ import "../styles/Ai.css";
 import React, { useEffect, useState } from "react";
 import { Configuration, OpenAIApi } from "openai";
 import Hand from "../assets/images/hand.png";
+import WhyCard from "../components/WhyCard";
+import { whyData } from "../data/Data";
 
 const Ai = () => {
   const [status, setStatus] = useState("Ask me");
@@ -78,11 +80,12 @@ const Ai = () => {
           </div>
           <div>
             <img
+              className="ai__hand"
               src={Hand}
               style={{ transform: "scaleX(-1)" }}
               alt="hand over crystal ball"
             />
-            <img src={Hand} alt="hand over crystal ball" />
+            <img className="ai__hand" src={Hand} alt="hand over crystal ball" />
           </div>
           <textarea
             className="ai__textarea"
@@ -123,6 +126,19 @@ const Ai = () => {
           </li>
         </ul>
       </div>
+      <WhyCard
+        titleOne={whyData.ai.titleOne}
+        textOne={whyData.ai.textOne}
+        titleTwo={whyData.ai.titleTwo}
+        textTwo={whyData.ai.textTwo}
+        titleThree={whyData.ai.titleThree}
+        textThree={whyData.ai.textThree}
+        titleFour={whyData.ai.titleFour}
+        textFour={whyData.ai.textFour}
+        observation={whyData.ai.observation}
+        bottom={whyData.ai.bottom}
+        left={whyData.ai.left}
+      />
     </section>
   );
 };

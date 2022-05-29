@@ -32,6 +32,20 @@ export const whyData = {
     bottom: "0.5%",
     left: "50%",
   },
+  ai: {
+    titleOne: "Why?",
+    textOne: "Artificial Intelligence had to be a part of my portfolio.",
+    titleTwo: "Showcase",
+    textTwo:
+      "To demonstrate how powerful this technology is, I created a fun and mystical area where you can place any question, and the crystal ball will give you a reasonable response.",
+    titleThree: "Tech used",
+    textThree: "I used a cutting-edge API called OpenAI to achieve this.",
+    titleFour: "",
+    textFour: "",
+    observation: "",
+    bottom: "5%",
+    left: "50%",
+  },
   selectedProjects: {
     titleOne: "Why?",
     textOne:

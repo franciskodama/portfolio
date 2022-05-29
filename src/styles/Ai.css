@@ -1,7 +1,6 @@
 .ai {
   position: relative;
   padding-bottom: 10em;
-  text-align: center;
 }
 
 .ai .container {
@@ -12,6 +11,7 @@
 
 .ai__question {
   margin: 0.8em 0 5em 0;
+  text-align: center;
 }
 
 .ai__examples {
@@ -19,6 +19,7 @@
   border: 1px dashed var(--third-color);
   padding: 1em;
   margin-bottom: 7em;
+  text-align: center;
 }
 
 .ai__examples-title {
@@ -49,14 +50,16 @@
           align-items: center;
 }
 
+.ai__hand {
+  width: 10em;
+}
+
 .ai__textarea {
   text-align: center;
-  width: 35em;
-  height: 35em;
+  width: 20em;
+  height: 20em;
   border-radius: 50%;
-  padding-top: 15em;
-  padding-bottom: 15em;
-  padding: 15em 5em;
+  padding: 5em 5em;
   margin-bottom: 3em;
   overflow: hidden;
 }
@@ -147,6 +150,14 @@
 @media only screen and (min-width: 48em) {
   .ai .container {
     width: 60%;
+  }
+  .ai__hand {
+    width: 25em;
+  }
+  .ai__textarea {
+    width: 35em;
+    height: 35em;
+    padding: 15em 5em;
   }
   .title {
     font-size: 3rem;
