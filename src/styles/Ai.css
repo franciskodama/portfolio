@@ -55,7 +55,7 @@
 }
 
 .ai__hand-left {
-  width: 8.5em;
+  width: 7.5em;
   margin-left: 3em;
   -webkit-animation: hand-left-float 4s ease-in-out infinite;
           animation: hand-left-float 4s ease-in-out infinite;
@@ -226,10 +226,12 @@
   ======================================= */
 @media only screen and (min-width: 48em) {
   .ai .container {
-    width: 60%;
+    width: 80%;
+  }
+  .ai__hand-left, .ai__hand-right {
+    width: 15em;
   }
   .ai__hand-left {
-    width: 25em;
     -webkit-animation: hand-left-float 4s ease-in-out infinite;
             animation: hand-left-float 4s ease-in-out infinite;
   }
@@ -262,7 +264,6 @@
     }
   }
   .ai__hand-right {
-    width: 25em;
     -webkit-animation: hand-right-float 4s ease-in-out infinite;
             animation: hand-right-float 4s ease-in-out infinite;
   }
@@ -313,6 +314,24 @@
   .result__text {
     padding-left: 0;
     width: 80%;
+  }
+}
+
+@media only screen and (min-width: 51em) {
+  .ai__hand-left, .ai__hand-right {
+    width: 18em;
+  }
+}
+
+@media only screen and (min-width: 56em) {
+  .ai__hand-left, .ai__hand-right {
+    width: 20em;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .ai__hand-left, .ai__hand-right {
+    width: 22em;
   }
 }
 /*# sourceMappingURL=Ai.css.map */

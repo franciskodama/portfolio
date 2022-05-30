@@ -7,7 +7,7 @@
 }
 
 .api-external__image {
-  width: 30em;
+  width: 28em;
   position: absolute;
   top: -14em;
   left: calc(100vw - 100%);
@@ -337,6 +337,7 @@
 ======================================= */
 @media only screen and (min-width: 48em) {
   .api-external__image {
+    width: 30em;
     left: calc(100vw - 80%);
   }
   .api {
@@ -353,7 +354,6 @@
 
 @media only screen and (min-width: 62em) {
   .api-external__image {
-    width: 30em;
     top: -14em;
     left: calc(100vw - 47%);
   }

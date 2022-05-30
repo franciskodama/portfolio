@@ -50,6 +50,7 @@
           flex-direction: column;
   background-image: url("../assets/images/xray.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   -webkit-animation: code-appearance 0.3s both;
           animation: code-appearance 0.3s both;
   height: 135em;

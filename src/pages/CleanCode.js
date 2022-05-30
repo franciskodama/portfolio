@@ -113,6 +113,7 @@ const CleanCode = () => {
           </ul>
         </Parallax>
         <WhyCard
+          style={{ display: showBackground ? "none" : "block" }}
           titleOne={whyData.code.titleOne}
           textOne={whyData.code.textOne}
           titleTwo={whyData.code.titleTwo}

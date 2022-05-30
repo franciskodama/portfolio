@@ -47,7 +47,7 @@
   }
 
   &__hand-left {
-    width: 8.5em;
+    width: 7.5em;
     margin-left: 3em;
     animation: hand-left-float 4s ease-in-out infinite;
   }
@@ -167,11 +167,15 @@
 @media only screen and (min-width: 48em) {
   .ai {
     .container {
-      width: 60%;
+      width: 80%;
+    }
+
+    &__hand-left,
+    &__hand-right {
+      width: 15em;
     }
 
     &__hand-left {
-      width: 25em;
       animation: hand-left-float 4s ease-in-out infinite;
     }
   
@@ -190,7 +194,6 @@
     }
 
     &__hand-right {
-      width: 25em;
       animation: hand-right-float 4s ease-in-out infinite;
     }
   
@@ -236,4 +239,32 @@
     }
   }
 }
-  
+
+
+@media only screen and (min-width: 51em) {
+  .ai {
+    &__hand-left,
+    &__hand-right {
+      width: 18em;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 56em) {
+  .ai {
+    &__hand-left,
+    &__hand-right {
+      width: 20em;
+    }
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .ai {
+    &__hand-left,
+    &__hand-right {
+      width: 22em;
+    }
+  }
+}
