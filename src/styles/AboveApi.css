@@ -2,8 +2,8 @@
   background-color: var(--dark-color);
   height: 15em;
   z-index: 10;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
-  margin-bottom: -10vw;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7.5vw), 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7.5vw), 0 100%);
+  margin-bottom: -7.5vw;
 }
 /*# sourceMappingURL=AboveApi.css.map */

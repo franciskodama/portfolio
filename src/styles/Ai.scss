@@ -41,9 +41,48 @@
     flex-direction: column;
     align-items: center;
   }
+  
+  &__hands {
+    padding-right: 2.5em;
+  }
 
-  &__hand {
+  &__hand-left {
     width: 8.5em;
+    margin-left: 3em;
+    animation: hand-left-float 4s ease-in-out infinite;
+  }
+
+  @keyframes hand-left-float {
+    0% {
+      transform: translateX(50px) scale(0.8);
+    }
+
+    50% {
+      transform: translateX(-10px) scale(1.1);
+    }
+
+    100% {
+      transform: translateX(50px) scale(0.8);
+    }
+  }
+
+  &__hand-right {
+    width: 8.5em;
+    animation: hand-right-float 4s ease-in-out infinite;
+  }
+
+  @keyframes hand-right-float {
+    0% {
+      transform: translateX(50px) scale(1.1);
+    }
+
+    50% {
+      transform: translateX(-10px) scale(0.8);
+    }
+
+    100% {
+      transform: translateX(50px) scale(1.1);
+    }
   }
 
   &__textarea {
@@ -66,6 +105,7 @@
   }
 }
   
+
 /* ====================================
                 RESULT
 ======================================= */
@@ -167,9 +207,6 @@
         transform: translateX(50px) scale(1.1);
       }
     }
-
-
-
 
     &__textarea {
       width: 35em;

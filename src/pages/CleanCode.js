@@ -11,25 +11,25 @@ const CleanCode = () => {
 
   const handleClick = () => {
     setShowBackground(!showBackground);
-    setInterval(createBubble, 500);
+    // setInterval(createBubble, 500);
   };
 
   useEffect(() => {}, [showBackground]);
 
   // ------------------ BUBBLES ------------------
 
-  const createBubble = () => {
-    const section = document.getElementById("code");
-    const createElement = document.createElement("span");
-    let size = Math.random() * 120;
-    createElement.style.width = 20 + size + "px";
-    createElement.style.height = 20 + size + "px";
-    createElement.style.left = Math.random() * window.innerWidth + "px";
-    section.appendChild(createElement);
-    setTimeout(() => {
-      createElement.remove();
-    }, 6000);
-  };
+  // const createBubble = () => {
+  //   const section = document.getElementById("code");
+  //   const createElement = document.createElement("span");
+  //   let size = Math.random() * 120;
+  //   createElement.style.width = 20 + size + "px";
+  //   createElement.style.height = 20 + size + "px";
+  //   createElement.style.left = Math.random() * window.innerWidth + "px";
+  //   section.appendChild(createElement);
+  //   setTimeout(() => {
+  //     createElement.remove();
+  //   }, 6000);
+  // };
 
   return (
     <section

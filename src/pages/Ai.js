@@ -90,11 +90,10 @@ const Ai = ({ color }) => {
               </li>
             </ul>
           </div>
-          <div>
+          <div className="ai__hands">
             <img
               className="ai__hand-left"
               src={imageLeftHand}
-              style={{ marginRight: "4em" }}
               alt="hand over crystal ball"
             />
             <img

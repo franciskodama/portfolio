@@ -50,8 +50,81 @@
           align-items: center;
 }
 
-.ai__hand {
+.ai__hands {
+  padding-right: 2.5em;
+}
+
+.ai__hand-left {
   width: 8.5em;
+  margin-left: 3em;
+  -webkit-animation: hand-left-float 4s ease-in-out infinite;
+          animation: hand-left-float 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes hand-left-float {
+  0% {
+    -webkit-transform: translateX(50px) scale(0.8);
+            transform: translateX(50px) scale(0.8);
+  }
+  50% {
+    -webkit-transform: translateX(-10px) scale(1.1);
+            transform: translateX(-10px) scale(1.1);
+  }
+  100% {
+    -webkit-transform: translateX(50px) scale(0.8);
+            transform: translateX(50px) scale(0.8);
+  }
+}
+
+@keyframes hand-left-float {
+  0% {
+    -webkit-transform: translateX(50px) scale(0.8);
+            transform: translateX(50px) scale(0.8);
+  }
+  50% {
+    -webkit-transform: translateX(-10px) scale(1.1);
+            transform: translateX(-10px) scale(1.1);
+  }
+  100% {
+    -webkit-transform: translateX(50px) scale(0.8);
+            transform: translateX(50px) scale(0.8);
+  }
+}
+
+.ai__hand-right {
+  width: 8.5em;
+  -webkit-animation: hand-right-float 4s ease-in-out infinite;
+          animation: hand-right-float 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes hand-right-float {
+  0% {
+    -webkit-transform: translateX(50px) scale(1.1);
+            transform: translateX(50px) scale(1.1);
+  }
+  50% {
+    -webkit-transform: translateX(-10px) scale(0.8);
+            transform: translateX(-10px) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(50px) scale(1.1);
+            transform: translateX(50px) scale(1.1);
+  }
+}
+
+@keyframes hand-right-float {
+  0% {
+    -webkit-transform: translateX(50px) scale(1.1);
+            transform: translateX(50px) scale(1.1);
+  }
+  50% {
+    -webkit-transform: translateX(-10px) scale(0.8);
+            transform: translateX(-10px) scale(0.8);
+  }
+  100% {
+    -webkit-transform: translateX(50px) scale(1.1);
+            transform: translateX(50px) scale(1.1);
+  }
 }
 
 .ai__textarea {
