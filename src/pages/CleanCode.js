@@ -112,20 +112,22 @@ const CleanCode = () => {
             <li className="code__even">D.R.Y.</li>
           </ul>
         </Parallax>
-        <WhyCard
-          style={{ display: showBackground ? "none" : "block" }}
-          titleOne={whyData.code.titleOne}
-          textOne={whyData.code.textOne}
-          titleTwo={whyData.code.titleTwo}
-          textTwo={whyData.code.textTwo}
-          titleThree={whyData.code.titleThree}
-          textThree={whyData.code.textThree}
-          titleFour={whyData.code.titleFour}
-          textFour={whyData.code.textFour}
-          observation={whyData.code.observation}
-          bottom={whyData.code.bottom}
-          left={whyData.code.left}
-        />
+
+        {!showBackground ? (
+          <WhyCard
+            titleOne={whyData.code.titleOne}
+            textOne={whyData.code.textOne}
+            titleTwo={whyData.code.titleTwo}
+            textTwo={whyData.code.textTwo}
+            titleThree={whyData.code.titleThree}
+            textThree={whyData.code.textThree}
+            titleFour={whyData.code.titleFour}
+            textFour={whyData.code.textFour}
+            observation={whyData.code.observation}
+            bottom={whyData.code.bottom}
+            left={whyData.code.left}
+          />
+        ) : null}
       </div>
     </section>
   );

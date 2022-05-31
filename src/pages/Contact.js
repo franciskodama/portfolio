@@ -191,7 +191,6 @@ const Contact = () => {
               setMessage(e.target.value);
             }}
             name="message"
-            required
           ></textarea>{" "}
           <div className="form-contact__input-wrapper">
             <input
