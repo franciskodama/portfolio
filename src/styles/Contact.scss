@@ -100,7 +100,7 @@
     
   &__buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 2em;
   }
 }
@@ -127,7 +127,7 @@
   }
 
   .form-contact__buttons {
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 1em;
   }
 }

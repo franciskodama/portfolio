@@ -60,9 +60,6 @@ const onDragEnd = (result, columns, setColumns) => {
       },
     });
   }
-  console.log(result);
-  console.log(source);
-  console.log(destination);
 };
 
 const Contact = () => {
@@ -122,7 +119,6 @@ const Contact = () => {
   };
 
   const handleClickClearMessage = () => {
-    console.log(columns);
     setColumns({
       drag: {
         name: "drag from here:",
