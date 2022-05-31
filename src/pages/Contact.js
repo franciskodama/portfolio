@@ -5,7 +5,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { whyData } from "../data/Data";
 import { contactData } from "../data/Data";
 import WhyCard from "../components/WhyCard";
-// import Button from "../components/Button";
+import Button from "../components/Button";
 // import { useForm } from "react-hook-form";
 // import { yupResolver } from "@hookform/resolvers/yup";
 // import * as yup from "yup";
@@ -60,6 +60,9 @@ const onDragEnd = (result, columns, setColumns) => {
       },
     });
   }
+  console.log(result);
+  console.log(source);
+  console.log(destination);
 };
 
 const Contact = () => {
@@ -106,6 +109,30 @@ const Contact = () => {
     setName("");
     setEmail("");
     setMessage("");
+    setColumns({
+      drag: {
+        name: "drag from here:",
+        items: contactData,
+      },
+      drop: {
+        name: "drop here:",
+        items: [],
+      },
+    });
+  };
+
+  const handleClickClearMessage = () => {
+    console.log(columns);
+    setColumns({
+      drag: {
+        name: "drag from here:",
+        items: contactData,
+      },
+      drop: {
+        name: "drop here:",
+        items: [],
+      },
+    });
   };
 
   // =================== DRAG N'DROP ===================
@@ -215,12 +242,12 @@ const Contact = () => {
             />
           </div>
           <div className="form-contact__buttons">
-            {/* <Button
+            <Button
               className={"btn btn--dark-dark-bg"}
               onClick={handleClickClearMessage}
               text="clear"
               align="flex-start"
-            /> */}
+            />
 
             <button
               className="btn btn--third-color"
