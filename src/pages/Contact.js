@@ -1,26 +1,26 @@
-import React, { useState, useContext } from "react";
-import "../styles/Contact.css";
-import { AboutContext } from "../contexts/AboutContext";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { whyData } from "../data/Data";
-import { contactData } from "../data/Data";
-import WhyCard from "../components/WhyCard";
-import Button from "../components/Button";
+import React, { useState, useContext } from 'react';
+import '../styles/Contact.css';
+import { AboutContext } from '../contexts/AboutContext';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { whyData } from '../data/Data';
+import { contactData } from '../data/Data';
+import WhyCard from '../components/WhyCard';
+import Button from '../components/Button';
 // import { useForm } from "react-hook-form";
 // import { yupResolver } from "@hookform/resolvers/yup";
 // import * as yup from "yup";
 
-import { db } from "../firebase";
+import { db } from '../firebase';
 
 // ======================================
 
 let dropSpace = {
   drag: {
-    name: "drag from here:",
+    name: 'drag from here:',
     items: contactData,
   },
   drop: {
-    name: "drop here:",
+    name: 'drop here:',
     items: [],
   },
 };
@@ -69,20 +69,20 @@ const Contact = () => {
 
   // ============= SEND EMAIL FIREBASE ================
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("SUBMIT");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('SUBMIT');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus("SENDING...");
+    setStatus('SENDING...');
 
     const dragDropMessage = columns.drop.items.map(
       (element) => element.content
     );
 
-    db.collection("contacts")
+    db.collection('contacts')
       .add({
         name: name,
         email: email,
@@ -91,10 +91,10 @@ const Contact = () => {
         messageDrag: dragDropMessage,
       })
       .then(() => {
-        setStatus("SENT");
+        setStatus('SENT');
 
         setInterval(() => {
-          setStatus("SUBMIT");
+          setStatus('SUBMIT');
         }, 5000);
 
         clearInterval();
@@ -103,29 +103,32 @@ const Contact = () => {
         console.log(error.message);
       });
 
-    setName("");
-    setEmail("");
-    setMessage("");
+    setName('');
+    setEmail('');
+    setMessage('');
     setColumns({
       drag: {
-        name: "drag from here:",
+        name: 'drag from here:',
         items: contactData,
       },
       drop: {
-        name: "drop here:",
+        name: 'drop here:',
         items: [],
       },
     });
   };
 
   const handleClickClearMessage = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
     setColumns({
       drag: {
-        name: "drag from here:",
+        name: 'drag from here:',
         items: contactData,
       },
       drop: {
-        name: "drop here:",
+        name: 'drop here:',
         items: [],
       },
     });
@@ -136,9 +139,9 @@ const Contact = () => {
   const [columns, setColumns] = useState(dropSpace);
 
   return (
-    <section className="section contact" id="contact">
-      <div className="container">
-        <h1 className="section-title" style={{ textAlign: "left" }}>
+    <section className='section contact' id='contact'>
+      <div className='container'>
+        <h1 className='section-title' style={{ textAlign: 'left' }}>
           hello generator
         </h1>
         <p>Let me help you drop me a line! ;)</p>
@@ -147,8 +150,8 @@ const Contact = () => {
         >
           {Object.entries(columns).map(([columnId, column], index) => {
             return (
-              <div className="drop" key={columnId}>
-                <h2 className="drop__title">{column.name}</h2>
+              <div className='drop' key={columnId}>
+                <h2 className='drop__title'>{column.name}</h2>
                 <div>
                   <Droppable droppableId={columnId} key={columnId}>
                     {(provided, snapshot) => {
@@ -156,11 +159,11 @@ const Contact = () => {
                         <div
                           {...provided.droppableProps}
                           ref={provided.innerRef}
-                          className="drop__space"
+                          className='drop__space'
                           style={{
                             background: snapshot.isDraggingOver
-                              ? "rgba(255, 255, 255, 0.1)"
-                              : "var(--dark-color)",
+                              ? 'rgba(255, 255, 255, 0.1)'
+                              : 'var(--dark-color)',
                           }}
                         >
                           {column.items.map((item, index) => {
@@ -173,15 +176,15 @@ const Contact = () => {
                                 {(provided, snapshot) => {
                                   return (
                                     <div
-                                      className="phrase"
+                                      className='phrase'
                                       ref={provided.innerRef}
                                       {...provided.draggableProps}
                                       {...provided.dragHandleProps}
                                       style={{
                                         backgroundColor: snapshot.isDragging
-                                          ? "var(--third-color)"
-                                          : "var(--dark-color)",
-                                        color: "var(--bright-color)",
+                                          ? 'var(--third-color)'
+                                          : 'var(--dark-color)',
+                                        color: 'var(--bright-color)',
                                         ...provided.draggableProps.style,
                                       }}
                                     >
@@ -203,56 +206,56 @@ const Contact = () => {
           })}
         </DragDropContext>
 
-        <form className="form-contact" onSubmit={handleSubmit}>
-          <p className="form-contact__title">Additional comments:</p>
+        <form className='form-contact' onSubmit={handleSubmit}>
+          <p className='form-contact__title'>Additional comments:</p>
           <textarea
-            className="form-contact__input form-contact__input--textarea"
-            placeholder="type some additional comments"
-            type="text"
+            className='form-contact__input form-contact__input--textarea'
+            placeholder='type some additional comments'
+            type='text'
             value={message}
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            name="message"
-          ></textarea>{" "}
-          <div className="form-contact__input-wrapper">
+            name='message'
+          ></textarea>{' '}
+          <div className='form-contact__input-wrapper'>
             <input
-              className="form-contact__input"
-              placeholder="name"
-              type="text"
+              className='form-contact__input'
+              placeholder='name'
+              type='text'
               value={name}
               onChange={(e) => {
                 setName(e.target.value);
               }}
-              name="name"
+              name='name'
             />
             <input
-              className="form-contact__input"
-              placeholder="email"
-              type="text"
+              className='form-contact__input'
+              placeholder='email'
+              type='text'
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
-              name="email"
+              name='email'
             />
           </div>
-          <div className="form-contact__buttons">
+          <div className='form-contact__buttons'>
             <Button
-              className={"btn btn--dark-dark-bg"}
+              className={'btn btn--dark-dark-bg'}
               onClick={handleClickClearMessage}
-              text="clear"
-              align="flex-start"
+              text='clear'
+              align='flex-start'
             />
 
             <button
-              className="btn btn--third-color"
-              type="submit"
+              className='btn btn--third-color'
+              type='submit'
               style={{
                 backgroundColor:
-                  status === "SENT"
-                    ? "var(--dark-color)"
-                    : "var(--third-color)",
+                  status === 'SENT'
+                    ? 'var(--dark-color)'
+                    : 'var(--third-color)',
               }}
             >
               {status}
