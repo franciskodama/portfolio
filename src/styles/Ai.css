@@ -56,7 +56,6 @@
 
 .ai__hand-left {
   width: 7.5em;
-  margin-left: 3em;
   -webkit-animation: hand-left-float 4s ease-in-out infinite;
           animation: hand-left-float 4s ease-in-out infinite;
 }
