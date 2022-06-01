@@ -269,7 +269,7 @@ export const projects = [
       "That's why I decided to build this project. This tutorial again from Ania Kubow (mentioned on the Pac Man project) uses a great deal of Vanilla Javascript logic. Therefore, it was a good place to restart.",
     backText_titleThree: "what",
     backText_textThree:
-      "As I did with Pac Man, I challenged myself to create new buttons and redesign the entire video game.",
+      "As I did with Pac Man, I challenged myself to create a restart button and redesign the entire video game.",
     backText_titleFour: "",
     backText_textFour: "",
     backText_linkName: "Compare with original: Ania Kubów's Tutorial",
