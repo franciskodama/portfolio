@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-scroll";
-import "../styles/Navbar.css";
-import "../App.css";
-import Logo from "../assets/logo-fkodama.svg";
-import Menu from "../assets/images/menu-hamburguer.svg";
-import Close from "../assets/images/card-icon-close-white.svg";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
+import '../styles/Navbar.css';
+import '../App.css';
+import Logo from '../assets/logo-fkodama.svg';
+import Menu from '../assets/images/menu-hamburguer.svg';
+import Close from '../assets/images/card-icon-close-white.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,101 +30,113 @@ const Navbar = () => {
   }, [isActive, isOpen]);
 
   return (
-    <header className="section navbar">
-      <div className="container">
-        <Link to="hero" spy={true} smooth={true} offset={0} duration={500}>
-          <img className="navbar__logo" alt="logo fkodama" src={Logo} />
+    <header className='section navbar'>
+      <div className='container'>
+        <Link to='hero' spy={true} smooth={true} offset={0} duration={500}>
+          <img className='navbar__logo' alt='logo fkodama' src={Logo} />
         </Link>
 
         {/* -------- NAVBAR TOGGLE -------- */}
 
-        <div className="navbar__toggle">
+        <div className='navbar__toggle'>
           <img
-            className="navbar__menu"
+            className='navbar__menu'
             style={{
-              display: isOpen ? "none" : "block",
-              backgroundColor: "var(--dark-color)",
+              display: isOpen ? 'none' : 'block',
+              backgroundColor: 'var(--dark-color)',
             }}
             onClick={hangleClickOpen}
             src={Menu}
-            alt="hamburguer icon menu"
+            alt='hamburguer icon menu'
           />
           <img
-            className="navbar__close"
+            className='navbar__close'
             style={{
-              display: isOpen ? "block" : "none",
+              display: isOpen ? 'block' : 'none',
             }}
             onClick={handleClickClose}
             src={Close}
-            alt="close icon menu"
+            alt='close icon menu'
           />
         </div>
 
         {/* -------- NAVBAR EXTENDED -------- */}
 
         <nav
-          className="navbar__extended"
-          style={{ display: isActive ? "block" : "none" }}
+          className='navbar__extended'
+          style={{ display: isActive ? 'block' : 'none' }}
         >
           <Link
-            className="navbar__item"
-            to="hero"
+            className='navbar__item'
+            to='hero'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            home{" "}
+            {' '}
+            home{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="reason"
+            className='navbar__item'
+            to='reason'
             spy={true}
             smooth={true}
             offset={-50}
             duration={2000}
             onClick={handleClickOnLink}
           >
-            {" "}
-            this{" "}
+            {' '}
+            this{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="about"
+            className='navbar__item'
+            to='about'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            about me{" "}
+            {' '}
+            about me{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="ai"
+            className='navbar__item'
+            to='whyme'
             spy={true}
             smooth={true}
             offset={100}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            a.i.{" "}
+            {' '}
+            why me?{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="projects"
+            className='navbar__item'
+            to='ai'
+            spy={true}
+            smooth={true}
+            offset={100}
+            duration={500}
+            onClick={handleClickOnLink}
+          >
+            {' '}
+            a.i.{' '}
+          </Link>
+          <Link
+            className='navbar__item'
+            to='projects'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            projects{" "}
+            {' '}
+            projects{' '}
           </Link>
 
           {/* <Link
@@ -141,106 +153,118 @@ const Navbar = () => {
           </Link> */}
 
           <Link
-            className="navbar__item"
-            to="api"
+            className='navbar__item'
+            to='api'
             spy={true}
             smooth={true}
             offset={-150}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            api{" "}
+            {' '}
+            api{' '}
           </Link>
 
           <Link
-            className="navbar__item"
-            to="code"
+            className='navbar__item'
+            to='code'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            my code{" "}
+            {' '}
+            my code{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="contact"
+            className='navbar__item'
+            to='contact'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            contact{" "}
+            {' '}
+            contact{' '}
           </Link>
         </nav>
 
         {/* -------- NAVBAR HORIZONTAL -------- */}
 
-        <nav className="navbar__horizontal">
+        <nav className='navbar__horizontal'>
           <Link
-            className="navbar__item"
-            to="hero"
+            className='navbar__item'
+            to='hero'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            home{" "}
+            {' '}
+            home{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="reason"
+            className='navbar__item'
+            to='reason'
             spy={true}
             smooth={true}
             offset={-50}
             duration={2000}
             onClick={handleClickOnLink}
           >
-            {" "}
-            this{" "}
+            {' '}
+            this{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="about"
+            className='navbar__item'
+            to='about'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            about me{" "}
+            {' '}
+            about me{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="ai"
+            className='navbar__item'
+            to='whyme'
             spy={true}
             smooth={true}
             offset={100}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            a.i.{" "}
+            {' '}
+            why me?{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="projects"
+            className='navbar__item'
+            to='ai'
+            spy={true}
+            smooth={true}
+            offset={100}
+            duration={500}
+            onClick={handleClickOnLink}
+          >
+            {' '}
+            a.i.{' '}
+          </Link>
+          <Link
+            className='navbar__item'
+            to='projects'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            projects{" "}
+            {' '}
+            projects{' '}
           </Link>
 
           {/* <Link
@@ -257,40 +281,40 @@ const Navbar = () => {
           </Link> */}
 
           <Link
-            className="navbar__item"
-            to="api"
+            className='navbar__item'
+            to='api'
             spy={true}
             smooth={true}
             offset={-150}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            api{" "}
+            {' '}
+            api{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="code"
+            className='navbar__item'
+            to='code'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            my code{" "}
+            {' '}
+            my code{' '}
           </Link>
           <Link
-            className="navbar__item"
-            to="contact"
+            className='navbar__item'
+            to='contact'
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
             onClick={handleClickOnLink}
           >
-            {" "}
-            contact{" "}
+            {' '}
+            contact{' '}
           </Link>
         </nav>
       </div>
