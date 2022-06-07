@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/WhyMe.css';
 
 const WhyMe = () => {
+  const [heartShown, setHeartShown] = useState(false);
+
   return (
     <section className='section whyme' id='whyme'>
       <div className='container'>
@@ -10,17 +12,51 @@ const WhyMe = () => {
           The opportunity to have a fully<br></br>qualified professional in your
           team
         </p>
-        <div className='circle'>
+
+        <div
+          className='circle'
+          style={{ display: heartShown ? 'none' : 'flex' }}
+        >
           <h4 className='circle__title'>Whole package</h4>
           <p className='circle__text'>
             Maturity, organization, strategic view, and much more from 23 years
             of experience.
           </p>
         </div>
-        <div className='circle-small'>
-          <h4 className='circle-small__title'>Why changing carrers now?</h4>
+
+        <div
+          className='circle-clicked'
+          style={{ display: heartShown ? 'flex' : 'none' }}
+        >
+          <h4 className='circle-clicked__title'>PASSION</h4>
+          <p className='circle-clicked__text'>
+            For more than two decades, I worked in marketing, progressed to
+            important positions. And now, I turn my attention to a career that
+            I'm passionate about since I was a teenager. A career that I will
+            work for fun!<br></br>
+            <br></br>"When you have confidence, you can have a lot of fun. And
+            when you have fun, you can do amazing things."<br></br>
+            -Joe Namath.
+          </p>
+        </div>
+
+        <div
+          className='circle-small'
+          onClick={() => setHeartShown(!heartShown)}
+        >
+          <h4 className='circle-small__title'>Why changing carrers?</h4>
           <p className='circle-small__text'>Click here</p>
         </div>
+
+        <div className='one-a__wrapper'>
+          <div className='one-a__title'>Changing carreers</div>
+          <span className='one-a__title-curly' style={{ marginLeft: '0.3em' }}>
+            {String.fromCharCode(123)}
+          </span>
+          <div className='one-a__title--bright'>front-end developer</div>
+          <span className='one-a__title-curly'>{String.fromCharCode(125)}</span>
+        </div>
+        <div className='one-b__wrapper'></div>
       </div>
     </section>
   );
