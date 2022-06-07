@@ -5,7 +5,10 @@
 .whyme .container {
   margin-top: 5em;
   margin-bottom: 6em;
-  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.section-title {
+  margin-top: 5em;
 }
 
 .whyme-subtitle {
@@ -67,6 +70,34 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  -webkit-animation: circle-appear 0.5s ease-in-out forwards;
+          animation: circle-appear 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes circle-appear {
+  0% {
+    -webkit-transform: translateY(100px) scale(0.2);
+            transform: translateY(100px) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes circle-appear {
+  0% {
+    -webkit-transform: translateY(100px) scale(0.2);
+            transform: translateY(100px) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 .circle-clicked {
@@ -179,7 +210,7 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  height: 98%;
+  height: 85%;
   width: 3px;
   background-color: var(--third-color);
 }

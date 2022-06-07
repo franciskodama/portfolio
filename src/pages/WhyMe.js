@@ -33,7 +33,8 @@ const WhyMe = () => {
             For more than two decades, <br></br> I worked in marketing,
             progressed to important positions. And now, <br></br>I turn my
             attention to a career that I'm passionate about since <br></br>I was
-            a teenager. A career that <br></br>I will work for fun!<br></br>
+            a teenager. A career that <br></br>I've been working for fun!
+            <br></br>
             <br></br>"When you have confidence, you can have a lot of fun. And
             when you have fun, you can do amazing things."<br></br>
             -Joe Namath.

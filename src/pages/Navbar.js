@@ -112,7 +112,7 @@ const Navbar = () => {
             onClick={handleClickOnLink}
           >
             {' '}
-            why me?{' '}
+            why me{' '}
           </Link>
           <Link
             className='navbar__item'
@@ -227,7 +227,7 @@ const Navbar = () => {
             onClick={handleClickOnLink}
           >
             {' '}
-            why me?{' '}
+            why me{' '}
           </Link>
           <Link
             className='navbar__item'
