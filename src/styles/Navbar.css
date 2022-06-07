@@ -80,7 +80,7 @@
       -ms-flex-align: left;
           align-items: left;
   width: 75%;
-  padding: 2.5em 2em 0 3em;
+  padding: 2.5em 2em 1em 3em;
   background-color: var(--third-color);
 }
 
@@ -97,7 +97,7 @@
           box-shadow: 0 0 1px rgba(255, 0, 0, 0);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   margin-right: 1em;
   font-family: var(--main-font-thin);
   font-size: 1.3rem;
@@ -136,8 +136,8 @@
     top: 0;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 4.6rem 3.3rem 6.6rem 3.3rem 5.8rem 3.6rem 6rem 4.3rem;
-        grid-template-columns: 4.6rem 3.3rem 6.6rem 3.3rem 5.8rem 3.6rem 6rem 4.3rem;
+    -ms-grid-columns: 4.6rem 3.3rem 6.6rem 5.8rem 3.1rem 5.8rem 3.6rem 6rem 4.3rem;
+        grid-template-columns: 4.6rem 3.3rem 6.6rem 5.8rem 3.1rem 5.8rem 3.6rem 6rem 4.3rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

@@ -9,14 +9,14 @@ import Hero from './pages/Hero';
 import Palette from './components/Palette';
 import Reason from './pages/Reason';
 import About from './pages/About';
-import Contact from './pages/Contact';
-import Footer from './pages/Footer';
+import WhyMe from './pages/WhyMe';
+import Ai from './pages/Ai';
 import Projects from './pages/Projects';
 import AboveApi from './pages/AboveApi';
 import Api from './pages/Api';
 import CleanCode from './pages/CleanCode';
-import Ai from './pages/Ai';
-import WhyMe from './pages/WhyMe';
+import Contact from './pages/Contact';
+import Footer from './pages/Footer';
 
 const App = () => {
   const [location, setLocation] = useState({ data: '' });
@@ -76,11 +76,9 @@ const App = () => {
           isActive={isActive}
         />
         <Reason />
-
         <AboutContext.Provider value={{ location, setLocation }}>
           <About />
           <WhyMe />
-
           <Ai color={color} />
           <Projects />
           <AboveApi />
@@ -88,7 +86,6 @@ const App = () => {
           <CleanCode />
           <Contact />
         </AboutContext.Provider>
-
         <Footer />
       </ParallaxProvider>
     </div>

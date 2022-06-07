@@ -3,9 +3,24 @@ import '../styles/WhyMe.css';
 
 const WhyMe = () => {
   return (
-    <section className='section section--whyme' id='whyme'>
+    <section className='section whyme' id='whyme'>
       <div className='container'>
-        <div className='why__line'></div>
+        <h1 className='section-title'>Why Me?</h1>
+        <p className='whyme-subtitle'>
+          The opportunity to have a fully<br></br>qualified professional in your
+          team
+        </p>
+        <div className='circle'>
+          <h4 className='circle__title'>Whole package</h4>
+          <p className='circle__text'>
+            Maturity, organization, strategic view, and much more from 23 years
+            of experience.
+          </p>
+        </div>
+        <div className='circle-small'>
+          <h4 className='circle-small__title'>Why changing carrers now?</h4>
+          <p className='circle-small__text'>Click here</p>
+        </div>
       </div>
     </section>
   );
@@ -17,62 +32,62 @@ export default WhyMe;
 
 //   return (
 //     <section
-//       className='section section--whyme'
-//       id='whyme'
+//       className="section section--whyme"
+//       id="whyme"
 //       style={{ transform: `translateY(${offsetY * 0.5}px)` }}
 //     >
-//       <div className='container'>
+//       <div className="container">
 //         ------------------ LINE SCROLL ------------------
 
-//         <div className='why__line'>
+//         <div className="why__line">
 //           <svg
-//             viewBox='0 0 978 2090'
-//             fill='none'
-//             preserveAspectRatio='xMidYMax meet'
+//             viewBox="0 0 978 2090"
+//             fill="none"
+//             preserveAspectRatio="xMidYMax meet"
 //           >
 //             <path
-//               d='M559 0V446H727V562H861H975V676H53V778H355V720H959V1044H209V934H701V844H3V1276H559V1470H875V1630H559V1750H261V1886H559V2090'
-//               stroke='#FF0000'
-//               stroke-width='5'
+//               d="M559 0V446H727V562H861H975V676H53V778H355V720H959V1044H209V934H701V844H3V1276H559V1470H875V1630H559V1750H261V1886H559V2090"
+//               stroke="#FF0000"
+//               stroke-width="5"
 //             />
 //           </svg>
 //         </div>
 
-//         <section className='one'>
-//           <h1 className='scroll' data-rate='.4' data-direction='vertical'>
+//         <section className="one">
+//           <h1 className="scroll" data-rate=".4" data-direction="vertical">
 //             ocean stuff
 //           </h1>
 //         </section>
 
-//         <section className='two'>
-//           <h1 className='scroll' data-rate='.2' data-direction='vertical'>
+//         <section className="two">
+//           <h1 className="scroll" data-rate=".2" data-direction="vertical">
 //             omg scroll
 //           </h1>
 //         </section>
 
 //         ------------------ PARALLAX ------------------
-//         <div className='whyme__background'>
+//         <div className="whyme__background">
 //           <div
-//             className='whyme__elements'
+//             className="whyme__elements"
 //             style={{ transform: `translateY(${offsetY * 0.7}px)` }}
 //           ></div>
 //           <div
-//             className='whyme__content'
+//             className="whyme__content"
 //             style={{ transform: `translateY(${offsetY * 0.4}px)` }}
 //           ></div>
 
 //           <ul
-//             className='whyme__title'
+//             className="whyme__title"
 //             ref={whyMeRef}
 //             onClick={() => setFirstClick(true)}
 //             style={{ transform: `translateY(${offsetY * 0.9}px)` }}
 //           >
-//             <li className='whyme__letter'>W</li>
-//             <li className='whyme__letter'>H</li>
-//             <li className='whyme__letter'>Y</li>
-//             <li className='whyme__letter'>M</li>
-//             <li className='whyme__letter'>E</li>
-//             <li className='whyme__letter'>?</li>
+//             <li className="whyme__letter">W</li>
+//             <li className="whyme__letter">H</li>
+//             <li className="whyme__letter">Y</li>
+//             <li className="whyme__letter">M</li>
+//             <li className="whyme__letter">E</li>
+//             <li className="whyme__letter">?</li>
 //           </ul>
 
 //           <h3 className="whyme__words valuable">valuable for</h3>
@@ -136,12 +151,12 @@ export default WhyMe;
 
 // ------------------ END PARALLAX ------------------
 
-// let path = document.querySelector('path');
+// let path = document.querySelector("path");
 // let pathLength = path.getTotalLength();
 
-// path.style.strokeDasharray = pathLength + ' ' + pathLength;
+// path.style.strokeDasharray = pathLength + " " + pathLength;
 // path.style.strokeDasharray = pathLength;
-// window.addEventListener('scroll', () => {
+// window.addEventListener("scroll", () => {
 //   var scrollPercentage =
 //     (document.documentElement.scrollTop + document.body.scrollTop) /
 //     (document.documentElement.scrollHeight -

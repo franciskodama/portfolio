@@ -139,19 +139,6 @@ const Navbar = () => {
             projects{' '}
           </Link>
 
-          {/* <Link
-            className="navbar__item"
-            to="whyme"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-            onClick={handleClickOnLink}
-          >
-            {" "}
-            why{" "}
-          </Link> */}
-
           <Link
             className='navbar__item'
             to='api'
@@ -266,19 +253,6 @@ const Navbar = () => {
             {' '}
             projects{' '}
           </Link>
-
-          {/* <Link
-            className="navbar__item"
-            to="whyme"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-            onClick={handleClickOnLink}
-          >
-            {" "}
-            why{" "}
-          </Link> */}
 
           <Link
             className='navbar__item'
