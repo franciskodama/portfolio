@@ -11,7 +11,7 @@ const WhyMe = () => {
         <h1 className='section-title'>Why Me?</h1>
         <p className='whyme-subtitle'>
           The opportunity to have a fully<br></br>qualified professional in your
-          team
+          team.
         </p>
 
         <div
@@ -55,10 +55,9 @@ const WhyMe = () => {
 
         <section className='cv'>
           <Parallax
-            className='cv__parallax'
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
-            scale={[1.5, 1]}
+            scale={[2, 0.8]}
           >
             <div className='cv__item'>
               <div className='cv__first-container'>
@@ -100,130 +99,132 @@ const WhyMe = () => {
             </div>
           </Parallax>
           {/* -------------- */}
-          {/* <Parallax
+          <Parallax
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
-            scale={[1.5, 1]}
-          > */}
-          <div className='cv__item'>
-            <div className='cv__a-wrapper'>
-              <h3 className='cv__title'>Product strategy director</h3>
-              <div className='cv__square'></div>
-              <p className='cv__cia-date'>
-                Circus | <span className='cv__hightlight'>2016 ~ 2020</span>
-              </p>
-              <ul className='cv__tech'>
-                <li>Design thinking</li>
-                <li>Agile methodology</li>
-                <li>Product Strategy</li>
-              </ul>
-            </div>
+            scale={[2, 0.8]}
+          >
+            <div className='cv__item'>
+              <div className='cv__a-wrapper'>
+                <h3 className='cv__title'>Product strategy director</h3>
+                <div className='cv__square'></div>
+                <p className='cv__cia-date'>
+                  Circus | <span className='cv__hightlight'>2016 ~ 2020</span>
+                </p>
+                <ul className='cv__tech'>
+                  <li>Design thinking</li>
+                  <li>Agile methodology</li>
+                  <li>Product Strategy</li>
+                </ul>
+              </div>
 
-            <div className='cv__b-wrapper'>
-              <h6 className='cv__benefit-title'>Why is it good for you?</h6>
-              <h5 className='cv__benefit'>
-                I will consider what are the most valuable features for each
-                persona, respecting the product's life cycle.
-              </h5>
+              <div className='cv__b-wrapper'>
+                <h6 className='cv__benefit-title'>Why is it good for you?</h6>
+                <h5 className='cv__benefit'>
+                  I will consider what are the most valuable features for each
+                  persona, respecting the product's life cycle.
+                </h5>
+              </div>
             </div>
-          </div>
-          {/* </Parallax> */}
+          </Parallax>
           {/* -------------- */}
-          {/* <Parallax
+          <Parallax
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
-            scale={[1.5, 1]}
-          > */}
-          <div className='cv__item'>
-            <div className='cv__a-wrapper'>
-              <h3 className='cv__title'>Planning and new business director</h3>
-              <div className='cv__square'></div>
-              <p className='cv__cia-date'>
-                Circus | <span className='cv__hightlight'>2011 ~ 2015</span>
-              </p>
-              <ul className='cv__tech'>
-                <li>Presentations</li>
-                <li>Leadership</li>
-                <li>Sales</li>
-              </ul>
-            </div>
+            scale={[2, 0.8]}
+          >
+            <div className='cv__item'>
+              <div className='cv__a-wrapper'>
+                <h3 className='cv__title'>
+                  Planning and new business director
+                </h3>
+                <div className='cv__square'></div>
+                <p className='cv__cia-date'>
+                  Circus | <span className='cv__hightlight'>2011 ~ 2015</span>
+                </p>
+                <ul className='cv__tech'>
+                  <li>Presentations</li>
+                  <li>Leadership</li>
+                  <li>Sales</li>
+                </ul>
+              </div>
 
-            <div className='cv__b-wrapper'>
-              <h6 className='cv__benefit-title'>Why is it good for you?</h6>
-              <h5 className='cv__benefit'>
-                Through listening, <br></br>strategy, and effective
-                communication, I will present my ideas, negotiating and
-                optimizing results on multiple fronts.
-              </h5>
+              <div className='cv__b-wrapper'>
+                <h6 className='cv__benefit-title'>Why is it good for you?</h6>
+                <h5 className='cv__benefit'>
+                  Through listening, <br></br>strategy, and effective
+                  communication, I will present my ideas, negotiating and
+                  optimizing results on multiple fronts.
+                </h5>
+              </div>
             </div>
-          </div>
-          {/* </Parallax> */}
+          </Parallax>
           {/* -------------- */}
-          {/* <Parallax
+          <Parallax
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
-            scale={[1.5, 1]}
-          > */}
-          <div className='cv__item'>
-            <div className='cv__a-wrapper'>
-              <h3 className='cv__title'>Client Services Director</h3>
-              <div className='cv__square'></div>
-              <p className='cv__cia-date'>
-                WE | <span className='cv__hightlight'>2008 ~ 2010</span>
-              </p>
-              <p className='cv__cia-date'>
-                Rapp Collins |{' '}
-                <span className='cv__hightlight'>2007 ~ 2008</span>
-              </p>
-              <ul className='cv__tech'>
-                <li>Leadership</li>
-                <li>Business & Financial</li>
-                <li>Problem Solving</li>
-              </ul>
-            </div>
+            scale={[2, 0.8]}
+          >
+            <div className='cv__item'>
+              <div className='cv__a-wrapper'>
+                <h3 className='cv__title'>Client Services Director</h3>
+                <div className='cv__square'></div>
+                <p className='cv__cia-date'>
+                  WE | <span className='cv__hightlight'>2008 ~ 2010</span>
+                </p>
+                <p className='cv__cia-date'>
+                  Rapp Collins |{' '}
+                  <span className='cv__hightlight'>2007 ~ 2008</span>
+                </p>
+                <ul className='cv__tech'>
+                  <li>Leadership</li>
+                  <li>Business & Financial</li>
+                  <li>Problem Solving</li>
+                </ul>
+              </div>
 
-            <div className='cv__b-wrapper'>
-              <h6 className='cv__benefit-title'>Why is it good for you?</h6>
-              <h5 className='cv__benefit'>
-                I will listen closely to customers to understand and discover
-                their real needs.
-              </h5>
+              <div className='cv__b-wrapper'>
+                <h6 className='cv__benefit-title'>Why is it good for you?</h6>
+                <h5 className='cv__benefit'>
+                  I will listen closely to customers to understand and discover
+                  their real needs.
+                </h5>
+              </div>
             </div>
-          </div>
-          {/* </Parallax> */}
+          </Parallax>
           {/* -------------- */}
-          {/* <Parallax
+          <Parallax
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
-            scale={[1.5, 1]}
-          > */}
-          <div className='cv__item'>
-            <div className='cv__a-wrapper'>
-              <h3 className='cv__title'>
-                Advertising <br></br>and digital marketing manager
-              </h3>
-              <div className='cv__square'></div>
-              <p className='cv__cia-date'>
-                Peugeot-Citroën Automobile |{' '}
-                <span className='cv__hightlight'>2000 ~ 2007</span>
-              </p>
-              <ul className='cv__tech'>
-                <li>Critical Thinking</li>
-                <li>Strategy & Criativity</li>
-                <li>Keen eye for design</li>
-              </ul>
-            </div>
+            scale={[2, 0.8]}
+          >
+            <div className='cv__item'>
+              <div className='cv__a-wrapper'>
+                <h3 className='cv__title'>
+                  Advertising <br></br>and digital marketing manager
+                </h3>
+                <div className='cv__square'></div>
+                <p className='cv__cia-date'>
+                  Peugeot-Citroën Automobile |{' '}
+                  <span className='cv__hightlight'>2000 ~ 2007</span>
+                </p>
+                <ul className='cv__tech'>
+                  <li>Critical Thinking</li>
+                  <li>Strategy & Criativity</li>
+                  <li>Keen eye for design</li>
+                </ul>
+              </div>
 
-            <div className='cv__b-wrapper'>
-              <h6 className='cv__benefit-title'>Why is it good for you?</h6>
-              <h5 className='cv__benefit'>
-                I will use my experience in campaign evaluation, critical
-                thinking, and a keen eye for design to provide my opinion so the
-                team can develop the best digital product.
-              </h5>
+              <div className='cv__b-wrapper'>
+                <h6 className='cv__benefit-title'>Why is it good for you?</h6>
+                <h5 className='cv__benefit'>
+                  I will use my experience in campaign evaluation, critical
+                  thinking, and a keen eye for design to provide my opinion so
+                  the team can develop the best digital product.
+                </h5>
+              </div>
             </div>
-          </div>
-          {/* </Parallax> */}
+          </Parallax>
           {/* -------------- */}
         </section>
       </div>

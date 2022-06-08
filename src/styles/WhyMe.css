@@ -5,6 +5,7 @@
 .whyme .container {
   margin-top: 5em;
   margin-bottom: 6em;
+  max-width: 80%;
 }
 
 .section-title {
@@ -15,10 +16,6 @@
   margin: 0.8em 0 5em 0;
   text-align: center;
   margin-bottom: 5em;
-}
-
-.cv__parallax {
-  display: none;
 }
 
 /* ====================================
@@ -68,14 +65,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 50%;
-  width: 22em;
-  height: 22em;
+  width: 19em;
+  height: 19em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  -webkit-animation: circle-appear 0.5s ease-in-out forwards;
-          animation: circle-appear 0.5s ease-in-out forwards;
+  -webkit-animation: circle-appear 1s ease-in-out forwards;
+          animation: circle-appear 1s ease-in-out forwards;
 }
 
 @-webkit-keyframes circle-appear {
@@ -129,6 +126,10 @@
   line-height: 1.1rem;
 }
 
+.circle-clicked__quote, .circle-clicked__quote--bright {
+  display: none;
+}
+
 .circle-clicked__quote {
   font-family: var(--main-font-light);
   font-style: italic;
@@ -142,7 +143,7 @@
 
 .circle {
   background-color: var(--third-color);
-  padding: 3.3em 3.5em 4em 3.5em;
+  padding: 2em;
 }
 
 .circle__title, .circle__text {
@@ -231,13 +232,13 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  height: 86%;
+  height: 85%;
   width: 3px;
   background-color: var(--third-color);
 }
 
 .cv__item:first-child {
-  margin-top: 10em;
+  margin-top: 3em;
 }
 
 .cv__item {
@@ -336,7 +337,6 @@
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: right;
-  margin-top: 8em;
   margin-right: 0;
 }
 
@@ -413,6 +413,25 @@
             MEDIA QUERY
 ======================================= */
 @media only screen and (min-width: 62em) {
+  .whyme .container {
+    max-width: 100%;
+  }
+  .circle,
+  .circle-clicked {
+    width: 22em;
+    height: 22em;
+  }
+  .circle__quote, .circle__quote--bright,
+  .circle-clicked__quote,
+  .circle-clicked__quote--bright {
+    display: block;
+  }
+  .circle {
+    padding: 3.3em 3.5em 4em 3.5em;
+  }
+  .circle-clicked {
+    padding: 1.8em 2.5em;
+  }
   .cv::after {
     display: block;
   }

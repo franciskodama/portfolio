@@ -4,6 +4,7 @@
   & .container {
     margin-top: 5em;
     margin-bottom: 6em;
+    max-width: 80%;
   }
 }
 
@@ -15,10 +16,6 @@ margin-top: 5em;
   margin: 0.8em 0 5em 0;
   text-align: center;
   margin-bottom: 5em;
-}
-
-.cv__parallax {
-  display: none;
 }
 
 /* ====================================
@@ -66,11 +63,11 @@ margin-top: 5em;
   display: flex;
   flex-direction: column;
   border-radius: 50%;
-  width: 22em;
-  height: 22em;
+  width: 19em;
+  height: 19em;
   align-items: center;
   margin: 0 auto;
-  animation: circle-appear 0.5s ease-in-out forwards;
+  animation: circle-appear 1s ease-in-out forwards;
 }
 
 @keyframes circle-appear {
@@ -108,6 +105,11 @@ margin-top: 5em;
     font-size: 0.9rem;
     line-height: 1.1rem;
   }
+  
+  &__quote,
+  &__quote--bright {
+      display: none;
+  }
 
   &__quote {
     font-family: var(--main-font-light);
@@ -123,7 +125,7 @@ margin-top: 5em;
 
 .circle {
   background-color: var(--third-color);
-  padding: 3.3em 3.5em 4em 3.5em;
+  padding: 2em;
 
   &__title,
   &__text {
@@ -199,7 +201,7 @@ margin-top: 5em;
     top: 0%;
     left: 50%;
     transform: translateX(-50%);
-    height: 86%;
+    height: 85%;
     width: 3px;
     background-color: var(--third-color);
   }
@@ -207,7 +209,7 @@ margin-top: 5em;
   // ----------- ITEM -----------
 
   &__item:first-child {
-    margin-top: 10em;
+    margin-top: 3em;
   }
 
   &__item {
@@ -286,7 +288,6 @@ margin-top: 5em;
     flex-direction: column;
     align-items:flex-end;
     text-align: right;
-    margin-top: 8em;
     margin-right: 0;
   }
 
@@ -365,6 +366,31 @@ margin-top: 5em;
 }
 
 @media only screen and (min-width: 62em) {
+  .whyme {
+    & .container {
+      max-width: 100%;
+    }
+  }
+
+  .circle,
+  .circle-clicked {
+    width: 22em;
+    height: 22em;
+
+    &__quote,
+    &__quote--bright {
+        display: block;
+    }
+  }
+
+  .circle {
+  padding: 3.3em 3.5em 4em 3.5em;
+  }
+
+  .circle-clicked {
+    padding: 1.8em 2.5em;
+  }
+
   .cv {
     &::after {
       display: block;
