@@ -17,6 +17,10 @@
   margin-bottom: 5em;
 }
 
+.cv__parallax {
+  display: none;
+}
+
 /* ====================================
           GENERAL TYPOGRAPHY
 ======================================= */
@@ -64,8 +68,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-radius: 50%;
-  width: 18em;
-  height: 18em;
+  width: 22em;
+  height: 22em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -103,33 +107,46 @@
 .circle-clicked {
   background-color: var(--dark-color);
   border: 2px solid var(--third-color);
-  padding: 1.8em 2.2em;
+  padding: 1.8em 3em;
 }
 
 .circle-clicked__title, .circle-clicked__text {
-  font-size: 1.2rem;
   text-align: center;
 }
 
 .circle-clicked__title {
-  color: var(--bright-color);
+  font-size: 1.3rem;
   margin-bottom: 0.3em;
+  color: var(--dark-color);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--bright-color);
 }
 
 .circle-clicked__text {
   font-family: var(--main-font-regular);
   color: var(--third-color);
-  font-size: 0.8rem;
-  line-height: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+}
+
+.circle-clicked__quote {
+  font-family: var(--main-font-light);
+  font-style: italic;
+  color: var(--bright-color);
+}
+
+.circle-clicked__quote--bright {
+  color: var(--bright-color);
+  margin-top: 0.5em;
 }
 
 .circle {
   background-color: var(--third-color);
-  padding: 2em;
+  padding: 3.3em 3.5em 4em 3.5em;
 }
 
 .circle__title, .circle__text {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -142,7 +159,7 @@
 
 .circle__text {
   font-family: var(--main-font-semibold);
-  line-height: 1.5rem;
+  line-height: 1.7rem;
 }
 
 .circle-small {
@@ -335,12 +352,13 @@
 .cv__cia-date {
   font-size: 0.8rem;
   font-family: var(--main-font-light);
+  width: 25ch;
 }
 
 .cv__hightlight {
   color: var(--third-color);
   font-family: var(--main-font-regular);
-  text-align: right;
+  text-align: center;
 }
 
 .cv__tech {
@@ -369,6 +387,13 @@
   text-align: left;
   margin-top: 1em;
   margin-left: 0;
+}
+
+.cv__b-wrapper--mobile {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .cv__benefit-title {
@@ -421,6 +446,12 @@
     width: 8ch;
     padding: 0;
   }
+  .cv__cia-date {
+    width: auto;
+  }
+  .cv__hightlight {
+    text-align: right;
+  }
   .cv__tech--mobile {
     text-align: right;
   }
@@ -432,8 +463,13 @@
     margin: 2em 0;
     margin-left: 2.5em;
   }
+  .cv__b-wrapper--mobile {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+  }
   .cv__benefit {
-    font-family: var(--main-font-heavy);
     width: 25ch;
   }
 }
