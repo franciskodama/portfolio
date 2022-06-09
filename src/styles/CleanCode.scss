@@ -8,16 +8,21 @@
     var(--dark-color) 0%,
     rgba(41, 41, 41, 1) 100%);
 
-  & .container {
+  .container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     width: 100%;
     height: 50em;
     margin-top: 10em;
     margin-bottom: 10em;
+  }
+
+  &__subtitle {
+    margin: 0.8em 0 1em 0;
+    text-align: center;
   }
 
   /* ------- BACKGROUND ------- */
@@ -43,10 +48,10 @@
 
   /* ------- SEE MY CODE ICON ------- */
 
-  &__icon-wrapper {
+  &__button {
     display: none;
     position: absolute;
-    top: 33%;
+    top: 27%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -56,10 +61,14 @@
     cursor: pointer;
   }
 
-  /* ------- WORDS ------- */
+  }
 
-  &__quote,
-  &__words {
+  /* ------------------------------- */
+  /*          QUOTE & WORDS          */
+  /* ------------------------------- */
+
+  // .quote,
+  .words {
     font-family: var(--main-font-heavy);
     text-transform: uppercase;
     text-align: center;
@@ -70,140 +79,209 @@
     line-height: 1.5rem;
   }
 
-  &__quote {
+  /* ------------------------------- */
+  /*             QUOTE               */
+  /* ------------------------------- */
+
+  .quote {
     display: flex;
+    flex-direction: column;
+
+    &__text {
+      font-family: var(--main-font-semibold);
+      font-size: 3rem;
+      line-height: 3.3rem;
+      width: 15ch;
+      margin-bottom: 0.5em;
+      text-align: left;
+    }
+
+    &__author-name {
+      font-family: var(--main-font-regular);
+      font-size: 2rem;
+      line-height: 2.3rem;
+      margin-bottom: 0.1em;
+      text-align: right;
+    }
+
+    &__author {
+      font-family: var(--main-font-light);
+      font-size: 1rem;
+      margin-bottom: 20em;
+      text-align: right;
+    }
   }
 
-  /* ------- QUOTE TRANSFORM ------- */
+  // .quote {
+  //   display: flex;
 
-  &__odd--inverse {
-    transform: skew(-60deg, 30deg) scaleY(0.66667);
-    color: var(--bright-color);
-  }
+  //   &__bright {
+  //     transform: skew(-60deg, 30deg) scaleY(0.66667);
+  //     color: var(--bright-color);
+  //   }
 
-  &__even--inverse {
-    transform: skew(0deg, 30deg) scaleY(1.33333);
-    color: var(--third-color);
-  }
-
-  /* ------- WORDS TRANSFORM ------- */
-
-  &__odd {
-    transform: skew(60deg, -30deg) scaleY(0.66667);
-    color: var(--bright-color);
-  }
-
-  &__even {
-    transform: skew(0deg, -30deg) scaleY(1.33333);
-    color: var(--third-color);
-  }
-}
-
-  /* ------- WORDS INDIVIDUALS ------- */
-
-  .dry {
-    font-size: 5rem;
-    line-height: 5rem;
-  }
+  //   &__dark {
+  //     transform: skew(0deg, 30deg) scaleY(1.33333);
+  //     color: var(--third-color);
+  //   }
   
-  .meticulousness {
-    font-size: 1rem;
-    line-height: 1.6rem;
-  }
+  //   &--stroke {
+  //     font-size: 1rem;
+  //     line-height: 1.4em;
+  //     color: var(--dark-color);
+  //     -webkit-text-stroke: 1px var(--bright-color);
+  //   }
+
+  //   &--clean {
+  //     font-size: 4rem;
+  //     line-height: 4.5rem;
+  //   }
+
+  //   &--always {
+  //     font-size: 3rem;
+  //     line-height: 3.3rem;
+  //     padding-right: 5.8em;
+  //   }
+    
+  //   &--looks {
+  //     font-size: 2rem;
+  //     line-height: 2.6rem;
+  //     padding-right: 9.3em;
+  //   }
+    
+  //   &--it-was {
+  //     font-size: 2.5rem;
+  //     line-height: 3rem;
+  //     padding-right: 3.4em;
+  //   }
+    
+  //   &--someone {
+  //     font-size: 2.5rem;
+  //     line-height: 3rem;
+  //   }
+    
+  //   &--who {
+  //     font-size: 4rem;
+  //     line-height: 4.4rem;
+  //     padding-right: 0.5em;
+
+  //   }
+    
+  //   &--cares {
+  //     font-size: 2.2rem;
+  //     line-height: 2.8rem;
+  //     padding-right: 3.4em;
+  //   }
+  // }
+
+
+  /* ------------------------------- */
+  /*             WORDS               */
+  /* ------------------------------- */
+
+  .words {
+    &__bright {
+      transform: skew(60deg, -30deg) scaleY(0.66667);
+      color: var(--bright-color);
+    }
   
-  .easy-read {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    text-align: left;
-    padding-left: 2em;
+    &__dark {
+      transform: skew(0deg, -30deg) scaleY(1.33333);
+      color: var(--third-color);
+    }
+
+    /* ------- WORDS INDIVIDUALS ------- */
+
+    &--dry {
+      font-size: 5rem;
+      line-height: 4.3rem;
+    }
+    
+    &--meticulousness {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+    
+    &--easy-read {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      text-align: left;
+      padding-left: 2em;
+    }
+
+    &--easy-change {
+      font-size: 2.5rem;
+      line-height: 2.8rem;
+      text-align: left;
+      padding-left: 2.4em;
+    }
+
+    &--naming {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      text-align: left;
+      padding-left: 3.5em;
+    }
+
+    &--conventions {
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      text-align: left;
+      padding-left: 7.9em;
+    }
+
+    &--repeat {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      text-align: left;
+      padding-left: 5em;
+    }
+
+    &--self {
+      font-size: 2.6rem;
+      line-height: 3rem;
+      text-align: left;
+      padding-left: 3.9em;
+    }
+
+    &--keep {
+      font-size: 2.8rem;
+      line-height: 3.5rem;
+      padding-right: 0.5em;
+    }
+
+    &--simple {
+      font-size: 2.8rem;
+      line-height: 3.5rem;
+      padding-left: 1.4em;
+    }
+
+    &--concise {
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+    }
+
+    &--consistency {
+      font-size: 2.3rem;
+      line-height: 3rem;
+      text-align: left;
+      padding-left: 4.5em;
+    }
+
+    &--uncomplicate {
+      font-size: 3rem;
+      line-height: 3.8rem;   
+      text-align: right;
+      padding-left: 4em;
+    }
+
+    &--bem {
+      font-size: 5rem;
+      line-height: 5.5rem;
+      text-align: left;
+      padding-left: 3em;
+    }
   }
-
-  .easy-change {
-    font-size: 2.5rem;
-    line-height: 2.8rem;
-    text-align: left;
-    padding-left: 2.4em;
-  }
-
-  .naming {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    text-align: left;
-    padding-left: 3.5em;
-  }
-
-  .conventions {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-    text-align: left;
-    padding-left: 7.9em;
-  }
-
-  .repeat {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    text-align: left;
-    padding-left: 5em;
-  }
-
-  .self {
-    font-size: 2.6rem;
-    line-height: 3rem;
-    text-align: left;
-    padding-left: 3.9em;
-  }
-
-  .keep {
-    font-size: 2.8rem;
-    line-height: 3.5rem;
-    padding-right: 0.5em;
-  }
-
-  .simple {
-    font-size: 2.8rem;
-    line-height: 3.5rem;
-    padding-left: 1.4em;
-  }
-
-  .concise {
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-  }
-
-  .consistency {
-    font-size: 2.3rem;
-    line-height: 3rem;
-    text-align: left;
-    padding-left: 4.5em;
-  }
-
-  .uncomplicate {
-    font-size: 3rem;
-    line-height: 3.5rem;   
-    text-align: right;
-    padding-left: 4em;
-  }
-
-  .bem {
-    font-size: 5rem;
-    line-height: 5.3rem;
-    text-align: left;
-    padding-left: 3em;
-  }
-
-/* ------- MODIFIERS ------- */
-
-.code--stroke {
-  font-size: 1rem;
-  line-height: 1.4em;
-  color: var(--dark-color);
-  -webkit-text-stroke: 0.5px var(--bright-color);
-}
-
-.code--bright {
-  color: var(--bright-color);
-  padding: 0.3em;
-}
 
 /* ====================================
             MEDIA QUERY
@@ -214,17 +292,19 @@
 
 @media only screen and (min-width: 48em) {
   .code {
-    & .container {
+    .container {
       height: 70em;
     }
-  
-    &__quote,
-    &__words {
-      font-size: 2em;
-      line-height: 2.5rem;
-    }
-  
-    .code--stroke {
+  }
+    
+  .quote,
+  .words {
+    font-size: 2em;
+    line-height: 2.5rem;
+  }
+
+  .quote {
+    &--stroke {
       font-size: 1.8rem;
       line-height: 1.4em;
     }
@@ -236,59 +316,12 @@
 
 @media only screen and (min-width: 75em) {
   .code {
-    & .container {
+    .container {
       height: 93em;
     }
-  
-    // &__quote,
-    // &__words {
-    //   font-size: 3em;
-    //   line-height: 3.5rem;
-    // }
 
-    &__icon-wrapper {
+    &__button {
       display: block;
     }
   }
 }
-
-
-  /* ------- BUBBLES ------- */
-
-  // &__bubble {
-  //   display: none;
-  // }
-
-  // & span {
-  //   position: absolute;
-  //   bottom: -34em;
-  //   border-radius: 50%;
-  //   background: transparent;
-  //   pointer-events: none;
-  //   box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.4);
-  //   animation: bubbles 25s ease-out infinite;
-  // }
-
-  // & span::before {
-  //   content: "";
-  //   position: absolute;
-  //   border-radius: 50%;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: radial-gradient(rgba(255, 255, 255, 0.2), transparent);
-  //   transform: scale(0.25) translate(-70%, -70%);
-  // }
-
-  // @keyframes bubbles {
-  //   0% {
-  //     transform: translateY(0%);
-  //     opacity: 1;
-  //   }
-  //   99% {
-  //     opacity: 1;
-  //   }
-  //   100% {
-  //     transform: translateY(-3000%);
-  //     opacity: 0;
-  //   }
-  // }

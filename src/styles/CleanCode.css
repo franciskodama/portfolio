@@ -12,9 +12,6 @@
   background: linear-gradient(180deg, var(--dark-color) 0%, #292929 100%);
   /* ------- BACKGROUND ------- */
   /* ------- SEE MY CODE ICON ------- */
-  /* ------- WORDS ------- */
-  /* ------- QUOTE TRANSFORM ------- */
-  /* ------- WORDS TRANSFORM ------- */
 }
 
 .code .container {
@@ -29,13 +26,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
   height: 50em;
   margin-top: 10em;
   margin-bottom: 10em;
+}
+
+.code__subtitle {
+  margin: 0.8em 0 1em 0;
+  text-align: center;
 }
 
 .code__background {
@@ -72,10 +71,10 @@
   }
 }
 
-.code__icon-wrapper {
+.code__button {
   display: none;
   position: absolute;
-  top: 33%;
+  top: 27%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -86,7 +85,10 @@
   cursor: pointer;
 }
 
-.code__quote, .code__words {
+/* ------------------------------- */
+/*          QUOTE & WORDS          */
+/* ------------------------------- */
+.words {
   font-family: var(--main-font-heavy);
   text-transform: uppercase;
   text-align: center;
@@ -98,138 +100,150 @@
   line-height: 1.5rem;
 }
 
-.code__quote {
+/* ------------------------------- */
+/*             QUOTE               */
+/* ------------------------------- */
+.quote {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.code__odd--inverse {
-  -webkit-transform: skew(-60deg, 30deg) scaleY(0.66667);
-          transform: skew(-60deg, 30deg) scaleY(0.66667);
-  color: var(--bright-color);
+.quote__text {
+  font-family: var(--main-font-semibold);
+  font-size: 3rem;
+  line-height: 3.3rem;
+  width: 15ch;
+  margin-bottom: 0.5em;
+  text-align: left;
 }
 
-.code__even--inverse {
-  -webkit-transform: skew(0deg, 30deg) scaleY(1.33333);
-          transform: skew(0deg, 30deg) scaleY(1.33333);
-  color: var(--third-color);
+.quote__author-name {
+  font-family: var(--main-font-regular);
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin-bottom: 0.1em;
+  text-align: right;
 }
 
-.code__odd {
+.quote__author {
+  font-family: var(--main-font-light);
+  font-size: 1rem;
+  margin-bottom: 20em;
+  text-align: right;
+}
+
+/* ------------------------------- */
+/*             WORDS               */
+/* ------------------------------- */
+.words {
+  /* ------- WORDS INDIVIDUALS ------- */
+}
+
+.words__bright {
   -webkit-transform: skew(60deg, -30deg) scaleY(0.66667);
           transform: skew(60deg, -30deg) scaleY(0.66667);
   color: var(--bright-color);
 }
 
-.code__even {
+.words__dark {
   -webkit-transform: skew(0deg, -30deg) scaleY(1.33333);
           transform: skew(0deg, -30deg) scaleY(1.33333);
   color: var(--third-color);
 }
 
-/* ------- WORDS INDIVIDUALS ------- */
-.dry {
+.words--dry {
   font-size: 5rem;
-  line-height: 5rem;
+  line-height: 4.3rem;
 }
 
-.meticulousness {
+.words--meticulousness {
   font-size: 1rem;
   line-height: 1.6rem;
 }
 
-.easy-read {
+.words--easy-read {
   font-size: 3rem;
   line-height: 3.5rem;
   text-align: left;
   padding-left: 2em;
 }
 
-.easy-change {
+.words--easy-change {
   font-size: 2.5rem;
   line-height: 2.8rem;
   text-align: left;
   padding-left: 2.4em;
 }
 
-.naming {
+.words--naming {
   font-size: 2rem;
   line-height: 2.5rem;
   text-align: left;
   padding-left: 3.5em;
 }
 
-.conventions {
+.words--conventions {
   font-size: 1.1rem;
   line-height: 1.5rem;
   text-align: left;
   padding-left: 7.9em;
 }
 
-.repeat {
+.words--repeat {
   font-size: 2rem;
   line-height: 2.5rem;
   text-align: left;
   padding-left: 5em;
 }
 
-.self {
+.words--self {
   font-size: 2.6rem;
   line-height: 3rem;
   text-align: left;
   padding-left: 3.9em;
 }
 
-.keep {
+.words--keep {
   font-size: 2.8rem;
   line-height: 3.5rem;
   padding-right: 0.5em;
 }
 
-.simple {
+.words--simple {
   font-size: 2.8rem;
   line-height: 3.5rem;
   padding-left: 1.4em;
 }
 
-.concise {
+.words--concise {
   font-size: 1.6rem;
   line-height: 1.8rem;
 }
 
-.consistency {
+.words--consistency {
   font-size: 2.3rem;
   line-height: 3rem;
   text-align: left;
   padding-left: 4.5em;
 }
 
-.uncomplicate {
+.words--uncomplicate {
   font-size: 3rem;
-  line-height: 3.5rem;
+  line-height: 3.8rem;
   text-align: right;
   padding-left: 4em;
 }
 
-.bem {
+.words--bem {
   font-size: 5rem;
-  line-height: 5.3rem;
+  line-height: 5.5rem;
   text-align: left;
   padding-left: 3em;
-}
-
-/* ------- MODIFIERS ------- */
-.code--stroke {
-  font-size: 1rem;
-  line-height: 1.4em;
-  color: var(--dark-color);
-  -webkit-text-stroke: 0.5px var(--bright-color);
-}
-
-.code--bright {
-  color: var(--bright-color);
-  padding: 0.3em;
 }
 
 /* ====================================
@@ -239,11 +253,12 @@
   .code .container {
     height: 70em;
   }
-  .code__quote, .code__words {
+  .quote,
+  .words {
     font-size: 2em;
     line-height: 2.5rem;
   }
-  .code .code--stroke {
+  .quote--stroke {
     font-size: 1.8rem;
     line-height: 1.4em;
   }
@@ -253,10 +268,8 @@
   .code .container {
     height: 93em;
   }
-  .code__icon-wrapper {
+  .code__button {
     display: block;
   }
 }
-
-/* ------- BUBBLES ------- */
 /*# sourceMappingURL=CleanCode.css.map */
