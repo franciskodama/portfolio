@@ -44,76 +44,80 @@ const CleanCode = () => {
           className='section-title'
           style={{ display: showBackground ? 'none' : 'block' }}
         >
-          clean code
+          Clean code
         </h1>
       </Parallax>
       <div className='container'>
-        <Parallax
+        {/* <Parallax
           scale={[1.8, 0.8]}
-          // opacity={[0, 1.5]}
+          opacity={[0, 1.5]}
           translateX={['-100%', '50%']}
+        > */}
+        <ul
+          className='code__quote'
+          style={{ display: showBackground ? 'none' : 'block' }}
         >
-          <ul
-            className='code__quote'
-            style={{ display: showBackground ? 'none' : 'block' }}
+          <li className='code__odd--inverse'>"clean code</li>
+          <li className='code__even--inverse'>always looks like</li>
+          <li className='code__odd--inverse'>it was written by</li>
+          <li className='code__even--inverse'>someone who</li>
+          <li className='code__odd--inverse'>cares."</li>
+          <li className='code__even--inverse code--stroke'>
+            ― Robert C. Martin
+          </li>
+          <li className='code__odd--inverse code--stroke'>
+            Author of Clean Code
+          </li>
+        </ul>
+        {/* </Parallax> */}
+        {/* <Parallax opacity={[0, 2]} translateY={['-100%', '50%']}> */}
+        <div className='code__icon-wrapper' onClick={handleClick}>
+          <img
+            className='code__icon'
+            src={!showBackground ? ZoomIn : ZoomOut}
+            alt='icon zoom in or out'
+          />
+          <p style={{ display: !showBackground ? 'block' : 'none' }}>
+            CHECK MY CODE
+          </p>
+          <p
+            className='code--bright'
+            style={{
+              display: showBackground ? 'block' : 'none',
+            }}
           >
-            <li className='code__odd--inverse'>"clean code</li>
-            <li className='code__even--inverse'>always looks like</li>
-            <li className='code__odd--inverse'>it was written by</li>
-            <li className='code__even--inverse'>someone who</li>
-            <li className='code__odd--inverse'>cares."</li>
-            <li className='code__even--inverse code--stroke'>
-              ― Robert C. Martin
-            </li>
-            <li className='code__odd--inverse code--stroke'>
-              Author of Clean Code
-            </li>
-          </ul>
-        </Parallax>
-        <Parallax opacity={[0, 2]} translateY={['-100%', '50%']}>
-          <div className='code__icon-wrapper' onClick={handleClick}>
-            <img
-              className='code__icon'
-              src={!showBackground ? ZoomIn : ZoomOut}
-              alt='icon zoom in or out'
-            />
-            <p style={{ display: !showBackground ? 'block' : 'none' }}>
-              CHECK MY CODE
-            </p>
-            <p
-              className='code--bright'
-              style={{
-                display: showBackground ? 'block' : 'none',
-              }}
-            >
-              RETURN
-            </p>
-          </div>
-        </Parallax>
+            RETURN
+          </p>
+        </div>
+        {/* </Parallax> */}
 
-        <Parallax
+        {/* <Parallax
           scale={[1.4, 0.8]}
-          // opacity={[0, 2]}
+          opacity={[0, 2]}
           translateX={['50%', '-100%']}
+        > */}
+        <ul
+          className='code__words'
+          style={{ display: showBackground ? 'none' : 'block' }}
         >
-          <ul
-            className='code__words'
-            style={{ display: showBackground ? 'none' : 'block' }}
-          >
-            <li className='code__odd'>meticulousness</li>
-            <li className='code__even'>easy to read, easy to change</li>
-            <li className='code__odd'>naming conventions</li>
-            <li className='code__even'>don't repeat your self</li>
-            <li className='code__odd'>keep it simple</li>
-            <li className='code__even'>clear and concise</li>
-            <li className='code__odd'>consistent</li>
-            <li className='code__even'>uncomplicate</li>
-            <li className='code__odd'>B.E.M.</li>
-            <li className='code__even'>D.R.Y.</li>
-          </ul>
-        </Parallax>
+          <li className='code__even dry'>DRY</li>
+          <li className='code__odd meticulousness'>meticulousness</li>
+          <li className='code__even easy-read'>easy to read</li>
+          <li className='code__even easy-change'>easy to change</li>
+          <li className='code__odd naming'>naming</li>
+          <li className='code__odd conventions'>conventions</li>
+          <li className='code__even repeat'>don't repeat</li>
+          <li className='code__even self'>your self</li>
+          <li className='code__odd keep'>keep it</li>
+          <li className='code__odd simple'>simple</li>
+          <li className='code__even concise'>clear and concise</li>
+          <li className='code__odd consistency'>consistency</li>
+          <li className='code__even uncomplicate'>uncomplicate</li>
+          <li className='code__odd bem'>BEM</li>
+        </ul>
+        {/* </Parallax> */}
 
-        {!showBackground ? (
+        {/* {!showBackground ? (
           <WhyCard
             titleOne={whyData.code.titleOne}
             textOne={whyData.code.textOne}
@@ -127,7 +131,7 @@ const CleanCode = () => {
             bottom={whyData.code.bottom}
             left={whyData.code.left}
           />
-        ) : null}
+        ) : null} */}
       </div>
     </section>
   );

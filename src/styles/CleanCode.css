@@ -15,7 +15,6 @@
   /* ------- WORDS ------- */
   /* ------- QUOTE TRANSFORM ------- */
   /* ------- WORDS TRANSFORM ------- */
-  /* ------- BUBBLES ------- */
 }
 
 .code .container {
@@ -27,7 +26,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 10em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -79,6 +77,8 @@
   position: absolute;
   top: 33%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   text-align: center;
   font-family: var(--main-font-regular);
   font-size: 0.7rem;
@@ -88,24 +88,20 @@
 
 .code__quote, .code__words {
   font-family: var(--main-font-heavy);
-  font-size: 1.2em;
   text-transform: uppercase;
-  line-height: 1.5rem;
-  text-align: right;
+  text-align: center;
   width: 18em;
-  height: 8em;
+  height: 30em;
   -webkit-animation: code-appearance 2s both;
           animation: code-appearance 2s both;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .code__quote {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.code__words {
-  margin-top: 4em;
 }
 
 .code__odd--inverse {
@@ -130,6 +126,97 @@
   -webkit-transform: skew(0deg, -30deg) scaleY(1.33333);
           transform: skew(0deg, -30deg) scaleY(1.33333);
   color: var(--third-color);
+}
+
+/* ------- WORDS INDIVIDUALS ------- */
+.dry {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+
+.meticulousness {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+.easy-read {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  text-align: left;
+  padding-left: 2em;
+}
+
+.easy-change {
+  font-size: 2.5rem;
+  line-height: 2.8rem;
+  text-align: left;
+  padding-left: 2.4em;
+}
+
+.naming {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: left;
+  padding-left: 3.5em;
+}
+
+.conventions {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  text-align: left;
+  padding-left: 7.9em;
+}
+
+.repeat {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-align: left;
+  padding-left: 5em;
+}
+
+.self {
+  font-size: 2.6rem;
+  line-height: 3rem;
+  text-align: left;
+  padding-left: 3.9em;
+}
+
+.keep {
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  padding-right: 0.5em;
+}
+
+.simple {
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  padding-left: 1.4em;
+}
+
+.concise {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+
+.consistency {
+  font-size: 2.3rem;
+  line-height: 3rem;
+  text-align: left;
+  padding-left: 4.5em;
+}
+
+.uncomplicate {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  text-align: right;
+  padding-left: 4em;
+}
+
+.bem {
+  font-size: 5rem;
+  line-height: 5.3rem;
+  text-align: left;
+  padding-left: 3em;
 }
 
 /* ------- MODIFIERS ------- */
@@ -166,12 +253,10 @@
   .code .container {
     height: 93em;
   }
-  .code__quote, .code__words {
-    font-size: 3em;
-    line-height: 3.5rem;
-  }
   .code__icon-wrapper {
     display: block;
   }
 }
+
+/* ------- BUBBLES ------- */
 /*# sourceMappingURL=CleanCode.css.map */
