@@ -90,7 +90,7 @@
     height: 20em;
     border-radius: 50%;
     padding: 5em 5em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     overflow:hidden;
     box-shadow:
     0 -2.5em 4em 2em rgba(255, 255, 255, 0.4),
@@ -112,13 +112,14 @@
 .result {
   display: none;
   flex-direction: column-reverse;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   color: var(--dark-color);
   font-family: var(--main-font-light);
   line-height: 1.5;
   margin-top: 1em;
   opacity: 0;
-  animation-name: appear;
+  animation-name: result-ai-appear;
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
@@ -128,6 +129,7 @@
     padding: 1em 1em;
     background-color: var(--bright-color);
     margin-bottom: 1em;
+    border-radius: 10px;
   }
 
     &__wrapper {
@@ -147,7 +149,7 @@
   }
 }
 
-@keyframes appear {
+@keyframes result-ai-appear {
   0% {
     opacity: 0;
     transform: translateY(50%);

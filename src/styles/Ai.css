@@ -132,7 +132,7 @@
   height: 20em;
   border-radius: 50%;
   padding: 5em 5em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   overflow: hidden;
   -webkit-box-shadow: 0 -2.5em 4em 2em rgba(255, 255, 255, 0.4), inset 0 -2.5em 1.5em 1em rgba(0, 0, 0, 0.1);
           box-shadow: 0 -2.5em 4em 2em rgba(255, 255, 255, 0.4), inset 0 -2.5em 1.5em 1em rgba(0, 0, 0, 0.1);
@@ -153,14 +153,15 @@
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   color: var(--dark-color);
   font-family: var(--main-font-light);
   line-height: 1.5;
   margin-top: 1em;
   opacity: 0;
-  -webkit-animation-name: appear;
-          animation-name: appear;
+  -webkit-animation-name: result-ai-appear;
+          animation-name: result-ai-appear;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-timing-function: ease-in;
@@ -174,6 +175,7 @@
   padding: 1em 1em;
   background-color: var(--bright-color);
   margin-bottom: 1em;
+  border-radius: 10px;
 }
 
 .result__wrapper {
@@ -194,7 +196,7 @@
   width: 75%;
 }
 
-@-webkit-keyframes appear {
+@-webkit-keyframes result-ai-appear {
   0% {
     opacity: 0;
     -webkit-transform: translateY(50%);
@@ -207,7 +209,7 @@
   }
 }
 
-@keyframes appear {
+@keyframes result-ai-appear {
   0% {
     opacity: 0;
     -webkit-transform: translateY(50%);
