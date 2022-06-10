@@ -39,7 +39,7 @@ const WhyMe = () => {
             <br></br>
             <br></br>
             <q className='circle-clicked__quote' rel='Joe Namath'>
-              "When when you have fun, you can do amazing things."
+              "When you have fun, you can do amazing things."
             </q>
             <p className='circle-clicked__quote--bright'>- Joe Namath</p>
           </h6>

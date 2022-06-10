@@ -13,15 +13,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: space-between;
     width: 100%;
-    height: 50em;
-    margin-top: 10em;
-    margin-bottom: 10em;
+    height: 70em;
+    margin-top: 8em;
+    margin-bottom: 5em;
   }
 
   &__subtitle {
-    margin: 0.8em 0 1em 0;
+    margin-top: 0.8em;
     text-align: center;
   }
 
@@ -51,7 +50,7 @@
   &__button {
     display: none;
     position: absolute;
-    top: 27%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -60,24 +59,7 @@
     line-height: 1rem;
     cursor: pointer;
   }
-
-  }
-
-  /* ------------------------------- */
-  /*          QUOTE & WORDS          */
-  /* ------------------------------- */
-
-  // .quote,
-  .words {
-    font-family: var(--main-font-heavy);
-    text-transform: uppercase;
-    text-align: center;
-    width: 18em;
-    height: 30em;
-    animation: code-appearance 2s both;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-  }
+}
 
   /* ------------------------------- */
   /*             QUOTE               */
@@ -88,98 +70,41 @@
     flex-direction: column;
 
     &__text {
-      font-family: var(--main-font-semibold);
-      font-size: 3rem;
-      line-height: 3.3rem;
-      width: 15ch;
-      margin-bottom: 0.5em;
-      text-align: left;
+      font-family: var(--main-font-regular);
+      font-size: 1.6rem;
+      line-height: 2rem;
+      width: 20ch;
+      margin-bottom: 0.8em;
+      text-align: center;
     }
 
     &__author-name {
-      font-family: var(--main-font-regular);
-      font-size: 2rem;
-      line-height: 2.3rem;
+      font-family: var(--main-font-light);
+      font-size: 1.3rem;
       margin-bottom: 0.1em;
-      text-align: right;
+      text-align: center;
     }
 
     &__author {
-      font-family: var(--main-font-light);
+      font-family: var(--main-font-thin);
       font-size: 1rem;
-      margin-bottom: 20em;
-      text-align: right;
+      margin-bottom: 12em;
+      text-align: center;
     }
   }
-
-  // .quote {
-  //   display: flex;
-
-  //   &__bright {
-  //     transform: skew(-60deg, 30deg) scaleY(0.66667);
-  //     color: var(--bright-color);
-  //   }
-
-  //   &__dark {
-  //     transform: skew(0deg, 30deg) scaleY(1.33333);
-  //     color: var(--third-color);
-  //   }
-  
-  //   &--stroke {
-  //     font-size: 1rem;
-  //     line-height: 1.4em;
-  //     color: var(--dark-color);
-  //     -webkit-text-stroke: 1px var(--bright-color);
-  //   }
-
-  //   &--clean {
-  //     font-size: 4rem;
-  //     line-height: 4.5rem;
-  //   }
-
-  //   &--always {
-  //     font-size: 3rem;
-  //     line-height: 3.3rem;
-  //     padding-right: 5.8em;
-  //   }
-    
-  //   &--looks {
-  //     font-size: 2rem;
-  //     line-height: 2.6rem;
-  //     padding-right: 9.3em;
-  //   }
-    
-  //   &--it-was {
-  //     font-size: 2.5rem;
-  //     line-height: 3rem;
-  //     padding-right: 3.4em;
-  //   }
-    
-  //   &--someone {
-  //     font-size: 2.5rem;
-  //     line-height: 3rem;
-  //   }
-    
-  //   &--who {
-  //     font-size: 4rem;
-  //     line-height: 4.4rem;
-  //     padding-right: 0.5em;
-
-  //   }
-    
-  //   &--cares {
-  //     font-size: 2.2rem;
-  //     line-height: 2.8rem;
-  //     padding-right: 3.4em;
-  //   }
-  // }
-
 
   /* ------------------------------- */
   /*             WORDS               */
   /* ------------------------------- */
 
   .words {
+    font-family: var(--main-font-heavy);
+    text-transform: uppercase;
+    text-align: center;
+    height: 30em;
+    animation: code-appearance 2s both;
+    margin-right: 10em;
+
     &__bright {
       transform: skew(60deg, -30deg) scaleY(0.66667);
       color: var(--bright-color);
@@ -193,93 +118,94 @@
     /* ------- WORDS INDIVIDUALS ------- */
 
     &--dry {
-      font-size: 5rem;
-      line-height: 4.3rem;
+      font-size: 3.75rem;
+      line-height: 3.22rem;
     }
     
     &--meticulousness {
-      font-size: 1rem;
-      line-height: 1.6rem;
+      font-size: 0.75rem;
+      line-height: 1.2rem;
     }
     
     &--easy-read {
-      font-size: 3rem;
-      line-height: 3.5rem;
-      text-align: left;
-      padding-left: 2em;
-    }
-
-    &--easy-change {
-      font-size: 2.5rem;
-      line-height: 2.8rem;
-      text-align: left;
-      padding-left: 2.4em;
-    }
-
-    &--naming {
-      font-size: 2rem;
-      line-height: 2.5rem;
-      text-align: left;
-      padding-left: 3.5em;
-    }
-
-    &--conventions {
-      font-size: 1.1rem;
-      line-height: 1.5rem;
-      text-align: left;
-      padding-left: 7.9em;
-    }
-
-    &--repeat {
-      font-size: 2rem;
-      line-height: 2.5rem;
+      font-size: 2.25rem;
+      line-height: 2.62rem;
       text-align: left;
       padding-left: 5em;
     }
 
-    &--self {
-      font-size: 2.6rem;
-      line-height: 3rem;
+    &--easy-change {
+      font-size: 1.875rem;
+      line-height: 2.1rem;
       text-align: left;
-      padding-left: 3.9em;
+      padding-left: 6.1em;
+    }
+
+    &--naming {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+      text-align: left;
+      padding-left: 8.3em;
+    }
+
+    &--conventions {
+      font-size: 0.82rem;
+      line-height: 1.125rem;
+      text-align: left;
+      padding-left: 16.5em;
+    }
+
+    &--repeat {
+      font-size: 1.5em;
+      line-height: 1.87rem;
+      text-align: left;
+      padding-left: 9.3em;
+    }
+
+    &--self {
+      font-size: 1.95rem;
+      line-height: 2.25rem;
+      text-align: left;
+      padding-left: 7.2em;
     }
 
     &--keep {
-      font-size: 2.8rem;
-      line-height: 3.5rem;
-      padding-right: 0.5em;
+      font-size: 2.1rem;
+      line-height: 2.62rem;
+      padding-left: 0.7em;
     }
 
     &--simple {
-      font-size: 2.8rem;
-      line-height: 3.5rem;
-      padding-left: 1.4em;
+      font-size: 2.1rem;
+      line-height: 2.62rem;
+      padding-left: 2.6em;
     }
 
     &--concise {
-      font-size: 1.6rem;
-      line-height: 1.8rem;
+      font-size: 1.72rem;
+      line-height: 2.25rem;
+      padding-left: 5em;
     }
 
     &--consistency {
-      font-size: 2.3rem;
-      line-height: 3rem;
+      font-size: 2.25rem;
+      line-height: 2.85rem;
       text-align: left;
-      padding-left: 4.5em;
+      padding-left: 6em;
     }
 
     &--uncomplicate {
-      font-size: 3rem;
-      line-height: 3.8rem;   
+      font-size: 2.25rem;
+      line-height: 2.85rem;   
       text-align: right;
-      padding-left: 4em;
+      padding-left: 1em;
     }
 
     &--bem {
-      font-size: 5rem;
-      line-height: 5.5rem;
+      font-size: 3.75rem;
+      line-height: 4.125rem;
       text-align: left;
-      padding-left: 3em;
+      padding-left: 3.8em;
     }
   }
 
@@ -287,41 +213,140 @@
             MEDIA QUERY
 ======================================= */
 
-@media only screen and (min-width: 20em) {
-}
-
 @media only screen and (min-width: 48em) {
   .code {
     .container {
-      height: 70em;
-    }
-  }
-    
-  .quote,
-  .words {
-    font-size: 2em;
-    line-height: 2.5rem;
-  }
-
-  .quote {
-    &--stroke {
-      font-size: 1.8rem;
-      line-height: 1.4em;
-    }
-  }
-}
-
-@media only screen and (min-width: 62em) {
-}
-
-@media only screen and (min-width: 75em) {
-  .code {
-    .container {
-      height: 93em;
+      height: 110em;
     }
 
     &__button {
       display: block;
     }
   }
+
+  .quote {
+    &__text {
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+    &__author-name {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    &__author {
+      margin-bottom: 20em;
+    }
+  }
+
+  .words {
+    width: 28em;
+    height: 30em;
+    font-size: 2em;
+    line-height: 2.5rem;
+    margin-right: 0;
+
+
+  &--dry {
+    font-size: 7.5rem;
+    line-height: 6rem;
+  }
+  
+  &--meticulousness {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+  
+  &--easy-read {
+    font-size: 4.5rem;
+    line-height: 5.25rem;
+    text-align: left;
+    padding-left: 2em;
+  }
+
+  &--easy-change {
+    font-size: 3.75rem;
+    line-height: 4rem;
+    text-align: left;
+    padding-left: 2.4em;
+  }
+
+  &--naming {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    text-align: left;
+    padding-left: 3.5em;
+  }
+
+  &--conventions {
+    font-size: 1.65rem;
+    line-height: 2.25rem;
+    text-align: left;
+    padding-left: 7.9em;
+  }
+
+  &--repeat {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    text-align: left;
+    padding-left: 4.6em;
+  }
+
+  &--self {
+    font-size: 3.9rem;
+    line-height: 4.2rem;
+    text-align: left;
+    padding-left: 3.6em;
+  }
+
+  &--keep {
+    font-size: 4.2rem;
+    line-height: 5rem;
+    padding-right: 1.1em;
+  }
+
+  &--simple {
+    font-size: 4.2rem;
+    line-height: 5rem;
+    padding-left: 0.7em;
+  }
+
+  &--concise {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    padding-right: 1.6em;
+  }
+
+  &--consistency {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    text-align: left;
+    padding-left: 4.2em;
+  }
+
+  &--uncomplicate {
+    font-size: 3rem;
+    line-height: 3.6rem;   
+    text-align: right;
+    padding-right: 4.4em;
+  }
+
+  &--bem {
+    font-size: 7.5rem;
+    line-height: 8.9rem;
+    text-align: left;
+    padding-left: 2.85em;
+  }
+}
+}
+
+@media only screen and (min-width: 62em) {
+  .words--uncomplicate {
+    font-size: 4.5rem;
+    line-height: 4.8rem;   
+    padding-left: 3.7em;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+
 }
