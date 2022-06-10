@@ -149,12 +149,12 @@
 
 .words--dry {
   font-size: 3.75rem;
-  line-height: 3.22rem;
+  line-height: 3.5rem;
 }
 
 .words--meticulousness {
   font-size: 0.75rem;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
 }
 
 .words--easy-read {
@@ -173,14 +173,14 @@
 
 .words--naming {
   font-size: 1.5rem;
-  line-height: 1.875rem;
+  line-height: 1.8rem;
   text-align: left;
   padding-left: 8.3em;
 }
 
 .words--conventions {
   font-size: 0.82rem;
-  line-height: 1.125rem;
+  line-height: 1.3rem;
   text-align: left;
   padding-left: 16.5em;
 }
@@ -268,7 +268,7 @@
   }
   .words--dry {
     font-size: 7.5rem;
-    line-height: 6rem;
+    line-height: 7rem;
   }
   .words--meticulousness {
     font-size: 1.5rem;
@@ -323,7 +323,7 @@
   .words--concise {
     font-size: 2.4rem;
     line-height: 2.4rem;
-    padding-right: 1.6em;
+    padding-right: 6.5em;
   }
   .words--consistency {
     font-size: 3.5rem;

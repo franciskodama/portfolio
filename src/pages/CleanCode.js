@@ -49,7 +49,8 @@ const CleanCode = () => {
               cares.”
             </q>
             <p className='quote__author-name'>
-              <span style={{ color: 'red' }}>― </span>Robert C. Martin
+              <span style={{ color: 'var(--third-color)' }}>― </span>Robert C.
+              Martin
             </p>
             <p className='quote__author'>Author of Clean Code</p>
           </div>
@@ -86,6 +87,7 @@ const CleanCode = () => {
             <li className='words__bright words--meticulousness'>
               meticulousness
             </li>
+
             <li className='words__dark words--easy-read'>easy to read</li>
             <li className='words__dark words--easy-change'>easy to change</li>
             <li className='words__bright words--naming'>naming</li>
