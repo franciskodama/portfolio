@@ -66,7 +66,7 @@ const Navbar = () => {
           className='navbar__extended'
           style={{ display: isActive ? 'block' : 'none' }}
         >
-          <Link
+          {/* <Link
             className='navbar__item'
             to='hero'
             spy={true}
@@ -77,7 +77,7 @@ const Navbar = () => {
           >
             {' '}
             home{' '}
-          </Link>
+          </Link> */}
           <Link
             className='navbar__item'
             to='reason'
@@ -87,8 +87,7 @@ const Navbar = () => {
             duration={2000}
             onClick={handleClickOnLink}
           >
-            {' '}
-            this{' '}
+            this.portfolio
           </Link>
           <Link
             className='navbar__item'
@@ -99,8 +98,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            about me{' '}
+            about.me
           </Link>
           <Link
             className='navbar__item'
@@ -111,8 +109,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            why me{' '}
+            why.me
           </Link>
           <Link
             className='navbar__item'
@@ -123,8 +120,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            a.i.{' '}
+            a.i.
           </Link>
           <Link
             className='navbar__item'
@@ -135,8 +131,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            projects{' '}
+            projects
           </Link>
 
           <Link
@@ -148,8 +143,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            api{' '}
+            api
           </Link>
 
           <Link
@@ -161,8 +155,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            my code{' '}
+            my.code
           </Link>
           <Link
             className='navbar__item'
@@ -173,15 +166,14 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            contact{' '}
+            contact
           </Link>
         </nav>
 
         {/* -------- NAVBAR HORIZONTAL -------- */}
 
         <nav className='navbar__horizontal'>
-          <Link
+          {/* <Link
             className='navbar__item'
             to='hero'
             spy={true}
@@ -192,7 +184,7 @@ const Navbar = () => {
           >
             {' '}
             home{' '}
-          </Link>
+          </Link> */}
           <Link
             className='navbar__item'
             to='reason'
@@ -202,8 +194,7 @@ const Navbar = () => {
             duration={2000}
             onClick={handleClickOnLink}
           >
-            {' '}
-            this{' '}
+            this.portfolio
           </Link>
           <Link
             className='navbar__item'
@@ -214,8 +205,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            about me{' '}
+            about.me
           </Link>
           <Link
             className='navbar__item'
@@ -226,8 +216,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            why me{' '}
+            why.me
           </Link>
           <Link
             className='navbar__item'
@@ -263,8 +252,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            api{' '}
+            api
           </Link>
           <Link
             className='navbar__item'
@@ -275,8 +263,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            my code{' '}
+            my.code
           </Link>
           <Link
             className='navbar__item'
@@ -287,8 +274,7 @@ const Navbar = () => {
             duration={500}
             onClick={handleClickOnLink}
           >
-            {' '}
-            contact{' '}
+            contact
           </Link>
         </nav>
       </div>

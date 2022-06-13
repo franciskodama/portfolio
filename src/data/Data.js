@@ -309,8 +309,7 @@ export const projects = [
     category: 'video game',
     url: 'https://fkodama.com/_dev/space-invaders/',
     image: require('../assets/images/project-space.jpg'),
-    frontText:
-      "It's pretty awesome to build classic video games. You learn to play!",
+    frontText: 'Time to have fun with Vanilla Javascript.',
     backText_titleOne: 'why',
     backText_textOne:
       'As I studied product management, agile, and some other things, I have not been coding for some time. I want to make my big return with a fun project to allow me to catch up with the syntax.',
