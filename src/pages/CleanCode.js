@@ -87,7 +87,6 @@ const CleanCode = () => {
             <li className='words__bright words--meticulousness'>
               meticulousness
             </li>
-
             <li className='words__dark words--easy-read'>easy to read</li>
             <li className='words__dark words--easy-change'>easy to change</li>
             <li className='words__bright words--naming'>naming</li>
