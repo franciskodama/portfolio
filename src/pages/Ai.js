@@ -1,5 +1,5 @@
 import '../styles/Ai.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import WhyCard from '../components/WhyCard';
 import { whyData } from '../data/Data';
 const { Configuration, OpenAIApi } = require('openai');
@@ -27,11 +27,6 @@ const Ai = ({ color }) => {
   };
   HandImageColor();
 
-  useEffect(() => {
-    setIsResultActive(true);
-    setNewPrompt(prompt);
-  }, [prompt]);
-
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -45,17 +40,17 @@ const Ai = ({ color }) => {
       .createCompletion('text-curie-001', {
         prompt: prompt,
         temperature: 1,
-        max_tokens: 200,
+        max_tokens: 256,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
       })
       .then((response) => {
-        console.log(response.data.choices[0].text.trim());
-        console.log(isResultActive);
         setResult(response.data.choices[0].text.trim());
+        setIsResultActive(true);
+        setNewPrompt(prompt);
         setStatus('ASK ME AGAIN');
-        // setPrompt('');
+        setPrompt('');
       })
       .catch((error) => console.log(error.message));
   };

@@ -17,6 +17,7 @@
 .ai__examples {
   color: var(--third-color);
   border: 1px dashed var(--third-color);
+  border-radius: 10px;
   padding: 1em;
   margin-bottom: 7em;
   text-align: center;
@@ -153,7 +154,7 @@
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   color: var(--dark-color);
   font-family: var(--main-font-light);
