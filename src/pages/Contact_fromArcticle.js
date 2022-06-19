@@ -6,11 +6,6 @@ import { whyData } from '../data/Data';
 import { contactData } from '../data/Data';
 import WhyCard from '../components/WhyCard';
 import Button from '../components/Button';
-// import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
-
-import { db } from '../firebase';
 
 // ======================================
 
@@ -63,16 +58,11 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 const Contact = () => {
-  // ============= LOCATION FROM ABOUT ME PAGE ========
-
   const { location } = useContext(AboutContext);
-
-  // ============= SEND EMAIL FIREBASE ================
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('SUBMIT');
+  const [status, setStatus] = useState('Submit');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -82,25 +72,37 @@ const Contact = () => {
       (element) => element.content
     );
 
-    db.collection('contacts')
-      .add({
-        name: name,
-        email: email,
-        message: message,
-        location: location.data,
-        messageDrag: dragDropMessage,
-      })
+    let details = {
+      name: name,
+      email: email,
+      message: message,
+      location: location.data,
+      messageDrag: dragDropMessage,
+    };
+
+    // fetch(path.join(__dirname, '/contact'), {
+    // http://localhost:5500/contact
+
+    fetch('http://localhost:5500/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(details),
+    })
+      // .then((res) => {
+      //   setStatus('Sent');
+      //   res.json();
+      //   console.log(res);
+      // })
       .then(() => {
-        setStatus('SENT');
-
         setInterval(() => {
-          setStatus('SUBMIT');
-        }, 5000);
-
+          setStatus('Submit');
+        }, 2000);
         clearInterval();
       })
       .catch((error) => {
-        console.log(error.message);
+        console.log(`Error Message: ${error.message}`);
       });
 
     setName('');
@@ -253,7 +255,7 @@ const Contact = () => {
               type='submit'
               style={{
                 backgroundColor:
-                  status === 'SENT'
+                  status === 'Sent'
                     ? 'var(--dark-color)'
                     : 'var(--third-color)',
               }}

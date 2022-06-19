@@ -1,6 +1,4 @@
-// import cors from 'cors';
 const cors = require('cors');
-// import { createTransport } from 'nodemailer';
 const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
@@ -11,24 +9,23 @@ const app = express();
 app.use(
   cors({
     origin: '*',
+    // origin: 'http://127.0.0.1:5500',
   })
 );
-
-// app.use(cors());
 
 app.use(express.json());
 app.use('/', router);
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Origin',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header(
+//     'Access-Control-Allow-Origin',
+//     'Origin, X-Requested-With, Content-Type, Accept'
+//   );
+//   next();
+// });
 
-app.listen(3008, () => console.log('Server Running'));
+app.listen(5500, () => console.log('Server Running'));
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',

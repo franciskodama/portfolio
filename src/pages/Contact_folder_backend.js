@@ -6,11 +6,9 @@ import { whyData } from '../data/Data';
 import { contactData } from '../data/Data';
 import WhyCard from '../components/WhyCard';
 import Button from '../components/Button';
-// import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
-
-import { db } from '../firebase';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 // ======================================
 
@@ -63,59 +61,41 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 const Contact = () => {
-  // ============= LOCATION FROM ABOUT ME PAGE ========
-
   const { location } = useContext(AboutContext);
-
-  // ============= SEND EMAIL FIREBASE ================
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('SUBMIT');
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('SENDING...');
 
     const dragDropMessage = columns.drop.items.map(
       (element) => element.content
     );
 
-    db.collection('contacts')
-      .add({
-        name: name,
-        email: email,
-        message: message,
+    if (!name || !email) {
+      return toast.error(`Please fill name and email`);
+    }
+    try {
+      setLoading(true);
+      const { data } = await axios.post(`api/email`, {
+        name,
+        email,
+        message,
         location: location.data,
         messageDrag: dragDropMessage,
-      })
-      .then(() => {
-        setStatus('SENT');
-
-        setInterval(() => {
-          setStatus('SUBMIT');
-        }, 5000);
-
-        clearInterval();
-      })
-      .catch((error) => {
-        console.log(error.message);
       });
-
-    setName('');
-    setEmail('');
-    setMessage('');
-    setColumns({
-      drag: {
-        name: 'drag from here:',
-        items: contactData,
-      },
-      drop: {
-        name: 'drop here:',
-        items: [],
-      },
-    });
+      setLoading(false);
+      toast.success(data.message);
+    } catch (err) {
+      setLoading(false);
+      toast.error(
+        err.response && err.response.data.message
+          ? err.response.data.message
+          : err.message
+      );
+    }
   };
 
   const handleClickClearMessage = () => {
@@ -206,6 +186,7 @@ const Contact = () => {
           })}
         </DragDropContext>
 
+        <ToastContainer position='bottom-center' limit={1} />
         <form className='form-contact' onSubmit={handleSubmit}>
           <p className='form-contact__title'>Additional comments:</p>
           <textarea
@@ -250,15 +231,15 @@ const Contact = () => {
 
             <button
               className='btn btn--third-color'
+              disabled={loading}
               type='submit'
               style={{
-                backgroundColor:
-                  status === 'SENT'
-                    ? 'var(--dark-color)'
-                    : 'var(--third-color)',
+                backgroundColor: loading
+                  ? 'var(--dark-color)'
+                  : 'var(--third-color)',
               }}
             >
-              {status}
+              {loading ? 'Sending...' : ' Submit'}
             </button>
           </div>
         </form>
