@@ -352,8 +352,44 @@ margin-top: 5em;
     line-height: 1.5rem;
     margin-top: 0.5em;
   }
-
 }
+
+.pics {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: dense;
+  margin: 10em 3em;
+}
+
+.pic {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  // animation: pics-why-appear 1s ease-in-out forwards;
+}
+
+@keyframes pics-why-appear {
+  0% {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.pics__vertical {
+  grid-row: span 2;
+}
+
+.pics__cube {
+  grid-column: span 1;
+}
+
 
 /* ====================================
             MEDIA QUERY
