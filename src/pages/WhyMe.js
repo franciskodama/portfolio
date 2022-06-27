@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import '../styles/WhyMe.css';
 import { Parallax } from 'react-scroll-parallax';
-import WhyPic01 from '../assets/images/why-pic-pb-01.jpg';
-import WhyPic02 from '../assets/images/why-pic-pb-02.jpg';
-import WhyPic03 from '../assets/images/why-pic-pb-03.jpg';
-import WhyPic04 from '../assets/images/why-pic-pb-04.jpg';
-import WhyPic05 from '../assets/images/why-pic-pb-05.jpg';
-import WhyPic06 from '../assets/images/why-pic-pb-06.jpg';
-import WhyPic07 from '../assets/images/why-pic-pb-07.jpg';
-import WhyPic08 from '../assets/images/why-pic-pb-08.jpg';
-import WhyPic09 from '../assets/images/why-pic-pb-09.jpg';
-import WhyPic10 from '../assets/images/why-pic-pb-10.jpg';
-import WhyPic11 from '../assets/images/why-pic-pb-11.jpg';
-import WhyPic12 from '../assets/images/why-pic-pb-12.jpg';
-import WhyPic13 from '../assets/images/why-pic-pb-13.jpg';
-import WhyPic14 from '../assets/images/why-pic-pb-14.jpg';
-import WhyPic15 from '../assets/images/why-pic-pb-15.jpg';
-import WhyPic16 from '../assets/images/why-pic-pb-16.jpg';
+import WhyPic01 from '../assets/images/why-pic-01.jpg';
+import WhyPic02 from '../assets/images/why-pic-02.jpg';
+import WhyPic03 from '../assets/images/why-pic-03.jpg';
+import WhyPic04 from '../assets/images/why-pic-04.jpg';
+import WhyPic05 from '../assets/images/why-pic-05.jpg';
+import WhyPic06 from '../assets/images/why-pic-06.jpg';
+import WhyPic07 from '../assets/images/why-pic-07.jpg';
+import WhyPic08 from '../assets/images/why-pic-08.jpg';
+import WhyPic09 from '../assets/images/why-pic-09.jpg';
+import WhyPic10 from '../assets/images/why-pic-10.jpg';
+import WhyPic11 from '../assets/images/why-pic-11.jpg';
+import WhyPic12 from '../assets/images/why-pic-12.jpg';
+import WhyPic13 from '../assets/images/why-pic-13.jpg';
+import WhyPic14 from '../assets/images/why-pic-14.jpg';
+import WhyPic15 from '../assets/images/why-pic-15.jpg';
+import WhyPic16 from '../assets/images/why-pic-16.jpg';
 
 const WhyMe = () => {
   const [heartShown, setHeartShown] = useState(false);
@@ -256,10 +256,11 @@ const WhyMe = () => {
             className='pic pics__vertical'
           />
           <img
-            src={WhyPic03}
+            src={WhyPic13}
             alt='gallery element'
             className='pic pics__cube'
           />
+
           <img
             src={WhyPic04}
             alt='gallery element'
@@ -305,11 +306,13 @@ const WhyMe = () => {
             alt='gallery element'
             className='pic pics__cube'
           />
+
           <img
-            src={WhyPic13}
+            src={WhyPic03}
             alt='gallery element'
             className='pic pics__cube'
           />
+
           <img
             src={WhyPic14}
             alt='gallery element'
