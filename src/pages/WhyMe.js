@@ -270,7 +270,7 @@ const WhyMe = () => {
               onMouseEnter={() => setOneShown(true)}
               onMouseLeave={() => setOneShown(false)}
             />
-            {oneShown ? <p className='subtitle'>Circus 2016</p> : null}
+            {oneShown ? <p className='subtitle'>WE 2008</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
@@ -281,18 +281,19 @@ const WhyMe = () => {
               onMouseEnter={() => setTwoShown(true)}
               onMouseLeave={() => setTwoShown(false)}
             />
-            {twoShown ? <p className='subtitle'>WE 2008</p> : null}
+            {twoShown ? <p className='subtitle'>Circus 2017</p> : null}
           </div>
 
           <div className='pics__wrapper'>
             <img
-              src={WhyPic13}
+              src={WhyPic03}
               alt='gallery element'
               className='pic'
-              onMouseEnter={() => setThreeShown(true)}
-              onMouseLeave={() => setThreeShown(false)}
+              onMouseEnter={() => setThirteenShown(true)}
+              s
+              onMouseLeave={() => setThirteenShown(false)}
             />
-            {threeShown ? <p className='subtitle'>Circus 2019</p> : null}
+            {thirteenShown ? <p className='subtitle'>Circus 2019</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
@@ -303,7 +304,7 @@ const WhyMe = () => {
               onMouseEnter={() => setFourShown(true)}
               onMouseLeave={() => setFourShown(false)}
             />
-            {fourShown ? <p className='subtitle'>Citroën 2006</p> : null}
+            {fourShown ? <p className='subtitle'>Citroën 2005</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
@@ -314,7 +315,7 @@ const WhyMe = () => {
               onMouseEnter={() => setFiveShown(true)}
               onMouseLeave={() => setFiveShown(false)}
             />
-            {fiveShown ? <p className='subtitle'>Circus 2017</p> : null}
+            {fiveShown ? <p className='subtitle'>WE 2008</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
@@ -391,20 +392,17 @@ const WhyMe = () => {
               onMouseEnter={() => setTwelveShown(true)}
               onMouseLeave={() => setTwelveShown(false)}
             />
-            {twelveShown ? <p className='subtitle'>Circus 2019</p> : null}
+            {twelveShown ? <p className='subtitle'>Rapp Collins 2008</p> : null}
           </div>
-
           <div className='pics__wrapper'>
             <img
-              src={WhyPic03}
+              src={WhyPic13}
               alt='gallery element'
               className='pic'
-              onMouseEnter={() => setThirteenShown(true)}
-              onMouseLeave={() => setThirteenShown(false)}
+              onMouseEnter={() => setThreeShown(true)}
+              onMouseLeave={() => setThreeShown(false)}
             />
-            {thirteenShown ? (
-              <p className='subtitle'>Rapp Collins 2007</p>
-            ) : null}
+            {threeShown ? <p className='subtitle'>Circus 2012</p> : null}
           </div>
 
           <div className='pics__wrapper'>
@@ -415,7 +413,9 @@ const WhyMe = () => {
               onMouseEnter={() => setFourteenShown(true)}
               onMouseLeave={() => setFourteenShown(false)}
             />
-            {fourteenShown ? <p className='subtitle'>Circus 2012</p> : null}
+            {fourteenShown ? (
+              <p className='subtitle'>Rapp Collins 2007</p>
+            ) : null}
           </div>
 
           <div className='pics__wrapper'>
@@ -437,7 +437,9 @@ const WhyMe = () => {
               onMouseEnter={() => setSixteenShown(true)}
               onMouseLeave={() => setSixteenShown(false)}
             />
-            {sixteenShown ? <p className='subtitle'>Circus 2017</p> : null}
+            {sixteenShown ? (
+              <p className='subtitle'>Rapp Collins 2007</p>
+            ) : null}
           </div>
         </section>
       </div>

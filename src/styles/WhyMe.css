@@ -456,11 +456,12 @@
   text-shadow: -1px 1px var(--dark-color);
   font-family: var(--main-font-light);
   font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 1rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-animation: subtitle-why-appear 0.5s ease-in-out forwards;
           animation: subtitle-why-appear 0.5s ease-in-out forwards;
-  text-transform: uppercase;
 }
 
 @-webkit-keyframes subtitle-why-appear {

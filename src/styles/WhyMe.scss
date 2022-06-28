@@ -395,9 +395,10 @@ margin-top: 5em;
   text-shadow: -1px 1px var(--dark-color);  
   font-family: var(--main-font-light);
   font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 1rem;
   transform: translateX(-50%);
   animation: subtitle-why-appear 0.5s ease-in-out forwards;
-  text-transform: uppercase;
 }
 
 @keyframes subtitle-why-appear {
