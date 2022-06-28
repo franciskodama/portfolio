@@ -21,6 +21,23 @@ import WhyPic16 from '../assets/images/why-pic-16.jpg';
 const WhyMe = () => {
   const [heartShown, setHeartShown] = useState(false);
 
+  const [oneShown, setOneShown] = useState(false);
+  const [twoShown, setTwoShown] = useState(false);
+  const [threeShown, setThreeShown] = useState(false);
+  const [fourShown, setFourShown] = useState(false);
+  const [fiveShown, setFiveShown] = useState(false);
+  const [sixShown, setSixShown] = useState(false);
+  const [sevenShown, setSevenShown] = useState(false);
+  const [eightShown, setEightShown] = useState(false);
+  const [nineShown, setNineShown] = useState(false);
+  const [tenShown, setTenShown] = useState(false);
+  const [elevenShown, setElevenShown] = useState(false);
+  const [twelveShown, setTwelveShown] = useState(false);
+  const [thirteenShown, setThirteenShown] = useState(false);
+  const [fourteenShown, setFourteenShown] = useState(false);
+  const [fifteenShown, setFifteenShown] = useState(false);
+  const [sixteenShown, setSixteenShown] = useState(false);
+
   return (
     <section className='section whyme' id='whyme'>
       <div className='container'>
@@ -245,89 +262,183 @@ const WhyMe = () => {
         </section>
 
         <section className='pics'>
-          <img
-            src={WhyPic01}
-            alt='gallery element'
-            className='pic pics__vertical'
-          />
-          <img
-            src={WhyPic02}
-            alt='gallery element'
-            className='pic pics__vertical'
-          />
-          <img
-            src={WhyPic13}
-            alt='gallery element'
-            className='pic pics__cube'
-          />
+          <div className='pics__wrapper-vertical'>
+            <img
+              src={WhyPic01}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setOneShown(true)}
+              onMouseLeave={() => setOneShown(false)}
+            />
+            {oneShown ? <p className='subtitle'>Circus 2016</p> : null}
+          </div>
 
-          <img
-            src={WhyPic04}
-            alt='gallery element'
-            className='pic pics__vertical'
-          />
-          <img
-            src={WhyPic05}
-            alt='gallery element'
-            className='pic pics__vertical'
-          />
-          <img
-            src={WhyPic06}
-            alt='gallery element'
-            className='pic pics__vertical'
-          />
-          <img
-            src={WhyPic07}
-            alt='gallery element'
-            className='pic pics__cube'
-          />
-          <img
-            src={WhyPic08}
-            alt='gallery element'
-            className='pic pics__vertical'
-          />
-          <img
-            src={WhyPic09}
-            alt='gallery element'
-            className='pic pics__vertical'
-          />
-          <img
-            src={WhyPic10}
-            alt='gallery element'
-            className='pic pics__vertical'
-          />
-          <img
-            src={WhyPic11}
-            alt='gallery element'
-            className='pic pics__cube'
-          />
-          <img
-            src={WhyPic12}
-            alt='gallery element'
-            className='pic pics__cube'
-          />
+          <div className='pics__wrapper-vertical'>
+            <img
+              src={WhyPic02}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setTwoShown(true)}
+              onMouseLeave={() => setTwoShown(false)}
+            />
+            {twoShown ? <p className='subtitle'>WE 2008</p> : null}
+          </div>
 
-          <img
-            src={WhyPic03}
-            alt='gallery element'
-            className='pic pics__cube'
-          />
+          <div className='pics__wrapper'>
+            <img
+              src={WhyPic13}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setThreeShown(true)}
+              onMouseLeave={() => setThreeShown(false)}
+            />
+            {threeShown ? <p className='subtitle'>Circus 2019</p> : null}
+          </div>
 
-          <img
-            src={WhyPic14}
-            alt='gallery element'
-            className='pic pics__cube'
-          />
-          <img
-            src={WhyPic15}
-            alt='gallery element'
-            className='pic pics__cube'
-          />
-          <img
-            src={WhyPic16}
-            alt='gallery element'
-            className='pic pics__cube'
-          />
+          <div className='pics__wrapper-vertical'>
+            <img
+              src={WhyPic04}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setFourShown(true)}
+              onMouseLeave={() => setFourShown(false)}
+            />
+            {fourShown ? <p className='subtitle'>Citroën 2006</p> : null}
+          </div>
+
+          <div className='pics__wrapper-vertical'>
+            <img
+              src={WhyPic05}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setFiveShown(true)}
+              onMouseLeave={() => setFiveShown(false)}
+            />
+            {fiveShown ? <p className='subtitle'>Circus 2017</p> : null}
+          </div>
+
+          <div className='pics__wrapper-vertical'>
+            <img
+              src={WhyPic06}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setSixShown(true)}
+              onMouseLeave={() => setSixShown(false)}
+            />
+            {sixShown ? <p className='subtitle'>Circus 2020</p> : null}
+          </div>
+
+          <div className='pics__wrapper'>
+            <img
+              src={WhyPic07}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setSevenShown(true)}
+              onMouseLeave={() => setSevenShown(false)}
+            />
+            {sevenShown ? <p className='subtitle'>Circus 2016</p> : null}
+          </div>
+
+          <div className='pics__wrapper-vertical'>
+            <img
+              src={WhyPic08}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setEightShown(true)}
+              onMouseLeave={() => setEightShown(false)}
+            />
+            {eightShown ? <p className='subtitle'>Circus 2014</p> : null}
+          </div>
+
+          <div className='pics__wrapper-vertical'>
+            <img
+              src={WhyPic09}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setNineShown(true)}
+              onMouseLeave={() => setNineShown(false)}
+            />
+            {nineShown ? <p className='subtitle'>Citroën 2007</p> : null}
+          </div>
+
+          <div className='pics__wrapper-vertical'>
+            <img
+              src={WhyPic10}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setTenShown(true)}
+              onMouseLeave={() => setTenShown(false)}
+            />
+            {tenShown ? <p className='subtitle'>Circus 2020</p> : null}
+          </div>
+
+          <div className='pics__wrapper'>
+            <img
+              src={WhyPic11}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setElevenShown(true)}
+              onMouseLeave={() => setElevenShown(false)}
+            />
+            {elevenShown ? <p className='subtitle'>Circus 2019</p> : null}
+          </div>
+
+          <div className='pics__wrapper'>
+            <img
+              src={WhyPic12}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setTwelveShown(true)}
+              onMouseLeave={() => setTwelveShown(false)}
+            />
+            {twelveShown ? <p className='subtitle'>Circus 2019</p> : null}
+          </div>
+
+          <div className='pics__wrapper'>
+            <img
+              src={WhyPic03}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setThirteenShown(true)}
+              onMouseLeave={() => setThirteenShown(false)}
+            />
+            {thirteenShown ? (
+              <p className='subtitle'>Rapp Collins 2007</p>
+            ) : null}
+          </div>
+
+          <div className='pics__wrapper'>
+            <img
+              src={WhyPic14}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setFourteenShown(true)}
+              onMouseLeave={() => setFourteenShown(false)}
+            />
+            {fourteenShown ? <p className='subtitle'>Circus 2012</p> : null}
+          </div>
+
+          <div className='pics__wrapper'>
+            <img
+              src={WhyPic15}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setFifteenShown(true)}
+              onMouseLeave={() => setFifteenShown(false)}
+            />
+            {fifteenShown ? <p className='subtitle'>Circus 2013</p> : null}
+          </div>
+
+          <div className='pics__wrapper'>
+            <img
+              src={WhyPic16}
+              alt='gallery element'
+              className='pic'
+              onMouseEnter={() => setSixteenShown(true)}
+              onMouseLeave={() => setSixteenShown(false)}
+            />
+            {sixteenShown ? <p className='subtitle'>Circus 2017</p> : null}
+          </div>
         </section>
       </div>
     </section>
