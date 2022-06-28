@@ -266,155 +266,159 @@ const WhyMe = () => {
             <img
               src={WhyPic01}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setOneShown(true)}
               onMouseLeave={() => setOneShown(false)}
             />
-            {oneShown ? <p className='subtitle'>WE 2008</p> : null}
+            {oneShown ? <p className='pics__subtitle'>WE 2008</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
             <img
               src={WhyPic02}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setTwoShown(true)}
               onMouseLeave={() => setTwoShown(false)}
             />
-            {twoShown ? <p className='subtitle'>Circus 2017</p> : null}
+            {twoShown ? <p className='pics__subtitle'>Circus 2017</p> : null}
           </div>
 
           <div className='pics__wrapper'>
             <img
               src={WhyPic03}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setThirteenShown(true)}
               s
               onMouseLeave={() => setThirteenShown(false)}
             />
-            {thirteenShown ? <p className='subtitle'>Circus 2019</p> : null}
+            {thirteenShown ? (
+              <p className='pics__subtitle'>Circus 2019</p>
+            ) : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
             <img
               src={WhyPic04}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setFourShown(true)}
               onMouseLeave={() => setFourShown(false)}
             />
-            {fourShown ? <p className='subtitle'>Citroën 2005</p> : null}
+            {fourShown ? <p className='pics__subtitle'>Citroën 2005</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
             <img
               src={WhyPic05}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setFiveShown(true)}
               onMouseLeave={() => setFiveShown(false)}
             />
-            {fiveShown ? <p className='subtitle'>WE 2008</p> : null}
+            {fiveShown ? <p className='pics__subtitle'>WE 2008</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
             <img
               src={WhyPic06}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setSixShown(true)}
               onMouseLeave={() => setSixShown(false)}
             />
-            {sixShown ? <p className='subtitle'>Circus 2020</p> : null}
+            {sixShown ? <p className='pics__subtitle'>Circus 2020</p> : null}
           </div>
 
           <div className='pics__wrapper'>
             <img
               src={WhyPic07}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setSevenShown(true)}
               onMouseLeave={() => setSevenShown(false)}
             />
-            {sevenShown ? <p className='subtitle'>Circus 2016</p> : null}
+            {sevenShown ? <p className='pics__subtitle'>Circus 2016</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
             <img
               src={WhyPic08}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setEightShown(true)}
               onMouseLeave={() => setEightShown(false)}
             />
-            {eightShown ? <p className='subtitle'>Circus 2014</p> : null}
+            {eightShown ? <p className='pics__subtitle'>Circus 2014</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
             <img
               src={WhyPic09}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setNineShown(true)}
               onMouseLeave={() => setNineShown(false)}
             />
-            {nineShown ? <p className='subtitle'>Citroën 2007</p> : null}
+            {nineShown ? <p className='pics__subtitle'>Citroën 2007</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
             <img
               src={WhyPic10}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setTenShown(true)}
               onMouseLeave={() => setTenShown(false)}
             />
-            {tenShown ? <p className='subtitle'>Circus 2020</p> : null}
+            {tenShown ? <p className='pics__subtitle'>Circus 2020</p> : null}
           </div>
 
           <div className='pics__wrapper'>
             <img
               src={WhyPic11}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setElevenShown(true)}
               onMouseLeave={() => setElevenShown(false)}
             />
-            {elevenShown ? <p className='subtitle'>Circus 2019</p> : null}
+            {elevenShown ? <p className='pics__subtitle'>Circus 2019</p> : null}
           </div>
 
           <div className='pics__wrapper'>
             <img
               src={WhyPic12}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setTwelveShown(true)}
               onMouseLeave={() => setTwelveShown(false)}
             />
-            {twelveShown ? <p className='subtitle'>Rapp Collins 2008</p> : null}
+            {twelveShown ? (
+              <p className='pics__subtitle'>Rapp Collins 2008</p>
+            ) : null}
           </div>
           <div className='pics__wrapper'>
             <img
               src={WhyPic13}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setThreeShown(true)}
               onMouseLeave={() => setThreeShown(false)}
             />
-            {threeShown ? <p className='subtitle'>Circus 2012</p> : null}
+            {threeShown ? <p className='pics__subtitle'>Circus 2012</p> : null}
           </div>
 
           <div className='pics__wrapper'>
             <img
               src={WhyPic14}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setFourteenShown(true)}
               onMouseLeave={() => setFourteenShown(false)}
             />
             {fourteenShown ? (
-              <p className='subtitle'>Rapp Collins 2007</p>
+              <p className='pics__subtitle'>Rapp Collins 2007</p>
             ) : null}
           </div>
 
@@ -422,23 +426,25 @@ const WhyMe = () => {
             <img
               src={WhyPic15}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setFifteenShown(true)}
               onMouseLeave={() => setFifteenShown(false)}
             />
-            {fifteenShown ? <p className='subtitle'>Circus 2013</p> : null}
+            {fifteenShown ? (
+              <p className='pics__subtitle'>Circus 2013</p>
+            ) : null}
           </div>
 
           <div className='pics__wrapper'>
             <img
               src={WhyPic16}
               alt='gallery element'
-              className='pic'
+              className='pics__pic'
               onMouseEnter={() => setSixteenShown(true)}
               onMouseLeave={() => setSixteenShown(false)}
             />
             {sixteenShown ? (
-              <p className='subtitle'>Rapp Collins 2007</p>
+              <p className='pics__subtitle'>Rapp Collins 2007</p>
             ) : null}
           </div>
         </section>

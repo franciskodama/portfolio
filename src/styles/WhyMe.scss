@@ -355,64 +355,8 @@ margin-top: 5em;
 }
 
 .pics {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-auto-rows: 150px;
-  grid-auto-flow: dense;
-  margin: 15em 3em 5em 3em;
+  display: none;
 }
-
-.pics__wrapper {
-  position: relative;
-}
-
-.pics__wrapper-vertical {
-  position: relative;
-  grid-row: span 2;
-}
-
-.pic {
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  filter: saturate(0%);
-  object-fit: contain;
-}
-
-.pic:hover {
-  opacity: 1;
-  filter: saturate(100%);
-  transition: all 0.5s;
-}
-
-.subtitle {
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  bottom: 0;
-  color: var(--bright-color);
-  text-shadow: -1px 1px var(--dark-color);  
-  font-family: var(--main-font-light);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  line-height: 1rem;
-  transform: translateX(-50%);
-  animation: subtitle-why-appear 0.5s ease-in-out forwards;
-}
-
-@keyframes subtitle-why-appear {
-  0% {
-    transform: translateX(-50%) translateY(25px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-10px);
-    opacity: 1;
-  }
-}
-
-
 
 /* ====================================
             MEDIA QUERY
@@ -518,6 +462,66 @@ margin-top: 5em;
 
     &__benefit {
       width: 25ch;
+    }
+  }
+
+  // ----------- PICTURES -----------
+
+  .pics {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    grid-auto-flow: dense;
+    margin: 15em 3em 5em 3em;
+
+    &__wrapper {
+      position: relative;
+    }
+    
+    &__wrapper-vertical {
+      position: relative;
+      grid-row: span 2;
+    }
+
+    &__pic {
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      filter: saturate(0%);
+      object-fit: contain;
+    
+      &:hover {
+        opacity: 1;
+        filter: saturate(100%);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    
+    &__subtitle {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      bottom: 0;
+      color: var(--bright-color);
+      text-shadow: -1px 1px var(--dark-color);  
+      font-family: var(--main-font-light);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      line-height: 1rem;
+      transform: translateX(-50%);
+      animation: subtitle-why-appear 0.5s ease-in-out forwards;
+    }
+  }
+
+  @keyframes subtitle-why-appear {
+    0% {
+      transform: translateX(-50%) translateY(25px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10px);
+      opacity: 1;
     }
   }
 }
