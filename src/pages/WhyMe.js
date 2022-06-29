@@ -306,7 +306,7 @@ const WhyMe = () => {
               onMouseEnter={() => setFourShown(true)}
               onMouseLeave={() => setFourShown(false)}
             />
-            {fourShown ? <p className='pics__subtitle'>Citroën 2005</p> : null}
+            {fourShown ? <p className='pics__subtitle'>Citroën 2007</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
