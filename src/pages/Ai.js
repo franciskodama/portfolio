@@ -129,7 +129,7 @@ const Ai = ({ color }) => {
               <p className='result__text'>{newPrompt}</p>
             </div>
             <div className='result__wrapper'>
-              <h4 className='result__title'>My wisdow:</h4>
+              <h4 className='result__title'>My wisdom:</h4>
               <p className='result__text'>{result}</p>
             </div>
           </li>

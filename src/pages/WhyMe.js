@@ -361,7 +361,7 @@ const WhyMe = () => {
               onMouseEnter={() => setNineShown(true)}
               onMouseLeave={() => setNineShown(false)}
             />
-            {nineShown ? <p className='pics__subtitle'>Citroën 2007</p> : null}
+            {nineShown ? <p className='pics__subtitle'>Citroën 2006</p> : null}
           </div>
 
           <div className='pics__wrapper-vertical'>
