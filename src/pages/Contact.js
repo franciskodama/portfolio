@@ -228,6 +228,7 @@ const Contact = () => {
                 setName(e.target.value);
               }}
               name='name'
+              required
             />
             <input
               className='form-contact__input'
@@ -238,6 +239,7 @@ const Contact = () => {
                 setEmail(e.target.value);
               }}
               name='email'
+              required
             />
           </div>
           <div className='form-contact__buttons'>
