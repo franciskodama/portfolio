@@ -115,9 +115,8 @@ const WhyMe = () => {
                 </p>
                 <p className='cv__tech cv__tech--mobile'>
                   React | Next.js | JavaScript | CSS3 | SASS | HTML5 | Styled
-                  Components | Responsive Design | APIs | MongoDB | MongoDB
-                  Compass | GraphQL | Apollo GraphQL | Keystone | Firebase | Git
-                  | NPM | FIGMA
+                  Components | APIs | GraphQL | Firebase | Responsive Design |
+                  Git | NPM | Figma | Adobe Photoshop | Jira | Agile 
                 </p>
               </div>
               <div className='cv__b-wrapper cv__b-wrapper--mobile'>
