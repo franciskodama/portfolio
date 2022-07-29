@@ -18,8 +18,6 @@ import WhyPic14 from '../assets/images/why-pic-14.jpg';
 import WhyPic15 from '../assets/images/why-pic-15.jpg';
 import WhyPic16 from '../assets/images/why-pic-16.jpg';
 
-// test
-
 const WhyMe = () => {
   const [heartShown, setHeartShown] = useState(false);
 
