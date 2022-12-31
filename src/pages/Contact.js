@@ -9,10 +9,7 @@ import Button from '../components/Button';
 // import { useForm } from "react-hook-form";
 // import { yupResolver } from "@hookform/resolvers/yup";
 // import * as yup from "yup";
-
 import { db } from '../firebase';
-
-// ======================================
 
 let dropSpace = {
   drag: {
@@ -63,12 +60,7 @@ const onDragEnd = (result, columns, setColumns) => {
 };
 
 const Contact = () => {
-  // ============= LOCATION FROM ABOUT ME PAGE ========
-
   const { location } = useContext(AboutContext);
-
-  // ============= SEND EMAIL FIREBASE ================
-
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');

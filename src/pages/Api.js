@@ -8,11 +8,11 @@ const Api = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}&units=metric`;
 
   useEffect(() => {
     Axios.get(
-      "https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=56fa81e49104e23170bab6e9546dbc2e&units=metric"
+      `https://api.openweathermap.org/data/2.5/weather?q=ottawa&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}&units=metric`
     ).then((response) => {
       setData(response.data);
     });
