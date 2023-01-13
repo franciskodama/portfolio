@@ -103,7 +103,7 @@ const WhyMe = () => {
                     {String.fromCharCode(123)}
                   </span>
                   <div className='cv__first-title--bright'>
-                    front-end developer
+                    software developer
                   </div>
                   <span className='cv__first-title-curly'>
                     {String.fromCharCode(125)}
@@ -114,8 +114,8 @@ const WhyMe = () => {
                   2021 ~ <span className='cv__today'>TODAY</span>
                 </p>
                 <p className='cv__tech cv__tech--mobile'>
-                  React | Next.js | JavaScript | CSS3 | SASS | HTML5 | Styled
-                  Components | APIs | GraphQL | Firebase | Responsive Design |
+                  React | Next.js | JavaScript | Typescript | CSS3 | SASS | HTML5 | 
+                  Styled Components | APIs | GraphQL | Firebase | Responsive Design |
                   Git | NPM | Figma | Adobe Photoshop | Jira | Agile 
                 </p>
               </div>
@@ -138,15 +138,15 @@ const WhyMe = () => {
           >
             <div className='cv__item'>
               <div className='cv__a-wrapper'>
-                <h3 className='cv__title'>Product strategy director</h3>
+                <h3 className='cv__title'>General Director</h3>
                 <div className='cv__square'></div>
                 <p className='cv__cia-date'>
                   Circus | <span className='cv__hightlight'>2016 ~ 2020</span>
                 </p>
                 <ul className='cv__tech'>
-                  <li>Design thinking</li>
-                  <li>Agile methodology</li>
+                  <li>Leadership</li>
                   <li>Product Strategy</li>
+                  <li>Agile methodology</li>
                 </ul>
               </div>
 
