@@ -207,10 +207,10 @@ const About = () => {
 
           <div className='about__container'>
             <h3 className='about__name'>Francis Kodama</h3>
-            <h2 className='about__job'>Front-end Developer</h2>
-            <h2 className='about__languages'>
-              React, JS, CSS, <span className='about__and'>and</span> HTML
-            </h2>
+            <h2 className='about__job'>Software Developer</h2>
+            <h2 className='about__languages' style={{ marginBottom: "0" }}>React, Next.js, JavaScript,</h2>
+            <h2 className='about__languages'
+            >Typescript, CSS,<span className='about__and'> and</span> HTML</h2>
             <p className='about__description'>
               I'm an experienced tech services provider with a strong
               understanding of the industry trends, as well as of the entire web
