@@ -111,9 +111,11 @@ const WhyMe = () => {
                   <div className='cv__first-square'></div>
                 </div>
                 <p className='cv__cia-date cv__hightlight'>
-                  2021 ~ <span className='cv__today'>TODAY</span>
+                  2023 ~ <span className='cv__today'>TODAY</span>
                 </p>
-                <p className='cv__tech cv__tech--mobile'>
+                <p className='cv__tech cv__tech--mobile'
+                style={{ width: "95%"}}
+                >
                   React | Next.js | JavaScript | Typescript | CSS3 | SASS | HTML5 | 
                   Styled Components | APIs | GraphQL | Firebase | Responsive Design |
                   Git | NPM | Figma | Adobe Photoshop | Jira | Agile 
@@ -153,8 +155,8 @@ const WhyMe = () => {
               <div className='cv__b-wrapper'>
                 <h6 className='cv__benefit-title'>Why is it good for you?</h6>
                 <h5 className='cv__benefit'>
-                  I will consider what are the most valuable features for each
-                  persona, respecting the product's life cycle.
+                  I will bring valuable experience and leadership skills to your organization.
+                  {/* Product Director: I will consider what are the most valuable features for each persona, respecting the product's life cycle. */}
                 </h5>
               </div>
             </div>

@@ -63,11 +63,11 @@ const Hero = () => {
             <h2>Canada.</h2>
           </div>
           <div className='cube__top' ref={sideTopRef}>
-            <h2>Front-end</h2> <h2>developer </h2> <h2>-----------</h2>
+            <h2>Software</h2> <h2>developer </h2> <h2>-----------</h2>
             <h2>react, css</h2> <h2>next, sass</h2>
           </div>
           <div className='cube__right' ref={sideRightRef}>
-            <h2>html, api</h2> <h2>mongo db</h2> <h2>graph ql</h2>
+          <h2>typescript</h2> <h2>firestore</h2> <h2>html, api</h2>
             <h2>node, git</h2> <h2>figma, XD </h2> <h2>PHOTOSHOP</h2>
           </div>
         </div>
