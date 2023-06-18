@@ -1,5 +1,5 @@
 import React, { useState, useContext, useRef } from 'react';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 import '../styles/Contact.css';
 import { AboutContext } from '../contexts/AboutContext';
@@ -8,8 +8,6 @@ import { whyData } from '../data/Data';
 import { contactData } from '../data/Data';
 import WhyCard from '../components/WhyCard';
 import Button from '../components/Button';
-
-// import { db } from '../firebase';
 
 let dropSpace = {
   drag: {
@@ -82,54 +80,19 @@ const Contact = () => {
       location: location.data,
       messageDrag: dragDropMessage,
     }
-    console.log("---  🚀 ---> | allDataMessage:", allDataMessage)
 
-
-    // emailjs.sendForm('REACT_APP_EMAILJS_SERVICE_ID', 'REACT_APP_EMAILJS_TEMPLATE_ID', formContact.current, 'REACT_APP_EMAILJS_PUBLIC_KEY')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
-
-    // db.collection('contacts')
-    //   .add({
-    //     name: name,
-    //     email: email,
-    //     message: message,
-    //     location: location.data,
-    //     messageDrag: dragDropMessage,
-    //   })
-    //   .then(() => {
-    //     setStatus('SENT');
-
-    //     setInterval(() => {
-    //       setStatus('SUBMIT');
-    //     }, 5000);
-
-    //     clearInterval();
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.message);
-    //   });
-
+    emailjs.send('REACT_APP_EMAILJS_SERVICE_ID', 'REACT_APP_EMAILJS_TEMPLATE_ID', allDataMessage, 'REACT_APP_EMAILJS_PUBLIC_KEY')
+      .then((result) => {
+        console.log(result.text)
+          setStatus('SENT');
+          setInterval(() => {
+            setStatus('SUBMIT');
+          }, 5000);
+          clearInterval();
+      }, (error) => {
+          console.log(error.text);
+      }) 
       handleClickClearMessage()
-      console.log("LIMPEI!")
-    // setName('');
-    // setEmail('');
-    // setMessage('');
-    // setColumns({
-    //   drag: {
-    //     name: 'drag from here:',
-    //     items: contactData,
-    //   },
-    //   drop: {
-    //     name: 'drop here:',
-    //     items: [],
-    //   },
-    // });
-    console.log("FIM!")
-
   };
 
   const handleClickClearMessage = () => {
@@ -147,8 +110,6 @@ const Contact = () => {
       },
     });
   };
-
-  // =================== DRAG N'DROP ===================
 
   const [columns, setColumns] = useState(dropSpace);
 
