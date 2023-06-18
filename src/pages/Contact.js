@@ -1,4 +1,4 @@
-// import React, { useState, useContext, useRef } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 // import emailjs from '@emailjs/browser';
 
 import '../styles/Contact.css';
@@ -9,7 +9,7 @@ import { contactData } from '../data/Data';
 import WhyCard from '../components/WhyCard';
 import Button from '../components/Button';
 
-import { db } from '../firebase';
+// import { db } from '../firebase';
 
 let dropSpace = {
   drag: {
@@ -65,7 +65,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('SUBMIT');
-  // const formContact = useRef()
+  const formContact = useRef()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -75,40 +75,61 @@ const Contact = () => {
       (element) => element.content
     );
 
-    db.collection('contacts')
-      .add({
-        name: name,
-        email: email,
-        message: message,
-        location: location.data,
-        messageDrag: dragDropMessage,
-      })
-      .then(() => {
-        setStatus('SENT');
+    const allDataMessage = {
+      name: name,
+      email: email,
+      message: message,
+      location: location.data,
+      messageDrag: dragDropMessage,
+    }
+    console.log("---  🚀 ---> | allDataMessage:", allDataMessage)
 
-        setInterval(() => {
-          setStatus('SUBMIT');
-        }, 5000);
 
-        clearInterval();
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+    // emailjs.sendForm('REACT_APP_EMAILJS_SERVICE_ID', 'REACT_APP_EMAILJS_TEMPLATE_ID', formContact.current, 'REACT_APP_EMAILJS_PUBLIC_KEY')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
 
-    setName('');
-    setEmail('');
-    setMessage('');
-    setColumns({
-      drag: {
-        name: 'drag from here:',
-        items: contactData,
-      },
-      drop: {
-        name: 'drop here:',
-        items: [],
-      },
-    });
+    // db.collection('contacts')
+    //   .add({
+    //     name: name,
+    //     email: email,
+    //     message: message,
+    //     location: location.data,
+    //     messageDrag: dragDropMessage,
+    //   })
+    //   .then(() => {
+    //     setStatus('SENT');
+
+    //     setInterval(() => {
+    //       setStatus('SUBMIT');
+    //     }, 5000);
+
+    //     clearInterval();
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.message);
+    //   });
+
+      handleClickClearMessage()
+      console.log("LIMPEI!")
+    // setName('');
+    // setEmail('');
+    // setMessage('');
+    // setColumns({
+    //   drag: {
+    //     name: 'drag from here:',
+    //     items: contactData,
+    //   },
+    //   drop: {
+    //     name: 'drop here:',
+    //     items: [],
+    //   },
+    // });
+    console.log("FIM!")
+
   };
 
   const handleClickClearMessage = () => {
@@ -199,7 +220,7 @@ const Contact = () => {
           })}
         </DragDropContext>
 
-        <form className='form-contact' onSubmit={handleSubmit}>
+        <form ref={formContact} className='form-contact' onSubmit={handleSubmit}>
           <p className='form-contact__title'>Additional comments:</p>
           <textarea
             className='form-contact__input form-contact__input--textarea'
