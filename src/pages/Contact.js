@@ -81,7 +81,7 @@ const Contact = () => {
       messageDrag: dragDropMessage,
     }
 
-    emailjs.send('REACT_APP_EMAILJS_SERVICE_ID', 'REACT_APP_EMAILJS_TEMPLATE_ID', allDataMessage, 'REACT_APP_EMAILJS_PUBLIC_KEY')
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, allDataMessage, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
       .then((result) => {
         console.log(result.text)
           setStatus('SENT');
