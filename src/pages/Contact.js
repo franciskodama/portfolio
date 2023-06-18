@@ -1,4 +1,6 @@
-import React, { useState, useContext } from 'react';
+// import React, { useState, useContext, useRef } from 'react';
+// import emailjs from '@emailjs/browser';
+
 import '../styles/Contact.css';
 import { AboutContext } from '../contexts/AboutContext';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -6,9 +8,7 @@ import { whyData } from '../data/Data';
 import { contactData } from '../data/Data';
 import WhyCard from '../components/WhyCard';
 import Button from '../components/Button';
-// import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
+
 import { db } from '../firebase';
 
 let dropSpace = {
@@ -65,6 +65,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('SUBMIT');
+  // const formContact = useRef()
 
   const handleSubmit = (e) => {
     e.preventDefault();
