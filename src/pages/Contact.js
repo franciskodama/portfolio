@@ -136,7 +136,7 @@ const Contact = () => {
         <h1 className='section-title' style={{ textAlign: 'left' }}>
           hello generator
         </h1>
-        <p>Let me help you drop me a line! ;)</p>
+        <p>{`Let me help you drop me a line! ;)`}</p>
         <DragDropContext
           onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
         >
