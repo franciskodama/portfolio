@@ -1,5 +1,4 @@
-// import React, { useState, useContext, useRef } from 'react';
-// import emailjs from '@emailjs/browser';
+import React, { useState, useContext } from 'react';
 
 import '../styles/Contact.css';
 import { AboutContext } from '../contexts/AboutContext';
@@ -65,7 +64,6 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('SUBMIT');
-  // const formContact = useRef()
 
   const handleSubmit = (e) => {
     e.preventDefault();
