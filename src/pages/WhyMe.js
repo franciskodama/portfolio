@@ -53,7 +53,7 @@ const WhyMe = () => {
         >
           <h4 className='circle__title'>Whole package</h4>
           <p className='circle__text'>
-            Maturity, organization, strategic view, and much more from 23 years
+            Maturity, organization, strategic view, and much more from 24 years
             of experience.
           </p>
         </div>
@@ -117,8 +117,9 @@ const WhyMe = () => {
                 style={{ width: "95%"}}
                 >
                   React | Next.js | JavaScript | Typescript | CSS3 | SASS | HTML5 | 
-                  Styled Components | APIs | GraphQL | Firebase | Responsive Design |
-                  Git | NPM | Figma | Adobe Photoshop | Jira | Agile 
+                  Styled Components | Tailwind | APIs | Prisma | GraphQL | Retool | 
+                  Airtable | Firebase | Responsive Design | Git | Yarn | NPM | 
+                  Figma | Adobe Photoshop | Jira | Agile | ...And a big  smile
                 </p>
               </div>
               <div className='cv__b-wrapper cv__b-wrapper--mobile'>
@@ -132,7 +133,6 @@ const WhyMe = () => {
               </div>
             </div>
           </Parallax>
-          {/* -------------- */}
           <Parallax
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
@@ -156,12 +156,11 @@ const WhyMe = () => {
                 <h6 className='cv__benefit-title'>Why is it good for you?</h6>
                 <h5 className='cv__benefit'>
                   I will bring valuable experience and leadership skills to your organization.
-                  {/* Product Director: I will consider what are the most valuable features for each persona, respecting the product's life cycle. */}
+                  {/* Product: I will consider what are the most valuable features for each persona, respecting the product's life cycle. */}
                 </h5>
               </div>
             </div>
           </Parallax>
-          {/* -------------- */}
           <Parallax
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
@@ -193,7 +192,6 @@ const WhyMe = () => {
               </div>
             </div>
           </Parallax>
-          {/* -------------- */}
           <Parallax
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
@@ -226,7 +224,6 @@ const WhyMe = () => {
               </div>
             </div>
           </Parallax>
-          {/* -------------- */}
           <Parallax
             opacity={[0, 2]}
             translateY={['100%', '-50%']}
@@ -259,7 +256,6 @@ const WhyMe = () => {
               </div>
             </div>
           </Parallax>
-          {/* -------------- */}
         </section>
 
         <section className='pics'>
