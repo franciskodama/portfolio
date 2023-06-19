@@ -5,7 +5,7 @@ import LogoFooter from '../assets/images/logo-fkodama-footer.svg';
 import Linkedin from '../assets/images/ico-linkedin-white.svg';
 import Insta from '../assets/images/ico-instagram-white.svg';
 import Git from '../assets/images/ico-github-white.svg';
-import Resume from '../assets/2023-francis-kodama-resume.pdf';
+import Resume from '../assets/2023-fkodama-resume.pdf';
 
 const Footer = () => {
   return (
