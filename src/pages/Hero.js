@@ -55,7 +55,6 @@ const Hero = () => {
       </video>
       <div className='hero__filter'></div>
       <div className='container' ref={sidesWrapperRef}>
-        {/* --------------- CUBE --------------- */}
         <div className='cube' onMouseMove={onMoveHandler}>
           <div className='cube__left' ref={sideLeftRef}>
             <h2>hey, I'm</h2>
@@ -64,11 +63,15 @@ const Hero = () => {
           </div>
           <div className='cube__top' ref={sideTopRef}>
             <h2>Software</h2> <h2>developer </h2> <h2>-----------</h2>
-            <h2>react, css</h2> <h2>next, sass</h2>
+            <h2>react sass</h2> <h2>next.js, js</h2>
           </div>
           <div className='cube__right' ref={sideRightRef}>
-          <h2>typescript</h2> <h2>firestore</h2> <h2>html, api</h2>
-            <h2>node, git</h2> <h2>figma, XD </h2> <h2>PHOTOSHOP</h2>
+            <h2>typescript</h2>
+            <h2>apis design</h2>
+            <h2>agile + jira</h2>
+            <h2>git figma xd</h2>
+            <h2>PHOTOSHOP</h2>
+            <h2>responsive</h2>
           </div>
         </div>
       </div>
