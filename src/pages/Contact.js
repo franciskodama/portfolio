@@ -209,7 +209,7 @@ const Contact = () => {
             <input
               className='form-contact__input'
               placeholder='email'
-              type='text'
+              type='email'
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
