@@ -111,7 +111,7 @@ const WhyMe = () => {
                   <div className='cv__first-square'></div>
                 </div>
                 <p className='cv__cia-date cv__hightlight'>
-                  2023 ~ <span className='cv__today'>TODAY</span>
+                  2020 ~ <span className='cv__today'>TODAY</span>
                 </p>
                 <p className='cv__tech cv__tech--mobile'
                 style={{ width: "95%"}}
